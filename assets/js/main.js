@@ -337,7 +337,8 @@ if (document.fonts) document.fonts.ready.then(() => HAS_GSAP && ScrollTrigger.re
    ========================================================================== */
 
 /* ---- Horário do studio ------------------------------------------------------
-   [CONFIRMAR COM A THAINÁ] Horário de exemplo. Para mudar, troque só esta
+   Segunda a sexta 9h às 18h · sábado 9h às 13h · domingo fechado.
+   Para mudar, troque só esta
    tabela: [abre, fecha] em horas (ex.: [9, 18] = 9h às 18h; 13.5 = 13h30);
    null = fechado. 0 = domingo, 1 = segunda ... 6 = sábado.
    A lista de horário, o aviso "Aberto agora" e o formulário usam esta tabela. */
