@@ -31,7 +31,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -53,11 +53,11 @@
 <div class="menu" id="menu" hidden>
   <button class="menu__close" id="menu-close" aria-label="Fechar menu"><span></span><span></span></button>
   <nav class="menu__nav" aria-label="Navegação mobile">
+    <a href="#studio">O studio</a>
     <a href="#servicos">Serviços</a>
     <a href="#como-funciona">Avaliação</a>
     <a href="#guia">Qual técnica?</a>
     <a href="#resultados">Resultados</a>
-    <a href="#sobre">Sobre</a>
     <a href="#cursos">Cursos</a>
     <a href="#duvidas">Dúvidas</a>
   </nav>
@@ -132,6 +132,27 @@
     <button class="check__go" type="submit" id="bkGo">Consultar</button>
   </form>
   <p class="check__msg" id="bkMsg" role="status" aria-live="polite"></p>
+</section>
+
+<!-- ═══════════════ 02b · CONHEÇA O STUDIO ═══════════════ -->
+<!-- Mesma estética da apresentação do Espaço Fancy: título cursivo, letra
+     capitular, foto grande arredondada e retrato redondo da Thainá
+     sobreposto. Texto feito só com o que o site já informa.
+     [FOTO] Trocar a foto grande por uma do ambiente do studio quando houver. -->
+<section class="studio" id="studio">
+  <div class="studio__wrap">
+    <div class="studio__txt">
+      <h2 class="studio__title" data-reveal>Conheça o studio</h2>
+      <p class="studio__lead" data-reveal>Meu studio fica em Carpina, no térreo da Galeria Gomes Santos, na Rua Tiradentes. É um espaço pensado só para sobrancelhas e olhar: design, henna, tintura, micropigmentação, brow lamination, lash lifting, descoloração e spa labial.</p>
+      <p class="studio__text" data-reveal>Aqui todo atendimento começa com uma avaliação honesta. Olho com calma o seu rosto, a sua expressão e a sua rotina antes de indicar qualquer técnica. Às vezes um design bem feito resolve, e eu digo isso.</p>
+      <p class="studio__text" data-reveal>O studio também é sala de aula: mais de 50 alunas já saíram daqui com certificado na mão e prontas para atender.</p>
+      <p class="studio__sign" data-reveal>Thainá Cavalcanti</p>
+    </div>
+    <div class="studio__pics">
+      <figure class="studio__pic" data-reveal-img><img decoding="async" src="assets/img/carrossel-atendimento-poster.webp" alt="Thainá fazendo o design de sobrancelha de uma cliente no studio" loading="lazy"></figure>
+      <figure class="studio__owner"><img decoding="async" src="assets/img/sobre-thaina.webp" alt="Retrato da Thainá Cavalcanti" loading="lazy"></figure>
+    </div>
+  </div>
 </section>
 
 <!-- ═══════════════ 03 · SERVIÇOS · menu de spa (opção 11) ═══════════════ -->
@@ -295,7 +316,9 @@
   </div>
 </section>
 
-<!-- ═══════════════ 07 · SOBRE ═══════════════ -->
+<!-- ═══════════════ 07 · SOBRE (desativada por enquanto) ═══════════════
+     Tirada a pedido: a seção "Conheça o studio" (#studio) apresenta a Thainá.
+     Para voltar, apague esta linha de comentário e a marca do fim do bloco.
 <section class="about" id="sobre">
   <figure class="about__photo" data-reveal-img>
     <img decoding="async" src="assets/img/sobre-thaina.webp" alt="Retrato de Thainá Cavalcanti de blazer marrom" loading="lazy">
@@ -313,6 +336,7 @@
     </ul>
   </div>
 </section>
+fim da seção Sobre desativada -->
 
 <!-- ═══════════════ 08 · CURSOS ═══════════════ -->
 <!-- Estrutura inspirada na referência (manifesto → pilares → caminhos → prova),
