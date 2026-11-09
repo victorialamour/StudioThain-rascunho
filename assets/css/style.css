@@ -676,3 +676,106 @@ main>.skew:has(.skew__word){--bleed:var(--rose);background:var(--rose);border:0}
 
 /* ---- Vídeo da micropigmentação é vertical: no celular aparece inteiro ---- */
 @media (max-width:980px){.svc-panel__media:has(video){aspect-ratio:9/16}}
+
+/* ==========================================================================
+   IDEIAS TRAZIDAS DO ESPAÇO FANCY (rascunho)
+   ========================================================================== */
+
+/* ---- Guia: o que a sua sobrancelha pede? ----
+   Texto à esquerda, carrossel de deslizar à direita (um slide por vez).
+   No celular, o carrossel fica embaixo do texto, na largura toda. */
+.guide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:clamp(2rem,6vw,5.5rem);align-items:center;justify-content:center}
+.guide__text{display:grid;gap:1.1rem;justify-items:start;max-width:440px}
+.guide__text p:not(.tag){color:var(--body);font-size:1.02rem;line-height:1.7}
+.guide .h2 b{color:var(--rose-deep)}
+.gcar{position:relative;width:100%}
+.gcar__track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--r-xl);overscroll-behavior-x:contain}
+.gcar__track::-webkit-scrollbar{display:none}
+.gslide{position:relative;flex:0 0 100%;scroll-snap-align:start;aspect-ratio:4/5;margin:0;display:flex;flex-direction:column;background:#fff;overflow:hidden}
+.gslide__img{flex:0 0 56%;overflow:hidden;background:var(--sand)}
+.gslide__img img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.gslide figcaption{display:flex;flex-direction:column;flex:1;gap:.45rem;padding:clamp(1.1rem,3vw,1.6rem)}
+.gslide__kicker{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-deep)}
+.gslide b{font-family:var(--f-brand);font-weight:400;font-size:clamp(1.5rem,2.4vw,1.9rem);line-height:1.1;color:var(--ink)}
+.gslide p{font-size:.95rem;line-height:1.55;color:var(--body)}
+.gslide small{margin-top:auto;padding-top:.3rem;font-size:.8rem;font-weight:600;color:var(--olive)}
+/* capa: foto inteira com o título por cima */
+.gslide--cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gslide--cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,39,31,0) 35%,rgba(35,39,31,.82) 100%)}
+.gslide--cover figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;flex:none;gap:.7rem;color:#fff}
+.gslide--cover .gslide__kicker{color:var(--rose-light)}
+.gslide--cover b{font-size:clamp(2rem,3.4vw,2.6rem);color:#fff}
+.gslide--cover b em{font-style:italic;color:var(--rose-light)}
+.gslide--cover span:last-child{font-size:.9rem;color:rgba(255,255,255,.88)}
+/* último: chamada para a avaliação no oliva da marca */
+.gslide--end{background:var(--olive);justify-content:center}
+.gslide--end figcaption{flex:none;align-items:flex-start;gap:1rem;padding:clamp(1.6rem,4vw,2.4rem)}
+.gslide--end svg{width:22px;height:22px;fill:var(--rose-light)}
+.gslide--end b{font-size:clamp(2rem,3.4vw,2.6rem);color:#fff}
+.gslide--end p{color:#F1E6DB;font-size:1rem}
+.gcar__bar{display:flex;align-items:center;gap:.8rem;margin-top:1rem}
+.gcar__nav{display:grid;place-items:center;width:42px;height:42px;flex:none;border-radius:50%;border:1px solid var(--ink);color:var(--ink);font-size:1.05rem;transition:background-color .3s,color .3s,opacity .3s}
+.gcar__nav:hover:not(:disabled){background:var(--ink);color:#fff}
+.gcar__nav:disabled{opacity:.25;cursor:default}
+.gcar__dots{display:flex;gap:6px;flex:1;justify-content:center}
+.gcar__dots i{width:6px;height:6px;border-radius:50%;background:var(--line);transition:background-color .3s,width .3s}
+.gcar__dots i.on{width:18px;border-radius:3px;background:var(--rose)}
+.gcar__count{font-size:.8rem;font-weight:600;color:var(--muted);min-width:3.2em;text-align:right}
+@media (max-width:900px){
+  .guide{grid-template-columns:minmax(0,1fr);justify-items:center}
+  .guide__text{max-width:none;justify-self:stretch}
+  .gcar{max-width:460px}
+}
+
+/* ---- Nota do Google (preencher com os números reais) ---- */
+.gscore{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:clamp(2rem,4vw,3rem)}
+.gscore__n{font-family:var(--f-brand);font-size:clamp(2.6rem,4vw,3.4rem);line-height:1;color:var(--ink)}
+.gscore__t{display:grid;font-size:.9rem;color:var(--muted);line-height:1.4}
+.gscore__stars{color:var(--rose);letter-spacing:.12em;font-size:1rem}
+.gscore .link{margin-left:auto;font-size:.9rem}
+.results .gscore+.band__label{margin-top:1.4rem}
+/* cartão reservado para depoimento real (some quando for preenchido) */
+.band__item--todo{background:transparent;border:1px dashed var(--rose);box-shadow:none}
+.band__item--todo p,.band__item--todo figcaption{color:var(--muted)}
+
+/* ---- Destaque: micropigmentação ---- */
+.spot__card{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);background:var(--sand);border-radius:var(--r-xl);overflow:hidden}
+.spot__photo{position:relative;margin:0;min-height:clamp(420px,40vw,560px);background:var(--rose-tint)}
+.spot__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.spot__body{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:1.1rem;padding:clamp(1.8rem,5vw,4.2rem)}
+.spot .h2 b{color:var(--rose-deep)}
+.spot__body>p:not(.tag){max-width:48ch;font-size:1.02rem;line-height:1.7;color:var(--body)}
+.spot__facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;margin-top:.3rem;border-top:1px solid rgba(35,39,31,.14)}
+.spot__facts li{display:grid;gap:.1rem;padding:.9rem .8rem .2rem 0}
+.spot__facts b{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-deep)}
+.spot__facts span{font-size:.95rem;color:var(--ink)}
+.spot__buy{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem;margin-top:.6rem}
+.spot__price{display:grid;line-height:1.1}
+.spot__price b{font-family:var(--f-brand);font-weight:400;font-size:clamp(2.2rem,3.6vw,2.8rem);color:var(--ink)}
+.spot__price small{font-size:.85rem;color:var(--muted)}
+@media (max-width:900px){.spot__card{grid-template-columns:1fr}.spot__photo{min-height:0;aspect-ratio:4/3.4}}
+@media (max-width:520px){.spot__facts{grid-template-columns:1fr}.spot__facts li{grid-template-columns:auto 1fr;align-items:baseline;gap:.8rem;padding:.65rem 0;border-bottom:1px solid rgba(35,39,31,.1)}.spot__buy .pill{width:100%;justify-content:center}}
+
+/* ---- Consulta de horário no bloco oliva ---- */
+.visit__cta-body{width:100%}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;width:100%;max-width:560px;margin-top:.4rem}
+.book__f{display:grid;gap:.35rem;min-width:0}
+.book__f--wide,.book__go,.book__msg{grid-column:1/-1}
+.book label{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#F1E6DB}
+.book input,.book select{width:100%;min-width:0;height:48px;padding:0 .9rem;border:1px solid transparent;border-radius:4px;background-color:var(--paper);color:var(--ink);font:inherit;font-size:.95rem;appearance:none;-webkit-appearance:none}
+.book select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2323271F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .8rem center;background-size:16px;padding-right:2.4rem}
+.book input:focus-visible,.book select:focus-visible{outline:2px solid var(--rose-light);outline-offset:2px}
+.book__go{justify-content:center;width:100%;margin-top:.3rem}
+.book__go:disabled{opacity:.5;cursor:not-allowed}
+.book__msg{min-height:1.4em;font-size:.88rem;color:rgba(255,255,255,.85)}
+.book__msg.is-err{color:#FFD9D4;font-weight:600}
+
+/* ---- Horário + "Aberto agora" ---- */
+.hours{display:grid;gap:.6rem;width:100%}
+.hours__now{display:inline-flex;align-items:center;gap:.5rem;justify-self:start;padding:.3rem .75rem;border-radius:999px;background:rgba(98,105,88,.12);font-size:.82rem;font-weight:600;color:var(--olive-deep)}
+.hours__now::before{content:"";width:8px;height:8px;border-radius:50%;background:#5E9B4F;box-shadow:0 0 0 3px rgba(94,155,79,.2)}
+.hours__now.is-off{background:rgba(138,76,80,.1);color:var(--rose-deep)}
+.hours__now.is-off::before{background:var(--rose-deep);box-shadow:0 0 0 3px rgba(138,76,80,.15)}
+.hours__list{display:grid;grid-template-columns:auto 1fr;gap:.25rem 1.2rem;margin:0;font-size:.92rem}
+.hours__list dt{color:var(--body)}
+.hours__list dd{margin:0;font-weight:600;color:var(--ink)}

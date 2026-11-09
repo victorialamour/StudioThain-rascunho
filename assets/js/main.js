@@ -331,3 +331,140 @@ if (HAS_GSAP) {
   }));
 }
 if (document.fonts) document.fonts.ready.then(() => HAS_GSAP && ScrollTrigger.refresh());
+
+/* ==========================================================================
+   IDEIAS TRAZIDAS DO ESPAÇO FANCY (rascunho)
+   ========================================================================== */
+
+/* ---- Horário do studio ------------------------------------------------------
+   [CONFIRMAR COM A THAINÁ] Horário de exemplo. Para mudar, troque só esta
+   tabela: [abre, fecha] em horas (ex.: [9, 18] = 9h às 18h; 13.5 = 13h30);
+   null = fechado. 0 = domingo, 1 = segunda ... 6 = sábado.
+   A lista de horário, o aviso "Aberto agora" e o formulário usam esta tabela. */
+const HOURS = { 0: null, 1: [9, 18], 2: [9, 18], 3: [9, 18], 4: [9, 18], 5: [9, 18], 6: [9, 13] };
+const WA_NUMBER = '5581992901559';
+const DAY_NAMES = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+const DAY_FULL  = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+const fmtH = h => { const m = Math.round((h % 1) * 60); return Math.floor(h) + 'h' + (m ? String(m).padStart(2, '0') : ''); };
+const cap  = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+/* agora no fuso de Recife (mesmo se a pessoa estiver em outro fuso) */
+function nowRecife () {
+  try {
+    const o = {};
+    new Intl.DateTimeFormat('en-US', { timeZone: 'America/Recife', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false })
+      .formatToParts(new Date()).forEach(p => { o[p.type] = p.value; });
+    const d = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(o.weekday);
+    if (d < 0) return null;
+    return { day: d, h: (+o.hour % 24) + (+o.minute) / 60 };
+  } catch (e) { return null; }
+}
+
+function initHours () {
+  // lista: junta dias seguidos com o mesmo horário ("Segunda a sexta")
+  const list = document.getElementById('hoursList');
+  if (list) {
+    const order = [1, 2, 3, 4, 5, 6, 0], groups = [];
+    order.forEach(d => {
+      const key = HOURS[d] ? HOURS[d].join('-') : 'x', last = groups[groups.length - 1];
+      if (last && last.key === key) last.days.push(d); else groups.push({ key, days: [d] });
+    });
+    list.innerHTML = groups.map(g => {
+      const a = g.days[0], b = g.days[g.days.length - 1];
+      const label = g.days.length === 1 ? cap(DAY_NAMES[a]) : cap(DAY_NAMES[a]) + (g.days.length === 2 ? ' e ' : ' a ') + DAY_NAMES[b];
+      const h = HOURS[a];
+      return '<dt>' + label + '</dt><dd>' + (h ? fmtH(h[0]) + ' às ' + fmtH(h[1]) : 'Fechado') + '</dd>';
+    }).join('');
+  }
+
+  // aviso "Aberto agora / Fechado"
+  const el = document.getElementById('openNow'), now = nowRecife();
+  if (!el || !now) return;
+  const today = HOURS[now.day];
+  let text, open = false;
+  if (today && now.h >= today[0] && now.h < today[1]) {
+    open = true;
+    const left = Math.round((today[1] - now.h) * 60);
+    text = left <= 60 ? 'Aberto agora · fecha em ' + left + ' min' : 'Aberto agora · até ' + fmtH(today[1]);
+  } else if (today && now.h < today[0]) {
+    text = 'Fechado agora · abre hoje às ' + fmtH(today[0]);
+  } else {
+    let k = 1; while (k < 7 && !HOURS[(now.day + k) % 7]) k++;
+    const d = (now.day + k) % 7;
+    text = 'Fechado agora · abre ' + (k === 1 ? 'amanhã' : DAY_NAMES[d]) + ' às ' + fmtH(HOURS[d][0]);
+  }
+  el.textContent = text; el.classList.toggle('is-off', !open); el.hidden = false;
+}
+
+/* ---- Guia de técnicas: carrossel de deslizar --------------------------------
+   Arrastar com o dedo, setas, bolinhas ou teclado (← →). */
+function initGuide () {
+  document.querySelectorAll('.gcar').forEach(car => {
+    const track = car.querySelector('.gcar__track'), slides = track.children, N = slides.length;
+    const prev = car.querySelector('[data-dir="-1"]'), next = car.querySelector('[data-dir="1"]');
+    const count = car.querySelector('.gcar__count'), dotsBox = car.querySelector('.gcar__dots');
+    dotsBox.innerHTML = '<i></i>'.repeat(N);
+    const dots = [...dotsBox.children];
+    let cur = -1;
+    const go = i => { i = Math.max(0, Math.min(N - 1, i)); track.scrollTo({ left: i * track.clientWidth, behavior: REDUCED ? 'auto' : 'smooth' }); };
+    const update = () => {
+      const i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+      if (i === cur) return; cur = i;
+      count.textContent = (i + 1) + ' / ' + N;
+      dots.forEach((d, k) => d.classList.toggle('on', k === i));
+      prev.disabled = i === 0; next.disabled = i === N - 1;
+    };
+    track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+    prev.addEventListener('click', () => go(cur - 1));
+    next.addEventListener('click', () => go(cur + 1));
+    track.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); go(cur - 1); }
+    });
+    window.addEventListener('resize', () => { track.scrollLeft = cur * track.clientWidth; });
+    update();
+  });
+}
+
+/* ---- Consulta de horário -> WhatsApp ----------------------------------------
+   Não marca nada sozinho: confere se o studio abre no dia/período escolhido e
+   abre o WhatsApp com a mensagem pronta. */
+function initBooking () {
+  const form = document.getElementById('book'); if (!form) return;
+  const svc = document.getElementById('bkSvc'), date = document.getElementById('bkDate'),
+        time = document.getElementById('bkTime'), go = document.getElementById('bkGo'), msg = document.getElementById('bkMsg');
+  const NOON = 12;
+  const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const parse = v => { const p = v.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); };
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  date.min = iso(today);
+  // sugestão: o próximo dia em que o studio abre
+  const first = new Date(today); first.setDate(first.getDate() + 1);
+  for (let k = 0; k < 7 && !HOURS[first.getDay()]; k++) first.setDate(first.getDate() + 1);
+  date.value = iso(first);
+
+  const say = (text, err) => { msg.textContent = text; msg.classList.toggle('is-err', !!err); go.disabled = !!err; return !err; };
+  const check = () => {
+    if (!date.value) return say('Escolha um dia.', true);
+    const d = parse(date.value), h = HOURS[d.getDay()];
+    if (d < today) return say('Esse dia já passou. Escolha a partir de hoje.', true);
+    if (!h) return say('O studio não abre ' + (d.getDay() === 0 ? 'aos domingos' : 'nesse dia') + '. Escolha outro dia.', true);
+    if (time.value === 'manhã' && h[0] >= NOON) return say('Nesse dia o atendimento começa às ' + fmtH(h[0]) + '. Escolha a tarde.', true);
+    if (time.value === 'tarde' && h[1] <= NOON) return say('Nesse dia o studio fecha às ' + fmtH(h[1]) + '. Escolha a manhã.', true);
+    return say('Eu confirmo o horário com você pelo WhatsApp.');
+  };
+  [svc, date, time].forEach(el => el.addEventListener('change', check));
+  check();
+
+  form.addEventListener('submit', e => {
+    e.preventDefault(); if (!check()) return;
+    const d = parse(date.value), dm = String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0');
+    const what = svc.value === 'uma avaliação' ? 'uma avaliação' : svc.value;
+    const text = 'Oi Thainá, vim pelo site e queria saber se tem horário para ' + what + (d.getDay() % 6 === 0 ? ' no ' : ' na ') + DAY_FULL[d.getDay()] + ', ' + dm + ', pela ' + time.value + '.';
+    window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  });
+}
+
+initHours();
+initGuide();
+initBooking();

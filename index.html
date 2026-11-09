@@ -55,6 +55,7 @@
   <nav class="menu__nav" aria-label="Navegação mobile">
     <a href="#servicos">Serviços</a>
     <a href="#como-funciona">Avaliação</a>
+    <a href="#guia">Qual técnica?</a>
     <a href="#resultados">Resultados</a>
     <a href="#sobre">Sobre</a>
     <a href="#cursos">Cursos</a>
@@ -234,6 +235,62 @@
  </div>
 </section>
 
+<!-- ═══════════════ 04b · GUIA: O QUE SUA SOBRANCELHA PEDE? ═══════════════ -->
+<!-- Ideia trazida do Espaço Fancy ("O que suas unhas pedem?"). Carrossel de
+     deslizar: cada slide = uma técnica + pra quem ela serve. Os textos saem
+     das descrições dos serviços; as fotos são as de resultados que o site já
+     tem (main.js · initGuide). -->
+<section class="guide" id="guia">
+  <div class="guide__text">
+    <p class="tag" data-reveal>Guia de técnicas</p>
+    <h2 class="h2" data-reveal>O que a sua sobrancelha <b>pede?</b></h2>
+    <p data-reveal>Cada rosto pede um cuidado diferente. Deslize e veja pra quem cada técnica é indicada. Na dúvida, eu olho com você na avaliação.</p>
+    <a class="pill pill--dark" data-reveal href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20vi%20o%20guia%20de%20t%C3%A9cnicas%20no%20site%20e%20quero%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">Quero uma avaliação</a>
+  </div>
+
+  <div class="gcar" data-reveal role="group" aria-roledescription="carrossel" aria-label="Guia de técnicas: o que a sua sobrancelha pede?">
+    <div class="gcar__track" tabindex="0">
+      <figure class="gslide gslide--cover" aria-roledescription="slide" aria-label="1 de 8">
+        <img decoding="async" src="assets/img/servico-design-poster.webp" alt="Aplicação de henna na sobrancelha">
+        <figcaption><span class="gslide__kicker">Guia Thainá de técnicas</span><b>O que a sua sobrancelha <em>pede?</em></b><span>Deslize e encontre a técnica feita pra você →</span></figcaption>
+      </figure>
+      <figure class="gslide" aria-roledescription="slide" aria-label="2 de 8">
+        <div class="gslide__img"><img decoding="async" src="assets/img/resultados/antes-depois-2.webp" alt="Antes e depois: fios alinhados e sobrancelhas definidas" loading="lazy"></div>
+        <figcaption><span class="gslide__kicker">Micropigmentação</span><b>Fio a fio</b><p>Pra quem tem falhas ou poucos fios e quer um resultado natural, que parece fio de verdade.</p><small>Dura de 6 meses a 1 ano</small></figcaption>
+      </figure>
+      <figure class="gslide" aria-roledescription="slide" aria-label="3 de 8">
+        <div class="gslide__img"><img decoding="async" src="assets/img/resultados/antes-depois-1.webp" alt="Antes e depois: sobrancelhas preenchidas e com desenho definido" loading="lazy"></div>
+        <figcaption><span class="gslide__kicker">Micropigmentação</span><b>Shadow</b><p>Pra quem quer acordar com a sobrancelha pronta, com efeito sombreado parecido com henna.</p><small>Dura de 8 a 18 meses</small></figcaption>
+      </figure>
+      <figure class="gslide" aria-roledescription="slide" aria-label="4 de 8">
+        <div class="gslide__img"><img decoding="async" src="assets/img/resultados/brow-lamination-1.webp" alt="Antes e depois de brow lamination: fios alinhados para cima" loading="lazy"></div>
+        <figcaption><span class="gslide__kicker">Sem pigmento</span><b>Brow Lamination</b><p>Pra quem tem fios rebeldes ou caídos e quer a sobrancelha mais cheia e alinhada.</p><small>Dura até 4 semanas</small></figcaption>
+      </figure>
+      <figure class="gslide" aria-roledescription="slide" aria-label="5 de 8">
+        <div class="gslide__img"><img decoding="async" src="assets/img/resultados/design-3.webp" alt="Antes e depois de design: sobrancelhas preenchidas e definidas" loading="lazy"></div>
+        <figcaption><span class="gslide__kicker">Design</span><b>Design com henna</b><p>Pra quem quer preencher e definir com efeito de maquiagem, sem compromisso longo.</p><small>Dura até 7 dias</small></figcaption>
+      </figure>
+      <figure class="gslide" aria-roledescription="slide" aria-label="6 de 8">
+        <div class="gslide__img"><img decoding="async" src="assets/img/resultados/design-4.webp" alt="Antes e depois: sobrancelhas com cor em harmonia com o cabelo" loading="lazy"></div>
+        <figcaption><span class="gslide__kicker">Cor</span><b>Tintura ou descoloração</b><p>Pra quem tem fios brancos ou sente que a cor da sobrancelha não combina com o cabelo.</p><small>Dura até 30 dias</small></figcaption>
+      </figure>
+      <figure class="gslide" aria-roledescription="slide" aria-label="7 de 8">
+        <div class="gslide__img"><img decoding="async" src="assets/img/hero-olhar.webp" alt="Close de cílios curvados com lash lifting" loading="lazy"></div>
+        <figcaption><span class="gslide__kicker">Cílios</span><b>Lash Lifting</b><p>Pra quem quer cílios curvados todo dia, sem rímel e sem extensão.</p><small>Dura até 30 dias</small></figcaption>
+      </figure>
+      <figure class="gslide gslide--end" aria-roledescription="slide" aria-label="8 de 8">
+        <figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><b>Ainda na dúvida?</b><p>Normal. Na avaliação eu olho seu rosto de perto e indico só o que faz sentido pra você.</p><a class="pill pill--light" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20vi%20o%20guia%20de%20t%C3%A9cnicas%20no%20site%20e%20quero%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">Agendar avaliação</a></figcaption>
+      </figure>
+    </div>
+    <div class="gcar__bar">
+      <button type="button" class="gcar__nav" data-dir="-1" aria-label="Anterior" disabled>←</button>
+      <div class="gcar__dots" aria-hidden="true"></div>
+      <span class="gcar__count" aria-live="polite">1 / 8</span>
+      <button type="button" class="gcar__nav" data-dir="1" aria-label="Próxima">→</button>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ 05 · RESULTADOS ═══════════════ -->
 <!-- Fotos reais de clientes (autorização de imagem: confirmar com a Thainá). -->
 <section class="results" id="resultados">
@@ -249,11 +306,47 @@
     <figure class="shot"><img decoding="async" src="assets/img/resultados/antes-depois-2.webp" alt="Antes e depois: fios alinhados e sobrancelhas definidas" loading="lazy"><span class="shot__tag">Antes</span><span class="shot__tag shot__tag--after">Depois</span></figure>
     <figure class="shot"><img decoding="async" src="assets/img/resultados/design-4.webp" alt="Antes e depois de design: sobrancelhas com desenho natural" loading="lazy"><span class="shot__tag">Antes</span><span class="shot__tag shot__tag--after">Depois</span></figure>
   </div>
+  <!-- Nota do Google (ideia do Espaço Fancy). Preencher com os números REAIS
+       do perfil da Thainá no Google e trocar o link. Não inventar nota. -->
+  <div class="gscore" data-reveal>
+    <p class="gscore__n">[X,X]</p>
+    <p class="gscore__t"><span class="gscore__stars" aria-hidden="true">★★★★★</span>[N] avaliações no Google</p>
+    <a class="link" href="#" target="_blank" rel="noopener">Ler todas no Google</a>
+  </div>
   <p class="band__label" data-reveal>O que as clientes dizem</p>
   <div class="band" data-reveal aria-label="Depoimentos de clientes">
     <figure class="band__item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><blockquote><p>“Me sinto radiante, uma nova mulher. A praticidade de acordar pronta é maravilhosa.”</p></blockquote><figcaption>Cliente · via WhatsApp</figcaption></figure>
     <figure class="band__item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><blockquote><p>“Mãos de fada. Zero dor ou incômodo. Minhas sobrancelhas elevaram minha autoestima.”</p></blockquote><figcaption>Cliente · via WhatsApp</figcaption></figure>
     <figure class="band__item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><blockquote><p>“Ganhei vários elogios hoje, dizendo que a sobrancelha tá linda.”</p></blockquote><figcaption>Cliente · via WhatsApp</figcaption></figure>
+    <!-- Espaços para depoimentos REAIS (Google ou WhatsApp), com o nome que a
+         cliente autorizar. Apagar os que sobrarem. -->
+    <figure class="band__item band__item--todo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><blockquote><p>“[Depoimento real de cliente]”</p></blockquote><figcaption>[Nome autorizado] · via Google</figcaption></figure>
+    <figure class="band__item band__item--todo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><blockquote><p>“[Depoimento real de cliente]”</p></blockquote><figcaption>[Nome autorizado] · via Google</figcaption></figure>
+    <figure class="band__item band__item--todo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><blockquote><p>“[Depoimento real de cliente]”</p></blockquote><figcaption>[Nome autorizado] · via Google</figcaption></figure>
+  </div>
+</section>
+
+<!-- ═══════════════ 05b · DESTAQUE: MICROPIGMENTAÇÃO ═══════════════ -->
+<!-- Ideia do Espaço Fancy (seção só do "banho de gel"): um serviço carro-chefe
+     com foto, explicação, preço e botão. Confirmar com a Thainá se é a
+     micropigmentação que ela quer destacar. -->
+<section class="spot" id="micropigmentacao">
+  <div class="spot__card">
+    <figure class="spot__photo" data-reveal-img><img decoding="async" src="assets/img/servico-micro-poster.jpg" alt="Thainá explicando a micropigmentação no studio" loading="lazy"></figure>
+    <div class="spot__body">
+      <p class="tag" data-reveal>Carro-chefe do studio</p>
+      <h2 class="h2" data-reveal>Micropigmentação: <b>acorde com a sobrancelha pronta.</b></h2>
+      <p data-reveal>Fio a fio pra quem quer naturalidade, shadow pra quem quer um efeito de maquiagem leve. Antes, eu avalio seu rosto e só indico se fizer sentido pra você.</p>
+      <ul class="spot__facts" data-reveal-stagger>
+        <li><b>Fio a fio</b><span>6 meses a 1 ano</span></li>
+        <li><b>Shadow</b><span>8 a 18 meses</span></li>
+        <li><b>Incluso</b><span>Retoque e acompanhamento</span></li>
+      </ul>
+      <div class="spot__buy" data-reveal>
+        <p class="spot__price"><b>R$ 670</b><small>ou 10x de R$ 67</small></p>
+        <a class="pill pill--dark pill--lg" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20micropigmenta%C3%A7%C3%A3o" target="_blank" rel="noopener">Agendar avaliação</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -464,7 +557,7 @@
     <details class="qa"><summary>Brow Lamination e Lash Lifting precisam de manutenção?</summary><p>Não. O Brow Lamination dura até 4 semanas e o Lash Lifting até 30 dias.</p></details>
     <details class="qa"><summary>Vocês atendem pele madura e fios brancos?</summary><p>Sim. Tenho técnica de micropigmentação pra pele madura, e o design com tintura é ótimo pra cobrir fios brancos.</p></details>
     <details class="qa"><summary>Posso parcelar?</summary><p>Sim. A micropigmentação sai em até 10x, e o Brow Lamination e o Lash Lifting em até 2x.</p></details>
-    <details class="qa"><summary>Como funciona o agendamento?</summary><p>Você agenda pelo WhatsApp e eu confirmo o horário por lá. Chegue 10 minutinhos antes pra aproveitar com calma.</p></details>
+    <details class="qa"><summary>Como funciona o agendamento?</summary><p>Você escolhe o serviço, o dia e o período <a class="link" href="#localizacao">no fim da página</a> (ou me chama direto no WhatsApp) e eu confirmo o horário por lá. Chegue 10 minutinhos antes pra aproveitar com calma.</p></details>
   </div>
 </section>
 
@@ -473,14 +566,39 @@
   <div class="visit__cta" data-reveal-img>
     <div class="visit__cta-body">
       <h2 class="h2 h2--light" data-reveal><b>Vamos ver</b> o que o seu rosto pede?</h2>
-      <p>Agende sua avaliação pelo WhatsApp.</p>
-      <a class="pill pill--light pill--lg" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" data-magnetic>Agendar minha avaliação</a>
+      <p>Escolha o serviço, o dia e o período. O WhatsApp abre com a mensagem pronta e eu confirmo o horário por lá.</p>
+      <!-- Consulta de horário (ideia do Espaço Fancy). Não marca nada sozinho:
+           só monta a mensagem do WhatsApp (main.js · initBooking). -->
+      <form class="book" id="book" novalidate>
+        <div class="book__f book__f--wide"><label for="bkSvc">Serviço</label>
+          <select id="bkSvc">
+            <option value="uma avaliação">Ainda não sei · quero uma avaliação</option>
+            <option>Micropigmentação</option>
+            <option>Brow Lamination</option>
+            <option>Lash Lifting</option>
+            <option>Design de sobrancelhas</option>
+            <option>Design com henna</option>
+            <option>Design com tintura</option>
+            <option>Descoloração + coloração</option>
+            <option>Spa labial</option>
+          </select></div>
+        <div class="book__f"><label for="bkDate">Dia</label><input id="bkDate" type="date" required></div>
+        <div class="book__f"><label for="bkTime">Período</label>
+          <select id="bkTime"><option value="manhã">Manhã</option><option value="tarde">Tarde</option></select></div>
+        <button class="pill pill--light pill--lg book__go" type="submit" id="bkGo">Consultar horário</button>
+        <p class="book__msg" id="bkMsg" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
   <div class="visit__place" data-reveal>
     <p class="tag">Venha nos visitar</p>
     <address><b>Studio Thainá Cavalcanti</b><br>Rua Tiradentes, 110, Galeria Gomes Santos, sala 05, térreo<br>São Sebastião, Carpina-PE</address>
-    <p class="visit__hours">[HORÁRIO DE FUNCIONAMENTO]</p>
+    <!-- Horário: o JS preenche a lista e o aviso "Aberto agora" a partir da
+         tabela HOURS em main.js. [CONFIRMAR O HORÁRIO COM A THAINÁ] -->
+    <div class="hours">
+      <p class="hours__now" id="openNow" hidden></p>
+      <dl class="hours__list" id="hoursList"></dl>
+    </div>
     <div class="visit__map">
       <iframe title="Mapa: Rua Tiradentes, 110, Carpina-PE" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=Rua%20Tiradentes%2C%20110%2C%20S%C3%A3o%20Sebasti%C3%A3o%2C%20Carpina%20-%20PE&amp;z=17&amp;output=embed"></iframe>
