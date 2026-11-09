@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 opções · Como funciona a micropigmentação · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   10 OPÇÕES · "Você sabe como funciona a micropigmentação?"
+   Página só de comparação. Mesmas fontes da "Conheça o studio"
+   (Pinyon Script no título, Gloock nos números/subtítulos, Plus Jakarta Sans
+   no texto). Muda o layout e a estética. Princípios da skill
+   high-end-visual-design: muito respiro, moldura dupla nos cartões,
+   botão-ilha com seta em círculo, entrada suave com desfoque, sombras
+   difusas, curvas de animação com "peso".
+   ========================================================================== */
+:root{
+  --ink:#161616;--body:#4A4A4A;--muted:#6F6F6F;--line:rgba(22,22,22,.08);--sand:#F6F4F2;--cream:#FBF8F4;
+  --accent:#9A5457;--accent-l:#E8C6C6;--pad:clamp(16px,4vw,64px);
+  --ease:cubic-bezier(.32,.72,0,1);--r:2rem;--shell:6px;
+  --soft:0 40px 90px -50px rgba(22,22,22,.22),0 12px 30px -20px rgba(22,22,22,.10);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--body);font:16px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h2,h3,p,ul,ol,figure{margin:0}ul,ol{list-style:none;padding:0}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ---- topo da página e índice ---- */
+.top{padding:clamp(28px,5vw,56px) var(--pad) 20px}
+.top h1{margin:0;font:400 clamp(2rem,5vw,3.2rem)/1.05 Gloock,serif;color:var(--ink);letter-spacing:-.02em}
+.top p{margin-top:.6rem;max-width:64ch;color:var(--muted)}
+.idx{position:sticky;top:12px;z-index:40;display:flex;gap:4px;width:max-content;max-width:calc(100% - 24px);margin:0 auto;padding:5px;overflow-x:auto;border-radius:999px;background:rgba(255,255,255,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 0 0 1px var(--line),0 12px 30px -18px rgba(22,22,22,.25);scrollbar-width:none}
+.idx::-webkit-scrollbar{display:none}
+.idx a{flex:none;min-width:38px;height:34px;display:grid;place-items:center;padding:0 10px;border-radius:999px;font-size:.78rem;font-weight:600;color:var(--ink);transition:background .5s var(--ease),color .5s var(--ease)}
+.idx a:hover{background:var(--ink);color:#fff}
+.opt{scroll-margin-top:70px;border-top:1px solid var(--line)}
+.opt__tag{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .8rem;padding:22px var(--pad) 0;font-size:.8rem;color:var(--muted)}
+.opt__tag b{font:400 1.5rem/1 Gloock,serif;color:var(--accent)}
+.opt__tag strong{font-size:1rem;color:var(--ink)}
+.opt__tag span{flex-basis:100%}
+.sec{padding:clamp(72px,10vw,150px) var(--pad)}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* ---- peças comuns ---- */
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .8rem;border-radius:999px;background:rgba(154,84,87,.08);font-size:.625rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.title{font:400 clamp(2.5rem,5vw,4.1rem)/1.08 "Pinyon Script",cursive;color:var(--accent);letter-spacing:0}
+.lead{max-width:46ch;font-size:1.08rem;line-height:1.8;color:var(--ink)}
+.lead::first-letter{float:left;padding:6px 12px 0 0;font:400 3.9rem/.8 Gloock,serif;color:var(--accent)}
+.txt{font-size:1.02rem;line-height:1.8;color:var(--body)}
+.num{font:400 1.35rem/1 Gloock,serif;color:var(--accent)}
+.st{font:400 1.12rem/1.3 Gloock,serif;color:var(--ink)}
+.price b{display:block;font:400 clamp(2rem,3vw,2.6rem)/1 Gloock,serif;color:var(--ink)}
+.price small{font-size:.82rem;color:var(--muted)}
+/* moldura dupla: casca (fundo + fio) + miolo com raio concêntrico */
+.bezel{padding:var(--shell);border-radius:var(--r);background:rgba(22,22,22,.035);box-shadow:0 0 0 1px var(--line),var(--soft)}
+.core{position:relative;height:100%;overflow:hidden;border-radius:calc(var(--r) - var(--shell));background:#fff;box-shadow:inset 0 1px 1px rgba(255,255,255,.7)}
+/* botão-ilha com a seta dentro de um círculo */
+.cta{display:inline-flex;align-items:center;gap:.9rem;padding:.55rem .55rem .55rem 1.4rem;border-radius:999px;background:var(--ink);color:#fff;font-size:.9rem;font-weight:600;transition:transform .6s var(--ease),background .6s var(--ease)}
+.cta i{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(255,255,255,.12);font-style:normal;transition:transform .6s var(--ease)}
+.cta:hover{background:var(--accent)}
+.cta:hover i{transform:translate(3px,-1px) scale(1.06)}
+.cta:active{transform:scale(.98)}
+.cta--light{background:#fff;color:var(--ink)}.cta--light i{background:rgba(22,22,22,.06)}.cta--light:hover{background:var(--accent-l)}
+.buy{display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem 1.8rem}
+/* vídeo (em pé) */
+.vid{position:relative;overflow:hidden;background:#2a2a2a}
+.vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.snd{position:absolute;left:12px;bottom:12px;z-index:2;display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .8rem;border-radius:999px;background:rgba(255,255,255,.88);color:var(--ink);font-size:.72rem;font-weight:600;backdrop-filter:blur(6px);transition:transform .5s var(--ease)}
+.snd:hover{transform:scale(1.04)}
+/* entrada: sobe pesado, sai do desfoque */
+.rv{opacity:0;transform:translateY(48px);filter:blur(8px);transition:opacity 1s var(--ease),transform 1.1s var(--ease),filter 1s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
+.rv.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none !important;animation:none !important}.rv{opacity:1;transform:none;filter:none}}
+
+/* ===== 01 · Editorial dividido ===== */
+.o1 .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,96px);align-items:center}
+.o1 .title{margin:1.4rem 0 1.6rem}
+.o1 .lead{margin-bottom:2rem}
+.o1 ol li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:1rem 0;border-top:1px solid var(--line)}
+.o1 ol li .num{grid-row:span 2}
+.o1 .buy{margin-top:2.2rem}
+.o1 .bezel{max-width:420px;justify-self:end;width:100%}
+.o1 .vid{aspect-ratio:9/15}
+
+/* ===== 02 · Bento assimétrico ===== */
+.o2 header{max-width:720px;margin:0 auto clamp(40px,6vw,72px);text-align:center;display:grid;justify-items:center;gap:1.2rem}
+.o2 header .lead{text-align:left}
+.o2 .g{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(150px,auto);gap:14px}
+.o2 .v{grid-column:span 5;grid-row:span 3}
+.o2 .s{grid-column:span 7}
+.o2 .s .core{display:grid;grid-template-columns:3rem 1fr;align-items:start;gap:.3rem .8rem;padding:clamp(18px,2.4vw,28px)}
+.o2 .s .num{grid-row:span 2;font-size:2rem}
+.o2 .p{grid-column:span 12}
+.o2 .p .core{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;padding:clamp(20px,3vw,32px);background:var(--cream)}
+.o2 .v .vid{height:100%;min-height:520px}
+
+/* ===== 03 · Vídeo no centro, passos ao redor ===== */
+.o3 header{text-align:center;display:grid;justify-items:center;gap:1.2rem;margin-bottom:clamp(40px,6vw,72px)}
+.o3 header .lead{text-align:left}
+.o3 .g{display:grid;grid-template-columns:1fr minmax(260px,340px) 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.o3 .col{display:grid;gap:clamp(28px,4vw,48px)}
+.o3 .col:first-child{text-align:right}
+.o3 .col:first-child .num{margin-left:auto}
+.o3 .step{display:grid;gap:.4rem}
+.o3 .num{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:rgba(154,84,87,.08);font-size:1.1rem}
+.o3 .vid{aspect-ratio:9/16;border-radius:999px 999px calc(var(--r) - var(--shell)) calc(var(--r) - var(--shell))}
+.o3 .bezel{border-radius:999px 999px var(--r) var(--r)}
+.o3 .core{border-radius:999px 999px calc(var(--r) - var(--shell)) calc(var(--r) - var(--shell))}
+.o3 .buy{justify-content:center;margin-top:clamp(40px,6vw,64px)}
+
+/* ===== 04 · Cascata em camadas ===== */
+.o4 .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.o4 .title{margin:1.4rem 0 1.6rem}
+.o4 .stage{position:relative;min-height:640px}
+.o4 .stage .bezel{position:absolute}
+.o4 .v{width:58%;top:0;left:4%;rotate:-2deg}
+.o4 .v .vid{aspect-ratio:9/15}
+.o4 .c{width:52%;right:0;padding:var(--shell)}
+.o4 .c .core{padding:18px 20px}
+.o4 .c1{top:6%;rotate:3deg}
+.o4 .c2{top:32%;rotate:-1.5deg}
+.o4 .c3{top:58%;rotate:2deg}
+.o4 .c4{top:82%;left:22%;right:auto;rotate:-2.5deg}
+.o4 .c .num{display:block;margin-bottom:.3rem}
+.o4 .buy{margin-top:2rem}
+
+/* ===== 05 · Linha do tempo horizontal ===== */
+.o5 .head{display:grid;grid-template-columns:1fr minmax(240px,320px);gap:clamp(32px,6vw,96px);align-items:center}
+.o5 .title{margin:1.4rem 0 1.6rem}
+.o5 .vid{aspect-ratio:9/14}
+.o5 .tl{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,3vw,40px);margin-top:clamp(56px,8vw,96px);padding-top:2.6rem}
+.o5 .tl::before{content:"";position:absolute;left:0;right:0;top:.55rem;height:1px;background:var(--line)}
+.o5 .tl::after{content:"";position:absolute;left:0;right:0;top:.55rem;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 2.2s var(--ease)}
+.o5 .tl.in::after{transform:scaleX(1)}
+.o5 .tl li{position:relative}
+.o5 .tl li::before{content:"";position:absolute;top:-2.45rem;left:0;width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--accent);transition:background .6s var(--ease) calc(var(--i) * 450ms)}
+.o5 .tl.in li::before{background:var(--accent)}
+.o5 .tl .num{display:block;margin-bottom:.5rem}
+.o5 .buy{margin-top:clamp(40px,6vw,64px)}
+
+/* ===== 06 · Vídeo fixo enquanto os passos rolam ===== */
+.o6 .wrap{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:clamp(32px,6vw,96px)}
+.o6 .pin{position:sticky;top:90px;align-self:start}
+.o6 .vid{aspect-ratio:9/15}
+.o6 .title{margin:1.4rem 0 1.6rem}
+.o6 .step{display:grid;grid-template-columns:3.2rem 1fr;gap:.3rem .8rem;min-height:38vh;align-content:center;border-top:1px solid var(--line);opacity:.28;transition:opacity .8s var(--ease)}
+.o6 .step.cur{opacity:1}
+.o6 .step .num{grid-row:span 2;font-size:2.2rem}
+.o6 .buy{margin-top:2rem}
+
+/* ===== 07 · Abas por etapa ===== */
+.o7 .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:center}
+.o7 .title{margin:1.4rem 0 1.6rem}
+.o7 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin:2rem 0 1.2rem;padding:5px;width:max-content;max-width:100%;border-radius:999px;background:var(--sand)}
+.o7 .tabs button{padding:.55rem 1rem;border-radius:999px;font-size:.82rem;font-weight:600;color:var(--muted);transition:background .6s var(--ease),color .6s var(--ease),box-shadow .6s var(--ease)}
+.o7 .tabs button[aria-selected=true]{background:#fff;color:var(--ink);box-shadow:0 6px 18px -10px rgba(22,22,22,.3)}
+.o7 .panel{min-height:9rem}
+.o7 .panel .st{font-size:1.6rem;margin-bottom:.6rem}
+.o7 .panel>*{animation:pin .8s var(--ease)}
+@keyframes pin{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.o7 .bezel{max-width:420px;justify-self:end;width:100%}
+.o7 .vid{aspect-ratio:9/15}
+.o7 .buy{margin-top:1.6rem}
+
+/* ===== 08 · Fio a fio × shadow ===== */
+.o8 header{text-align:center;display:grid;justify-items:center;gap:1.2rem;margin-bottom:clamp(40px,6vw,72px)}
+.o8 header .lead{text-align:left}
+.o8 .g{display:grid;grid-template-columns:1fr minmax(240px,320px) 1fr;gap:clamp(16px,3vw,28px);align-items:stretch}
+.o8 .t .core{display:flex;flex-direction:column;gap:.9rem;padding:clamp(22px,3vw,36px);background:var(--cream)}
+.o8 .t .st{font-size:1.8rem}
+.o8 .t .dur{margin-top:auto;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.o8 .t .dur b{display:block;font:400 1.5rem Gloock,serif;color:var(--accent)}
+.o8 .vid{height:100%;min-height:460px}
+.o8 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,3vw,32px);margin-top:clamp(40px,6vw,64px)}
+.o8 .steps .num{display:block;margin-bottom:.4rem}
+.o8 .buy{justify-content:center;margin-top:clamp(36px,5vw,56px)}
+
+/* ===== 09 · Ficha escura premium ===== */
+.o9{background:var(--sand)}
+.o9 .bezel{--r:2.4rem;background:rgba(22,22,22,.06)}
+.o9 .core{display:grid;grid-template-columns:1fr minmax(240px,360px);gap:clamp(32px,5vw,72px);align-items:center;padding:clamp(28px,5vw,72px);background:var(--ink);color:rgba(255,255,255,.78);box-shadow:inset 0 1px 1px rgba(255,255,255,.08)}
+.o9 .eyebrow{background:rgba(232,198,198,.12);color:var(--accent-l)}
+.o9 .title{color:var(--accent-l);margin:1.4rem 0 1.6rem}
+.o9 .lead{color:#fff}.o9 .lead::first-letter{color:var(--accent-l)}
+.o9 ol li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem .6rem;padding:1rem 0;border-top:1px solid rgba(255,255,255,.1)}
+.o9 ol li .num{grid-row:span 2;color:var(--accent-l)}
+.o9 .st{color:#fff}.o9 .txt{color:rgba(255,255,255,.7)}
+.o9 .price b{color:#fff}.o9 .price small{color:rgba(255,255,255,.6)}
+.o9 .buy{margin-top:2rem}
+.o9 .vbox{padding:6px;border-radius:1.8rem;background:rgba(255,255,255,.06);box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+.o9 .vid{aspect-ratio:9/15;border-radius:calc(1.8rem - 6px)}
+
+/* ===== 10 · Pergunta gigante ===== */
+.o10{text-align:center}
+.o10 .title{font-size:clamp(3rem,8vw,6.4rem);line-height:1.02;max-width:12ch;margin:1.6rem auto 2rem}
+.o10 .lead{margin:0 auto;text-align:left}
+.o10 .bezel{width:min(320px,80%);margin:clamp(40px,6vw,72px) auto;border-radius:999px}
+.o10 .vid{aspect-ratio:9/16;border-radius:999px}
+.o10 .core{border-radius:999px}
+.o10 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,3vw,40px);text-align:left}
+.o10 .steps li{padding-top:1rem;border-top:1px solid var(--line)}
+.o10 .steps .num{display:block;margin-bottom:.4rem}
+.o10 .buy{justify-content:center;margin-top:clamp(40px,6vw,64px)}
+
+/* ===== celular (abaixo de 768px): tudo em uma coluna, sem giros ===== */
+@media (max-width:767px){
+  .o1 .wrap,.o4 .wrap,.o5 .head,.o6 .wrap,.o7 .wrap,.o9 .core{grid-template-columns:minmax(0,1fr)}
+  .o1 .bezel,.o7 .bezel{justify-self:stretch;max-width:none}
+  .o1 .vid,.o4 .v .vid,.o6 .vid,.o7 .vid,.o9 .vid,.o5 .vid{aspect-ratio:4/5}
+  .o2 .g{grid-template-columns:minmax(0,1fr)}.o2 .v,.o2 .s,.o2 .p{grid-column:1/-1;grid-row:auto}.o2 .v .vid{min-height:0;aspect-ratio:4/5}
+  .o3 .g,.o8 .g{grid-template-columns:minmax(0,1fr)}.o3 .col:first-child{text-align:left}.o3 .col:first-child .num{margin-left:0}
+  .o3 .bezel{order:-1;width:min(300px,80%);margin:0 auto}
+  .o4 .stage{min-height:0;display:grid;gap:14px}.o4 .stage .bezel{position:static;width:100%;rotate:0deg}
+  .o5 .tl,.o8 .steps,.o10 .steps{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .o5 .tl{gap:28px 16px}.o5 .tl::before,.o5 .tl::after{display:none}.o5 .tl li::before{position:static;display:block;margin-bottom:.8rem}
+  .o6 .pin{position:static}.o6 .step{min-height:0;padding:1.2rem 0;opacity:1}
+  .o8 .vid{min-height:0;aspect-ratio:4/5}
+  .o9 .vbox{order:-1}
+}
+@media (max-width:420px){.o5 .tl,.o8 .steps,.o10 .steps{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>10 opções · “Você sabe como funciona a micropigmentação?”</h1>
+  <p>Mesmo conteúdo e mesmas fontes da “Conheça o studio” (título cursivo, letra capitular, números em Gloock). Muda o layout e a estética. Os vídeos tocam sem som quando aparecem e pausam quando saem. Toque em “Ativar som” para ouvir.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+
+<script>
+/* ---- conteúdo (só o que o site já informa) ---- */
+const VIDEO = '../assets/video/servico-micro.mp4';
+const WA = 'https://wa.me/5581992901559?text=' + encodeURIComponent('Oi Thainá, quero agendar uma avaliação para micropigmentação');
+const TITLE = 'Você sabe como funciona a micropigmentação?';
+const LEAD = 'É a técnica que pigmenta a pele para desenhar a sobrancelha, pra você acordar com ela pronta por meses. No vídeo, eu explico. Aqui, o passo a passo:';
+const STEPS = [
+  ['Avaliação', 'Olho seu rosto, sua expressão e sua rotina e digo com sinceridade se a micro faz sentido pra você.'],
+  ['Escolha da técnica', 'Fio a fio simula fios naturais e dura de 6 meses a 1 ano. Shadow tem efeito sombreado e dura de 8 a 18 meses.'],
+  ['Desenho e pigmentação', 'O desenho é feito pro formato do seu rosto antes de pigmentar.'],
+  ['Retoque e acompanhamento', 'Já estão inclusos, junto com as orientações de cuidados depois.'],
+];
+const n = i => String(i + 1).padStart(2, '0');
+const eyebrow = '<span class="eyebrow">Micropigmentação</span>';
+const title = (extra = '') => `<h2 class="title ${extra}">${TITLE}</h2>`;
+const lead = '<p class="lead">' + LEAD + '</p>';
+const vid = (cls = '') => `<figure class="vid ${cls}"><video data-src="${VIDEO}" muted loop playsinline preload="none" aria-label="Thainá explicando como funciona a micropigmentação"></video><button class="snd" type="button">Ativar som</button></figure>`;
+const bezelVid = (cls = '', vcls = '') => `<div class="bezel ${cls}"><div class="core">${vid(vcls)}</div></div>`;
+const cta = (light = false) => `<a class="cta${light ? ' cta--light' : ''}" href="${WA}" target="_blank" rel="noopener">Agendar avaliação<i aria-hidden="true">↗</i></a>`;
+const buy = (light = false) => `<div class="buy rv"><p class="price"><b>R$ 670</b><small>ou 10x de R$ 67 · retoque incluso</small></p>${cta(light)}</div>`;
+const stepList = () => `<ol>${STEPS.map((s, i) => `<li class="rv" style="--i:${i}"><span class="num">${n(i)}</span><span class="st">${s[0]}</span><span class="txt">${s[1]}</span></li>`).join('')}</ol>`;
+const stepGrid = cls => `<ol class="${cls}">${STEPS.map((s, i) => `<li class="rv" style="--i:${i}"><span class="num">${n(i)}</span><p class="st">${s[0]}</p><p class="txt">${s[1]}</p></li>`).join('')}</ol>`;
+
+/* ---- as 10 opções: [nome, descrição, html] ---- */
+const O = [
+ ['Editorial dividido', 'texto grande à esquerda com passos numerados; vídeo numa moldura dupla à direita',
+  `<div class="sec o1"><div class="wrap"><div><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div>${stepList()}${buy()}</div><div class="rv" style="--i:2;justify-self:end;width:100%;max-width:420px">${bezelVid()}</div></div></div>`],
+ ['Bento assimétrico', 'vídeo alto num bloco; cada passo é um cartão; preço numa faixa creme embaixo',
+  `<div class="sec o2"><div class="wrap"><header><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div></header><div class="g"><div class="bezel v rv"><div class="core">${vid()}</div></div>${STEPS.map((s, i) => `<div class="bezel s rv" style="--i:${i + 1}"><div class="core"><span class="num">${n(i)}</span><span class="st">${s[0]}</span><span class="txt">${s[1]}</span></div></div>`).join('')}<div class="bezel p rv" style="--i:5"><div class="core"><p class="price"><b>R$ 670</b><small>ou 10x de R$ 67 · retoque incluso</small></p>${cta()}</div></div></div></div></div>`],
+ ['Vídeo no centro', 'vídeo em formato de arco no meio, dois passos de cada lado',
+  `<div class="sec o3"><div class="wrap"><header><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div></header><div class="g"><div class="col">${STEPS.slice(0, 2).map((s, i) => `<div class="step rv" style="--i:${i}"><span class="num">${n(i)}</span><p class="st">${s[0]}</p><p class="txt">${s[1]}</p></div>`).join('')}</div><div class="rv">${bezelVid()}</div><div class="col">${STEPS.slice(2).map((s, i) => `<div class="step rv" style="--i:${i + 2}"><span class="num">${n(i + 2)}</span><p class="st">${s[0]}</p><p class="txt">${s[1]}</p></div>`).join('')}</div></div>${buy()}</div></div>`],
+ ['Cascata em camadas', 'vídeo e cartões de passos empilhados com leve inclinação, como fotos sobre a mesa (no celular, sem inclinação)',
+  `<div class="sec o4"><div class="wrap"><div><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div>${buy()}</div><div class="stage"><div class="bezel v rv"><div class="core">${vid()}</div></div>${STEPS.map((s, i) => `<div class="bezel c c${i + 1} rv" style="--i:${i + 1}"><div class="core"><span class="num">${n(i)}</span><p class="st">${s[0]}</p><p class="txt">${s[1]}</p></div></div>`).join('')}</div></div></div>`],
+ ['Linha do tempo', 'texto e vídeo no topo; os 4 passos numa linha que se desenha e acende ponto a ponto',
+  `<div class="sec o5"><div class="wrap"><div class="head"><div><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div></div><div class="rv">${bezelVid()}</div></div>${stepGrid('tl rv')}${buy()}</div></div>`],
+ ['Vídeo fixo', 'o vídeo fica parado na tela enquanto os passos rolam ao lado; o passo em foco acende',
+  `<div class="sec o6"><div class="wrap"><div class="pin rv">${bezelVid()}</div><div><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div>${STEPS.map((s, i) => `<div class="step${i ? '' : ' cur'}"><span class="num">${n(i)}</span><span class="st">${s[0]}</span><span class="txt">${s[1]}</span></div>`).join('')}${buy()}</div></div></div>`],
+ ['Abas por etapa', 'um seletor em pílula troca a etapa com transição suave; vídeo à direita',
+  `<div class="sec o7"><div class="wrap"><div><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div><div class="tabs rv" role="tablist">${STEPS.map((s, i) => `<button role="tab" aria-selected="${!i}" data-i="${i}">${n(i)} · ${s[0].split(' ')[0]}</button>`).join('')}</div><div class="panel" aria-live="polite"></div>${buy()}</div><div class="rv" style="justify-self:end;width:100%;max-width:420px">${bezelVid()}</div></div></div>`],
+ ['Fio a fio × shadow', 'as duas técnicas em cartões lado a lado, vídeo no meio; passos resumidos embaixo',
+  `<div class="sec o8"><div class="wrap"><header><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div></header><div class="g"><div class="bezel t rv"><div class="core"><span class="eyebrow">Natural</span><p class="st">Fio a fio</p><p class="txt">Simula fios naturais, com resultado delicado e realista. Ideal pra preencher falhas.</p><p class="dur"><b>6 meses a 1 ano</b>de duração</p></div></div><div class="rv" style="--i:1">${bezelVid()}</div><div class="bezel t rv" style="--i:2"><div class="core"><span class="eyebrow">Efeito maquiagem</span><p class="st">Shadow</p><p class="txt">Efeito sombreado, parecido com henna, pra quem quer a sobrancelha pronta todo dia.</p><p class="dur"><b>8 a 18 meses</b>de duração</p></div></div></div>${stepGrid('steps')}${buy()}</div></div>`],
+ ['Ficha escura premium', 'tudo dentro de um cartão grafite com moldura dupla, como um convite; vídeo à direita',
+  `<div class="sec o9"><div class="wrap"><div class="bezel rv"><div class="core"><div><span class="eyebrow">Micropigmentação</span>${title()}${lead}${stepList()}${buy(true)}</div><div class="vbox">${vid()}</div></div></div></div></div>`],
+ ['Pergunta gigante', 'a pergunta em letra cursiva enorme no centro, vídeo em cápsula e os 4 passos em linha',
+  `<div class="sec o10"><div class="wrap"><div class="rv">${eyebrow}</div><div class="rv">${title()}</div><div class="rv">${lead}</div><div class="rv">${bezelVid()}</div>${stepGrid('steps')}${buy()}</div></div>`],
+];
+
+/* ---- monta a página ---- */
+document.getElementById('idx').innerHTML = O.map((o, i) => `<a href="#o${i + 1}">${n(i)}</a>`).join('');
+document.getElementById('opts').innerHTML = O.map((o, i) => `<section class="opt" id="o${i + 1}"><div class="opt__tag"><b>${n(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div>${o[2]}</section>`).join('');
+
+/* ---- entrada suave ao rolar ---- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ---- vídeos: só baixam perto da tela, tocam quando aparecem e pausam quando saem ---- */
+const vids = [...document.querySelectorAll('.vid video')];
+const near = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const v = e.target; if (!v.src) { v.src = v.dataset.src; v.preload = 'auto'; } near.unobserve(v); } }), { rootMargin: '400px 0px' });
+const vis = new IntersectionObserver(es => es.forEach(e => { const v = e.target; e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }), { threshold: .4 });
+vids.forEach(v => { near.observe(v); vis.observe(v); });
+document.querySelectorAll('.snd').forEach(b => b.addEventListener('click', () => {
+  const v = b.parentElement.querySelector('video'), on = v.muted;
+  vids.forEach(o => { o.muted = true; o.parentElement.querySelector('.snd').textContent = 'Ativar som'; });
+  if (on) { v.muted = false; v.currentTime = 0; v.play().catch(() => {}); b.textContent = 'Som ligado'; }
+}));
+
+/* 06 · passo em foco acende */
+(() => { const steps = [...document.querySelectorAll('.o6 .step')];
+  const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) steps.forEach(s => s.classList.toggle('cur', s === e.target)); }), { rootMargin: '-45% 0px -45% 0px' });
+  steps.forEach(s => o.observe(s)); })();
+
+/* 07 · abas */
+(() => { const box = document.querySelector('.o7'), tabs = [...box.querySelectorAll('[role=tab]')], panel = box.querySelector('.panel');
+  const go = i => { tabs.forEach((t, k) => t.setAttribute('aria-selected', k === i)); panel.innerHTML = `<p class="st">${n(i)} · ${STEPS[i][0]}</p><p class="txt">${STEPS[i][1]}</p>`; };
+  tabs.forEach((t, i) => t.addEventListener('click', () => go(i))); go(0); })();
+</script>
+</body>
+</html>
