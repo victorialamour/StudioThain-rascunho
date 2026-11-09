@@ -957,3 +957,26 @@ main>.check{position:relative;z-index:5;padding:0 var(--pad);margin-top:-38px}
    mantido no centro quando o celular corta o vídeo horizontal */
 .hero__video--modelo{background:#9C9C9C;object-position:50% 30%}
 @media (max-width:760px){.hero__video--modelo{object-position:47.5% 30%}}
+
+/* ---- Serviços · "menu de spa" (opção 11 da página de comparação) ----
+   Cartão branco com moldura fina sobre faixa creme, centralizado, como um
+   cardápio impresso. Cinzel (caixa alta clássica) nos nomes e preços,
+   Raleway nas descrições; pontilhado liga o nome ao preço. */
+main>.services{--bleed:var(--sand);background:var(--sand)}
+.menu-card{max-width:720px;margin:0 auto;padding:clamp(32px,5vw,64px) clamp(22px,5vw,64px);background:#fff;outline:1px solid var(--ink);outline-offset:-10px;text-align:center;font-family:Raleway,var(--f-sans)}
+.menu__orn{font:400 .7rem Cinzel,serif;letter-spacing:.4em;color:var(--accent)}
+.menu__title{margin:.6rem 0 clamp(26px,4vw,42px);font:400 clamp(1.8rem,4vw,2.8rem)/1.1 Cinzel,serif;letter-spacing:.12em;color:var(--ink)}
+.menu__list{display:grid;gap:1.35rem;text-align:left}
+.menu__row{display:flex;align-items:baseline;gap:.6rem;margin:0;font:500 clamp(.92rem,1.6vw,1.08rem)/1.3 Cinzel,serif;letter-spacing:.07em;color:var(--ink)}
+.menu__row::after{content:"";order:2;flex:1;min-width:1.5rem;border-bottom:1px dotted #B9B0AA;transform:translateY(-4px)}
+.menu__row b{order:3;font-weight:500;white-space:nowrap}
+.menu__sub{margin:.2rem 0 0;font:italic 400 .9rem/1.5 Raleway,var(--f-sans);color:var(--muted)}
+.menu__cta{display:flex;flex-direction:column;align-items:center;gap:.9rem;margin-top:clamp(26px,4vw,40px)}
+.menu__cta .pill{border-radius:0;font-family:Cinzel,serif;font-weight:500;letter-spacing:.14em}
+@media (max-width:480px){.menu-card{outline-offset:-7px}.menu__row{letter-spacing:.04em}}
+
+/* ---- Destaque da micropigmentação agora com o vídeo da Thainá ----
+   O vídeo é em pé: no computador ocupa a coluna da foto inteira; no
+   celular fica em 4:5 com o rosto no terço de cima. */
+.spot__photo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;background:var(--sand)}
+@media (max-width:900px){.spot__photo{aspect-ratio:4/5}}
