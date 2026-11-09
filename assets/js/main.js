@@ -454,7 +454,8 @@ function initBooking () {
     if (time.value === 'tarde' && h[1] <= NOON) return say('Nesse dia o studio fecha às ' + fmtH(h[1]) + '. Escolha a manhã.', true);
     return say('Eu confirmo o horário com você pelo WhatsApp.');
   };
-  [svc, date, time].forEach(el => el.addEventListener('change', check));
+  // como no Espaço Fancy: a barra fica branca depois que a pessoa mexe nela
+  [svc, date, time].forEach(el => el.addEventListener('change', () => { form.classList.add('touched'); check(); }));
   check();
 
   form.addEventListener('submit', e => {

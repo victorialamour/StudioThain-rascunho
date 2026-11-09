@@ -103,30 +103,30 @@
 <main id="main">
 
 <!-- ═══════════════ 02 · CONSULTA DE HORÁRIO ═══════════════ -->
-<!-- Barra logo abaixo da hero (ideia do Espaço Fancy). Não marca nada sozinha:
-     confere o horário do studio e abre o WhatsApp com a mensagem pronta
-     (main.js · initBooking). Substituiu a faixa animada com os serviços. -->
-<section class="bookbar" id="horario" aria-label="Consultar horário">
-  <p class="bookbar__title">Consultar horário</p>
-  <form class="book" id="book" novalidate>
-      <div class="book__f book__f--svc"><label for="bkSvc">Serviço</label>
-        <select id="bkSvc">
-          <option value="uma avaliação">Ainda não sei · quero uma avaliação</option>
-          <option>Micropigmentação</option>
-          <option>Brow Lamination</option>
-          <option>Lash Lifting</option>
-          <option>Design de sobrancelhas</option>
-          <option>Design com henna</option>
-          <option>Design com tintura</option>
-          <option>Descoloração + coloração</option>
-          <option>Spa labial</option>
-        </select></div>
-      <div class="book__f"><label for="bkDate">Dia</label><input id="bkDate" type="date" required></div>
-      <div class="book__f"><label for="bkTime">Período</label>
-        <select id="bkTime"><option value="manhã">Manhã</option><option value="tarde">Tarde</option></select></div>
-      <button class="pill pill--dark book__go" type="submit" id="bkGo">Consultar horário</button>
-      <p class="book__msg" id="bkMsg" role="status" aria-live="polite"></p>
-    </form>
+<!-- Mesmo desenho da barra do Espaço Fancy: pílula de vidro escuro encaixada
+     metade sobre o vídeo da hero; fica branca quando a pessoa começa a
+     preencher. Não marca nada sozinha: confere o horário do studio e abre o
+     WhatsApp com a mensagem pronta (main.js · initBooking). -->
+<section class="check" id="horario" aria-label="Consultar horário">
+  <form class="check__form" id="book" novalidate>
+    <div class="check__f"><label for="bkDate">Data</label><input id="bkDate" type="date" required></div>
+    <div class="check__f"><label for="bkSvc">Serviço</label>
+      <select id="bkSvc">
+        <option value="uma avaliação">Quero uma avaliação</option>
+        <option>Micropigmentação</option>
+        <option>Brow Lamination</option>
+        <option>Lash Lifting</option>
+        <option>Design de sobrancelhas</option>
+        <option>Design com henna</option>
+        <option>Design com tintura</option>
+        <option>Descoloração + coloração</option>
+        <option>Spa labial</option>
+      </select></div>
+    <div class="check__f"><label for="bkTime">Período</label>
+      <select id="bkTime"><option value="manhã">Manhã</option><option value="tarde">Tarde</option></select></div>
+    <button class="check__go" type="submit" id="bkGo">Consultar</button>
+  </form>
+  <p class="check__msg" id="bkMsg" role="status" aria-live="polite"></p>
 </section>
 
 <!-- ═══════════════ 03 · SERVIÇOS · lista + mídia ═══════════════ -->
