@@ -779,3 +779,171 @@ main>.skew:has(.skew__word){--bleed:var(--rose);background:var(--rose);border:0}
 .hours__list{display:grid;grid-template-columns:auto 1fr;gap:.25rem 1.2rem;margin:0;font-size:.92rem}
 .hours__list dt{color:var(--body)}
 .hours__list dd{margin:0;font-weight:600;color:var(--ink)}
+
+/* ==========================================================================
+   VISUAL CLEAN · branco + um único tom (rosa queimado)
+   --------------------------------------------------------------------------
+   Regra: o fundo é branco; quem dá ritmo é o espaço e o fio fino, não a cor.
+   - Branco #FFFFFF em quase tudo.
+   - Grafite #161616 para texto forte, botões e dois blocos escuros
+     (cursos e chamada final + rodapé), que funcionam como "capítulos".
+   - Um único tom de destaque: rosa queimado #9A5457 (versão mais sóbria do
+     rosa do logo), usado só em palavras-chave dos títulos, rótulos e detalhes.
+   - Um cinza quente quase branco #F6F4F2 apenas atrás de fotos e em 2 cartões.
+   Para voltar ao visual anterior, apague este bloco inteiro.
+   ========================================================================== */
+:root{
+  --paper:#FFFFFF; --sand:#F6F4F2; --line:#ECE7E3; --rose-tint:#F6F4F2;
+  --ink:#161616; --body:#4A4A4A; --muted:#6F6F6F;
+  --accent:#9A5457;                                   /* o tom da marca (5,9:1 no branco) */
+  --rose:var(--accent); --rose-deep:var(--accent); --rose-light:#E8C6C6;
+  --olive:#161616; --olive-deep:#161616;
+  --brand-cream:#FFFFFF; --brand-rose:#E8C6C6; --brand-olive:#161616;
+}
+body{background:#fff;color:var(--body)}
+
+/* uma família de serifa só (Gloock), sem a Young Serif misturada */
+.how__quote,.how__punch,.how__sign,.about__hi,.about__name{font-family:var(--f-brand)}
+
+/* faixas coloridas viram branco; seções separadas por fio fino */
+main>.skew:has(.skew__word){--bleed:#fff;background:#fff;border-block:1px solid var(--line)}
+.skew__word{color:var(--ink)}
+.skew__word svg{fill:var(--accent)}
+.services,.faq{--bleed:#fff;background:#fff}
+.services .svc-stage{background:#fff;border:1px solid var(--line)}
+.faq{border-top:1px solid var(--line)}
+
+/* cartões: superfície quase branca, sem sombra */
+.how__card,.spot__card{background:var(--sand)}
+.band__item{background:#fff;border:1px solid var(--line);box-shadow:none}
+.band__item--todo{border:1px dashed #D9CFC9}
+.gslide{border:1px solid var(--line)}
+.gslide--cover,.gslide--end{border:0}
+.gslide small{color:var(--muted)}
+
+/* botões: grafite, com o tom no hover */
+.pill--dark,.price__cta{background:var(--ink);color:#fff}
+.pill--dark:hover,.price__cta:hover{background:var(--accent);color:#fff}
+.pill--line{border-color:var(--ink)}
+.wa{background:var(--ink)}
+.wa:hover{background:var(--accent)}
+.shot__tag--after{background:var(--ink)}
+.about__roles li{border-color:var(--line);color:var(--ink)}
+
+/* blocos escuros: cursos, chamada final, último slide do guia e rodapé */
+.courses,.visit__cta,.gslide--end{background:var(--ink)}
+.courses .h2,.price__name{color:#fff}
+.courses .count__n,.courses .h2 b{color:var(--rose-light)}
+.price__card{background:#fff}
+.price__card .price__name{color:var(--ink)}
+.price__tabs{background:var(--sand)}
+.alumni__video{background:#2a2a2a}
+.foot{background:var(--ink);box-shadow:0 0 0 100vmax var(--ink)}
+.foot__about,.foot__bottom,.foot__bottom a{color:rgba(255,255,255,.66)}
+.foot .circle--dark{background:#fff;border-color:#fff;color:var(--ink)}
+.foot .circle:hover{background:var(--rose-light);border-color:var(--rose-light);color:var(--ink)}
+.book label{color:rgba(255,255,255,.7)}
+.book input,.book select{background-color:#fff}
+.gslide--end p{color:rgba(255,255,255,.78)}
+
+/* horário */
+.hours__now{background:var(--sand);color:var(--ink)}
+.hours__now.is-off{background:var(--sand);color:var(--accent)}
+.visit__place{border-color:var(--line)}
+
+/* ==========================================================================
+   TIPOGRAFIA · uma escala só, 7 níveis
+   --------------------------------------------------------------------------
+   Gloock (serifa do logo) só para títulos e números; Plus Jakarta Sans para
+   todo o resto. Cada texto do site cai em um destes níveis:
+     XL     nome "eu sou a Thainá", contador de alunas
+     H2     título de cada seção
+     H3     nome do serviço, do curso, capa e fim do guia, preços
+     H4     subtítulos em serifa (frases de apoio, itens da lista)
+     LEAD   texto de abertura de seção
+     BODY   texto corrido
+     SM     legendas, listas, detalhes
+     LABEL  rótulos em caixa alta (sempre 11px, espaçados, no tom da marca)
+   ========================================================================== */
+:root{
+  --fs-xl:clamp(2.9rem,1.7rem + 4.6vw,5.2rem);
+  --fs-h2:clamp(2.2rem,1.45rem + 3vw,3.5rem);
+  --fs-h3:clamp(1.6rem,1.25rem + 1.4vw,2.25rem);
+  --fs-h4:clamp(1.2rem,1.08rem + .5vw,1.45rem);
+  --fs-lead:clamp(1.06rem,1rem + .3vw,1.2rem);
+  --fs-body:1rem;
+  --fs-sm:.875rem;
+  --fs-label:.6875rem;
+  --sec:clamp(5rem,9vw,8.5rem);
+}
+body{font-size:var(--fs-body);line-height:1.7}
+
+/* XL */
+.about__name,.count__n{font-family:var(--f-brand);font-size:var(--fs-xl);line-height:1;letter-spacing:-.025em;font-weight:400}
+/* H2 */
+.h2,.how__quote{font-family:var(--f-brand);font-size:var(--fs-h2);line-height:1.06;letter-spacing:-.02em;font-weight:400;color:var(--ink)}
+.h2 b{color:var(--accent)}
+.courses .h2 b,.h2--light b{color:var(--rose-light)}
+.h2--light,.courses .h2{color:#fff}
+.how__quote{max-width:15ch}
+/* H3 */
+.svc-panel__info h3,.price__name,.gslide--cover b,.gslide--end b,.svc-price b,.spot__price b,.price__value b,.gscore__n{font-family:var(--f-brand);font-size:var(--fs-h3);line-height:1.1;letter-spacing:-.015em;font-weight:400}
+.svc-price b,.spot__price b,.price__value b,.gscore__n{font-size:clamp(2rem,1.55rem + 1.8vw,2.75rem);line-height:1}
+/* H4 */
+.gslide b,.step h3,.svc,.how__punch,.about__hi,.how__sign,.band__item p,.foot__brand,.price__brand{font-family:var(--f-brand);font-size:var(--fs-h4);line-height:1.3;letter-spacing:-.005em;font-weight:400}
+.how__punch,.about__hi{color:var(--accent)}
+/* LEAD */
+.about__lead,.courses__manifesto,.guide__text p:not(.tag),.spot__body>p:not(.tag),.visit__cta-body>p{font-size:var(--fs-lead);line-height:1.6}
+.about__lead{font-weight:500;color:var(--ink)}
+/* BODY */
+.how__text p,.about .about__bio p,.svc-panel__info p:not(.tag),.qa p,.price__desc,.gslide--end p,.rev p{font-size:var(--fs-body);line-height:1.7}
+:where(.how__text,.about__bio,.svc-panel__info,.guide__text,.spot__body,.qa) p{max-width:60ch;text-wrap:pretty}
+/* SM */
+.gslide p,.svc-meta dd,.spot__facts span,.pillars span,.price__notes dd,.price__lists li,.hours__list,.gscore__t,.book__msg,.courses__demo figcaption,.foot__about,.band__item figcaption,.rev figcaption b,.price__side>p:not(.price__brand){font-size:var(--fs-sm);line-height:1.55}
+.foot__bottom,.price__spots,.svc-price small,.spot__price small,.price__value span,.gcar__count,.hours__now{font-size:.8125rem}
+/* LABEL */
+.tag,.eyebrow,.band__label,.gslide__kicker,.svc-meta dt,.spot__facts b,.book label,.price__lists h4,.shot__tag,.step__n,.svc em,.about__roles li,.skew__word{font-family:var(--f-sans);font-size:var(--fs-label);font-weight:600;letter-spacing:.18em;text-transform:uppercase;line-height:1.5}
+.tag,.eyebrow,.band__label,.gslide__kicker,.spot__facts b,.svc-meta dt,.step__n{color:var(--accent)}
+.gslide--cover .gslide__kicker,.courses .eyebrow,.tag--light{color:var(--rose-light)}
+.skew__word{font-size:.75rem;letter-spacing:.22em}
+.band__item figcaption{letter-spacing:.06em;text-transform:none;font-weight:500}
+
+/* perguntas do FAQ: peso médio, sem serifa, para ler rápido */
+.qa summary{font-size:var(--fs-lead);font-weight:500;color:var(--ink);line-height:1.4}
+
+/* botões: texto menor e firme, com um pouco de ar entre as letras */
+.pill,.price__cta{font-size:.875rem;font-weight:600;letter-spacing:.02em}
+.pill--lg{font-size:.9375rem}
+
+/* respiro entre título e conteúdo */
+.sec-head{margin-bottom:clamp(2.2rem,4vw,3.4rem)}
+.tag+.h2,.eyebrow+.h2{margin-top:.2rem}
+
+/* ---- Barra "Consultar horário" logo abaixo da hero (como no Espaço Fancy) ----
+   Computador: tudo numa linha. Celular: serviço em cima, dia + período lado a
+   lado e o botão embaixo, na largura toda. */
+main>.bookbar{padding-top:clamp(1.6rem,3vw,2.4rem);padding-bottom:clamp(1.6rem,3vw,2.4rem);border-bottom:1px solid var(--line)}
+.bookbar{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:1rem clamp(1.5rem,4vw,3rem)}
+.bookbar__title{font-family:var(--f-brand);font-size:var(--fs-h4);line-height:1.2;color:var(--ink);padding-top:1.55rem;white-space:nowrap}
+.bookbar .book{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,.8fr) auto;align-items:end;gap:.9rem;max-width:none;margin:0}
+.bookbar .book__f--svc{grid-column:auto}
+.bookbar .book label{color:var(--muted)}
+.bookbar .book input,.bookbar .book select{height:48px;border:1px solid var(--line);background-color:#fff}
+.bookbar .book input:hover,.bookbar .book select:hover{border-color:#CFC7C1}
+.bookbar .book input:focus-visible,.bookbar .book select:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.bookbar .book__go{grid-column:auto;width:auto;min-height:48px;margin:0;padding:0 1.6rem}
+.bookbar .book__msg{grid-column:1/-1;min-height:1.3em;margin-top:-.2rem;font-size:.8125rem;color:var(--muted)}
+.bookbar .book__msg.is-err{color:var(--accent)}
+@media (max-width:900px){
+  .bookbar{grid-template-columns:minmax(0,1fr)}
+  .bookbar__title{padding-top:0}
+  .bookbar .book{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .bookbar .book__f--svc,.bookbar .book__go{grid-column:1/-1}
+  .bookbar .book__go{width:100%;justify-content:center}
+}
+
+/* cursos: as variáveis de cor ficam presas na própria seção; troca aqui */
+main>.courses{--brand-olive:#161616;--brand-cream:#FFFFFF;--brand-rose:#E8C6C6;background:var(--ink)}
+/* campos com 16px: no iPhone, letra menor faz a tela dar zoom ao tocar */
+.book input,.book select{font-size:1rem}
+.foot{color:#fff}
