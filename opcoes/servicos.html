@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>15 opções · Seção de Serviços · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Montserrat:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Manrope:wght@400;500;600&family=Italiana&family=Outfit:wght@300;400;500&family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Marcellus&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&family=Libre+Baskerville:ital@0;1&family=Karla:wght@400;500&family=Syne:wght@500;700&family=Tenor+Sans&family=Nunito+Sans:wght@400;600&family=Prata&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   15 OPÇÕES para a seção de Serviços (logo abaixo da hero).
+   Página só de comparação: não faz parte do site. Mesmo conteúdo em todas;
+   muda fonte, desenho e animação. Paleta do visual clean: branco, grafite
+   #161616 e o rosa queimado #9A5457.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4A4A;--muted:#6F6F6F;--line:#ECE7E3;--sand:#F6F4F2;--accent:#9A5457;--accent-l:#E8C6C6;--pad:clamp(16px,4vw,56px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--body);font:16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p,ul,figure{margin:0}ul{list-style:none;padding:0}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+/* ---- cabeçalho da página e índice ---- */
+.top{padding:clamp(28px,5vw,56px) var(--pad) 20px;border-bottom:1px solid var(--line)}
+.top h1{font:400 clamp(2rem,5vw,3.2rem)/1.05 Gloock,serif;color:var(--ink);letter-spacing:-.02em}
+.top p{margin-top:.6rem;max-width:62ch;color:var(--muted)}
+.idx{position:sticky;top:0;z-index:50;display:flex;gap:6px;overflow-x:auto;padding:10px var(--pad);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);scrollbar-width:none}
+.idx::-webkit-scrollbar{display:none}
+.idx a{flex:none;min-width:40px;height:36px;display:grid;place-items:center;padding:0 10px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;font-weight:600;color:var(--ink)}
+.idx a:hover{background:var(--ink);color:#fff}
+.opt{border-bottom:8px solid var(--sand);scroll-margin-top:56px}
+.opt__tag{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .8rem;padding:18px var(--pad);font:500 .8rem/1.4 "Plus Jakarta Sans",sans-serif;color:var(--muted);border-bottom:1px solid var(--line);background:#fff}
+.opt__tag b{font:400 1.5rem/1 Gloock,serif;color:var(--accent)}
+.opt__tag strong{font-size:1rem;color:var(--ink)}
+.opt__tag span{flex-basis:100%}
+.sec{padding:clamp(56px,8vw,110px) var(--pad)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 1.3rem;border-radius:999px;background:var(--ink);color:#fff;font-size:.85rem;font-weight:600;transition:background .3s}
+.btn:hover{background:var(--accent)}
+
+/* ---- revelação genérica ao rolar (cada opção define o "antes") ---- */
+[data-r]{transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),clip-path 1.1s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i,0) * 80ms)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none !important;animation:none !important}[data-r]{opacity:1 !important;transform:none !important;clip-path:none !important}}
+
+/* ========== 01 · Editorial clássico ========== */
+.o1 h2{font:italic 400 clamp(3rem,8vw,6.5rem)/.9 "Cormorant Garamond",serif;color:var(--ink);letter-spacing:-.02em;margin-bottom:clamp(28px,4vw,48px)}
+.o1 h2 small{display:block;font:500 .72rem/1 Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;font-style:normal}
+.o1 ul{position:relative}
+.o1 li{position:relative;display:grid;grid-template-columns:3rem 1fr auto;align-items:baseline;gap:1rem;padding:clamp(16px,2.4vw,26px) 0;cursor:default}
+.o1 li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i) * 90ms)}
+.o1 li.in::before{transform:scaleX(1)}
+.o1 .n{font:500 .75rem Jost,sans-serif;letter-spacing:.2em;color:var(--muted)}
+.o1 .t{font:400 clamp(1.8rem,4vw,3.2rem)/1 "Cormorant Garamond",serif;color:var(--ink);transition:color .3s,transform .5s cubic-bezier(.16,1,.3,1)}
+.o1 .t em{display:block;margin-top:.4rem;font:400 .8rem Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-style:normal}
+.o1 .p{font:500 1rem Jost,sans-serif;color:var(--ink)}
+.o1 li:hover .t{color:var(--accent);transform:translateX(12px)}
+.o1 [data-r]{opacity:0;transform:translateY(18px)}.o1 .in[data-r]{opacity:1;transform:none}
+.o1__float{position:absolute;top:0;left:0;width:240px;aspect-ratio:4/5;pointer-events:none;overflow:hidden;opacity:0;transform:scale(.85);transition:opacity .35s,transform .45s cubic-bezier(.16,1,.3,1);z-index:2}
+.o1__float.on{opacity:1;transform:scale(1)}
+.o1__float img{width:100%;height:100%;object-fit:cover}
+.o1 .thumb{display:none}
+@media (max-width:760px){.o1__float{display:none}.o1 li{grid-template-columns:64px 1fr;grid-template-rows:auto auto}.o1 .n{display:none}.o1 .thumb{display:block;grid-row:span 2;width:64px;height:80px;object-fit:cover}.o1 .p{grid-column:2}}
+
+/* ========== 02 · Revista ========== */
+.o2 header{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+.o2 h2{font:400 clamp(2.4rem,5vw,4rem)/1 "Playfair Display",serif;color:var(--ink)}
+.o2 h2 i{color:var(--accent)}
+.o2 header p{max-width:34ch;font:400 .95rem/1.6 Inter,sans-serif}
+.o2 .g{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,2vw,24px)}
+.o2 article{grid-column:span 4;font-family:Inter,sans-serif}
+.o2 article:nth-child(1){grid-column:span 7;grid-row:span 2}
+.o2 article:nth-child(2){grid-column:span 5}
+.o2 article:nth-child(3){grid-column:span 5}
+.o2 figure{overflow:hidden;aspect-ratio:4/3;background:var(--sand)}
+.o2 article:nth-child(1) figure{aspect-ratio:4/4.3}
+.o2 figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.o2 article:hover img{transform:scale(1.05)}
+.o2 .k{display:flex;justify-content:space-between;margin-top:.9rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.o2 h3{font:italic 400 clamp(1.4rem,2.2vw,2rem)/1.15 "Playfair Display",serif;color:var(--ink);margin-top:.3rem}
+.o2 article:nth-child(1) h3{font-size:clamp(1.8rem,3.4vw,2.8rem)}
+.o2 .p{margin-top:.4rem;font-weight:600;color:var(--ink)}
+.o2 [data-r]{opacity:0;transform:translateY(40px)}.o2 .in[data-r]{opacity:1;transform:none}
+@media (max-width:760px){.o2 article,.o2 article:nth-child(n){grid-column:1/-1;grid-row:auto}}
+
+/* ========== 03 · Suíço minimalista ========== */
+.o3{font-family:"Space Grotesk",sans-serif}
+.o3 header{display:grid;grid-template-columns:1fr auto;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:1rem}
+.o3 h2{font-weight:500;font-size:clamp(3rem,9vw,7.5rem);line-height:.85;letter-spacing:-.05em;color:var(--ink)}
+.o3 header span{font-size:clamp(1rem,2vw,1.4rem);font-weight:500;color:var(--accent)}
+.o3 a.row{display:grid;grid-template-columns:3rem 1.4fr 1fr .6fr 2rem;align-items:center;gap:1rem;padding:1.1rem .6rem;border-bottom:1px solid var(--line);color:var(--ink);transition:background .25s,color .25s}
+.o3 a.row:hover{background:var(--ink);color:#fff}
+.o3 a.row:hover .d{color:rgba(255,255,255,.7)}
+.o3 .m{display:block;overflow:hidden}
+.o3 .m>span{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i) * 70ms)}
+.o3 .in .m>span{transform:none}
+.o3 .n{font-size:.8rem;color:var(--muted)}
+.o3 .t{font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:500;letter-spacing:-.02em}
+.o3 .d{font-size:.85rem;color:var(--muted);transition:color .25s}
+.o3 .p{font-weight:600;text-align:right}
+.o3 .ar{text-align:right;transition:transform .3s}
+.o3 a.row:hover .ar{transform:translateX(4px)}
+@media (max-width:760px){.o3 a.row{grid-template-columns:1fr auto;gap:.2rem 1rem}.o3 .n,.o3 .ar{display:none}.o3 .d{grid-column:1;grid-row:2}.o3 .p{grid-row:1/3;grid-column:2}}
+
+/* ========== 04 · Luxo escuro (Bodoni) ========== */
+.o4{background:var(--ink);color:#fff;padding-inline:0}
+.o4 header{padding:0 var(--pad);display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:1rem;margin-bottom:clamp(28px,4vw,48px)}
+.o4 h2{font:400 clamp(2.6rem,6vw,5rem)/1 "Bodoni Moda",serif;letter-spacing:-.02em}
+.o4 h2 i{color:var(--accent-l)}
+.o4 header p{font:500 .7rem Montserrat,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.o4 .rail{display:flex;gap:clamp(12px,2vw,24px);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 8px;scroll-padding-inline:var(--pad);scrollbar-width:none;cursor:grab}
+.o4 .rail::-webkit-scrollbar{display:none}
+.o4 article{flex:0 0 clamp(240px,26vw,340px);scroll-snap-align:start}
+.o4 figure{aspect-ratio:3/4;overflow:hidden;background:#222}
+.o4 figure img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform 1.6s cubic-bezier(.16,1,.3,1)}
+.o4 figure[data-r]{clip-path:inset(100% 0 0 0)}
+.o4 figure.in{clip-path:inset(0 0 0 0)}
+.o4 figure.in img{transform:scale(1)}
+.o4 h3{margin-top:1rem;font:italic 400 1.6rem/1.1 "Bodoni Moda",serif}
+.o4 .k{margin-top:.5rem;display:flex;justify-content:space-between;font:500 .68rem Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.o4 .k b{color:var(--accent-l);font-weight:600}
+.o4 .hint{padding:18px var(--pad) 0;font:500 .7rem Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+
+/* ========== 05 · Acordeão ========== */
+.o5{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(24px,5vw,80px);font-family:"DM Sans",sans-serif}
+.o5 h2{font:400 clamp(2.4rem,5vw,4rem)/1 "DM Serif Display",serif;color:var(--ink);position:sticky;top:90px}
+.o5 h2 i{color:var(--accent)}
+.o5 h2+p{margin-top:1rem;max-width:30ch;position:sticky;top:200px}
+.o5 .item{border-top:1px solid var(--ink)}
+.o5 .item:last-child{border-bottom:1px solid var(--ink)}
+.o5 .head{width:100%;display:grid;grid-template-columns:1fr auto 2rem;align-items:center;gap:1rem;padding:1.2rem 0;text-align:left}
+.o5 .head h3{font:400 clamp(1.4rem,2.6vw,2rem)/1.1 "DM Serif Display",serif;color:var(--ink)}
+.o5 .head .p{font-weight:600;color:var(--ink)}
+.o5 .pm{position:relative;width:2rem;height:2rem;border:1px solid var(--line);border-radius:50%}
+.o5 .pm::before,.o5 .pm::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .4s}
+.o5 .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.o5 .item.open .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.o5 .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s cubic-bezier(.16,1,.3,1)}
+.o5 .item.open .body{grid-template-rows:1fr}
+.o5 .body>div{overflow:hidden}
+.o5 .inner{display:grid;grid-template-columns:160px 1fr;gap:1.2rem;padding-bottom:1.4rem}
+.o5 .inner img{width:160px;aspect-ratio:4/5;object-fit:cover}
+.o5 .inner p{font-size:.95rem}.o5 .inner small{display:block;margin:.6rem 0 1rem;color:var(--muted)}
+@media (max-width:760px){.o5{grid-template-columns:minmax(0,1fr)}.o5 h2,.o5 h2+p{position:static}.o5 .inner{grid-template-columns:110px 1fr}.o5 .inner img{width:110px}}
+
+/* ========== 06 · Abas + imagem grande ========== */
+.o6{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);align-items:center;font-family:Manrope,sans-serif}
+.o6 h2{font:300 clamp(2.4rem,5vw,4.2rem)/1 Fraunces,serif;color:var(--ink);letter-spacing:-.03em;margin-bottom:1.6rem}
+.o6 h2 i{color:var(--accent)}
+.o6 .tabs button{display:flex;align-items:center;gap:.8rem;width:100%;padding:.55rem 0;font:300 clamp(1.3rem,2.4vw,1.9rem)/1.2 Fraunces,serif;color:#B4AEA9;text-align:left;transition:color .3s}
+.o6 .tabs button::before{content:"";width:0;height:1px;background:var(--accent);transition:width .5s cubic-bezier(.16,1,.3,1)}
+.o6 .tabs button[aria-selected=true]{color:var(--ink)}
+.o6 .tabs button[aria-selected=true]::before{width:28px}
+.o6 .stage{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--sand)}
+.o6 .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .8s,transform 1.6s cubic-bezier(.16,1,.3,1)}
+.o6 .stage img.on{opacity:1;transform:scale(1)}
+.o6 .card{position:absolute;left:16px;right:16px;bottom:16px;padding:1.1rem 1.2rem;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;align-items:end}
+.o6 .card h3{font:400 1.4rem/1.1 Fraunces,serif;color:var(--ink)}
+.o6 .card p{grid-column:1;font-size:.88rem}
+.o6 .card b{grid-row:1/3;grid-column:2;font-size:1.1rem;color:var(--ink)}
+@media (max-width:760px){.o6{grid-template-columns:minmax(0,1fr)}.o6 .tabs{display:flex;gap:1rem;overflow-x:auto;scrollbar-width:none}.o6 .tabs button{flex:none;width:auto;font-size:1.2rem}.o6 .tabs button::before{display:none}.o6 .tabs button[aria-selected=true]{border-bottom:1px solid var(--accent)}}
+
+/* ========== 07 · Tipografia em movimento ========== */
+.o7{text-align:center;font-family:Outfit,sans-serif}
+.o7 .k{font-size:.72rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(20px,3vw,36px)}
+.o7 a{display:block;position:relative;padding:.25rem 0;color:var(--ink)}
+.o7 .t{display:inline-block;font:400 clamp(2.3rem,7.4vw,6.4rem)/1.08 Italiana,serif;letter-spacing:.01em;transition:color .4s,letter-spacing .6s cubic-bezier(.16,1,.3,1)}
+.o7 .t .c{display:inline-block;opacity:0;transform:translateY(.4em) rotate(4deg);transition:opacity .7s,transform .9s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--c) * 22ms + var(--i) * 90ms)}
+.o7 .in .t .c{opacity:1;transform:none}
+.o7 a:hover .t{color:var(--accent);letter-spacing:.04em}
+.o7 .p{position:absolute;top:50%;right:0;transform:translate(0,-50%) scale(.8);opacity:0;padding:.35rem .8rem;border-radius:999px;background:var(--ink);color:#fff;font-size:.8rem;font-weight:500;transition:opacity .3s,transform .4s cubic-bezier(.16,1,.3,1)}
+.o7 a:hover .p{opacity:1;transform:translate(0,-50%) scale(1)}
+.o7 .sep{width:40px;height:1px;margin:.4rem auto;background:var(--line)}
+@media (max-width:760px){.o7 .p{position:static;display:inline-block;opacity:1;transform:none;margin:.2rem 0 .6rem;background:none;color:var(--accent);padding:0}}
+
+/* ========== 08 · Cartões empilhados ========== */
+.o8 h2{font:400 clamp(2.4rem,5vw,4rem)/1 Gloock,serif;color:var(--ink);text-align:center;margin-bottom:clamp(28px,4vw,48px)}
+.o8 h2 b{font-weight:400;color:var(--accent)}
+.o8 .stack{max-width:980px;margin:0 auto}
+.o8 article{position:sticky;top:calc(70px + var(--i) * 16px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:360px;margin-bottom:28px;background:#fff;border:1px solid var(--line);box-shadow:0 -20px 40px -30px rgba(0,0,0,.25);overflow:hidden}
+.o8 article:nth-child(even){background:var(--sand)}
+.o8 figure{overflow:hidden}.o8 figure img{width:100%;height:100%;object-fit:cover}
+.o8 .tx{padding:clamp(20px,4vw,44px);display:flex;flex-direction:column;justify-content:center;gap:.7rem}
+.o8 .tx small{font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.o8 h3{font:400 clamp(1.6rem,2.8vw,2.3rem)/1.1 Gloock,serif;color:var(--ink)}
+.o8 .row{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.6rem;flex-wrap:wrap}
+.o8 .row b{font:400 1.8rem Gloock,serif;color:var(--ink)}
+@media (max-width:760px){.o8 article{grid-template-columns:1fr;min-height:0;top:calc(64px + var(--i) * 10px)}.o8 figure{aspect-ratio:16/10}}
+
+/* ========== 09 · Bento ========== */
+.o9 h2{font:400 clamp(2.6rem,6vw,5rem)/.95 "Instrument Serif",serif;color:var(--ink);margin-bottom:clamp(24px,3vw,40px)}
+.o9 h2 i{color:var(--accent)}
+.o9 .g{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,17vw,230px);gap:12px;font-family:Inter,sans-serif}
+.o9 a{position:relative;overflow:hidden;background:var(--sand);color:#fff}
+.o9 a:nth-child(1){grid-column:span 2;grid-row:span 2}
+.o9 a:nth-child(3){grid-row:span 2}
+.o9 a:nth-child(6){grid-column:span 2}
+.o9 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.o9 a:hover img{transform:scale(1.06)}
+.o9 a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6))}
+.o9 .c{position:absolute;left:14px;right:14px;bottom:12px;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:.6rem}
+.o9 h3{font:400 clamp(1.3rem,2vw,1.9rem)/1 "Instrument Serif",serif}
+.o9 a:nth-child(1) h3{font-size:clamp(2rem,3.4vw,3rem)}
+.o9 .c span{font-size:.78rem;font-weight:600;white-space:nowrap;padding:.3rem .6rem;border-radius:999px;background:rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+.o9 [data-r]{opacity:0;transform:scale(.94)}.o9 .in[data-r]{opacity:1;transform:none}
+@media (max-width:760px){.o9 .g{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.o9 a:nth-child(6){grid-column:span 2}}
+
+/* ========== 10 · Linha do tempo ========== */
+.o10{font-family:Lato,sans-serif}
+.o10 h2{font:400 clamp(2.4rem,5vw,4rem)/1 Marcellus,serif;color:var(--ink);text-align:center}
+.o10 h2+p{text-align:center;margin:.8rem auto clamp(32px,5vw,64px);max-width:44ch}
+.o10 .tl{position:relative;max-width:900px;margin:0 auto}
+.o10 .line{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line)}
+.o10 .line i{position:absolute;inset:0;background:var(--accent);transform-origin:top;transform:scaleY(var(--p,0))}
+.o10 article{position:relative;width:50%;padding:0 clamp(24px,4vw,56px) clamp(32px,5vw,56px)}
+.o10 article:nth-child(odd){margin-left:50%}
+.o10 article:nth-child(even){text-align:right}
+.o10 article::before{content:"";position:absolute;top:.5rem;width:11px;height:11px;border-radius:50%;background:#fff;border:1px solid var(--accent)}
+.o10 article:nth-child(odd)::before{left:-6px}.o10 article:nth-child(even)::before{right:-5px}
+.o10 article.in::before{background:var(--accent)}
+.o10 small{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.o10 h3{font:400 clamp(1.5rem,2.4vw,2rem)/1.15 Marcellus,serif;color:var(--ink);margin:.2rem 0 .4rem}
+.o10 b{color:var(--accent)}
+.o10 [data-r]{opacity:0;transform:translateY(24px)}.o10 .in[data-r]{opacity:1;transform:none}
+@media (max-width:760px){.o10 .line{left:6px}.o10 article,.o10 article:nth-child(odd){width:100%;margin-left:0;padding:0 0 32px 32px;text-align:left}.o10 article:nth-child(even){text-align:left}.o10 article::before,.o10 article:nth-child(even)::before{left:1px;right:auto}}
+
+/* ========== 11 · Menu de spa ========== */
+.o11{background:var(--sand)}
+.o11 .menu{max-width:720px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(20px,5vw,64px);background:#fff;outline:1px solid var(--ink);outline-offset:-10px;text-align:center;font-family:Raleway,sans-serif}
+.o11 .orn{font:400 .7rem Cinzel,serif;letter-spacing:.4em;color:var(--accent)}
+.o11 h2{font:400 clamp(1.8rem,4vw,2.8rem)/1.1 Cinzel,serif;letter-spacing:.12em;color:var(--ink);margin:.6rem 0 clamp(24px,4vw,40px)}
+.o11 li{margin-bottom:1.4rem}
+.o11 .r{display:flex;align-items:baseline;gap:.6rem;font:500 clamp(.95rem,1.6vw,1.1rem) Cinzel,serif;letter-spacing:.08em;color:var(--ink);text-align:left}
+.o11 .r::after{content:"";order:2;flex:1;border-bottom:1px dotted #B9B0AA;transform:translateY(-4px)}
+.o11 .r b{order:3;font-weight:500}
+.o11 li p{margin-top:.2rem;font:italic 400 .9rem Raleway,sans-serif;color:var(--muted);text-align:left}
+.o11 [data-r]{opacity:0}.o11 .in[data-r]{opacity:1}
+.o11 .btn{margin-top:1rem;border-radius:0;font-family:Cinzel,serif;letter-spacing:.14em}
+
+/* ========== 12 · Polaroids ========== */
+.o12{font-family:Karla,sans-serif}
+.o12 h2{font:400 clamp(2.4rem,5vw,3.8rem)/1.05 "Libre Baskerville",serif;color:var(--ink);text-align:center}
+.o12 h2 i{color:var(--accent)}
+.o12 h2+p{text-align:center;margin:.6rem 0 clamp(32px,5vw,56px)}
+.o12 .g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,40px);max-width:1040px;margin:0 auto}
+.o12 a{display:block;padding:12px 12px 18px;background:#fff;box-shadow:0 18px 40px -22px rgba(0,0,0,.35),0 0 0 1px var(--line);transform:rotate(var(--r));transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s}
+.o12 a:hover{transform:rotate(0) translateY(-8px);box-shadow:0 28px 50px -24px rgba(0,0,0,.4),0 0 0 1px var(--line)}
+.o12 figure{aspect-ratio:1;overflow:hidden;background:var(--sand)}.o12 figure img{width:100%;height:100%;object-fit:cover}
+.o12 h3{font:italic 400 1.15rem/1.2 "Libre Baskerville",serif;color:var(--ink);margin-top:.8rem}
+.o12 .p{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);margin-top:.2rem}.o12 .p b{color:var(--accent)}
+.o12 [data-r]{opacity:0;transform:translateY(-30px) rotate(calc(var(--r) * 4))}.o12 .in[data-r]{opacity:1;transform:rotate(var(--r))}
+.o12 .in[data-r]:hover{transform:rotate(0) translateY(-8px)}
+@media (max-width:760px){.o12 .g{grid-template-columns:1fr 1fr;gap:16px}.o12 h3{font-size:.95rem}}
+
+/* ========== 13 · Imagem fixa + lista ========== */
+.o13{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);font-family:Inter,sans-serif}
+.o13 .pin{position:sticky;top:80px;height:calc(100vh - 120px);max-height:640px;overflow:hidden;background:var(--sand)}
+.o13 .pin img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .7s,transform 1.4s cubic-bezier(.16,1,.3,1)}
+.o13 .pin img.on{opacity:1;transform:none}
+.o13 .pin span{position:absolute;left:16px;bottom:14px;z-index:1;font:700 4rem/1 Syne,sans-serif;color:#fff;mix-blend-mode:difference}
+.o13 h2{font:700 clamp(2.4rem,5vw,4.2rem)/.95 Syne,sans-serif;letter-spacing:-.03em;color:var(--ink);margin-bottom:2rem}
+.o13 h2 span{color:var(--accent)}
+.o13 article{min-height:62vh;display:flex;flex-direction:column;justify-content:center;gap:.6rem;border-top:1px solid var(--line);opacity:.25;transition:opacity .5s}
+.o13 article.cur{opacity:1}
+.o13 h3{font:700 clamp(1.7rem,3vw,2.6rem)/1 Syne,sans-serif;letter-spacing:-.02em;color:var(--ink)}
+.o13 article p{max-width:40ch}.o13 article b{font-size:1.2rem;color:var(--ink)}
+.o13 article img{display:none}
+@media (max-width:760px){.o13{grid-template-columns:minmax(0,1fr)}.o13 .pin{display:none}.o13 article{min-height:0;padding:1.6rem 0;opacity:1}.o13 article img{display:block;aspect-ratio:16/10;object-fit:cover;width:100%;margin-bottom:.6rem}}
+
+/* ========== 14 · Carrossel em destaque ========== */
+.o14{padding-inline:0;font-family:"Nunito Sans",sans-serif;text-align:center;overflow:hidden}
+.o14 h2{font:400 clamp(2.2rem,5vw,3.6rem)/1.05 "Tenor Sans",sans-serif;letter-spacing:.02em;color:var(--ink);padding:0 var(--pad)}
+.o14 h2+p{margin:.6rem 0 clamp(24px,4vw,40px);padding:0 var(--pad)}
+.o14 .track{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px calc(50% - clamp(130px,16vw,190px));scrollbar-width:none}
+.o14 .track::-webkit-scrollbar{display:none}
+.o14 .card{flex:0 0 clamp(260px,32vw,380px);scroll-snap-align:center;padding:0 10px;transform:scale(var(--s,.82));opacity:var(--o,.45);transition:transform .25s,opacity .25s}
+.o14 figure{aspect-ratio:4/5;overflow:hidden;background:var(--sand);box-shadow:0 30px 60px -36px rgba(0,0,0,.45)}.o14 figure img{width:100%;height:100%;object-fit:cover}
+.o14 .cap{min-height:6.5rem;margin-top:1rem;padding:0 var(--pad)}
+.o14 .cap h3{font:400 1.7rem/1.1 "Tenor Sans",sans-serif;color:var(--ink)}
+.o14 .cap p{margin-top:.3rem;font-size:.95rem}
+.o14 .cap b{color:var(--accent)}
+.o14 .nav{display:flex;justify-content:center;gap:10px;margin-top:.6rem}
+.o14 .nav button{width:46px;height:46px;border:1px solid var(--ink);border-radius:50%;transition:background .3s,color .3s}.o14 .nav button:hover{background:var(--ink);color:#fff}
+
+/* ========== 15 · Cartões que viram ========== */
+.o15{font-family:Figtree,sans-serif}
+.o15 h2{font:400 clamp(2.4rem,5vw,3.8rem)/1.05 Prata,serif;color:var(--ink)}
+.o15 h2 i{color:var(--accent);font-style:normal}
+.o15 h2+p{margin:.6rem 0 clamp(28px,4vw,48px);color:var(--muted)}
+.o15 .g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,20px);perspective:1400px}
+.o15 .card{position:relative;aspect-ratio:4/5;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.16,1,.3,1);cursor:pointer}
+@media (hover:hover){.o15 .g .card:hover{transform:rotateY(180deg)}}
+.o15 .g .card.flip{transform:rotateY(180deg)}
+.o15 .f,.o15 .b{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.o15 .f img{width:100%;height:100%;object-fit:cover}
+.o15 .f::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
+.o15 .f h3{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;font:400 clamp(1.2rem,2vw,1.6rem)/1.15 Prata,serif;color:#fff}
+.o15 .f small{position:absolute;top:12px;right:12px;z-index:1;padding:.25rem .55rem;border-radius:999px;background:rgba(255,255,255,.9);font-size:.7rem;font-weight:600;color:var(--ink)}
+.o15 .b{transform:rotateY(180deg);background:var(--ink);color:#fff;padding:clamp(16px,2.4vw,28px);display:flex;flex-direction:column;justify-content:space-between}
+.o15 .b h3{font:400 1.5rem/1.15 Prata,serif}
+.o15 .b p{font-size:.92rem;color:rgba(255,255,255,.8)}
+.o15 .b b{font:400 2rem Prata,serif;color:var(--accent-l)}
+.o15 .b .btn{background:#fff;color:var(--ink);align-self:flex-start}
+.o15 [data-r]{opacity:0;transform:translateY(30px)}.o15 .in[data-r]{opacity:1;transform:none}
+@media (max-width:760px){.o15 .g{grid-template-columns:1fr 1fr}.o15 .b p{display:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>15 opções para a seção de Serviços</h1>
+  <p>É a primeira seção logo abaixo da hero. Todas têm o mesmo conteúdo: muda a fonte, o desenho e a animação. Role devagar para ver as animações. No celular, toque nos itens. Os números no topo levam direto a cada opção.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+
+<script>
+/* ---- conteúdo real do site ---- */
+const IMG = '../assets/img/';
+const WA  = t => 'https://wa.me/5581992901559?text=' + encodeURIComponent('Oi Thainá, quero agendar ' + t);
+const S = [
+  { n:'Micropigmentação', t:'Fio a fio ou shadow', d:'Fio a fio simula fios naturais; o shadow tem efeito sombreado, pra acordar com a sobrancelha pronta.', p:'R$ 670', x:'ou 10x de R$ 67', dur:'6 a 18 meses', img:'servico-micro-poster.jpg' },
+  { n:'Brow Lamination', t:'Moderno e estruturado', d:'Realinha os fios e deixa as sobrancelhas mais volumosas, alinhadas e sofisticadas.', p:'R$ 145', x:'ou 2x de R$ 72,50', dur:'até 4 semanas', img:'resultados/brow-lamination-1.webp' },
+  { n:'Lash Lifting', t:'Um olhar sempre realçado', d:'Curva os cílios naturais com efeito de alongamento, sem extensão e sem rímel.', p:'R$ 160', x:'ou 2x de R$ 80', dur:'até 30 dias', img:'hero-olhar.webp' },
+  { n:'Design, henna e tintura', t:'Feito pro seu rosto', d:'A henna preenche e define; a tintura colore com naturalidade e cobre fios brancos.', p:'R$ 30', x:'henna ou tintura R$ 55', dur:'7 a 30 dias', img:'servico-design-poster.webp' },
+  { n:'Descoloração + coloração', t:'Harmonia com o cabelo', d:'Deixa a cor das sobrancelhas em harmonia com o tom do cabelo.', p:'R$ 99,90', x:'', dur:'até 30 dias', img:'resultados/design-4.webp' },
+  { n:'Spa labial', t:'Lábios macios', d:'Hidratação, esfoliação e revitalização para lábios mais macios e saudáveis.', p:'R$ 20', x:'', dur:'', img:'servico-spa.webp' },
+];
+const nn = i => String(i + 1).padStart(2, '0');
+const im = (s, lazy = true) => `<img src="${IMG + s.img}" alt="${s.n}"${lazy ? ' loading="lazy"' : ''}>`;
+
+/* ---- as 15 opções: [nome, fontes, animação, html] ---- */
+const O = [
+ ['Editorial clássico', 'Cormorant Garamond + Jost', 'linhas se desenham ao rolar; no computador, a foto do serviço segue o mouse',
+  `<div class="sec o1"><h2><small>O que eu faço</small>Serviços</h2><ul>${S.map((s,i)=>`<li data-r style="--i:${i}" data-img="${IMG+s.img}"><span class="n">${nn(i)}</span>${im(s).replace('<img','<img class="thumb"')}<span class="t">${s.n}<em>${s.t}</em></span><span class="p">${s.p}</span></li>`).join('')}<figure class="o1__float"><img alt=""></figure></ul></div>`],
+ ['Revista', 'Playfair Display (itálico) + Inter', 'cartões sobem em sequência; foto aproxima no hover',
+  `<div class="sec o2"><header><h2>Serviços <i>que eu ofereço</i></h2><p>Cada técnica escolhida depois de uma avaliação honesta do seu rosto.</p></header><div class="g">${S.map((s,i)=>`<article data-r style="--i:${i}"><figure>${im(s)}</figure><div class="k"><span>${nn(i)}</span><span>${s.dur||'—'}</span></div><h3>${s.n}</h3><p class="p">${s.p}</p></article>`).join('')}</div></div>`],
+ ['Suíço minimalista', 'Space Grotesk', 'texto sobe por trás de uma máscara; linha inteira escurece no hover',
+  `<div class="sec o3"><header><h2>Serviços</h2><span>(06)</span></header>${S.map((s,i)=>`<a class="row" data-r style="--i:${i}" href="${WA(s.n)}" target="_blank" rel="noopener"><span class="n m"><span>${nn(i)}</span></span><span class="t m"><span>${s.n}</span></span><span class="d m"><span>${s.t}</span></span><span class="p m"><span>${s.p}</span></span><span class="ar">→</span></a>`).join('')}</div>`],
+ ['Luxo escuro', 'Bodoni Moda + Montserrat', 'fotos se revelam de baixo pra cima; trilho de deslizar para o lado',
+  `<div class="sec o4"><header><h2>Os <i>serviços</i></h2><p>Studio Thainá · Carpina</p></header><div class="rail">${S.map((s,i)=>`<article><figure data-r style="--i:${i}">${im(s)}</figure><h3>${s.n}</h3><div class="k"><span>${s.t}</span><b>${s.p}</b></div></article>`).join('')}</div><p class="hint">Deslize →</p></div>`],
+ ['Acordeão', 'DM Serif Display + DM Sans', 'cada serviço abre suave mostrando foto, texto e botão',
+  `<div class="sec o5"><div><h2>Escolha o <i>seu</i> cuidado</h2><p>Toque em um serviço para ver os detalhes, a duração e o valor.</p></div><div>${S.map((s,i)=>`<div class="item${i?'':' open'}"><button class="head" aria-expanded="${!i}"><h3>${s.n}</h3><span class="p">${s.p}</span><span class="pm" aria-hidden="true"></span></button><div class="body"><div><div class="inner">${im(s)}<div><p>${s.d}</p><small>${[s.dur,s.x].filter(Boolean).join(' · ')}</small><a class="btn" href="${WA(s.n)}" target="_blank" rel="noopener">Agendar</a></div></div></div></div></div>`).join('')}</div></div>`],
+ ['Abas + imagem grande', 'Fraunces (light) + Manrope', 'foto troca com esmaecer e leve zoom; troca sozinha a cada 5 s',
+  `<div class="sec o6"><div><h2>Serviços <i>pensados</i> pra você</h2><div class="tabs" role="tablist">${S.map((s,i)=>`<button role="tab" aria-selected="${!i}" data-i="${i}">${s.n}</button>`).join('')}</div></div><div class="stage">${S.map((s,i)=>im(s,false).replace('<img',`<img class="${i?'':'on'}"`)).join('')}<div class="card"><h3></h3><p></p><b></b></div></div></div>`],
+ ['Tipografia em movimento', 'Italiana + Outfit', 'letras entram uma a uma; no hover a palavra abre e mostra o preço',
+  `<div class="sec o7"><p class="k">Serviços do studio</p>${S.map((s,i)=>`<a data-r style="--i:${i}" href="${WA(s.n)}" target="_blank" rel="noopener"><span class="t">${[...s.n].map((c,k)=>`<span class="c" style="--c:${k}">${c===' '?'&nbsp;':c}</span>`).join('')}</span><span class="p">${s.p}</span></a>${i<S.length-1?'<div class="sep"></div>':''}`).join('')}</div>`],
+ ['Cartões empilhados', 'Gloock + Plus Jakarta Sans (as atuais)', 'ao rolar, cada cartão para no topo e o próximo empilha por cima',
+  `<div class="sec o8"><h2><b>Serviços</b> que eu ofereço</h2><div class="stack">${S.map((s,i)=>`<article style="--i:${i}"><figure>${im(s)}</figure><div class="tx"><small>${nn(i)} · ${s.t}</small><h3>${s.n}</h3><p>${s.d}</p><div class="row"><b>${s.p}</b><a class="btn" href="${WA(s.n)}" target="_blank" rel="noopener">Agendar</a></div></div></article>`).join('')}</div></div>`],
+ ['Bento', 'Instrument Serif + Inter', 'blocos crescem de leve ao aparecer; foto aproxima no hover',
+  `<div class="sec o9"><h2>Tudo pro seu <i>olhar</i></h2><div class="g">${S.map((s,i)=>`<a data-r style="--i:${i}" href="${WA(s.n)}" target="_blank" rel="noopener">${im(s)}<div class="c"><h3>${s.n}</h3><span>${s.p}</span></div></a>`).join('')}</div></div>`],
+ ['Linha do tempo', 'Marcellus + Lato', 'a linha rosa cresce conforme você rola; pontos acendem',
+  `<div class="sec o10"><h2>Serviços</h2><p>Do design simples à micropigmentação: escolhemos juntas o que faz sentido pra você.</p><div class="tl"><div class="line"><i></i></div>${S.map((s,i)=>`<article data-r style="--i:0"><small>${s.t}</small><h3>${s.n}</h3><p>${s.d}</p><p><b>${s.p}</b>${s.x?' · '+s.x:''}</p></article>`).join('')}</div></div>`],
+ ['Menu de spa', 'Cinzel + Raleway', 'itens aparecem um a um, como um cardápio impresso',
+  `<div class="sec o11"><div class="menu"><p class="orn">✦ Studio Thainá Cavalcanti ✦</p><h2>Menu de serviços</h2><ul>${S.map((s,i)=>`<li data-r style="--i:${i}"><div class="r"><span>${s.n}</span><b>${s.p}</b></div><p>${s.t}${s.dur?' · '+s.dur:''}</p></li>`).join('')}</ul><a class="btn" href="${WA('uma avaliação')}" target="_blank" rel="noopener">Agendar avaliação</a></div></div>`],
+ ['Polaroids', 'Libre Baskerville + Karla', 'fotos caem girando; no hover endireitam e sobem',
+  `<div class="sec o12"><h2>Serviços <i>de perto</i></h2><p>Resultados reais, feitos no studio.</p><div class="g">${S.map((s,i)=>`<a data-r style="--i:${i};--r:${[-2.5,1.8,-1.2,2.2,-2,1.4][i]}deg" href="${WA(s.n)}" target="_blank" rel="noopener"><figure>${im(s)}</figure><h3>${s.n}</h3><p class="p"><span>${s.t}</span><b>${s.p}</b></p></a>`).join('')}</div></div>`],
+ ['Imagem fixa + lista', 'Syne + Inter', 'a foto da esquerda fica parada e troca conforme o serviço em foco',
+  `<div class="sec o13"><div class="pin">${S.map((s,i)=>im(s,false).replace('<img',`<img class="${i?'':'on'}"`)).join('')}<span>01</span></div><div><h2>Serviços<span>.</span></h2>${S.map((s,i)=>`<article class="${i?'':'cur'}" data-i="${i}">${im(s)}<h3>${s.n}</h3><p>${s.d}</p><b>${s.p}</b></article>`).join('')}</div></div>`],
+ ['Carrossel em destaque', 'Tenor Sans + Nunito Sans', 'o cartão do centro cresce e os dos lados recuam ao deslizar',
+  `<div class="sec o14"><h2>Serviços</h2><p>Deslize para conhecer cada um.</p><div class="track">${S.map((s,i)=>`<div class="card" data-i="${i}"><figure>${im(s,false)}</figure></div>`).join('')}</div><div class="cap"><h3></h3><p></p></div><div class="nav"><button data-d="-1" aria-label="Anterior">←</button><button data-d="1" aria-label="Próximo">→</button></div></div>`],
+ ['Cartões que viram', 'Prata + Figtree', 'cartões giram em 3D e mostram detalhes, preço e botão (toque no celular)',
+  `<div class="sec o15"><h2>Serviços <i>✦</i></h2><p>Passe o mouse (ou toque) para ver os detalhes.</p><div class="g">${S.map((s,i)=>`<div class="card" data-r style="--i:${i}" tabindex="0"><div class="f">${im(s)}<small>${s.p}</small><h3>${s.n}</h3></div><div class="b"><div><h3>${s.n}</h3><p>${s.d}</p></div><div><b>${s.p}</b><br><a class="btn" href="${WA(s.n)}" target="_blank" rel="noopener">Agendar</a></div></div></div>`).join('')}</div></div>`],
+];
+
+/* ---- monta a página ---- */
+document.getElementById('idx').innerHTML = O.map((o,i)=>`<a href="#o${i+1}">${nn(i)}</a>`).join('');
+document.getElementById('opts').innerHTML = O.map((o,i)=>`<section class="opt" id="o${i+1}"><div class="opt__tag"><b>${nn(i)}</b><strong>${o[0]}</strong><span>Fontes: ${o[1]} · Animação: ${o[2]}</span></div>${o[3]}</section>`).join('');
+
+/* ---- revelação ao rolar ---- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('[data-r]').forEach(el => io.observe(el));
+
+/* 01 · foto que segue o mouse */
+(() => { const ul = document.querySelector('.o1 ul'), f = ul.querySelector('.o1__float'), img = f.querySelector('img');
+  ul.querySelectorAll('li').forEach(li => { li.addEventListener('mouseenter', () => { img.src = li.dataset.img; f.classList.add('on'); }); li.addEventListener('mouseleave', () => f.classList.remove('on')); });
+  ul.addEventListener('mousemove', e => { const r = ul.getBoundingClientRect(); f.style.left = (e.clientX - r.left + 30) + 'px'; f.style.top = (e.clientY - r.top - 150) + 'px'; }); })();
+
+/* 05 · acordeão */
+document.querySelectorAll('.o5 .head').forEach(b => b.addEventListener('click', () => {
+  const it = b.parentElement, open = !it.classList.contains('open');
+  document.querySelectorAll('.o5 .item').forEach(x => { x.classList.remove('open'); x.querySelector('.head').setAttribute('aria-expanded', 'false'); });
+  if (open) { it.classList.add('open'); b.setAttribute('aria-expanded', 'true'); } }));
+
+/* 06 · abas com troca automática */
+(() => { const box = document.querySelector('.o6'), tabs = [...box.querySelectorAll('[role=tab]')], imgs = [...box.querySelectorAll('.stage img')], c = box.querySelector('.card'); let cur = 0, t;
+  const go = i => { cur = i; tabs.forEach((b,k) => b.setAttribute('aria-selected', k === i)); imgs.forEach((m,k) => m.classList.toggle('on', k === i));
+    c.querySelector('h3').textContent = S[i].n; c.querySelector('p').textContent = S[i].t; c.querySelector('b').textContent = S[i].p; };
+  const auto = () => { clearInterval(t); t = setInterval(() => go((cur + 1) % S.length), 5000); };
+  tabs.forEach((b,i) => { b.addEventListener('click', () => { go(i); auto(); }); b.addEventListener('mouseenter', () => { go(i); auto(); }); });
+  go(0); auto(); })();
+
+/* 10 · linha cresce com a rolagem */
+(() => { const tl = document.querySelector('.o10 .tl'), line = tl.querySelector('.line');
+  const upd = () => { const r = tl.getBoundingClientRect(), p = Math.min(1, Math.max(0, (innerHeight * .6 - r.top) / r.height)); line.style.setProperty('--p', p); };
+  addEventListener('scroll', () => requestAnimationFrame(upd), { passive: true }); upd(); })();
+
+/* 13 · imagem fixa troca com o item em foco */
+(() => { const imgs = [...document.querySelectorAll('.o13 .pin img')], num = document.querySelector('.o13 .pin span'), arts = [...document.querySelectorAll('.o13 article')];
+  const o = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; const i = +e.target.dataset.i;
+    arts.forEach((a,k) => a.classList.toggle('cur', k === i)); imgs.forEach((m,k) => m.classList.toggle('on', k === i)); num.textContent = nn(i); }), { rootMargin: '-45% 0px -45% 0px' });
+  arts.forEach(a => o.observe(a)); })();
+
+/* 14 · carrossel: centro maior */
+(() => { const box = document.querySelector('.o14'), tr = box.querySelector('.track'), cards = [...tr.children], cap = box.querySelector('.cap'); let cur = -1;
+  const upd = () => { const mid = tr.getBoundingClientRect().left + tr.clientWidth / 2; let best = 0, bd = 1e9;
+    cards.forEach((c,i) => { const r = c.getBoundingClientRect(), d = Math.abs(r.left + r.width / 2 - mid), k = Math.min(1, d / r.width);
+      c.style.setProperty('--s', 1 - k * .18); c.style.setProperty('--o', 1 - k * .55); if (d < bd) { bd = d; best = i; } });
+    if (best !== cur) { cur = best; const s = S[best]; cap.innerHTML = `<h3>${s.n}</h3><p>${s.t} · <b>${s.p}</b>${s.x ? ' · ' + s.x : ''}</p>`; } };
+  const go = i => { const c = cards[Math.max(0, Math.min(cards.length - 1, i))]; tr.scrollTo({ left: c.offsetLeft - (tr.clientWidth - c.offsetWidth) / 2, behavior: 'smooth' }); };
+  tr.addEventListener('scroll', () => requestAnimationFrame(upd), { passive: true });
+  box.querySelectorAll('[data-d]').forEach(b => b.addEventListener('click', () => go(cur + +b.dataset.d)));
+  cards.forEach((c,i) => c.addEventListener('click', () => go(i)));
+  addEventListener('resize', upd); upd(); })();
+
+/* 15 · virar com toque/teclado */
+document.querySelectorAll('.o15 .card').forEach(c => { c.addEventListener('click', e => { if (!e.target.closest('a')) c.classList.toggle('flip'); }); c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.classList.toggle('flip'); } }); });
+</script>
+</body>
+</html>
