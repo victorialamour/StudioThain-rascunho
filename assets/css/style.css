@@ -952,3 +952,8 @@ main>.check{position:relative;z-index:5;padding:0 var(--pad);margin-top:-38px}
   .check__msg{font-size:.75rem}
 }
 @media (prefers-reduced-motion:reduce){.check__form,.check__f,.check__f label,.check__go{transition:none}}
+
+/* TESTE · vídeo da modelo na hero: fundo cinza enquanto carrega e rosto
+   mantido no centro quando o celular corta o vídeo horizontal */
+.hero__video--modelo{background:#9C9C9C;object-position:50% 30%}
+@media (max-width:760px){.hero__video--modelo{object-position:47.5% 30%}}

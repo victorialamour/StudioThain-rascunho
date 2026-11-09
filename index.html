@@ -67,8 +67,11 @@
 <!-- ═══════════════ 01 · HERO (tela cheia, fora da moldura) ═══════════════ -->
 <header class="hero" id="inicio">
   <div class="hero__media" data-parallax="0.12">
-    <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" aria-hidden="true">
-      <source src="assets/video/hero.mp4" type="video/mp4">
+    <!-- TESTE: vídeo da modelo (hero-modelo.mp4) no lugar do vídeo da Thainá.
+         Para voltar: trocar o src por assets/video/hero.mp4, devolver
+         poster="assets/img/hero-poster.jpg" e tirar a classe hero__video--modelo. -->
+    <video class="hero__video hero__video--modelo" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="assets/video/hero-modelo.mp4" type="video/mp4">
     </video>
   </div>
   <span class="hero__shade" aria-hidden="true"></span>
