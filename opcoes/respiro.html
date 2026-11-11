@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Respiro · 10 opções · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================
+   RESPIRO · 10 opções para a frase da Thainá entre duas seções
+   Regras: só a fala dela, sem foto, sem texto longo; muito espaço; serve de
+   pausa entre a micropigmentação e o guia. As faixas brancas acima e abaixo
+   de cada opção simulam as seções vizinhas.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4544;--muted:#6B6360;--line:#E7DFD9;--rose:#9A5457;--rose-l:#E8C6C6;--tint:#F6EDEA;--cream:#F8F1EB;--pad:clamp(20px,5vw,72px);--f:"Fraunces",Georgia,serif;--s:"Plus Jakarta Sans",system-ui,sans-serif;--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--rose);color:#fff}
+h1,p,figure,blockquote{margin:0}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:var(--ink)}
+.top p{margin-top:.6rem;max-width:62ch;font-size:.9rem;color:var(--muted)}
+.idx{position:sticky;top:0;z-index:10;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.idx a{flex:none;padding:.35rem .6rem;font:500 .74rem var(--s);color:var(--muted);text-decoration:none;border-radius:4px}
+.idx a:hover{color:var(--ink);background:var(--tint)}
+.opt{scroll-margin-top:52px}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:32px var(--pad) 14px;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:var(--rose)}
+.meta strong{font-weight:600;font-size:.88rem;color:var(--ink)}
+.meta span{font-size:.82rem;color:var(--muted)}
+.ctx{height:72px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* ---- peças comuns ---- */
+.q{font:300 clamp(2rem,4.2vw,3.4rem)/1.08 var(--f);font-variation-settings:"opsz" 144;letter-spacing:-.028em;color:var(--ink);text-wrap:balance}
+.q em{font-style:italic;color:var(--rose)}
+.p{font:300 italic clamp(1.05rem,1.5vw,1.22rem)/1.4 var(--f);letter-spacing:-.01em;color:var(--muted)}
+.by b{display:block;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--ink)}
+.by span{display:block;font-size:.78rem;color:var(--muted)}
+.sig{font:400 clamp(1.7rem,2.4vw,2.1rem)/1 "Pinyon Script",cursive;color:var(--ink)}
+.r{position:relative}
+
+/* 01 · a atual do site */
+.r1{padding:clamp(72px,9vw,128px) var(--pad);background:var(--cream);text-align:center}
+.r1 .line{display:block;width:1px;height:clamp(40px,5vw,64px);margin:0 auto clamp(28px,3.5vw,40px);background:var(--rose)}
+.r1 .q{max-width:20ch;margin:0 auto;text-indent:-.4em}
+.r1 .p{margin-top:1.1rem}
+.r1 .by{margin-top:1.8rem}
+
+/* 02 · branco, assimétrica */
+.r2{padding:clamp(80px,10vw,140px) var(--pad);background:#fff}
+.r2 .g{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem 4rem;max-width:1100px;margin:0 auto;align-items:end}
+.r2 .q{max-width:15ch;font-size:clamp(2.2rem,5vw,4rem)}
+.r2 .side{text-align:right;padding-bottom:.6rem}
+.r2 .p{margin-bottom:1.2rem}
+
+/* 03 · aspas penduradas na margem */
+.r3{padding:clamp(80px,10vw,136px) var(--pad);background:#fff}
+.r3 .in{position:relative;max-width:820px;margin:0 auto;padding-left:clamp(0px,6vw,80px)}
+.r3 .mark{position:absolute;left:clamp(-8px,0vw,0px);top:-.18em;font:300 clamp(6rem,11vw,9rem)/1 var(--f);color:var(--rose-l)}
+.r3 .q{max-width:18ch}
+.r3 .foot{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--line);max-width:36rem}
+
+/* 04 · entre dois fios, compacta */
+.r4{padding:clamp(48px,6vw,80px) var(--pad);background:#fff}
+.r4 .in{max-width:1100px;margin:0 auto;padding:clamp(28px,3.5vw,44px) 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.2rem 3rem;align-items:center}
+.r4 .q{font-size:clamp(1.6rem,3vw,2.5rem)}
+.r4 .side{text-align:right}
+
+/* 05 · duas vozes */
+.r5{padding:clamp(80px,10vw,136px) var(--pad);background:var(--tint);text-align:center}
+.r5 .q{max-width:22ch;margin:0 auto}
+.r5 .q .two{display:block;margin-top:.25em;font-style:italic;color:var(--rose)}
+.r5 .by{margin-top:2rem}
+
+/* 06 · assinatura de próprio punho */
+.r6{padding:clamp(80px,10vw,136px) var(--pad);background:var(--cream);text-align:center}
+.r6 .q{max-width:19ch;margin:0 auto}
+.r6 .p{margin-top:1rem}
+.r6 .sig{margin-top:1.6rem;font-size:clamp(2.2rem,3.4vw,2.8rem)}
+.r6 .mini{margin-top:.5rem;font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
+
+/* 07 · estrela do logo */
+.r7{padding:clamp(80px,10vw,136px) var(--pad);background:#fff;text-align:center}
+.r7 svg{display:block;width:18px;height:18px;margin:0 auto 1.6rem;fill:var(--rose)}
+.r7 .q{max-width:19ch;margin:0 auto}
+.r7 .p{margin-top:1rem}
+.r7 .by{margin-top:1.8rem}
+
+/* 08 · palavra por palavra */
+.r8{padding:clamp(88px,11vw,150px) var(--pad);background:var(--cream);text-align:center}
+.r8 .q{max-width:19ch;margin:0 auto}
+.r8 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.r8 .w>span{display:inline-block}
+.r8 .after{margin-top:1.2rem}
+@media (prefers-reduced-motion:no-preference){
+  .js .r8 .w>span{transform:translateY(105%);transition:transform 1.1s var(--out);transition-delay:calc(var(--k) * 70ms)}
+  .js .r8.on .w>span{transform:none}
+  .js .r8 .after{opacity:0;transition:opacity 1s var(--out) 1s}
+  .js .r8.on .after{opacity:1}
+}
+.r8 .by{margin-top:1.6rem}
+
+/* 09 · degraus editoriais */
+.r9{padding:clamp(80px,10vw,136px) var(--pad);background:#fff}
+.r9 .in{max-width:1000px;margin:0 auto}
+.r9 .q span{display:block}
+.r9 .q span:nth-child(2){padding-left:clamp(1.5rem,8vw,7rem)}
+.r9 .q span:nth-child(3){padding-left:clamp(3rem,16vw,14rem)}
+.r9 .foot{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:1rem 2rem;align-items:baseline;margin-top:1.6rem}
+
+/* 10 · fita mínima */
+.r10{padding:clamp(40px,5vw,60px) var(--pad);background:var(--cream)}
+.r10 .in{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.6rem 1.4rem;max-width:1100px;margin:0 auto;text-align:center}
+.r10 .q{font-size:clamp(1.4rem,2.4vw,1.95rem)}
+.r10 .dash{width:28px;height:1px;background:var(--rose);align-self:center}
+.r10 .by{text-align:left}
+
+@media (max-width:767px){
+  .r2 .g,.r4 .in{grid-template-columns:minmax(0,1fr)}
+  .r2 .side,.r4 .side{text-align:left}
+  .r3 .in{padding-left:0}.r3 .mark{position:static;display:block;height:3.4rem}
+  .r9 .q span:nth-child(n){padding-left:0}
+  .r9 .foot{justify-content:flex-start}
+  .r10 .dash{display:none}.r10 .by{text-align:center}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Respiro · a frase da Thainá</h1>
+  <p>Só a fala dela, sem foto, como uma pausa entre a micropigmentação e o guia. As faixas brancas acima e abaixo de cada opção fazem o papel das seções vizinhas. A 01 é a que está no site hoje.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+<script>
+const Q='Nem toda sobrancelha precisa de <em>micropigmentação.</em>';
+const P='E eu digo isso sendo micropigmentadora.';
+const BY='<figcaption class="by"><b>Thainá Cavalcanti</b><span>designer de sobrancelhas e micropigmentadora</span></figcaption>';
+const STAR='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>';
+const words=()=>{let k=0;return 'Nem toda sobrancelha precisa de'.split(' ').map(w=>`<span class="w"><span style="--k:${k++}">${w}</span></span>`).join(' ')+` <em class="w"><span style="--k:${k++}">micropigmentação.</span></em>`};
+const O=[
+ ['A atual do site','creme suave, fio rosa vertical, citação centralizada com aspas e autoria embaixo.',
+  `<figure class="r r1"><span class="line" aria-hidden="true"></span><blockquote class="q">“${Q}</blockquote><p class="p">${P}”</p>${BY}</figure>`],
+ ['Branca e assimétrica','frase grande à esquerda; complemento e autoria alinhados à direita, pela base. Sem cor de fundo: o respiro é o próprio branco.',
+  `<figure class="r r2"><div class="g"><blockquote class="q">“${Q}”</blockquote><div class="side"><p class="p">${P}</p>${BY}</div></div></figure>`],
+ ['Aspas na margem','uma aspa grande em rosa claro pendurada fora do texto, como nas revistas; autoria sob um fio fino.',
+  `<figure class="r r3"><div class="in"><span class="mark" aria-hidden="true">“</span><blockquote class="q">${Q}</blockquote><div class="foot"><p class="p">${P}</p>${BY}</div></div></figure>`],
+ ['Entre dois fios','a frase numa linha só, entre dois fios escuros finos, com a autoria à direita. A mais compacta das elegantes.',
+  `<figure class="r r4"><div class="in"><blockquote class="q">“${Q}”</blockquote><div class="side"><p class="p">${P}</p>${BY}</div></div></figure>`],
+ ['Duas vozes','as duas frases no mesmo tamanho: a primeira em grafite, a segunda em itálico rosa, como uma resposta. Fundo rosado bem suave.',
+  `<figure class="r r5"><blockquote class="q">“Nem toda sobrancelha precisa de micropigmentação. <span class="two">E eu digo isso sendo micropigmentadora.”</span></blockquote>${BY}</figure>`],
+ ['Assinatura de próprio punho','a autoria vira a assinatura dela, em letra cursiva, com o nome completo bem pequeno embaixo.',
+  `<figure class="r r6"><blockquote class="q">“${Q}</blockquote><p class="p">${P}”</p><p class="sig">Thainá</p><p class="mini">Thainá Cavalcanti · micropigmentadora</p></figure>`],
+ ['Estrela do logo','a estrelinha de quatro pontas da marca abre a frase, no lugar das aspas. Fundo branco.',
+  `<figure class="r r7">${STAR}<blockquote class="q">${Q}</blockquote><p class="p">${P}</p>${BY}</figure>`],
+ ['Palavra por palavra','a frase surge palavra a palavra quando a pessoa chega nela; o complemento aparece em seguida.',
+  `<figure class="r r8" data-on><blockquote class="q">${words()}</blockquote><div class="after"><p class="p">${P}</p>${BY}</div></figure>`],
+ ['Degraus editoriais','a frase quebrada em três linhas com recuos em escada, como título de revista; autoria à direita.',
+  `<figure class="r r9"><div class="in"><blockquote class="q"><span>“Nem toda sobrancelha</span><span>precisa de</span><span><em>micropigmentação.</em>”</span></blockquote><div class="foot"><p class="p">${P}</p>${BY}</div></div></figure>`],
+ ['Fita mínima','tudo numa faixa baixa: frase, um traço rosa e a autoria na mesma linha.',
+  `<figure class="r r10"><div class="in"><blockquote class="q">“${Q}”</blockquote><span class="dash" aria-hidden="true"></span>${BY}</div></figure>`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#r${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt" id="r${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div><div class="ctx"></div>${o[2]}<div class="ctx"></div></div>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.4});
+document.querySelectorAll('[data-on]').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
