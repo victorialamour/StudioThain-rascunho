@@ -1175,3 +1175,9 @@ main>.faq2{position:relative;padding:clamp(60px,7.5vw,104px) var(--pad);backgrou
 .faq2__it.is-open .faq2__a{clip-path:inset(0 0 0 0)}
 @media (prefers-reduced-motion:reduce){.faq2 *{transition-duration:.01ms !important;transition-delay:0ms !important}.faq2__a{clip-path:none}}
 @media (max-width:767px){.faq2__g{grid-template-columns:minmax(0,1fr)}}
+
+/* ---- Cursos: título que diz logo que é curso (Fraunces, sobre o grafite) ---- */
+.courses__title{margin:0;font:300 clamp(2.2rem,4.2vw,3.4rem)/1.06 var(--f-display);font-variation-settings:"opsz" 144;letter-spacing:-.028em;color:#fff;text-wrap:balance}
+.courses__title em{font-style:italic;color:var(--rose-light)}
+.courses__lead{margin:.9rem 0 0;max-width:46ch;font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.6;color:rgba(255,255,255,.82)}
+.courses__intro .courses__manifesto{margin-top:1.4rem}
