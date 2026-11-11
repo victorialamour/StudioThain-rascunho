@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dúvidas com movimento · 6 direções · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   DÚVIDAS COM MOVIMENTO · 6 direções (skill impeccable: animate + colorize)
+   Tese de movimento: o único momento autoral é a ABERTURA DA RESPOSTA.
+   Cada direção conta essa abertura com um material diferente (cortina,
+   luz que acompanha, palavras que chegam, marcador que desliza, painel
+   que responde, foco). Cor: paletas novas derivadas do mundo da marca.
+   Tudo tem caminho para "reduzir movimento".
+   ========================================================================== */
+:root{--f:"Fraunces",Georgia,serif;--s:"Plus Jakarta Sans",system-ui,sans-serif;--out:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,72px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#4A4544;font:15px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,p{margin:0}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:#161616}
+.top p{margin-top:.6rem;max-width:66ch;font-size:.9rem;color:#6B6360}
+.idx{position:sticky;top:0;z-index:20;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.94);border-bottom:1px solid #E7DFD9;overflow-x:auto}
+.idx a{flex:none;padding:.35rem .6rem;font:500 .74rem var(--s);color:#6B6360;text-decoration:none;border-radius:4px}
+.idx a:hover{color:#161616;background:#F6EDEA}
+.opt{scroll-margin-top:52px}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:34px var(--pad) 14px;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:#9A5457}
+.meta strong{font-weight:600;font-size:.88rem;color:#161616}
+.meta span{font-size:.82rem;color:#6B6360}
+.meta i{font-style:normal;display:inline-flex;gap:4px;align-items:center}
+.meta i u{display:inline-block;width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+
+/* ---- base comum ---- */
+.band{position:relative;overflow:hidden;padding:clamp(56px,7vw,96px) var(--pad)}
+.in{position:relative;max-width:1040px;margin:0 auto}
+.h{font:300 clamp(1.9rem,3.2vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em}
+.h em{font-style:italic}
+.sub{margin-top:.6rem;font-size:.86rem}
+.sub a{color:inherit;text-underline-offset:3px}
+.list{position:relative}
+.it>button{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.4rem;width:100%;padding:1.05rem 0;text-align:left}
+.q{font:300 clamp(1.08rem,1.6vw,1.3rem)/1.3 var(--f);letter-spacing:-.012em;transition:color .35s var(--out)}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--out)}
+.it.open .body{grid-template-rows:1fr}
+.body>div{overflow:hidden}
+.a{padding:0 0 1.2rem;font-size:.92rem;line-height:1.72;max-width:58ch}
+/* sinal que vira traço */
+.pm{position:relative;width:14px;height:14px;flex:none}
+.pm::before,.pm::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:currentColor;transition:transform .45s var(--out)}
+.pm::after{transform:rotate(90deg)}
+.it.open .pm::after{transform:rotate(0)}
+.it.open .pm::before{transform:rotate(180deg)}
+
+/* ===== 1 · Vinho profundo: a resposta abre como cortina ===== */
+.v1{background:#3B1D22;color:#F3DCD7}
+.v1 .g{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,6vw,96px);align-items:start}
+.v1 .h em{color:#E7B9B6}
+.v1 .sub{color:#D6B6B2}
+.v1 .it{border-bottom:1px solid rgba(243,220,215,.16)}
+.v1 .list{border-top:1px solid rgba(243,220,215,.16)}
+.v1 .it>button::after{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:#E7B9B6;transform:scaleX(0);transform-origin:left;transition:transform .6s var(--out)}
+.v1 .it.open>button::after{transform:scaleX(1)}
+.v1 .it.open .q{color:#fff}
+.v1 .a{color:#E4C7C3;clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--out) .08s}
+.v1 .it.open .a{clip-path:inset(0 0 0 0)}
+
+/* ===== 2 · Pó de arroz: uma luz acompanha a pergunta aberta ===== */
+.v2{background:#EFE3DA;color:#3A2A24}
+.v2 .in{max-width:820px;text-align:center}
+.v2 .h em{color:#A4574F}
+.v2 .sub{color:#6E5A50}
+.v2 .list{margin-top:clamp(26px,3.5vw,40px);text-align:left;border-top:1px solid #DCCABD}
+.v2 .it{position:relative;z-index:1;border-bottom:1px solid #DCCABD}
+.v2 .glow{position:absolute;left:-6%;right:-6%;top:0;height:120px;z-index:0;border-radius:40px;background:radial-gradient(60% 70% at 50% 50%,rgba(255,250,246,.95),rgba(255,250,246,0) 72%);transform:translateY(var(--y,0));opacity:var(--o,0);transition:transform .55s var(--out),opacity .4s var(--out),height .5s var(--out);pointer-events:none}
+.v2 .it.open .q{color:#A4574F;font-style:italic}
+.v2 .a{color:#5A4840}
+
+/* ===== 3 · Sálvia: as palavras da resposta chegam em sequência ===== */
+.v3{background:#E3E6DA;color:#2F3428}
+.v3 .g{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,6vw,96px);align-items:start}
+.v3 .h em{color:#7A5A4E}
+.v3 .sub{color:#5B6152}
+.v3 .list{border-top:1px solid #C9CEBC}
+.v3 .it{border-bottom:1px solid #C9CEBC}
+.v3 .it.open .q{color:#7A5A4E}
+.v3 .a{color:#424838}
+.v3 .a .w{display:inline-block;opacity:0;transform:translateY(.35em);filter:blur(3px);transition:opacity .5s var(--out),transform .6s var(--out),filter .5s var(--out);transition-delay:var(--d,0ms)}
+.v3 .it.open .a .w{opacity:1;transform:none;filter:none}
+
+/* ===== 4 · Grafite e champanhe: um marcador desliza até a pergunta ===== */
+.v4{background:#1C1A19;color:#E9D3C0}
+.v4 .g{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,6vw,96px);align-items:start}
+.v4 .h em{color:#D9AE94}
+.v4 .sub{color:#BFA999}
+.v4 .list{padding-left:22px;border-left:1px solid rgba(233,211,192,.14)}
+.v4 .mark{position:absolute;left:-1px;top:0;width:1px;height:var(--hh,0px);background:#D9AE94;transform:translateY(var(--y,0));transition:transform .5s var(--out),height .5s var(--out)}
+.v4 .it.open .q{color:#fff}
+.v4 .q{color:#BFA999}
+.v4 .it>button:hover .q{color:#E9D3C0}
+.v4 .a{color:#CDB8A8}
+.v4 .pm{color:#D9AE94}
+
+/* ===== 5 · Rosa queimado: o painel responde à pergunta ===== */
+.v5{padding:0}
+.v5 .g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);min-height:520px}
+.v5 .left{position:relative;padding:clamp(56px,7vw,96px) clamp(24px,5vw,72px);background:#9A5457;color:#FBF1EC;display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.v5 .left .h em{color:#F2CFCB}
+.v5 .left .sub{color:#F2DAD6}
+.v5 .topic{position:relative;height:clamp(4.5rem,8vw,6.5rem)}
+.v5 .topic span{position:absolute;left:0;bottom:0;font:300 italic clamp(3rem,6.5vw,5.2rem)/1 var(--f);letter-spacing:-.035em;color:#F2CFCB;opacity:0;transform:translateY(18px);filter:blur(8px);transition:opacity .6s var(--out),transform .7s var(--out),filter .6s var(--out)}
+.v5 .topic span.on{opacity:1;transform:none;filter:none}
+.v5 .right{padding:clamp(48px,6vw,88px) clamp(24px,5vw,72px);background:#F8F1EB;color:#2C2422;display:flex;flex-direction:column;justify-content:center}
+.v5 .list{border-top:1px solid #E3D6CC}
+.v5 .it{border-bottom:1px solid #E3D6CC}
+.v5 .it.open .q{color:#9A5457}
+.v5 .a{color:#4A4544}
+
+/* ===== 6 · Off-white: as outras perguntas recuam, a aberta ganha foco ===== */
+.v6{background:#FBF8F5;color:#161616}
+.v6 .in{max-width:900px}
+.v6 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem;margin-bottom:clamp(22px,3vw,34px)}
+.v6 .h em{color:#9A5457}
+.v6 .sub{color:#6B6360}
+.v6 .q{font-size:clamp(1.25rem,2.1vw,1.7rem)}
+.v6 .it{border-top:1px solid #ECE4DD;transition:opacity .45s var(--out)}
+.v6 .list.has-open .it:not(.open){opacity:.38}
+.v6 .list.has-open .it:not(.open):hover{opacity:.75}
+.v6 .it.open .q{font-style:italic;color:#9A5457}
+.v6 .it>button .pm{transition:transform .45s var(--out)}
+.v6 .a{color:#4A4544;transform:translateX(-10px);opacity:0;transition:transform .6s var(--out) .1s,opacity .5s var(--out) .1s}
+.v6 .it.open .a{transform:none;opacity:1}
+
+/* ---- reduzir movimento: mantém a mudança de estado, sem deslocamento ---- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms !important;transition-delay:0ms !important}
+  .v1 .a{clip-path:none}
+  .v3 .a .w{filter:none;transform:none}
+}
+
+@media (max-width:767px){
+  .v1 .g,.v3 .g,.v4 .g,.v5 .g{grid-template-columns:minmax(0,1fr)}
+  .v5 .g{min-height:0}
+  .v5 .left{gap:1.2rem}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Dúvidas com movimento · 6 direções</h1>
+  <p>Cada uma tem uma paleta nova, derivada da marca, e um único movimento pensado: o jeito como a resposta se abre. Clique nas perguntas para ver. Só as cinco perguntas essenciais.</p>
+</header>
+<nav class="idx" aria-label="Direções"><a href="#v1">1 · Vinho</a><a href="#v2">2 · Pó de arroz</a><a href="#v3">3 · Sálvia</a><a href="#v4">4 · Grafite</a><a href="#v5">5 · Rosa queimado</a><a href="#v6">6 · Off-white</a></nav>
+<main id="opts"></main>
+<script>
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, tenho uma dúvida');
+const F=[
+ {q:'Como eu sei qual procedimento é ideal pra mim?',a:'Eu faço uma avaliação antes e indico só o que faz sentido pro seu rosto e pra sua rotina. Nem toda sobrancelha precisa de micropigmentação.',t:'Avaliação'},
+ {q:'Dói?',a:'Design, henna, brow lamination e lash lifting não doem.',t:'Conforto'},
+ {q:'Quanto custa? Posso parcelar?',a:'Os valores de cada serviço estão no menu de serviços, mais acima. A micropigmentação sai em até 10x, e o Brow Lamination e o Lash Lifting em até 2x.',t:'Valores'},
+ {q:'A micropigmentação tem retoque?',a:'Sim. Estão inclusos o acompanhamento completo, o retoque e os cuidados pós-procedimento.',t:'Retoque'},
+ {q:'Como funciona o agendamento?',a:'Você escolhe o serviço, o dia e o período logo no começo da página (ou me chama direto no WhatsApp) e eu confirmo o horário por lá. Chegue 10 minutinhos antes pra aproveitar com calma.',t:'Agenda'},
+];
+const H='<h2 class="h">Ficou alguma <em>dúvida?</em></h2>';
+const SUB=`<p class="sub">Não achou a resposta? <a href="${WA}" target="_blank" rel="noopener">Me chama no WhatsApp</a>.</p>`;
+const words=t=>t.split(' ').map((w,i)=>`<span class="w" style="--d:${Math.min(i*22,420)}ms">${w}</span>`).join(' ');
+const items=(v,open=0)=>F.map((x,k)=>`<div class="it${k===open?' open':''}"><button type="button" aria-expanded="${k===open}"><span class="q">${x.q}</span><span class="pm" aria-hidden="true"></span></button><div class="body"><div><p class="a">${v===3?words(x.a):x.a}</p></div></div></div>`).join('');
+const PAL={1:['#3B1D22','#F3DCD7','#E7B9B6'],2:['#EFE3DA','#3A2A24','#A4574F'],3:['#E3E6DA','#2F3428','#7A5A4E'],4:['#1C1A19','#E9D3C0','#D9AE94'],5:['#9A5457','#F8F1EB','#2C2422'],6:['#FBF8F5','#161616','#9A5457']};
+const sw=v=>`<i>${PAL[v].map(c=>`<u style="background:${c}"></u>`).join('')}</i>`;
+const O=[
+ ['Vinho profundo','fundo vinho escuro com texto rosado; ao abrir, um fio claro corre sob a pergunta e a resposta se revela como uma cortina descendo.',
+  `<section class="band v1"><div class="in g"><div>${H}${SUB}</div><div class="list">${items(1)}</div></div></section>`],
+ ['Pó de arroz','tom nude de pó compacto com marrom cacau; uma luz suave desliza até a pergunta aberta, como um refletor de estúdio.',
+  `<section class="band v2"><div class="in">${H}${SUB}<div class="list"><span class="glow" aria-hidden="true"></span>${items(2)}</div></div></section>`],
+ ['Sálvia','verde sálvia acinzentado com detalhes cor de terra; ao abrir, as palavras da resposta chegam uma a uma, saindo do desfoque.',
+  `<section class="band v3"><div class="in g"><div>${H}${SUB}</div><div class="list">${items(3)}</div></div></section>`],
+ ['Grafite e champanhe','grafite quente com champanhe rosado; um fio dourado vertical desliza até a pergunta escolhida e acompanha a resposta.',
+  `<section class="band v4"><div class="in g"><div>${H}${SUB}</div><div class="list"><span class="mark" aria-hidden="true"></span>${items(4)}</div></div></section>`],
+ ['Rosa queimado e creme','metade rosa queimado, metade creme; o painel rosa mostra, em letra grande, o assunto da pergunta aberta (Avaliação, Conforto, Valores…).',
+  `<section class="band v5"><div class="g"><div class="left"><div>${H}${SUB}</div><div class="topic" aria-hidden="true">${F.map((x,k)=>`<span class="${k?'':'on'}">${x.t}</span>`).join('')}</div></div><div class="right"><div class="list">${items(5)}</div></div></div></section>`],
+ ['Off-white em foco','quase branco, perguntas grandes; ao abrir uma, as outras recuam e a resposta entra deslizando de leve.',
+  `<section class="band v6"><div class="in"><div class="head"><div>${H}</div>${SUB}</div><div class="list has-open">${items(6)}</div></div></section>`],
+];
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt" id="v${i+1}"><div class="meta"><b>${i+1}</b><strong>${o[0]}</strong>${sw(i+1)}<span>${o[1]}</span></div>${o[2]}</div>`).join('');
+
+/* um aberto por vez + efeitos que dependem da posição */
+document.querySelectorAll('.list').forEach(list=>{
+  const its=[...list.querySelectorAll('.it')],sec=list.closest('.band');
+  const glow=list.querySelector('.glow'),mark=list.querySelector('.mark'),topic=sec.querySelectorAll('.topic span');
+  const place=()=>{const o=list.querySelector('.it.open');
+    if(glow){if(o){glow.style.setProperty('--y',(o.offsetTop-20)+'px');glow.style.height=(o.offsetHeight+40)+'px';glow.style.setProperty('--o',1)}else glow.style.setProperty('--o',0)}
+    if(mark){if(o){mark.style.setProperty('--y',o.offsetTop+'px');mark.style.setProperty('--hh',o.offsetHeight+'px')}else mark.style.setProperty('--hh','0px')}
+    list.classList.toggle('has-open',!!o)};
+  its.forEach((it,k)=>it.querySelector('button').addEventListener('click',()=>{const was=it.classList.contains('open');
+    its.forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});
+    if(!was){it.classList.add('open');it.querySelector('button').setAttribute('aria-expanded','true');topic.forEach((s,j)=>s.classList.toggle('on',j===k))}
+    /* a altura muda durante a abertura: reposiciona ao longo da transição */
+    let n=0;const tick=()=>{place();if(++n<36)requestAnimationFrame(tick)};tick()}));
+  place();addEventListener('resize',place);
+});
+</script>
+</body>
+</html>
