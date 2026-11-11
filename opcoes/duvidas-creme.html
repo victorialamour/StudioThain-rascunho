@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dúvidas na faixa creme · 10 variações · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   DÚVIDAS · 10 variações da opção 06 (faixa creme centralizada)
+   Só as 5 perguntas essenciais. Mesma base: faixa creme de ponta a ponta,
+   título "Ficou alguma dúvida?" em Fraunces, lista fina centralizada.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4544;--muted:#6B6360;--line:#E3D6CC;--rose:#9A5457;--rose-l:#E8C6C6;--tint:#F6EDEA;--cream:#F8F1EB;--pad:clamp(20px,5vw,72px);--f:"Fraunces",Georgia,serif;--s:"Plus Jakarta Sans",system-ui,sans-serif;--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--rose);color:#fff}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:2px}
+h1,h2,p{margin:0}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:var(--rose);text-underline-offset:3px}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:var(--ink)}
+.top p{margin-top:.6rem;max-width:64ch;font-size:.9rem;color:var(--muted)}
+.idx{position:sticky;top:0;z-index:10;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.94);border-bottom:1px solid #E7DFD9;overflow-x:auto;scrollbar-width:none}
+.idx a{flex:none;padding:.35rem .6rem;font:500 .74rem var(--s);color:var(--muted);text-decoration:none;border-radius:4px}
+.idx a:hover{color:var(--ink);background:var(--tint)}
+.opt{scroll-margin-top:52px}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:32px var(--pad) 14px;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:var(--rose)}
+.meta strong{font-weight:600;font-size:.88rem;color:var(--ink)}
+.meta span{font-size:.82rem;color:var(--muted)}
+
+/* ---- base: faixa creme centralizada ---- */
+.band{padding:clamp(52px,6.5vw,88px) var(--pad);background:var(--cream);text-align:center}
+.in{max-width:760px;margin:0 auto}
+.h{font:300 clamp(1.8rem,3vw,2.4rem)/1.1 var(--f);letter-spacing:-.025em;color:var(--ink)}
+.h em{font-style:italic;color:var(--rose)}
+.sub{margin-top:.55rem;font-size:.88rem;color:var(--muted)}
+.acc{margin-top:clamp(22px,3vw,32px);text-align:left;border-top:1px solid var(--line)}
+.it{border-bottom:1px solid var(--line)}
+.it>button{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;width:100%;padding:1rem 0;text-align:left}
+.q{font-size:.98rem;font-weight:500;line-height:1.4;color:var(--ink)}
+.a{font-size:.9rem;line-height:1.7;color:var(--body);max-width:62ch}
+.pm{position:relative;width:12px;height:12px;flex:none}
+.pm::before,.pm::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--ink);transition:transform .5s var(--out)}
+.pm::after{transform:rotate(90deg)}
+.it.open .pm::after{transform:rotate(0)}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--out)}
+.it.open .body{grid-template-rows:1fr}
+.body>div{overflow:hidden}
+.body p{padding:0 0 1.1rem}
+
+/* 01 · a 06 original, enxuta */
+/* (usa só a base) */
+
+/* 02 · perguntas em Fraunces */
+.v2 .q{font:300 clamp(1.08rem,1.5vw,1.25rem)/1.3 var(--f);letter-spacing:-.01em}
+.v2 .it.open .q{font-style:italic;color:var(--rose)}
+
+/* 03 · estrela no lugar do "+" */
+.v3 .pm{display:none}
+.v3 .st{width:12px;height:12px;flex:none;fill:var(--rose);transition:transform .6s var(--out)}
+.v3 .it.open .st{transform:rotate(45deg) scale(1.15)}
+
+/* 04 · rosa claro */
+.v4{background:var(--tint)}
+.v4 .acc,.v4 .it{border-color:#EBD8D3}
+
+/* 05 · respostas sempre à vista */
+.v5 .list{margin-top:clamp(22px,3vw,32px);display:grid;gap:0;border-top:1px solid var(--line)}
+.v5 .row{padding:1rem 0;border-bottom:1px solid var(--line)}
+.v5 .row .q{font:300 clamp(1.08rem,1.5vw,1.22rem)/1.3 var(--f);letter-spacing:-.01em}
+.v5 .row .a{margin:.3rem auto 0}
+
+/* 06 · com convite ao WhatsApp no fim */
+.v6 .cta{display:inline-flex;align-items:center;gap:.6rem;margin-top:clamp(24px,3vw,32px);padding:.75rem 1.3rem;border-radius:999px;background:var(--ink);color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.03em;text-decoration:none;transition:background .4s var(--out)}
+.v6 .cta:hover{background:var(--rose)}
+
+/* 07 · fio e estrela, como o respiro */
+.v7 .line{display:block;width:1px;height:40px;margin:0 auto 18px;background:var(--rose)}
+
+/* 08 · item aberto ganha fundo branco */
+.v8 .it{transition:background .5s var(--out)}
+.v8 .it>button,.v8 .body p{padding-left:1rem;padding-right:1rem}
+.v8 .it.open{background:#fff;border-color:transparent}
+.v8 .it.open+.it{border-top-color:transparent}
+
+/* 09 · duas colunas centralizadas */
+.v9 .in{max-width:980px}
+.v9 .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px);align-items:start;margin-top:clamp(22px,3vw,32px)}
+.v9 .acc{margin-top:0}
+
+/* 10 · título à esquerda, dentro da faixa */
+.v10 .in{max-width:1000px;display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,5vw,72px);text-align:left;align-items:start}
+.v10 .acc{margin-top:0}
+
+@media (max-width:767px){
+  .v9 .cols,.v10 .in{grid-template-columns:minmax(0,1fr)}
+  .v9 .cols .acc+.acc{border-top:0}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Dúvidas na faixa creme · 10 variações</h1>
+  <p>Todas partem da opção 06 (faixa creme, título e lista centralizados), só com as cinco perguntas essenciais. Mudam detalhes: fonte das perguntas, ícone, cor, se as respostas ficam abertas, convite ao WhatsApp.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Variações"></nav>
+<main id="opts"></main>
+<script>
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, tenho uma dúvida');
+const F=[
+ {q:'Como eu sei qual procedimento é ideal pra mim?',a:'Eu faço uma avaliação antes e indico só o que faz sentido pro seu rosto e pra sua rotina. Nem toda sobrancelha precisa de micropigmentação.'},
+ {q:'Dói?',a:'Design, henna, brow lamination e lash lifting não doem.'},
+ {q:'Quanto custa? Posso parcelar?',a:'Os valores de cada serviço estão no menu de serviços, mais acima. A micropigmentação sai em até 10x, e o Brow Lamination e o Lash Lifting em até 2x.'},
+ {q:'A micropigmentação tem retoque?',a:'Sim. Estão inclusos o acompanhamento completo, o retoque e os cuidados pós-procedimento.'},
+ {q:'Como funciona o agendamento?',a:'Você escolhe o serviço, o dia e o período logo no começo da página (ou me chama direto no WhatsApp) e eu confirmo o horário por lá. Chegue 10 minutinhos antes pra aproveitar com calma.'},
+];
+const STAR='<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>';
+const H='<h2 class="h">Ficou alguma <em>dúvida?</em></h2>';
+const SUB=`<p class="sub">Não achou a resposta? <a href="${WA}" target="_blank" rel="noopener">Me chama no WhatsApp</a>.</p>`;
+const SUB2='<p class="sub">As perguntas que eu mais recebo.</p>';
+const acc=(list,open=0,icon='<span class="pm" aria-hidden="true"></span>')=>`<div class="acc">${list.map((x,k)=>`<div class="it${k===open?' open':''}"><button type="button" aria-expanded="${k===open}"><span class="q">${x.q}</span>${icon}</button><div class="body"><div><p class="a">${x.a}</p></div></div></div>`).join('')}</div>`;
+const O=[
+ ['A 06, enxuta','a mesma da opção 06, agora só com as cinco perguntas essenciais.',
+  `<div class="band v1"><div class="in">${H}${SUB}${acc(F)}</div></div>`],
+ ['Perguntas em Fraunces','as perguntas na mesma fonte dos títulos; a que está aberta fica em itálico rosado.',
+  `<div class="band v2"><div class="in">${H}${SUB}${acc(F)}</div></div>`],
+ ['Estrela no lugar do +','a estrelinha do logo marca cada pergunta e gira de leve quando ela abre.',
+  `<div class="band v3"><div class="in">${H}${SUB}${acc(F,0,STAR)}</div></div>`],
+ ['Rosa claro','a mesma faixa, em rosa bem claro no lugar do creme.',
+  `<div class="band v4"><div class="in">${H}${SUB}${acc(F)}</div></div>`],
+ ['Respostas sempre à vista','sem abrir e fechar: as cinco perguntas e respostas curtas já aparecem, centralizadas.',
+  `<div class="band v5"><div class="in">${H}${SUB}<div class="list">${F.map(x=>`<div class="row"><p class="q">${x.q}</p><p class="a">${x.a}</p></div>`).join('')}</div></div></div>`],
+ ['Convite no fim','a lista e, no final, um botão para chamar no WhatsApp, para quem não achou a resposta.',
+  `<div class="band v6"><div class="in">${H}${SUB2}${acc(F)}<a class="cta" href="${WA}" target="_blank" rel="noopener">Tirar outra dúvida no WhatsApp <span aria-hidden="true">→</span></a></div></div>`],
+ ['Fio rosa, como o respiro','um fio rosa vertical abre a faixa, repetindo o desenho do respiro da frase da Thainá.',
+  `<div class="band v7"><div class="in"><span class="line" aria-hidden="true"></span>${H}${SUB}${acc(F)}</div></div>`],
+ ['Aberta em destaque','a pergunta aberta ganha um fundo branco suave, destacando a resposta na faixa creme.',
+  `<div class="band v8"><div class="in">${H}${SUB}${acc(F)}</div></div>`],
+ ['Duas colunas','as perguntas em duas colunas, para a faixa ficar mais baixa.',
+  `<div class="band v9"><div class="in">${H}${SUB}<div class="cols">${acc(F.slice(0,3),-1)}${acc(F.slice(3),-1)}</div></div></div>`],
+ ['Título à esquerda','na mesma faixa creme, o título fica à esquerda e a lista à direita.',
+  `<div class="band v10"><div class="in"><div>${H}${SUB}</div>${acc(F)}</div></div>`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#v${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<section class="opt" id="v${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div>${o[2]}</section>`).join('');
+document.querySelectorAll('.acc').forEach(a=>a.querySelectorAll('.it>button').forEach(b=>b.addEventListener('click',()=>{const it=b.parentElement,o=!it.classList.contains('open');a.querySelectorAll('.it').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});if(o){it.classList.add('open');b.setAttribute('aria-expanded','true')}})));
+</script>
+</body>
+</html>
