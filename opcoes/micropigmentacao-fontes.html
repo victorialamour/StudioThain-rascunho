@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opção 02 · 8 fontes · Micropigmentação · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Instrument+Serif:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Italiana&family=Tenor+Sans&family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   Opção 02 ("Faixa em três tempos") com 8 fontes de destaque diferentes.
+   A fonte de destaque vale para: título, nomes das etapas, números e preço.
+   Texto corrido sempre em Plus Jakarta Sans. Cada versão define só
+   --f (família), --fs (tamanho do título), --fw (peso), --fst (estilo)
+   e --ls (espaçamento), para o título ficar no tamanho certo para a fonte.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4A4A;--muted:#7A7470;--line:#EAE5E0;--sand:#F7F4F1;--accent:#9A5457;--pad:clamp(16px,4vw,56px);--ease:cubic-bezier(.22,.8,.24,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,p,ol,figure{margin:0}ol{list-style:none;padding:0}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.top{padding:clamp(28px,4vw,48px) var(--pad) 18px}
+.top h1{font:400 clamp(1.7rem,3.4vw,2.4rem)/1.1 Gloock,serif;color:var(--ink)}
+.top p{margin-top:.5rem;max-width:64ch;color:var(--muted);font-size:.9rem}
+.idx{position:sticky;top:0;z-index:20;display:flex;gap:2px;padding:10px var(--pad);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.idx a{flex:none;padding:.3rem .65rem;font-size:.75rem;font-weight:600;color:var(--muted);border-bottom:1px solid transparent;white-space:nowrap}
+.idx a:hover{color:var(--ink);border-color:var(--ink)}
+.opt{scroll-margin-top:50px;border-top:6px solid var(--sand)}
+.opt__tag{padding:16px var(--pad) 0;font-size:.75rem;color:var(--muted)}
+.opt__tag b{font:400 1.1rem Gloock,serif;color:var(--accent);margin-right:.5rem}
+.opt__tag strong{color:var(--ink);font-weight:600;margin-right:.6rem}
+
+/* ---- opção 02 ---- */
+.sec{padding:clamp(48px,6vw,88px) var(--pad)}
+.wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.kick{font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.title{margin:.5rem 0 .8rem;font-family:var(--f);font-size:var(--fs);font-weight:var(--fw,400);font-style:var(--fst,normal);letter-spacing:var(--ls,-.01em);line-height:1.12;color:var(--ink)}
+.title em{font-style:var(--em,italic);color:var(--accent)}
+.lead{font-size:.95rem;line-height:1.75;max-width:40ch}
+.lead::first-letter{float:left;padding:4px 9px 0 0;font-family:var(--f);font-size:2.7rem;line-height:.8;color:var(--accent)}
+.buy{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1rem 1.8rem;margin-top:1.2rem}
+.price{font-family:var(--f);font-size:1.4rem;line-height:1;color:var(--ink)}
+.price small{display:block;margin-top:.3rem;font:500 .74rem "Plus Jakarta Sans",sans-serif;color:var(--muted)}
+.link{display:inline-flex;align-items:center;gap:.5rem;padding-bottom:3px;border-bottom:1px solid currentColor;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--ink);transition:color .4s var(--ease),gap .4s var(--ease)}
+.link:hover{color:var(--accent);gap:.75rem}
+ol li{display:flex;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--line)}ol li:first-child{border-top:1px solid var(--line)}
+.n{font-family:var(--f);font-size:.95rem;line-height:1.35;color:var(--accent)}
+.st{font-family:var(--f);font-size:1.02rem;line-height:1.3;color:var(--ink)}
+.tx{font-size:.86rem;line-height:1.6}
+.vid{position:relative;overflow:hidden;background:#2a2a2a;border-radius:6px;aspect-ratio:3/4}
+.vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.snd{position:absolute;right:8px;bottom:8px;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.85);color:var(--ink)}
+.snd svg{width:14px;height:14px}.snd .on{display:none}.snd[aria-pressed=true] .on{display:block}.snd[aria-pressed=true] .off{display:none}
+@media (max-width:767px){.wrap{grid-template-columns:minmax(0,1fr)}.vid{width:180px;max-width:60%}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Opção 02 · 8 fontes para o título</h1>
+  <p>O mesmo desenho da opção 02, mudando só a fonte de destaque (título, nomes das etapas, números e preço). O texto corrido continua em Plus Jakarta Sans. A palavra-chave do título aparece no rosa queimado.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Fontes"></nav>
+<main id="opts"></main>
+<script>
+const VIDEO='../assets/video/servico-micro.mp4';
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, quero agendar uma avaliação para micropigmentação');
+const S=[['Avaliação','Olho seu rosto, sua expressão e sua rotina e digo se a micro faz sentido pra você.'],['Técnica','Fio a fio, natural, dura de 6 meses a 1 ano. Shadow, sombreado, de 8 a 18 meses.'],['Desenho','Feito pro formato do seu rosto, antes de pigmentar.'],['Retoque','Retoque e acompanhamento já inclusos, com os cuidados depois.']];
+/* [nome, por que funciona, variáveis CSS] */
+const F=[
+ ['Cormorant Garamond','serifa clássica e delicada, com itálico de livro de arte; a mais “boutique”','--f:"Cormorant Garamond",serif;--fs:clamp(2.1rem,3.4vw,2.8rem);--fw:500;--ls:-.005em'],
+ ['Playfair Display','alto contraste, ar de revista de moda; elegante e muito legível','--f:"Playfair Display",serif;--fs:clamp(1.8rem,2.8vw,2.3rem)'],
+ ['Fraunces (leve)','serifa suave e arredondada no peso fino; chique e acolhedora','--f:"Fraunces",serif;--fs:clamp(1.8rem,2.8vw,2.35rem);--fw:300;--ls:-.02em'],
+ ['Instrument Serif','serifa fina e contemporânea, muito usada em marcas de beleza atuais','--f:"Instrument Serif",serif;--fs:clamp(2.1rem,3.3vw,2.8rem);--ls:-.01em'],
+ ['Bodoni Moda','a fonte das revistas de luxo; traços finos e grossos bem marcados','--f:"Bodoni Moda",serif;--fs:clamp(1.8rem,2.8vw,2.3rem);--ls:-.015em'],
+ ['Italiana','finíssima e alongada, quase uma assinatura de perfume; pede tamanho maior','--f:"Italiana",serif;--fs:clamp(2.1rem,3.4vw,2.8rem);--ls:.01em;--em:normal'],
+ ['Tenor Sans','sem serifa clássica, de linhas abertas; a mais minimalista','--f:"Tenor Sans",sans-serif;--fs:clamp(1.6rem,2.5vw,2.05rem);--ls:.01em;--em:normal'],
+ ['Gloock (a atual do site)','a serifa do logo, usada nos outros títulos do site; mantém tudo igual','--f:"Gloock",serif;--fs:clamp(1.8rem,2.8vw,2.3rem);--em:normal'],
+];
+const n=i=>String(i+1).padStart(2,'0');
+const vid=`<figure class="vid"><video data-src="${VIDEO}" muted loop playsinline preload="none" aria-label="Thainá explicando como funciona a micropigmentação"></video><button class="snd" type="button" aria-pressed="false" aria-label="Ativar som"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16 9l5 6M21 9l-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/></svg></button></figure>`;
+const block=()=>`<div class="sec"><div class="wrap">${vid}<div><p class="kick">Micropigmentação</p><h2 class="title">Você sabe como funciona a <em>micropigmentação?</em></h2><p class="lead">É a técnica que pigmenta a pele para desenhar a sobrancelha, pra você acordar com ela pronta por meses. No vídeo, eu explico.</p><div class="buy"><p class="price">R$ 670<small>ou 10x de R$ 67 · retoque incluso</small></p><a class="link" href="${WA}" target="_blank" rel="noopener">Agendar avaliação <span aria-hidden="true">→</span></a></div></div><ol>${S.map((s,i)=>`<li><span class="n">${n(i)}</span><div><p class="st">${s[0]}</p><p class="tx">${s[1]}</p></div></li>`).join('')}</ol></div></div>`;
+document.getElementById('idx').innerHTML=F.map((f,i)=>`<a href="#f${i+1}">${n(i)} · ${f[0].split(' (')[0]}</a>`).join('');
+document.getElementById('opts').innerHTML=F.map((f,i)=>`<section class="opt" id="f${i+1}" style='${f[2]}'><p class="opt__tag"><b>${n(i)}</b><strong>${f[0]}</strong>${f[1]}</p>${block()}</section>`).join('');
+/* vídeos: baixam perto, tocam ao aparecer, pausam ao sair */
+const vids=[...document.querySelectorAll('video')];
+const near=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=e.target;if(!v.src){v.src=v.dataset.src;v.preload='auto'}near.unobserve(v)}}),{rootMargin:'400px 0px'});
+const vis=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.4});
+vids.forEach(v=>{near.observe(v);vis.observe(v)});
+document.querySelectorAll('.snd').forEach(b=>b.addEventListener('click',()=>{const v=b.parentElement.querySelector('video'),on=v.muted;vids.forEach(o=>{o.muted=true;o.parentElement.querySelector('.snd').setAttribute('aria-pressed','false')});if(on){v.muted=false;v.currentTime=0;v.play().catch(()=>{});b.setAttribute('aria-pressed','true')}}));
+</script>
+</body>
+</html>
