@@ -162,36 +162,37 @@ h1,h2,p,figure,blockquote,ul,ol{margin:0}ul,ol{list-style:none;padding:0}button{
 <main id="opts"></main>
 <script>
 const Q=[
- {t:'Me sinto radiante, uma nova mulher. A praticidade de acordar pronta é maravilhosa.',k:'Radiante',hi:'uma nova mulher',key:'“Uma nova <em>mulher.</em>”'},
- {t:'Mãos de fada. Zero dor ou incômodo. Minhas sobrancelhas elevaram minha autoestima.',k:'Mãos de fada',hi:'Mãos de fada',key:'“Mãos de <em>fada.</em>”'},
- {t:'Ganhei vários elogios hoje, dizendo que a sobrancelha tá linda.',k:'Elogios',hi:'vários elogios',key:'“Ganhei vários <em>elogios.</em>”'},
+ {t:'Me sinto radiante, uma nova mulher. A praticidade de acordar pronta é maravilhosa.',k:'Radiante',hi:'uma nova mulher',key:'“Uma nova <em>mulher.</em>”',n:'Isabela C.'},
+ {t:'Mãos de fada. Zero dor ou incômodo. Minhas sobrancelhas elevaram minha autoestima.',k:'Mãos de fada',hi:'Mãos de fada',key:'“Mãos de <em>fada.</em>”',n:'Jéssica K.'},
+ {t:'Ganhei vários elogios hoje, dizendo que a sobrancelha tá linda.',k:'Elogios',hi:'vários elogios',key:'“Ganhei vários <em>elogios.</em>”',n:'Amanda M.'},
 ];
 const BY='<p class="by">Cliente · via WhatsApp</p>';
+const by=x=>`<p class="by">${x.n} · via WhatsApp</p>`;
 const HD='<h2 class="hd">O que as clientes <em>dizem</em></h2>';
 const STAR='<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>';
 const q=(x,mark=false,k=0)=>`<blockquote class="qt">“${mark?x.t.replace(x.hi,`<mark style="--k:${k}">${x.hi}</mark>`):x.t}”</blockquote>`;
 const ARR=d=>`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
 const O=[
  ['Três colunas entre fios','as três falas lado a lado, separadas só por fios verticais finos; sem caixa, sem sombra. Bem baixa.',
-  `<div class="sec o1"><div class="wrap">${HD.replace('class="hd"','class="hd" style="margin-bottom:14px"')}<div class="row">${Q.map(x=>`<figure>${q(x)}${BY}</figure>`).join('')}</div></div></div>`],
+  `<div class="sec o1"><div class="wrap">${HD.replace('class="hd"','class="hd" style="margin-bottom:14px"')}<div class="row">${Q.map(x=>`<figure>${q(x)}${by(x)}</figure>`).join('')}</div></div></div>`],
  ['Uma por vez','uma fala por vez numa faixa fina, trocando sozinha; uma barra rosa mostra o tempo e o contador indica qual é.',
-  `<div class="sec o2"><div class="box">${HD}<div class="stage" aria-live="polite">${Q.map((x,i)=>`<figure class="${i?'':'on'}">${q(x)}${BY}</figure>`).join('')}</div><div><p class="count"><span class="c">1</span> / 3</p><span class="bar"><i></i></span></div></div></div>`],
+  `<div class="sec o2"><div class="box">${HD}<div class="stage" aria-live="polite">${Q.map((x,i)=>`<figure class="${i?'':'on'}">${q(x)}${by(x)}</figure>`).join('')}</div><div><p class="count"><span class="c">1</span> / 3</p><span class="bar"><i></i></span></div></div></div>`],
  ['Aspa e lista','uma aspa grande em rosa claro à esquerda; as falas empilhadas como lista, cada uma numa linha.',
-  `<div class="sec o3"><div class="g"><span class="mark" aria-hidden="true">“</span><div>${HD.replace('class="hd"','class="hd" style="margin-bottom:12px"')}<ul>${Q.map(x=>`<li>${q(x)}<span class="by">Cliente · via WhatsApp</span></li>`).join('')}</ul></div></div></div>`],
+  `<div class="sec o3"><div class="g"><span class="mark" aria-hidden="true">“</span><div>${HD.replace('class="hd"','class="hd" style="margin-bottom:12px"')}<ul>${Q.map(x=>`<li>${q(x)}<span class="by">${x.n} · via WhatsApp</span></li>`).join('')}</ul></div></div></div>`],
  ['Palavras-chave','três palavras em itálico (Radiante, Mãos de fada, Elogios); ao tocar em uma, a fala completa aparece ao lado.',
   `<div class="sec o4"><div class="g"><div>${HD.replace('class="hd"','class="hd" style="margin-bottom:12px"')}<div class="keys" role="tablist">${Q.map((x,i)=>`<button role="tab" aria-selected="${!i}" data-i="${i}">${x.k}</button>`).join('')}</div></div><div class="panel" aria-live="polite"></div></div></div>`],
  ['Grifo nas palavras fortes','três colunas sob um fio escuro; as palavras mais fortes de cada fala ganham um grifo rosado que se pinta ao aparecer.',
-  `<div class="sec o5" data-on><div class="wrap">${HD}<div class="row">${Q.map((x,i)=>`<figure>${q(x,true,i)}${BY}</figure>`).join('')}</div></div></div>`],
+  `<div class="sec o5" data-on><div class="wrap">${HD}<div class="row">${Q.map((x,i)=>`<figure>${q(x,true,i)}${by(x)}</figure>`).join('')}</div></div></div>`],
  ['Frase-chave em destaque','de cada fala, a frase mais forte aparece maior, em Fraunces; a fala completa vem pequena embaixo.',
-  `<div class="sec o6"><div class="wrap">${HD.replace('class="hd"','class="hd" style="margin-bottom:18px"')}<div class="row">${Q.map(x=>`<figure><p class="key">${x.key}</p>${q(x)}${BY}</figure>`).join('')}</div></div></div>`],
+  `<div class="sec o6"><div class="wrap">${HD.replace('class="hd"','class="hd" style="margin-bottom:18px"')}<div class="row">${Q.map(x=>`<figure><p class="key">${x.key}</p>${q(x)}${by(x)}</figure>`).join('')}</div></div></div>`],
  ['Conversa','as falas como mensagens de uma conversa, em balões creme bem discretos, chegando uma depois da outra.',
-  `<div class="sec o7" data-on><div class="g"><div>${HD}<p class="sub">Mensagens que a Thainá recebeu no WhatsApp.</p></div><div class="chat">${Q.map((x,i)=>`<div class="msg" style="--k:${i}">${q(x)}<time>via WhatsApp</time></div>`).join('')}</div></div></div>`],
+  `<div class="sec o7" data-on><div class="g"><div>${HD}<p class="sub">Mensagens que a Thainá recebeu no WhatsApp.</p></div><div class="chat">${Q.map((x,i)=>`<div class="msg" style="--k:${i}">${q(x)}<time>${x.n} · via WhatsApp</time></div>`).join('')}</div></div></div>`],
  ['Coluna com estrelas','uma coluna estreita e centralizada; as falas separadas pela estrelinha do logo, aparecendo em sequência.',
-  `<div class="sec o8" data-on><div class="col">${HD}${Q.map((x,i)=>`${i?`<div class="sep" style="--k:${i*2-1}">${STAR}</div>`:''}<figure style="--k:${i*2}">${q(x)}${BY}</figure>`).join('')}</div></div>`],
+  `<div class="sec o8" data-on><div class="col">${HD}${Q.map((x,i)=>`${i?`<div class="sep" style="--k:${i*2-1}">${STAR}</div>`:''}<figure style="--k:${i*2}">${q(x)}${by(x)}</figure>`).join('')}</div></div>`],
  ['Uma linha, com setas','tudo numa única linha fina: a fala desliza para o lado ao tocar nas setas. A mais compacta.',
-  `<div class="sec o9"><div class="line">${HD}<div class="viewport"><div class="track">${Q.map(x=>`<figure>${q(x)}${BY}</figure>`).join('')}</div></div><div class="nav"><button type="button" data-d="-1" aria-label="Anterior">${ARR('M15 6l-6 6 6 6')}</button><button type="button" data-d="1" aria-label="Próxima">${ARR('M9 6l6 6-6 6')}</button></div></div></div>`],
+  `<div class="sec o9"><div class="line">${HD}<div class="viewport"><div class="track">${Q.map(x=>`<figure>${q(x)}${by(x)}</figure>`).join('')}</div></div><div class="nav"><button type="button" data-d="-1" aria-label="Anterior">${ARR('M15 6l-6 6 6 6')}</button><button type="button" data-d="1" aria-label="Próxima">${ARR('M9 6l6 6-6 6')}</button></div></div></div>`],
  ['Título lateral','o título à esquerda; à direita, a primeira fala maior e as outras duas lado a lado embaixo.',
-  `<div class="sec o10"><div class="g"><div class="left">${HD}<p>Três de muitas mensagens.</p></div><div class="stack">${Q.map(x=>`<figure>${q(x)}${BY}</figure>`).join('')}</div></div></div>`],
+  `<div class="sec o10"><div class="g"><div class="left">${HD}<p>Três de muitas mensagens.</p></div><div class="stack">${Q.map(x=>`<figure>${q(x)}${by(x)}</figure>`).join('')}</div></div></div>`],
 ];
 const pad=i=>String(i+1).padStart(2,'0');
 document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${pad(i)}</a>`).join('');
@@ -205,7 +206,7 @@ const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
  go(0);if(!RM)setInterval(()=>go((i+1)%f.length),6000)})();
 /* 04 · palavras-chave */
 (()=>{const box=document.querySelector('.o4'),b=[...box.querySelectorAll('[role=tab]')],p=box.querySelector('.panel');
- const go=n=>{b.forEach((x,k)=>x.setAttribute('aria-selected',k===n));p.innerHTML=q(Q[n])+BY};b.forEach((x,k)=>{x.addEventListener('click',()=>go(k));x.addEventListener('mouseenter',()=>go(k))});go(0)})();
+ const go=n=>{b.forEach((x,k)=>x.setAttribute('aria-selected',k===n));p.innerHTML=q(Q[n])+by(Q[n])};b.forEach((x,k)=>{x.addEventListener('click',()=>go(k));x.addEventListener('mouseenter',()=>go(k))});go(0)})();
 /* 09 · uma linha */
 (()=>{const box=document.querySelector('.o9'),tr=box.querySelector('.track');let i=0;
  box.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{i=(i+ +b.dataset.d+Q.length)%Q.length;tr.style.transform=`translateX(${-i*100}%)`}))})();
