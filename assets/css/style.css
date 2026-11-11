@@ -1098,3 +1098,15 @@ main>.breath{position:relative;padding:clamp(72px,9vw,128px) var(--pad);text-ali
 .breath__by{display:flex;flex-direction:column;align-items:center;gap:.15rem;margin-top:clamp(24px,3vw,34px)}
 .breath__by b{font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--ink)}
 .breath__by span{font-size:.78rem;color:var(--muted)}
+
+/* ---- Respiro · opção 07 (estrela do logo), versão compacta ----
+   Fundo branco, estrela pequena da marca, frase menor e menos espaço. */
+main>.breath{padding:clamp(48px,6vw,80px) var(--pad);background:transparent;box-shadow:none;clip-path:none;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.breath__star{display:block;width:14px;height:14px;margin:0 auto 1rem;fill:var(--accent)}
+.breath__q{max-width:24ch;margin:0 auto}
+.breath__q p{margin:0;text-indent:0;font:300 clamp(1.45rem,2.5vw,2rem)/1.15 var(--f-display);font-variation-settings:"opsz" 144;letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+.breath__q em{font-style:italic;color:var(--accent)}
+main>.breath .breath__p{display:block;margin:.6rem 0 0;font:300 italic clamp(.95rem,1.2vw,1.05rem)/1.4 var(--f-display);color:var(--muted)}
+.breath__by{margin-top:1rem;gap:.1rem}
+.breath__by b{font-size:.76rem}
+.breath__by span{font-size:.72rem}
