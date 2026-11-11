@@ -57,15 +57,15 @@ h1,h2,p{margin:0}button{font:inherit;color:inherit;background:none;border:0;curs
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms !important;transition-delay:0ms !important}.a{clip-path:none}}
 @media (max-width:767px){.g{grid-template-columns:minmax(0,1fr)}}
 
-/* ---- as três roupas da marca (contraste conferido) ---- */
-.rosa{--bg:#9A5457;--fg:#FBF1EC;--strong:#FFFFFF;--soft:#F6E3DF;--acc:#EDDAC9;--rule:rgba(251,241,236,.22)}
-.oliva{--bg:#4E5446;--fg:#F3EAE0;--strong:#FFFFFF;--soft:#E3DACE;--acc:#E8C6C6;--rule:rgba(243,234,224,.18)}
-.creme{--bg:#EDDAC9;--fg:#3A2A27;--strong:#7E4044;--soft:#5A4740;--acc:#9A5457;--rule:rgba(58,42,39,.16)}
+/* ---- versões suaves: fundos quase papel, cor forte só nos detalhes ---- */
+.rosa{--bg:#F7EEEB;--fg:#2E2423;--strong:#7E4044;--soft:#5A4A47;--acc:#9A5457;--rule:rgba(46,36,35,.12)}
+.oliva{--bg:#EEEFE9;--fg:#2B2F26;--strong:#4E5446;--soft:#555B4C;--acc:#9A5457;--rule:rgba(43,47,38,.13)}
+.creme{--bg:#FAF5F0;--fg:#2C2422;--strong:#7E4044;--soft:#5A4A47;--acc:#9A5457;--rule:rgba(44,36,34,.11)}
 </style>
 </head>
 <body>
 <header class="top">
-  <h1>A opção 1, com a identidade da Thainá</h1>
+  <h1>A opção 1, com a identidade da Thainá · versões suaves</h1>
   <p>Mesmo desenho e mesmo movimento da opção 1 (o fio corre sob a pergunta e a resposta abre como cortina), agora com as cores da marca, a estrelinha do logo no lugar do “+” e a assinatura dela em cada resposta. Clique nas perguntas.</p>
 </header>
 <main id="opts"></main>
@@ -81,9 +81,9 @@ const F=[
 const STAR=c=>`<svg class="${c}" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>`;
 const block=cls=>`<section class="band ${cls}"><div class="g"><div>${STAR('logo-star')}<h2 class="h">Ficou alguma <em>dúvida?</em></h2><p class="sub">Não achou a resposta? <a href="${WA}" target="_blank" rel="noopener">Me chama no WhatsApp</a>.</p></div><div class="list">${F.map((x,k)=>`<div class="it${k?'':' open'}"><button type="button" aria-expanded="${!k}"><span class="q">${x.q}</span>${STAR('st')}</button><div class="body"><div><p class="a">${x.a}<span class="sig">Thainá</span></p></div></div></div>`).join('')}</div></div></section>`;
 const O=[
- ['rosa','Rosa queimado','a cor principal da marca de fundo, texto creme e detalhes em creme. A mais “Thainá”.',['#9A5457','#FBF1EC','#EDDAC9']],
- ['oliva','Oliva do logo','o verde-oliva do fundo do logo original, com creme e rosa claro. Escura e elegante, como a 1, mas da marca.',['#4E5446','#F3EAE0','#E8C6C6']],
- ['creme','Creme da marca','o creme do logo de fundo, com rosa queimado nos detalhes. A versão clara.',['#EDDAC9','#3A2A27','#9A5457']],
+ ['rosa','Rosa bem claro','um rosado quase branco, derivado do rosa da marca; estrela, fio e itálico em rosa queimado.',['#F7EEEB','#2E2423','#9A5457']],
+ ['oliva','Oliva em névoa','o oliva do logo bem diluído, quase um cinza-esverdeado claro; detalhes em rosa queimado.',['#EEEFE9','#2B2F26','#9A5457']],
+ ['creme','Creme papel','um creme bem leve, como papel de carta; detalhes em rosa queimado. A mais neutra.',['#FAF5F0','#2C2422','#9A5457']],
 ];
 document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt"><div class="meta"><b>${String.fromCharCode(65+i)}</b><strong>${o[1]}</strong><i>${o[3].map(c=>`<u style="background:${c}"></u>`).join('')}</i><span>${o[2]}</span></div>${block(o[0])}</div>`).join('');
 document.querySelectorAll('.list').forEach(list=>{const its=[...list.querySelectorAll('.it')];its.forEach(it=>it.querySelector('button').addEventListener('click',()=>{const was=it.classList.contains('open');its.forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});if(!was){it.classList.add('open');it.querySelector('button').setAttribute('aria-expanded','true')}}))});
