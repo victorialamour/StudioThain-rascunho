@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 opções · Micropigmentação + avaliação · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Pinyon+Script&family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   10 OPÇÕES · seção única = "Você sabe como funciona a micropigmentação?"
+   + "Nem toda sobrancelha precisa de micropigmentação" (a avaliação honesta).
+   Mesmo estilo da opção 02 aplicada: Fraunces leve no destaque, Plus Jakarta
+   Sans no texto, fios finos, vídeo pequeno, escala contida.
+   O texto da avaliação substitui a etapa "Avaliação" para não repetir.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4A4A;--muted:#7A7470;--line:#EAE5E0;--sand:#F7F4F1;--tint:#F6EDEA;--accent:#9A5457;--pad:clamp(16px,4vw,56px);--ease:cubic-bezier(.22,.8,.24,1);--f:"Fraunces",Georgia,serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,p,ol,figure,blockquote{margin:0}ol{list-style:none;padding:0}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.top{padding:clamp(28px,4vw,48px) var(--pad) 18px}
+.top h1{font:400 clamp(1.7rem,3.4vw,2.4rem)/1.1 Gloock,serif;color:var(--ink)}
+.top p{margin-top:.5rem;max-width:66ch;color:var(--muted);font-size:.9rem}
+.idx{position:sticky;top:0;z-index:20;display:flex;gap:2px;padding:10px var(--pad);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.idx a{flex:none;padding:.3rem .65rem;font-size:.75rem;font-weight:600;color:var(--muted);border-bottom:1px solid transparent}
+.idx a:hover{color:var(--ink);border-color:var(--ink)}
+.opt{scroll-margin-top:50px;border-top:6px solid var(--sand)}
+.opt__tag{padding:16px var(--pad) 0;font-size:.75rem;color:var(--muted)}
+.opt__tag b{font:400 1.1rem Gloock,serif;color:var(--accent);margin-right:.5rem}
+.opt__tag strong{color:var(--ink);font-weight:600;margin-right:.6rem}
+.sec{padding:clamp(48px,6vw,88px) var(--pad)}
+.wrap{max-width:1040px;margin:0 auto}
+
+/* ---- peças ---- */
+.kick{font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.title{margin:.5rem 0 .8rem;font:300 clamp(1.8rem,2.8vw,2.35rem)/1.12 var(--f);letter-spacing:-.02em;color:var(--ink)}
+.title em,.q em{font-style:italic;color:var(--accent)}
+.lead{max-width:40ch;font-size:.95rem;line-height:1.75}
+.cap::first-letter{float:left;padding:4px 9px 0 0;font:300 2.7rem/.8 var(--f);color:var(--accent)}
+.q{font:300 clamp(1.35rem,2.1vw,1.7rem)/1.25 var(--f);letter-spacing:-.015em;color:var(--ink)}
+.q-it{font-style:italic}
+.punch{margin-top:.4rem;font:300 italic 1.02rem/1.4 var(--f);color:var(--accent)}
+.honest{font-size:.9rem;line-height:1.7}
+.sign{font:400 1.5rem/1 "Pinyon Script",cursive;color:var(--ink)}
+.n{font:300 .95rem/1.35 var(--f);color:var(--accent)}
+.st{font:300 1.02rem/1.3 var(--f);color:var(--ink)}
+.tx{font-size:.86rem;line-height:1.6}
+.price{font:300 1.4rem/1 var(--f);color:var(--ink)}
+.price small{display:block;margin-top:.3rem;font:500 .74rem "Plus Jakarta Sans",sans-serif;color:var(--muted)}
+.link{display:inline-flex;align-items:center;gap:.5rem;padding-bottom:3px;border-bottom:1px solid currentColor;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--ink);transition:color .4s var(--ease),gap .4s var(--ease)}
+.link:hover{color:var(--accent);gap:.75rem}
+.buy{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1rem 1.8rem}
+.steps li{display:flex;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--line)}.steps li:first-child{border-top:1px solid var(--line)}
+.vid{position:relative;overflow:hidden;background:#2a2a2a;border-radius:6px}
+.vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.pic{overflow:hidden;border-radius:6px;background:var(--sand)}.pic img{display:block;width:100%;height:100%;object-fit:cover}
+.snd{position:absolute;right:8px;bottom:8px;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.85);color:var(--ink)}
+.snd svg{width:14px;height:14px}.snd .on{display:none}.snd[aria-pressed=true] .on{display:block}.snd[aria-pressed=true] .off{display:none}
+.rv{opacity:0;transform:translateY(10px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}.rv{opacity:1;transform:none}}
+
+/* ===== 01 · Frase como abertura ===== */
+.o1 .open{max-width:760px;margin-bottom:clamp(28px,4vw,44px);padding-bottom:clamp(20px,3vw,32px);border-bottom:1px solid var(--line)}
+.o1 .band{display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(24px,4vw,48px);align-items:stretch}
+.o1 .vid{min-height:300px}.o1 .band>div,.o1 .band>ol{align-self:start}
+
+/* ===== 02 · Frase como fecho ===== */
+.o2 .band{display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(24px,4vw,48px);align-items:stretch}
+.o2 .vid{min-height:300px}.o2 .band>div,.o2 .band>ol{align-self:start}
+.o2 .close{display:grid;grid-template-columns:1fr auto;gap:1rem 2rem;align-items:end;margin-top:clamp(28px,4vw,44px);padding-top:clamp(20px,3vw,32px);border-top:1px solid var(--ink)}
+.o2 .close .honest{max-width:62ch;margin-top:.6rem}
+
+/* ===== 03 · Frase na lateral ===== */
+.o3 .wrap{display:grid;grid-template-columns:200px 1fr 250px;gap:clamp(24px,4vw,48px);align-items:stretch}
+.o3 .vid{min-height:300px}.o3 .wrap>div{align-self:start}
+.o3 .steps{margin-top:1.2rem}
+.o3 .side{padding-left:clamp(18px,3vw,32px);border-left:1px solid var(--line)}
+.o3 .side .honest{margin:.8rem 0 1rem}
+
+/* ===== 04 · A avaliação vira destaque ===== */
+.o4 .wrap{display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(24px,4vw,48px);align-items:stretch}
+.o4 .vid{min-height:300px}.o4 .wrap>div,.o4 .wrap>ol{align-self:start}
+.o4 .hl{display:block;padding:.9rem 1rem;margin:.2rem 0 .3rem;background:var(--tint);border-radius:4px}
+.o4 .hl .q{font-size:1.15rem}
+
+/* ===== 05 · Duas metades ===== */
+.o5 .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.o5 .l{padding:clamp(24px,4vw,44px);background:var(--sand);display:flex;flex-direction:column;gap:.8rem}
+.o5 .l .sign{margin-top:auto}
+.o5 .r{padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:150px 1fr;gap:1.2rem 1.6rem;align-items:start}
+.o5 .r .vid{grid-row:span 2;height:100%;min-height:260px}
+.o5 .r .buy{grid-column:1/-1}
+
+/* ===== 06 · Pergunta e resposta honesta ===== */
+.o6 .wrap{display:grid;grid-template-columns:1fr 1fr 210px;gap:clamp(24px,4vw,48px);align-items:stretch}
+.o6 .wrap>div{align-self:start}
+.o6 .ans{margin:.4rem 0 1rem}
+.o6 .ans .q{font-size:1.25rem}
+.o6 .then{margin-bottom:.6rem;font-size:.8rem;font-weight:600;color:var(--muted)}
+.o6 .vid{min-height:320px}
+
+/* ===== 07 · Foto e vídeo juntos ===== */
+.o7 .wrap{display:grid;grid-template-columns:340px 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.o7 .duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.o7 .duo>*{aspect-ratio:3/4}
+.o7 .duo figcaption{grid-column:1/-1;font-size:.72rem;font-style:italic;color:var(--muted)}
+.o7 .q{margin:.2rem 0 .3rem}
+.o7 .cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:1.4rem}
+
+/* ===== 08 · Abas ===== */
+.o8 .wrap{display:grid;grid-template-columns:200px 1fr;gap:clamp(24px,4vw,48px);align-items:stretch}
+.o8 .vid{min-height:320px}
+.o8 .tabs{display:flex;gap:1.4rem;margin:1rem 0 .4rem;border-bottom:1px solid var(--line)}
+.o8 .tabs button{padding:.5rem 0;font-size:.82rem;font-weight:600;color:var(--muted);border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .4s,border-color .4s}
+.o8 .tabs button[aria-selected=true]{color:var(--ink);border-color:var(--ink)}
+.o8 .panel{min-height:230px;padding-top:.6rem}
+.o8 .panel>*{animation:fi .6s var(--ease)}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.o8 .panel .steps{display:grid;grid-template-columns:1fr 1fr;column-gap:1.6rem}.o8 .panel .steps li:nth-child(2){border-top:1px solid var(--line)}
+
+/* ===== 09 · Aspas e faixa ===== */
+.o9 .quote{position:relative;max-width:640px;margin:0 auto clamp(32px,5vw,52px);text-align:center}
+.o9 .quote::before{content:"“";display:block;height:2.4rem;font:300 4.5rem/1 var(--f);color:var(--accent)}
+.o9 .quote .honest{max-width:52ch;margin:.8rem auto 0}
+.o9 .quote .sign{margin-top:.8rem}
+.o9 .band{display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(24px,4vw,48px);align-items:stretch;padding-top:clamp(28px,4vw,44px);border-top:1px solid var(--line)}
+.o9 .vid{min-height:300px}.o9 .band>div,.o9 .band>ol{align-self:start}
+
+/* ===== 10 · Linha com nota da Thainá ===== */
+.o10 .head{display:grid;grid-template-columns:200px 1fr;gap:clamp(24px,4vw,48px);align-items:stretch}
+.o10 .vid{min-height:290px}
+.o10 .head>div{align-self:center}
+.o10 .note{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;margin-top:1.2rem;padding:1rem 1.1rem;border-left:2px solid var(--accent);background:var(--sand)}
+.o10 .note .sign{grid-row:span 2;align-self:center;font-size:1.3rem}
+.o10 .tl{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:clamp(28px,4vw,44px)}
+.o10 .tl li{padding-top:.8rem;border-top:1px solid var(--line)}
+.o10 .tl .n{display:block;margin-bottom:.3rem}
+.o10 .buy{margin-top:1.6rem}
+
+@media (max-width:767px){
+  .o1 .band,.o2 .band,.o3 .wrap,.o4 .wrap,.o5 .wrap,.o6 .wrap,.o7 .wrap,.o8 .wrap,.o9 .band,.o10 .head{grid-template-columns:minmax(0,1fr)}
+  .vid{width:180px;max-width:60%;min-height:0 !important;height:auto !important;aspect-ratio:3/4}
+  .o2 .close{grid-template-columns:minmax(0,1fr)}
+  .o3 .side{padding-left:0;border-left:0;padding-top:1rem;border-top:1px solid var(--line)}
+  .o5 .r{grid-template-columns:minmax(0,1fr)}.o5 .r .vid{grid-row:auto}
+  .o6 .vid{order:-1}
+  .o7 .duo{max-width:300px}.o7 .duo>*{width:auto;max-width:none}.o7 .cols{grid-template-columns:minmax(0,1fr)}
+  .o8 .panel .steps{grid-template-columns:minmax(0,1fr)}.o8 .panel .steps li:nth-child(2){border-top:0}
+  .o10 .tl{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>10 opções · Micropigmentação + avaliação honesta</h1>
+  <p>As duas seções numa só: “Você sabe como funciona a micropigmentação?” e “Nem toda sobrancelha precisa de micropigmentação”. Mesmo estilo que você escolheu (opção 02, Fraunces). O texto da avaliação entra no lugar da etapa “Avaliação”, para não repetir.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+<script>
+const VIDEO='../assets/video/servico-micro.mp4', PHOTO='../assets/img/carrossel-atendimento-poster.webp';
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, quero agendar uma avaliação para micropigmentação');
+/* textos das duas seções (já existentes no site) */
+const LEAD='É a técnica que pigmenta a pele para desenhar a sobrancelha, pra você acordar com ela pronta por meses. No vídeo, eu explico.';
+const Q='Nem toda sobrancelha precisa de <em>micropigmentação.</em>';
+const PUNCH='E eu digo isso sendo micropigmentadora.';
+const HONEST='Antes de qualquer procedimento, eu olho com calma o seu rosto, a sua expressão e a sua rotina. Às vezes um design bem feito resolve. Você sai sabendo o que faz sentido pra você.';
+const S=[['Avaliação','Olho seu rosto, sua expressão e sua rotina e digo se a micro faz sentido pra você.'],['Técnica','Fio a fio, natural, dura de 6 meses a 1 ano. Shadow, sombreado, de 8 a 18 meses.'],['Desenho','Feito pro formato do seu rosto, antes de pigmentar.'],['Retoque','Retoque e acompanhamento já inclusos, com os cuidados depois.']];
+const n=i=>String(i+1).padStart(2,'0');
+const kick='<p class="kick">Micropigmentação</p>';
+const title='<h2 class="title">Você sabe como funciona a <em>micropigmentação?</em></h2>';
+const lead=(c=true)=>`<p class="lead${c?' cap':''}">${LEAD}</p>`;
+const quote=(it=false)=>`<p class="q${it?' q-it':''}">${Q}</p><p class="punch">${PUNCH}</p>`;
+const honest=`<p class="honest">${HONEST}</p>`;
+const sign='<p class="sign">Thainá</p>';
+const vid=`<figure class="vid"><video data-src="${VIDEO}" muted loop playsinline preload="none" aria-label="Thainá explicando como funciona a micropigmentação"></video><button class="snd" type="button" aria-pressed="false" aria-label="Ativar som"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16 9l5 6M21 9l-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/></svg></button></figure>`;
+const pic=`<figure class="pic"><img src="${PHOTO}" alt="Thainá atendendo uma cliente no studio" loading="lazy"></figure>`;
+const buy=`<div class="buy"><p class="price">R$ 670<small>ou 10x de R$ 67 · retoque incluso</small></p><a class="link" href="${WA}" target="_blank" rel="noopener">Agendar avaliação <span aria-hidden="true">→</span></a></div>`;
+/* etapas; from=1 pula a "Avaliação" quando o texto honesto já fala dela (e renumera a partir de 01) */
+const steps=(from=0,cls='steps',renum=true)=>`<ol class="${cls}">${S.slice(from).map((s,k)=>{const i=renum?k:k+from;return `<li><span class="n">${n(i)}</span><div><p class="st">${s[0]}</p><p class="tx">${s[1]}</p></div></li>`}).join('')}</ol>`;
+const textCol=`<div>${kick}${title}${lead()}<div style="margin-top:1.2rem">${buy}</div></div>`;
+
+const O=[
+ ['Frase como abertura','a frase honesta abre a seção; embaixo, a faixa da opção 02 sem a etapa repetida',
+  `<div class="sec o1"><div class="wrap"><div class="open rv">${quote()}<p class="honest" style="margin-top:.8rem;max-width:62ch">${HONEST}</p></div><div class="band rv" style="--i:1">${vid}${textCol}${steps(1)}</div></div></div>`],
+ ['Frase como fecho','primeiro a faixa da opção 02; a frase honesta fecha, sobre um fio escuro, com a assinatura',
+  `<div class="sec o2"><div class="wrap"><div class="band rv">${vid}${textCol}${steps(1)}</div><div class="close rv" style="--i:1"><div>${quote()}${honest}</div>${sign}</div></div></div>`],
+ ['Frase na lateral','vídeo, apresentação com etapas e, numa coluna fina à direita, a frase honesta',
+  `<div class="sec o3"><div class="wrap rv">${vid}<div>${kick}${title}${lead()}${steps(1)}<div style="margin-top:1.2rem">${buy}</div></div><aside class="side">${quote(true)}${honest}${sign}</aside></div></div>`],
+ ['A avaliação vira destaque','a etapa 01 ganha a frase honesta num destaque rosado; o resto segue a opção 02',
+  `<div class="sec o4"><div class="wrap rv">${vid}${textCol}<ol class="steps"><li><span class="n">01</span><div><p class="st">Avaliação</p><span class="hl"><span class="q">${Q}</span><span class="punch" style="display:block">${PUNCH}</span></span><p class="tx">Às vezes um design bem feito resolve.</p></div></li>${steps(1,'steps',false).replace(/^<ol class="steps">|<\/ol>$/g,'')}</ol></div></div>`],
+ ['Duas metades','à esquerda, a conversa honesta num painel creme; à direita, como funciona, com vídeo e etapas',
+  `<div class="sec o5"><div class="wrap rv"><div class="l">${kick}${quote()}${honest}${sign}</div><div class="r">${vid}<div><h2 class="title" style="font-size:1.6rem">Se fizer sentido, funciona <em>assim:</em></h2>${steps(1)}</div>${buy}</div></div></div>`],
+ ['Pergunta e resposta honesta','a pergunta do título é respondida primeiro com a frase honesta; depois, “se fizer sentido, funciona assim”',
+  `<div class="sec o6"><div class="wrap rv"><div>${kick}${title}<div class="ans">${quote()}</div>${honest}</div><div><p class="then">Se fizer sentido pra você, funciona assim:</p>${steps(1)}<div style="margin-top:1.2rem">${buy}</div></div>${vid}</div></div>`],
+ ['Foto e vídeo juntos','a foto da Thainá atendendo e o vídeo lado a lado, pequenos; texto e etapas à direita',
+  `<div class="sec o7"><div class="wrap rv"><div class="duo">${pic}${vid}<figcaption>No studio, avaliação antes de qualquer procedimento.</figcaption></div><div>${kick}${title}${lead()}<div class="cols"><div>${quote()}${honest}</div>${steps(1)}</div><div style="margin-top:1.4rem">${buy}</div></div></div></div>`],
+ ['Abas','vídeo à esquerda; à direita, duas abas: “Como funciona” e “Pra quem é”',
+  `<div class="sec o8"><div class="wrap rv">${vid}<div>${kick}${title}<div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="0">Como funciona</button><button role="tab" aria-selected="false" data-t="1">Pra quem é</button></div><div class="panel"></div>${buy}</div></div></div>`],
+ ['Aspas e faixa','a frase honesta centralizada, com aspas grandes e assinatura; embaixo, a faixa da opção 02',
+  `<div class="sec o9"><div class="wrap"><div class="quote rv">${quote()}${honest}${sign}</div><div class="band rv" style="--i:1">${vid}<div>${kick}${title}${lead()}<div style="margin-top:1.2rem">${buy}</div></div>${steps(1)}</div></div></div>`],
+ ['Linha com nota da Thainá','vídeo e título no topo, com a frase honesta numa nota assinada; etapas numa linha embaixo',
+  `<div class="sec o10"><div class="wrap"><div class="head rv">${vid}<div>${kick}${title}${lead()}<div class="note">${sign}<p class="q" style="font-size:1.1rem">${Q}</p><p class="tx">${PUNCH} Às vezes um design bem feito resolve.</p></div></div></div>${steps(0,'tl rv')}<div class="rv">${buy}</div></div></div>`],
+];
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${n(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<section class="opt" id="o${i+1}"><p class="opt__tag"><b>${n(i)}</b><strong>${o[0]}</strong>${o[1]}</p>${o[2]}</section>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* 08 · abas */
+(()=>{const box=document.querySelector('.o8'),tabs=[...box.querySelectorAll('[role=tab]')],p=box.querySelector('.panel');
+ const C=[`${steps()}`,`${quote()}<p class="honest" style="margin-top:.8rem">${HONEST}</p><p class="sign" style="margin-top:.8rem">Thainá</p>`];
+ const go=i=>{tabs.forEach((t,k)=>t.setAttribute('aria-selected',k===i));p.innerHTML=C[i]};tabs.forEach((t,i)=>t.addEventListener('click',()=>go(i)));go(0)})();
+/* vídeos */
+const vids=[...document.querySelectorAll('video')];
+const near=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=e.target;if(!v.src){v.src=v.dataset.src;v.preload='auto'}near.unobserve(v)}}),{rootMargin:'400px 0px'});
+const vis=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.4});
+vids.forEach(v=>{near.observe(v);vis.observe(v)});
+document.querySelectorAll('.snd').forEach(b=>b.addEventListener('click',()=>{const v=b.parentElement.querySelector('video'),on=v.muted;vids.forEach(o=>{o.muted=true;o.parentElement.querySelector('.snd').setAttribute('aria-pressed','false')});if(on){v.muted=false;v.currentTime=0;v.play().catch(()=>{});b.setAttribute('aria-pressed','true')}}));
+</script>
+</body>
+</html>
