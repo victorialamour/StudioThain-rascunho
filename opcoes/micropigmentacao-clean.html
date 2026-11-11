@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 opções clean · Micropigmentação · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   10 OPÇÕES CLEAN · "Você sabe como funciona a micropigmentação?"
+   Regras desta rodada: escala contida, vídeo pequeno, fios finos no lugar
+   de cartões e sombras, um só tom de destaque, movimento quase invisível.
+   Cada seção cabe em uma tela do computador.
+   Fontes iguais às da "Conheça o studio".
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4A4A;--muted:#7A7470;--line:#EAE5E0;--sand:#F7F4F1;--accent:#9A5457;--pad:clamp(16px,4vw,56px);--ease:cubic-bezier(.22,.8,.24,1)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0}ol,ul{list-style:none;padding:0}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+.top{padding:clamp(28px,4vw,48px) var(--pad) 18px}
+.top h1{font:400 clamp(1.7rem,3.4vw,2.4rem)/1.1 Gloock,serif;color:var(--ink)}
+.top p{margin-top:.5rem;max-width:62ch;color:var(--muted);font-size:.9rem}
+.idx{position:sticky;top:0;z-index:20;display:flex;gap:2px;padding:10px var(--pad);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.idx a{flex:none;padding:.3rem .65rem;font-size:.75rem;font-weight:600;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid transparent;transition:color .4s,border-color .4s}
+.idx a:hover{color:var(--ink);border-color:var(--ink)}
+.opt{scroll-margin-top:50px;border-top:6px solid var(--sand)}
+.opt__tag{padding:16px var(--pad) 0;font-size:.75rem;color:var(--muted)}
+.opt__tag b{font:400 1.1rem Gloock,serif;color:var(--accent);margin-right:.5rem}
+.opt__tag strong{color:var(--ink);font-weight:600;margin-right:.6rem}
+.sec{padding:clamp(48px,6vw,88px) var(--pad)}
+.wrap{max-width:1040px;margin:0 auto}
+
+/* ---- peças comuns, todas contidas ---- */
+.kick{font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.title{font:400 clamp(1.9rem,3vw,2.5rem)/1.12 "Pinyon Script",cursive;color:var(--accent)}
+.lead{font-size:.95rem;line-height:1.75;color:var(--body);max-width:44ch}
+.cap::first-letter{float:left;padding:4px 9px 0 0;font:400 2.7rem/.8 Gloock,serif;color:var(--accent)}
+.n{font:400 .95rem/1 Gloock,serif;color:var(--accent)}
+.st{font:400 1rem/1.3 Gloock,serif;color:var(--ink)}
+.tx{font-size:.86rem;line-height:1.6;color:var(--body)}
+.price{font:400 1.35rem/1 Gloock,serif;color:var(--ink)}
+.price small{display:block;margin-top:.3rem;font:500 .74rem "Plus Jakarta Sans",sans-serif;color:var(--muted)}
+.link{display:inline-flex;align-items:center;gap:.5rem;padding-bottom:3px;border-bottom:1px solid currentColor;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--ink);transition:color .4s var(--ease),gap .4s var(--ease)}
+.link:hover{color:var(--accent);gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.2rem;border-radius:999px;background:var(--ink);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.04em;transition:background .4s var(--ease)}
+.btn:hover{background:var(--accent)}
+.buy{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1rem 1.8rem}
+.vid{position:relative;overflow:hidden;background:#2a2a2a;border-radius:6px}
+.vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.snd{position:absolute;right:8px;bottom:8px;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.85);color:var(--ink);font-size:.7rem;transition:background .3s}
+.snd svg{width:14px;height:14px}
+.snd .on{display:none}.snd[aria-pressed=true] .on{display:block}.snd[aria-pressed=true] .off{display:none}
+.rv{opacity:0;transform:translateY(10px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}.rv{opacity:1;transform:none}}
+
+/* ===== 01 · Ficha lateral ===== */
+.o1 .wrap{display:grid;grid-template-columns:240px 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.o1 .vid{aspect-ratio:4/5}
+.o1 .title{margin:.6rem 0 .9rem}
+.o1 .steps{display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem;margin:1.4rem 0;padding:1.2rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.o1 .steps li{display:grid;grid-template-columns:1.6rem 1fr;gap:.15rem .4rem}.o1 .steps .n{grid-row:span 2;padding-top:.15rem}
+
+/* ===== 02 · Faixa em três tempos ===== */
+.o2 .wrap{display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.o2 .vid{aspect-ratio:3/4}
+.o2 .title{margin:.5rem 0 .8rem}
+.o2 ol li{display:flex;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--line)}.o2 ol li:first-child{border-top:1px solid var(--line)}
+.o2 ol .st{font-size:.95rem}
+.o2 .buy{margin-top:1.2rem}
+
+/* ===== 03 · Revista com legenda ===== */
+.o3 .wrap{display:grid;grid-template-columns:1fr 280px;gap:clamp(32px,6vw,80px);align-items:start}
+.o3 .title{margin:.6rem 0 .9rem}
+.o3 dl{display:grid;grid-template-columns:auto 1fr;gap:.9rem 1.4rem;margin:1.4rem 0 1.6rem}
+.o3 dt{font:400 1rem/1.4 Gloock,serif;color:var(--ink);white-space:nowrap}
+.o3 dt span{color:var(--accent);margin-right:.5rem}
+.o3 dd{font-size:.86rem;line-height:1.6;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+.o3 figure .vid{aspect-ratio:4/5}
+.o3 figcaption{margin-top:.6rem;font-size:.72rem;font-style:italic;color:var(--muted)}
+
+/* ===== 04 · Painel creme ===== */
+.o4 .panel{display:grid;grid-template-columns:1fr 220px;gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(24px,4vw,48px);background:var(--sand);border-radius:4px}
+.o4 .title{margin:.5rem 0 .8rem}
+.o4 ol{display:grid;grid-template-columns:repeat(4,1fr);margin:1.4rem 0}
+.o4 ol li{padding:0 1rem;border-left:1px solid #DDD4CC}.o4 ol li:first-child{padding-left:0;border-left:0}
+.o4 ol .n{display:block;margin-bottom:.3rem}
+.o4 .vid{aspect-ratio:4/5}
+
+/* ===== 05 · Coluna estreita ===== */
+.o5 .wrap{max-width:560px;text-align:center}
+.o5 .vid{width:130px;aspect-ratio:4/5;margin:0 auto 1rem;border-radius:999px 999px 6px 6px}
+.o5 .title{margin:.5rem 0 .8rem}
+.o5 .lead{margin:0 auto}
+.o5 ol{margin:1.2rem 0;text-align:left}
+.o5 ol li{display:grid;grid-template-columns:2rem 8rem 1fr;gap:.8rem;align-items:baseline;padding:.55rem 0;border-top:1px solid var(--line)}
+.o5 .buy{justify-content:center}
+
+/* ===== 06 · Cabeçalho + passos em linha ===== */
+.o6 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem;padding-bottom:1.4rem;border-bottom:1px solid var(--ink)}
+.o6 .title{margin-top:.5rem}
+.o6 .body{display:grid;grid-template-columns:190px 1fr;gap:clamp(24px,4vw,48px);margin-top:1.8rem;align-items:start}
+.o6 .vid{aspect-ratio:3/4}
+.o6 ol{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:1.4rem}
+.o6 ol li{padding-top:.8rem;border-top:1px solid var(--line)}
+.o6 ol .n{display:block;margin-bottom:.35rem}
+
+/* ===== 07 · Perguntas que abrem ===== */
+.o7 .wrap{display:grid;grid-template-columns:1fr 230px;gap:clamp(28px,5vw,64px);align-items:start}
+.o7 .title{margin:.5rem 0 .8rem}
+.o7 .acc{margin:1.4rem 0 1.4rem;border-top:1px solid var(--line)}
+.o7 .row{border-bottom:1px solid var(--line)}
+.o7 .row button{display:flex;align-items:baseline;gap:.8rem;width:100%;padding:.85rem 0;text-align:left}
+.o7 .row button .st{flex:1}
+.o7 .row button i{font-style:normal;font-size:.9rem;color:var(--muted);transition:transform .5s var(--ease)}
+.o7 .row.open button i{transform:rotate(45deg)}
+.o7 .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.o7 .row.open .body{grid-template-rows:1fr}
+.o7 .body>div{overflow:hidden}.o7 .body p{padding:0 0 .9rem 1.8rem}
+.o7 .vid{aspect-ratio:4/5}
+
+/* ===== 08 · Cartão postal ===== */
+.o8 .card{display:grid;grid-template-columns:300px 1fr;max-width:880px;margin:0 auto;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.o8 .vid{border-radius:0;height:100%;min-height:380px}
+.o8 .txt{padding:clamp(24px,4vw,44px)}
+.o8 .title{margin:.5rem 0 .8rem}
+.o8 ol{counter-reset:p;margin:1.2rem 0 1.4rem}
+.o8 ol li{display:flex;gap:.7rem;padding:.45rem 0;font-size:.86rem}
+.o8 ol li::before{counter-increment:p;content:counter(p,decimal-leading-zero);font:400 .9rem Gloock,serif;color:var(--accent)}
+.o8 ol b{font-weight:600;color:var(--ink)}
+
+/* ===== 09 · Texto com vídeo encaixado ===== */
+.o9 .wrap{max-width:760px}
+.o9 .vid{float:right;width:210px;aspect-ratio:4/5;margin:0 0 1rem 2rem;shape-outside:inset(0 round 6px)}
+.o9 .title{margin:.5rem 0 1rem}
+.o9 .prose p{font-size:.95rem;line-height:1.85;margin-bottom:.9rem}
+.o9 .prose p.kick{font-size:.66rem;line-height:1.7;margin-bottom:0}
+.o9 .prose b{font:400 1rem Gloock,serif;color:var(--ink)}
+.o9 .prose em{font-style:normal;color:var(--accent);font-family:Gloock,serif;margin-right:.2rem}
+.o9 .buy{clear:both;padding-top:1.2rem;border-top:1px solid var(--line)}
+
+/* ===== 10 · Fio a fio × shadow, em tabela ===== */
+.o10 .wrap{display:grid;grid-template-columns:1fr 220px;gap:clamp(28px,5vw,64px);align-items:start}
+.o10 .title{margin:.5rem 0 .8rem}
+.o10 table{width:100%;margin:1.4rem 0;border-collapse:collapse;font-size:.86rem}
+.o10 th{padding:.6rem 0;text-align:left;font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--ink)}
+.o10 td{padding:.75rem 1rem .75rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+.o10 td:first-child{font:400 1rem Gloock,serif;color:var(--ink);white-space:nowrap}
+.o10 .flow{display:flex;flex-wrap:wrap;gap:.3rem .9rem;margin-bottom:1.4rem;font-size:.8rem;color:var(--muted)}
+.o10 .flow span::before{content:attr(data-n)' ';font-family:Gloock,serif;color:var(--accent)}
+.o10 .vid{aspect-ratio:4/5}
+
+/* ===== celular ===== */
+@media (max-width:767px){
+  .o1 .wrap,.o2 .wrap,.o3 .wrap,.o6 .body,.o7 .wrap,.o10 .wrap{grid-template-columns:minmax(0,1fr)}
+  .o4 .panel,.o8 .card{grid-template-columns:minmax(0,1fr)}
+  .o1 .vid,.o2 .vid,.o3 figure,.o4 .vid,.o6 .vid,.o7 .vid,.o10 .vid{width:180px;max-width:60%}
+  .o3 figure{order:-1}.o3 figure .vid{width:100%;max-width:none}
+  .o4 .vid{order:-1}.o7 .vid,.o10 .vid{order:-1}
+  .o1 .steps,.o6 ol{grid-template-columns:minmax(0,1fr)}
+  .o4 ol{grid-template-columns:1fr 1fr;gap:1rem 0}.o4 ol li:nth-child(3){padding-left:0;border-left:0}
+  .o5 ol li{grid-template-columns:2rem 1fr}.o5 ol li .tx{grid-column:2}
+  .o8 .vid{min-height:0;aspect-ratio:16/11}
+  .o9 .vid{width:130px;margin-left:1rem}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>10 opções clean · Micropigmentação</h1>
+  <p>Escala menor, vídeo pequeno, fios finos no lugar de cartões e sombras, movimento discreto. Cada uma cabe numa tela do computador. Mesmas fontes da “Conheça o studio”.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+
+<script>
+const VIDEO = '../assets/video/servico-micro.mp4';
+const WA = 'https://wa.me/5581992901559?text=' + encodeURIComponent('Oi Thainá, quero agendar uma avaliação para micropigmentação');
+const TITLE = 'Você sabe como funciona a micropigmentação?';
+const LEAD = 'É a técnica que pigmenta a pele para desenhar a sobrancelha, pra você acordar com ela pronta por meses. No vídeo, eu explico.';
+const S = [
+  ['Avaliação', 'Olho seu rosto, sua expressão e sua rotina e digo se a micro faz sentido pra você.'],
+  ['Técnica', 'Fio a fio, natural, dura de 6 meses a 1 ano. Shadow, sombreado, de 8 a 18 meses.'],
+  ['Desenho', 'Feito pro formato do seu rosto, antes de pigmentar.'],
+  ['Retoque', 'Retoque e acompanhamento já inclusos, com os cuidados depois.'],
+];
+const n = i => String(i + 1).padStart(2, '0');
+const kick = '<p class="kick">Micropigmentação</p>';
+const title = '<h2 class="title">' + TITLE + '</h2>';
+const lead = (cap = true) => `<p class="lead${cap ? ' cap' : ''}">${LEAD}</p>`;
+const vid = (cls = '') => `<figure class="vid ${cls}"><video data-src="${VIDEO}" muted loop playsinline preload="none" aria-label="Thainá explicando como funciona a micropigmentação"></video><button class="snd" type="button" aria-pressed="false" aria-label="Ativar som"><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16 9l5 6M21 9l-5 6"/></svg><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/></svg></button></figure>`;
+const price = '<p class="price">R$ 670<small>ou 10x de R$ 67 · retoque incluso</small></p>';
+const link = `<a class="link" href="${WA}" target="_blank" rel="noopener">Agendar avaliação <span aria-hidden="true">→</span></a>`;
+const btn = `<a class="btn" href="${WA}" target="_blank" rel="noopener">Agendar avaliação <span aria-hidden="true">→</span></a>`;
+const buy = (cta = link) => `<div class="buy">${price}${cta}</div>`;
+
+const O = [
+ ['Ficha lateral', 'vídeo pequeno à esquerda; passos em 2×2 entre dois fios',
+  `<div class="sec o1"><div class="wrap"><div class="rv">${vid()}</div><div class="rv" style="--i:1">${kick}${title}${lead()}<ol class="steps">${S.map((s,i)=>`<li><span class="n">${n(i)}</span><span class="st">${s[0]}</span><span class="tx">${s[1]}</span></li>`).join('')}</ol>${buy()}</div></div></div>`],
+ ['Faixa em três tempos', 'vídeo, apresentação e passos lado a lado, numa faixa baixa',
+  `<div class="sec o2"><div class="wrap"><div class="rv">${vid()}</div><div class="rv" style="--i:1">${kick}${title}${lead()}<div class="buy" style="margin-top:1.2rem">${price}${link}</div></div><ol class="rv" style="--i:2">${S.map((s,i)=>`<li><span class="n">${n(i)}</span><div><p class="st">${s[0]}</p><p class="tx">${s[1]}</p></div></li>`).join('')}</ol></div></div>`],
+ ['Revista com legenda', 'passos como um pequeno glossário; vídeo com legenda em itálico, como foto de revista',
+  `<div class="sec o3"><div class="wrap"><div class="rv">${kick}${title}${lead()}<dl>${S.map((s,i)=>`<dt><span>${n(i)}</span>${s[0]}</dt><dd>${s[1]}</dd>`).join('')}</dl>${buy()}</div><figure class="rv" style="--i:1">${vid()}<figcaption>Thainá explica a técnica no studio.</figcaption></figure></div></div>`],
+ ['Painel creme', 'tudo num painel creme discreto; passos separados por fios verticais',
+  `<div class="sec o4"><div class="wrap"><div class="panel rv"><div>${kick}${title}${lead()}<ol>${S.map((s,i)=>`<li><span class="n">${n(i)}</span><p class="st">${s[0]}</p><p class="tx">${s[1]}</p></li>`).join('')}</ol>${buy(btn)}</div>${vid()}</div></div></div>`],
+ ['Coluna estreita', 'tudo centralizado numa coluna fina; vídeo pequeno em arco no topo',
+  `<div class="sec o5"><div class="wrap rv">${vid()}${kick}${title}${lead(false)}<ol>${S.map((s,i)=>`<li><span class="n">${n(i)}</span><span class="st">${s[0]}</span><span class="tx">${s[1]}</span></li>`).join('')}</ol>${buy()}</div></div>`],
+ ['Cabeçalho e linha', 'título e preço numa linha sobre um fio escuro; embaixo, vídeo e passos em quatro colunas',
+  `<div class="sec o6"><div class="wrap"><div class="head rv"><div>${kick}${title}</div>${buy()}</div><div class="body"><div class="rv" style="--i:1">${vid()}</div><div class="rv" style="--i:2">${lead()}<ol>${S.map((s,i)=>`<li><span class="n">${n(i)}</span><p class="st">${s[0]}</p><p class="tx">${s[1]}</p></li>`).join('')}</ol></div></div></div></div>`],
+ ['Etapas que abrem', 'cada etapa abre ao toque, uma por vez; ocupa pouco espaço',
+  `<div class="sec o7"><div class="wrap"><div class="rv">${kick}${title}${lead()}<div class="acc">${S.map((s,i)=>`<div class="row${i?'':' open'}"><button type="button" aria-expanded="${!i}"><span class="n">${n(i)}</span><span class="st">${s[0]}</span><i aria-hidden="true">+</i></button><div class="body"><div><p class="tx">${s[1]}</p></div></div></div>`).join('')}</div>${buy()}</div><div class="rv" style="--i:1">${vid()}</div></div></div>`],
+ ['Cartão postal', 'vídeo e texto num cartão horizontal com contorno fino, sem sombra',
+  `<div class="sec o8"><div class="card rv">${vid()}<div class="txt">${kick}${title}${lead()}<ol>${S.map(s=>`<li><span><b>${s[0]}.</b> ${s[1]}</span></li>`).join('')}</ol>${buy()}</div></div></div>`],
+ ['Texto com vídeo encaixado', 'leitura corrida, como um artigo; o vídeo fica encaixado no texto',
+  `<div class="sec o9"><div class="wrap prose rv">${vid()}${kick}${title}<p class="cap">${LEAD}</p>${S.map((s,i)=>`<p><em>${n(i)}</em><b>${s[0]}.</b> ${s[1]}</p>`).join('')}${buy()}</div></div>`],
+ ['Fio a fio × shadow', 'as duas técnicas numa tabela fina; etapas resumidas numa linha',
+  `<div class="sec o10"><div class="wrap"><div class="rv">${kick}${title}${lead()}<table><thead><tr><th>Técnica</th><th>Resultado</th><th>Duração</th></tr></thead><tbody><tr><td>Fio a fio</td><td>Simula fios naturais, ideal pra preencher falhas</td><td>6 meses a 1 ano</td></tr><tr><td>Shadow</td><td>Efeito sombreado, parecido com henna</td><td>8 a 18 meses</td></tr></tbody></table><p class="flow">${S.map((s,i)=>`<span data-n="${n(i)}">${s[0]}</span>`).join('')}</p>${buy()}</div><div class="rv" style="--i:1">${vid()}</div></div></div>`],
+];
+
+document.getElementById('idx').innerHTML = O.map((o,i)=>`<a href="#o${i+1}">${n(i)}</a>`).join('');
+document.getElementById('opts').innerHTML = O.map((o,i)=>`<section class="opt" id="o${i+1}"><p class="opt__tag"><b>${n(i)}</b><strong>${o[0]}</strong>${o[1]}</p>${o[2]}</section>`).join('');
+
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* vídeos: baixam perto da tela, tocam ao aparecer, pausam ao sair */
+const vids = [...document.querySelectorAll('.vid video')];
+const near = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const v = e.target; if (!v.src) { v.src = v.dataset.src; v.preload = 'auto'; } near.unobserve(v); } }), { rootMargin: '400px 0px' });
+const vis = new IntersectionObserver(es => es.forEach(e => { e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause(); }), { threshold: .4 });
+vids.forEach(v => { near.observe(v); vis.observe(v); });
+document.querySelectorAll('.snd').forEach(b => b.addEventListener('click', () => {
+  const v = b.parentElement.querySelector('video'), turnOn = v.muted;
+  vids.forEach(o => { o.muted = true; o.parentElement.querySelector('.snd').setAttribute('aria-pressed', 'false'); });
+  if (turnOn) { v.muted = false; v.currentTime = 0; v.play().catch(() => {}); b.setAttribute('aria-pressed', 'true'); }
+}));
+
+/* 07 · etapas que abrem */
+document.querySelectorAll('.o7 .row button').forEach(b => b.addEventListener('click', () => {
+  const r = b.parentElement, open = !r.classList.contains('open');
+  document.querySelectorAll('.o7 .row').forEach(x => { x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded', 'false'); });
+  if (open) { r.classList.add('open'); b.setAttribute('aria-expanded', 'true'); }
+}));
+</script>
+</body>
+</html>
