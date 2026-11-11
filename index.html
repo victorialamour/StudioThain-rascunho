@@ -31,7 +31,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -141,7 +141,7 @@
 <section class="studio" id="studio">
   <div class="studio__wrap">
     <div class="studio__txt">
-      <h2 class="studio__title" data-reveal>Conheça o studio</h2>
+      <h2 class="studio__title" data-reveal>Conheça o <em>studio</em></h2>
       <p class="studio__lead" data-reveal>Meu studio fica em Carpina, no térreo da Galeria Gomes Santos, na Rua Tiradentes. É um espaço pensado só para sobrancelhas e olhar: design, henna, tintura, micropigmentação, brow lamination, lash lifting, descoloração e spa labial.</p>
       <p class="studio__text" data-reveal>Aqui todo atendimento começa com uma avaliação honesta. Olho com calma o seu rosto, a sua expressão e a sua rotina antes de indicar qualquer técnica. Às vezes um design bem feito resolve, e eu digo isso.</p>
       <p class="studio__text" data-reveal>O studio também é sala de aula: mais de 50 alunas já saíram daqui com certificado na mão e prontas para atender.</p>
@@ -178,29 +178,29 @@
   </div>
 </section>
 
-<!-- ═══════════════ 05b · COMO FUNCIONA A MICROPIGMENTAÇÃO ═══════════════ -->
-<!-- Logo abaixo da tabela de serviços: vídeo da Thainá explicando + passo a
-     passo. Textos feitos só com o que o site já informa. -->
-<section class="spot" id="micropigmentacao">
-  <div class="spot__card">
-    <!-- Vídeo da Thainá explicando a micropigmentação (veio da seção de Serviços).
-         Mesmo comportamento: só baixa quando chega perto, toca ao aparecer na
-         tela, pausa ao sair, botão de som e de assistir de novo (main.js · initReplay). -->
-    <figure class="spot__photo media-replay" data-reveal-img><video data-src="assets/video/servico-micro.mp4" muted playsinline aria-label="Thainá explicando como funciona a micropigmentação" preload="none"></video><button type="button" class="sound" aria-label="Ativar som" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path class="sound__off" d="M16 9l5 6M21 9l-5 6"/><path class="sound__on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>Ativar som</span></button><button type="button" class="replay" hidden aria-label="Assistir de novo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button></figure>
-    <div class="spot__body">
-      <h2 class="studio__title spot__title" data-reveal>Você sabe como funciona a micropigmentação?</h2>
-      <p class="studio__lead" data-reveal>É a técnica que pigmenta a pele para desenhar a sobrancelha, pra você acordar com ela pronta por meses. No vídeo, eu explico. Aqui, o passo a passo:</p>
-      <ol class="spot__steps" data-reveal-stagger>
-        <li><b>Avaliação</b><span>Olho seu rosto, sua expressão e sua rotina e digo com sinceridade se a micro faz sentido pra você.</span></li>
-        <li><b>Escolha da técnica</b><span><strong>Fio a fio</strong> simula fios naturais e dura de 6 meses a 1 ano. <strong>Shadow</strong> tem efeito sombreado e dura de 8 a 18 meses.</span></li>
-        <li><b>Desenho e pigmentação</b><span>O desenho é feito pro formato do seu rosto antes de pigmentar.</span></li>
-        <li><b>Retoque e acompanhamento</b><span>Já estão inclusos, junto com as orientações de cuidados depois.</span></li>
-      </ol>
-      <div class="spot__buy" data-reveal>
-        <p class="spot__price"><b>R$ 670</b><small>ou 10x de R$ 67</small></p>
-        <a class="pill pill--dark pill--lg" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20micropigmenta%C3%A7%C3%A3o" target="_blank" rel="noopener">Agendar avaliação</a>
+<!-- ═══════════════ 05b · COMO FUNCIONA A MICROPIGMENTAÇÃO (opção 02 · Fraunces) ═══════════════ -->
+<!-- Faixa baixa em três tempos: vídeo pequeno da Thainá, apresentação com preço,
+     passo a passo. Fonte de destaque: Fraunces leve (título, etapas, números, preço).
+     O vídeo mantém o comportamento: carrega perto, toca ao aparecer, pausa ao sair,
+     botões de som e de assistir de novo (main.js · initReplay). -->
+<section class="micro" id="micropigmentacao">
+  <div class="micro__wrap">
+    <figure class="micro__vid media-replay" data-reveal-img><video data-src="assets/video/servico-micro.mp4" muted playsinline aria-label="Thainá explicando como funciona a micropigmentação" preload="none"></video><button type="button" class="sound" aria-label="Ativar som" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path class="sound__off" d="M16 9l5 6M21 9l-5 6"/><path class="sound__on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>Ativar som</span></button><button type="button" class="replay" hidden aria-label="Assistir de novo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button></figure>
+    <div class="micro__txt">
+      <p class="micro__kick" data-reveal>Micropigmentação</p>
+      <h2 class="micro__title" data-reveal>Você sabe como funciona a <em>micropigmentação?</em></h2>
+      <p class="micro__lead" data-reveal>É a técnica que pigmenta a pele para desenhar a sobrancelha, pra você acordar com ela pronta por meses. No vídeo, eu explico.</p>
+      <div class="micro__buy" data-reveal>
+        <p class="micro__price">R$ 670<small>ou 10x de R$ 67 · retoque incluso</small></p>
+        <a class="micro__link" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20micropigmenta%C3%A7%C3%A3o" target="_blank" rel="noopener">Agendar avaliação <span aria-hidden="true">→</span></a>
       </div>
     </div>
+    <ol class="micro__steps" data-reveal-stagger>
+      <li><span class="micro__n">01</span><div><p class="micro__st">Avaliação</p><p class="micro__tx">Olho seu rosto, sua expressão e sua rotina e digo se a micro faz sentido pra você.</p></div></li>
+      <li><span class="micro__n">02</span><div><p class="micro__st">Técnica</p><p class="micro__tx">Fio a fio, natural, dura de 6 meses a 1 ano. Shadow, sombreado, de 8 a 18 meses.</p></div></li>
+      <li><span class="micro__n">03</span><div><p class="micro__st">Desenho</p><p class="micro__tx">Feito pro formato do seu rosto, antes de pigmentar.</p></div></li>
+      <li><span class="micro__n">04</span><div><p class="micro__st">Retoque</p><p class="micro__tx">Retoque e acompanhamento já inclusos, com os cuidados depois.</p></div></li>
+    </ol>
   </div>
 </section>
 

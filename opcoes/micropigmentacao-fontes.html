@@ -52,7 +52,8 @@ ol li{display:flex;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--line)
 .vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
 .snd{position:absolute;right:8px;bottom:8px;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.85);color:var(--ink)}
 .snd svg{width:14px;height:14px}.snd .on{display:none}.snd[aria-pressed=true] .on{display:block}.snd[aria-pressed=true] .off{display:none}
-@media (max-width:767px){.wrap{grid-template-columns:minmax(0,1fr)}.vid{width:180px;max-width:60%}}
+.wrap{align-items:stretch}.vid{aspect-ratio:auto;height:100%;min-height:300px}
+@media (max-width:767px){.wrap{grid-template-columns:minmax(0,1fr);align-items:start}.vid{width:180px;max-width:60%;height:auto;min-height:0;aspect-ratio:3/4}}
 </style>
 </head>
 <body>

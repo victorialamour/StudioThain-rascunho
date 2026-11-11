@@ -1024,3 +1024,45 @@ main>.services{--bleed:var(--sand);background:var(--sand)}
 .spot__steps b{font:400 1.12rem/1.3 var(--f-brand);color:var(--ink)}
 .spot__steps span{font-size:1.02rem;line-height:1.8}
 .spot__buy{margin-top:clamp(22px,3vw,32px)}
+
+/* ==========================================================================
+   FRAUNCES LEVE como fonte de destaque (escolha da opção 03 da comparação)
+   Vale para os títulos da "Conheça o studio" e da micropigmentação, letras
+   capitulares, etapas, números e preço. Palavra-chave em itálico rosado.
+   ========================================================================== */
+:root{--f-display:"Fraunces",Georgia,serif}
+.studio__title{font:300 clamp(2.2rem,3.6vw,3rem)/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)}
+.studio__title em,.micro__title em{font-style:italic;color:var(--accent)}
+.studio__lead::first-letter{font-family:var(--f-display);font-weight:300}
+
+/* ---- Micropigmentação · faixa em três tempos (opção 02) ---- */
+.micro__wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.micro__vid{position:relative;margin:0;overflow:hidden;aspect-ratio:3/4;border-radius:6px;background:#2a2a2a}
+.micro__vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.micro__vid .sound{left:.5rem;bottom:.5rem;padding:.35rem .6rem .35rem .45rem;font-size:.68rem}
+.micro__vid .replay{width:52px;height:52px}
+.micro__kick{font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.micro__title{margin:.5rem 0 .8rem;font:300 clamp(1.8rem,2.8vw,2.35rem)/1.12 var(--f-display);letter-spacing:-.02em;color:var(--ink)}
+.micro__lead{max-width:40ch;font-size:.95rem;line-height:1.75;color:var(--body)}
+.micro__lead::first-letter{float:left;padding:4px 9px 0 0;font:300 2.7rem/.8 var(--f-display);color:var(--accent)}
+.micro__buy{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1rem 1.8rem;margin-top:1.2rem}
+.micro__price{margin:0;font:300 1.4rem/1 var(--f-display);color:var(--ink)}
+.micro__price small{display:block;margin-top:.3rem;font:500 .74rem var(--f-sans);color:var(--muted)}
+.micro__link{display:inline-flex;align-items:center;gap:.5rem;padding-bottom:3px;border-bottom:1px solid currentColor;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--ink);transition:color .4s var(--e-out),gap .4s var(--e-out)}
+.micro__link:hover{color:var(--accent);gap:.75rem}
+.micro__steps{margin:0;padding:0;list-style:none}
+.micro__steps li{display:flex;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.micro__steps li:first-child{border-top:1px solid var(--line)}
+.micro__n{font:300 .95rem/1.35 var(--f-display);color:var(--accent)}
+.micro__st{margin:0;font:300 1.02rem/1.3 var(--f-display);color:var(--ink)}
+.micro__tx{margin:.1rem 0 0;font-size:.86rem;line-height:1.6;color:var(--body)}
+@media (max-width:767px){
+  .micro__wrap{grid-template-columns:minmax(0,1fr)}
+  .micro__vid{width:180px;max-width:60%}
+}
+
+/* o vídeo acompanha a altura do texto e dos passos (mesmo topo e mesma base) */
+.micro__wrap{align-items:stretch}
+.micro__vid{aspect-ratio:auto;height:100%;min-height:300px}
+.micro__txt,.micro__steps{align-self:start}
+@media (max-width:767px){.micro__wrap{align-items:start}.micro__vid{height:auto;min-height:0;aspect-ratio:3/4}}
