@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursos · 10 formatações · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================
+   CURSOS · 10 formatações (mesmo conteúdo do site, estética das seções novas)
+   Fraunces leve no destaque com itálico rosado, Plus Jakarta Sans no texto,
+   fios finos, estrela do logo. Valores, datas e duração continuam [a
+   confirmar] como no site.
+   ========================================================================== */
+:root{--ink:#1A1918;--paper:#FAF5F0;--rose:#9A5457;--rose-l:#E8C6C6;--cream:#EDDAC9;--olive:#3E4338;--mist:#EEEFE9;--line:#E6DED7;--pad:clamp(20px,5vw,72px);--f:"Fraunces",Georgia,serif;--s:"Plus Jakarta Sans",system-ui,sans-serif;--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#4A4544;font:15px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--rose);color:#fff}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:2px}
+h1,h2,h3,p,ul,ol,figure,blockquote{margin:0}ul,ol{list-style:none;padding:0}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,video{display:block;max-width:100%}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:#161616}
+.top p{margin-top:.6rem;max-width:66ch;font-size:.9rem;color:#6B6360}
+.idx{position:sticky;top:0;z-index:20;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.94);border-bottom:1px solid #E7DFD9;overflow-x:auto}
+.idx a{flex:none;padding:.35rem .6rem;font:500 .74rem var(--s);color:#6B6360;text-decoration:none;border-radius:4px}
+.idx a:hover{color:#161616;background:#F6EDEA}
+.opt{scroll-margin-top:52px}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:34px var(--pad) 14px;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:var(--rose)}
+.meta strong{font-weight:600;font-size:.88rem;color:#161616}
+.meta span{font-size:.82rem;color:#6B6360}
+.sec{padding:clamp(60px,7.5vw,104px) var(--pad);overflow:hidden}
+.wrap{max-width:1120px;margin:0 auto}
+/* temas */
+.dark{background:var(--ink);color:rgba(255,255,255,.8)}
+.dark .t,.dark .nm,.dark .st{color:#fff}.dark .t em,.dark .n,.dark .acc{color:var(--rose-l)}.dark .ln{border-color:rgba(255,255,255,.14)}
+.dark .soft{color:rgba(255,255,255,.66)}
+.olive{background:var(--olive);color:rgba(243,234,224,.82)}
+.olive .t,.olive .nm,.olive .st{color:#F6EEE6}.olive .t em,.olive .n,.olive .acc{color:var(--rose-l)}.olive .ln{border-color:rgba(243,234,224,.16)}
+.olive .soft{color:rgba(243,234,224,.66)}
+.light{background:var(--paper);color:#4A4544}
+.light .t,.light .nm,.light .st{color:#1E1A19}.light .t em,.light .n,.light .acc{color:var(--rose)}.light .ln{border-color:var(--line)}
+.light .soft{color:#6B6360}
+/* peças */
+.t{font:300 clamp(2.1rem,4vw,3.3rem)/1.06 var(--f);font-variation-settings:"opsz" 144;letter-spacing:-.028em;text-wrap:balance}
+.t em{font-style:italic}
+.lead{margin-top:.9rem;max-width:46ch;font-size:clamp(1rem,1.3vw,1.1rem);line-height:1.6}
+.man{max-width:52ch;font-size:.92rem;line-height:1.75}
+.n{font:300 1rem/1 var(--f)}
+.st{font:300 1.08rem/1.3 var(--f)}
+.tx{font-size:.86rem;line-height:1.55}
+.nm{font:300 clamp(1.4rem,2.2vw,1.8rem)/1.15 var(--f);letter-spacing:-.018em}
+.tag{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.price{font:300 clamp(1.5rem,2.4vw,2rem)/1 var(--f)}
+.price small{display:block;margin-top:.35rem;font:500 .74rem var(--s);opacity:.7}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.8rem 1.3rem;border-radius:999px;font-size:.82rem;font-weight:600;letter-spacing:.03em;text-decoration:none;transition:background .4s var(--out),color .4s var(--out)}
+.dark .btn,.olive .btn{background:#fff;color:#1A1918}.dark .btn:hover,.olive .btn:hover{background:var(--rose-l)}
+.light .btn{background:#1E1A19;color:#fff}.light .btn:hover{background:var(--rose)}
+.link{display:inline-flex;gap:.5rem;padding-bottom:2px;border-bottom:1px solid currentColor;font-size:.8rem;font-weight:600;text-decoration:none;color:inherit}
+.vid{position:relative;overflow:hidden;border-radius:6px;background:#2a2a2a}
+.vid video,.vid img{width:100%;height:100%;object-fit:cover}
+.pic{overflow:hidden;border-radius:4px;background:#2a2a2a}.pic img{width:100%;height:100%;object-fit:cover}
+.chk li{position:relative;padding-left:1.1rem;font-size:.86rem;line-height:1.6}
+.chk li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.55}
+.star{width:14px;height:14px;fill:currentColor}
+.count b{font:300 clamp(2.6rem,5vw,4rem)/1 var(--f);letter-spacing:-.03em}
+.q{font:300 italic 1rem/1.5 var(--f)}
+.by{margin-top:.4rem;font-size:.72rem;letter-spacing:.06em;opacity:.7}
+
+/* ===== 01 · Editorial escuro com vídeo ===== */
+.o1 .g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,88px);align-items:start}
+.o1 .pil{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem;margin-top:2rem}
+.o1 .pil li{padding-top:.8rem;border-top:1px solid}.o1 .pil .n{display:block;margin-bottom:.35rem}
+.o1 .vid{aspect-ratio:9/13;max-height:560px}
+.o1 .courses{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,28px);margin-top:clamp(48px,6vw,72px)}
+.o1 .course{padding:clamp(20px,3vw,32px);border:1px solid;border-radius:6px;display:flex;flex-direction:column;gap:.7rem}
+.o1 .course .row{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:auto;padding-top:1rem}
+.o1 .strip{display:flex;align-items:center;gap:clamp(16px,3vw,32px);margin-top:clamp(36px,5vw,56px)}
+.o1 .faces{display:flex}.o1 .faces img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--ink);margin-left:-10px}.o1 .faces img:first-child{margin-left:0}
+
+/* ===== 02 · Duas trilhas ===== */
+.o2 .head{max-width:640px}
+.o2 .tracks{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);margin-top:clamp(36px,5vw,56px)}
+.o2 .track .pic{aspect-ratio:4/3}
+.o2 .track .tag{margin-top:1.1rem}
+.o2 .track .nm{margin-top:.3rem}
+.o2 .track .tx{margin-top:.5rem;max-width:40ch}
+.o2 .track .chk{display:grid;grid-template-columns:1fr 1fr;gap:.3rem 1rem;margin-top:1rem}
+.o2 .track .row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:1.3rem;padding-top:1rem;border-top:1px solid}
+
+/* ===== 03 · Jornada em quatro passos ===== */
+.o3 .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.o3 .road{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,3vw,32px);margin-top:clamp(40px,6vw,64px);padding-top:2.2rem}
+.o3 .road::before{content:"";position:absolute;left:0;right:0;top:.5rem;height:1px;background:currentColor;opacity:.2}
+.o3 .road::after{content:"";position:absolute;left:0;right:0;top:.5rem;height:1px;background:var(--rose);transform:scaleX(var(--p,0));transform-origin:left;transition:transform 2s var(--out)}
+.o3.on .road{--p:1}
+.o3 .road li{position:relative}
+.o3 .road li::before{content:"";position:absolute;left:0;top:-2.05rem;width:11px;height:11px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 1px var(--rose);transition:background .6s var(--out) calc(var(--i) * 450ms)}
+.o3.on .road li::before{background:var(--rose)}
+.o3 .road .n{display:block;margin-bottom:.4rem}
+.o3 .bottom{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);margin-top:clamp(44px,6vw,72px);align-items:center}
+.o3 .pic{aspect-ratio:4/3}
+.o3 .cs{display:grid;gap:14px}
+.o3 .cs div{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-top:1px solid}
+
+/* ===== 04 · As alunas em primeiro plano ===== */
+.o4 .g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,6vw,88px);align-items:center}
+.o4 .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:clamp(110px,12vw,160px);gap:8px}
+.o4 .mosaic .pic:nth-child(1){grid-column:span 2;grid-row:span 2}
+.o4 .count{display:flex;align-items:baseline;gap:.8rem;margin:1.6rem 0 1rem}
+.o4 .q{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid}
+.o4 .cs{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+
+/* ===== 05 · Faixa da aula ===== */
+.o5{padding-inline:0}
+.o5 .band{position:relative;min-height:clamp(380px,48vw,520px);display:flex;align-items:flex-end;color:#fff}
+.o5 .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.o5 .band::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,16,15,.86),rgba(20,16,15,.25) 60%,rgba(20,16,15,.1));z-index:1}
+.o5 .band .wrap{position:relative;z-index:2;width:100%;padding:0 var(--pad) clamp(36px,5vw,56px)}
+.o5 .band .t{color:#fff}.o5 .band .t em{color:var(--rose-l)}
+.o5 .below{padding:clamp(44px,6vw,72px) var(--pad) 0}
+.o5 .below .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,48px)}
+.o5 .below .col{padding-top:1rem;border-top:1px solid}
+
+/* ===== 06 · Comparação lado a lado ===== */
+.o6 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem}
+.o6 table{width:100%;margin-top:clamp(32px,5vw,48px);border-collapse:collapse}
+.o6 th{padding:0 0 1rem;text-align:left;vertical-align:bottom}
+.o6 th:first-child{width:24%}
+.o6 td{padding:1rem 1.2rem 1rem 0;border-top:1px solid;vertical-align:top;font-size:.88rem}
+.o6 td:first-child{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.o6 tr:last-child td{padding-top:1.4rem}
+
+/* ===== 07 · A voz das alunas ===== */
+.o7 .head{text-align:center;max-width:720px;margin:0 auto}
+.o7 .head .lead{margin-inline:auto}
+.o7 .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3.5vw,44px);margin-top:clamp(40px,6vw,64px)}
+.o7 figure{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;align-items:start}
+.o7 figure img{grid-row:span 2;width:56px;height:56px;border-radius:50%;object-fit:cover}
+.o7 .cs{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:clamp(40px,6vw,60px)}
+
+/* ===== 08 · Título fixo e blocos que rolam ===== */
+.o8 .g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,88px)}
+.o8 .pin{position:sticky;top:80px;align-self:start}
+.o8 .blocks{display:grid;gap:clamp(28px,4vw,44px)}
+.o8 .blk{padding-top:1.2rem;border-top:1px solid}
+.o8 .blk .vid{aspect-ratio:16/10;margin-top:1rem}
+.o8 .blk .pil{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.6rem;margin-top:1rem}
+
+/* ===== 09 · Abas por curso, refinadas ===== */
+.o9 .g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,88px);align-items:center}
+.o9 .stage{position:relative;aspect-ratio:4/5;max-height:560px;border-radius:6px;overflow:hidden}
+.o9 .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .8s var(--out),transform 1.4s var(--out)}
+.o9 .stage img.on{opacity:1;transform:none}
+.o9 .tabs{display:flex;gap:1.6rem;margin:1.8rem 0 1.2rem;border-bottom:1px solid}
+.o9 .tabs button{padding:.6rem 0;font:300 clamp(1.05rem,1.5vw,1.25rem) var(--f);opacity:.5;border-bottom:1px solid transparent;margin-bottom:-1px;transition:opacity .4s,border-color .4s}
+.o9 .tabs button[aria-selected=true]{opacity:1;border-color:var(--rose-l)}
+.o9 .panel>*{animation:fi .6s var(--out)}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.o9 .lists{display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem;margin-top:1.2rem}
+.o9 .row{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid}
+
+/* ===== 10 · Compacta ===== */
+.o10 .wrap{max-width:900px}
+.o10 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem}
+.o10 .lines{margin-top:clamp(28px,4vw,40px);border-top:1px solid}
+.o10 .lines div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) auto;gap:1rem 2rem;align-items:center;padding:1.2rem 0;border-bottom:1px solid}
+.o10 .foot{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem;margin-top:1.6rem}
+.o10 .faces{display:flex}.o10 .faces img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--paper);margin-left:-9px}.o10 .faces img:first-child{margin-left:0}
+
+@media (max-width:767px){
+  .o1 .g,.o1 .courses,.o2 .tracks,.o3 .head,.o3 .bottom,.o4 .g,.o5 .below .g,.o7 .row,.o8 .g,.o9 .g{grid-template-columns:minmax(0,1fr)}
+  .o1 .vid{aspect-ratio:4/5}
+  .o3 .road{grid-template-columns:1fr 1fr;row-gap:2.4rem}.o3 .road::before,.o3 .road::after{display:none}.o3 .road li::before{position:static;display:block;margin-bottom:.8rem}
+  .o6 table,.o6 tbody,.o6 tr,.o6 td,.o6 th{display:block;width:100% !important}.o6 thead{display:none}.o6 td{border-top:0;padding:.3rem 0}.o6 tr{padding:1rem 0;border-top:1px solid}
+  .o8 .pin{position:static}
+  .o10 .lines div{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Cursos · 10 formatações</h1>
+  <p>O mesmo conteúdo dos cursos do site (título, os quatro pilares, os dois cursos, alunas e falas delas), organizado de 10 jeitos, na estética das seções novas. Valores, datas e duração seguem “a confirmar”, como no site.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+<script>
+const IMG='../assets/img/', VID='../assets/video/';
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, quero saber dos cursos');
+const T='<h2 class="t">Cursos de <em>design de sobrancelhas</em></h2>';
+const LEAD='<p class="lead">Aprenda a profissão com quem vive dela. Presenciais, em turma pequena, em Carpina-PE.</p>';
+const MAN='<p class="man soft">Eu sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.</p>';
+const P=[['Técnica com olhar profissional','Do desenho à finalização, entendendo o porquê de cada escolha.'],['Prática de verdade','Você observa e depois atende modelo real, dentro do studio.'],['Correção de perto','Eu corrijo o que for preciso, até você tomar decisões sozinha.'],['Você sai preparada','Com apostila, certificado e confiança pra começar a atender.']];
+const C=[{nm:'Design de Sobrancelhas',tag:'Iniciante',d:'Pra quem está começando do zero e quer entrar na profissão com base sólida.',img:'alunas/turma-5.webp'},{nm:'Aperfeiçoamento em Design',tag:'Aperfeiçoamento',d:'Pra quem já atende e quer elevar o nível dos resultados.',img:'cursos/aula-demonstracao.webp'}];
+const IN=['Teoria + visagismo','Prática em modelo real','Correção de perto','Duração a confirmar'];
+const TAKE=['Kit de materiais','Apostila','Certificado','Suporte pós-curso'];
+const A=[{n:'Karolayne',q:'Obrigada por tudo, pela paciência, calma e toda atenção. Esses 2 dias foram incríveis.',img:'alunas/avatar-karolayne.jpg'},{n:'Heloísa',q:'Você foi, e sempre será, essencial nessa minha nova jornada. Foram dias incríveis.',img:'alunas/avatar-heloisa.jpg'},{n:'Esther',q:'Eu amei, Thai, você é uma profissional excelente, foi uma honra.',img:'alunas/avatar-esther.jpg'}];
+const TURMA=['turma-1.jpg','turma-2.jpg','turma-3.webp','turma-4.webp','turma-5.webp','turma-6.jpg','turma-7.webp','turma-8.jpg'];
+const price='<p class="price">R$ [a confirmar]<small>parcelamento a confirmar · próxima turma: [data]</small></p>';
+const btn=(t='Garantir minha vaga')=>`<a class="btn" href="${WA}" target="_blank" rel="noopener">${t} <span aria-hidden="true">→</span></a>`;
+const vid=(cls='')=>`<figure class="vid ${cls}"><video data-src="${VID}cursos.mp4" muted loop playsinline preload="none" aria-label="Thainá com alunas no studio"></video></figure>`;
+const pic=(src,cls='',alt='')=>`<figure class="pic ${cls}"><img src="${IMG+src}" alt="${alt}" loading="lazy"></figure>`;
+const pil=(cls='pil')=>`<ol class="${cls}">${P.map((p,i)=>`<li class="ln"><span class="n">0${i+1}</span><p class="st">${p[0]}</p><p class="tx soft">${p[1]}</p></li>`).join('')}</ol>`;
+const chk=l=>`<ul class="chk">${l.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+const faces=n=>`<div class="faces">${A.map(a=>`<img src="${IMG+a.img}" alt="">`).join('')}${TURMA.slice(0,n).map(t=>`<img src="${IMG}alunas/${t}" alt="">`).join('')}</div>`;
+const count='<p class="count"><b>+50</b> <span class="soft">alunas formadas</span></p>';
+
+const O=[
+ ['Editorial escuro com vídeo','texto e os quatro pilares à esquerda, vídeo em pé à direita; embaixo, os dois cursos lado a lado e uma linha com as alunas.',
+  `<section class="sec dark o1"><div class="wrap"><div class="g"><div>${T}${LEAD}<div style="margin-top:1.4rem">${MAN}</div>${pil()}</div>${vid()}</div><div class="courses">${C.map(c=>`<article class="course ln"><p class="tag acc">${c.tag}</p><h3 class="nm">${c.nm}</h3><p class="tx soft">${c.d}</p>${chk(IN.slice(0,3).concat(TAKE.slice(2,3)))}<div class="row">${price}${btn('Quero esse')}</div></article>`).join('')}</div><div class="strip">${faces(2)}${count}</div></div></section>`],
+ ['Duas trilhas','um cabeçalho curto e os dois cursos como duas trilhas, cada uma com foto, para quem é, o que inclui e o botão.',
+  `<section class="sec light o2"><div class="wrap"><div class="head">${T}${LEAD}</div><div class="tracks">${C.map(c=>`<article class="track">${pic(c.img,'','')}<p class="tag acc">${c.tag}</p><h3 class="nm">${c.nm}</h3><p class="tx soft">${c.d}</p>${chk(IN.slice(0,2).concat(TAKE.slice(1,3)))}<div class="row ln">${price}${btn('Quero esse')}</div></article>`).join('')}</div></div></section>`],
+ ['Jornada em quatro passos','os quatro pilares viram o caminho da aluna, numa linha que se desenha; embaixo, a foto da aula e os dois cursos em lista.',
+  `<section class="sec light o3" data-on><div class="wrap"><div class="head"><div>${T}</div><div>${MAN}</div></div><ol class="road">${P.map((p,i)=>`<li style="--i:${i}"><span class="n">0${i+1}</span><p class="st">${p[0]}</p><p class="tx soft">${p[1]}</p></li>`).join('')}</ol><div class="bottom">${pic('cursos/aula-demonstracao.webp','','Thainá demonstrando o procedimento com alunas acompanhando')}<div class="cs">${C.map(c=>`<div class="ln"><div><p class="tag acc">${c.tag}</p><p class="nm">${c.nm}</p></div>${btn('Saber mais')}</div>`).join('')}</div></div></div></section>`],
+ ['As alunas em primeiro plano','um mosaico com as fotos das alunas com o certificado; ao lado, o número de formadas, uma fala e os cursos.',
+  `<section class="sec olive o4"><div class="wrap g"><div class="mosaic">${TURMA.slice(0,6).map(t=>pic('alunas/'+t,'','Aluna com o certificado, ao lado da Thainá')).join('')}</div><div>${T}${LEAD}${count}<blockquote class="q ln">“${A[1].q}”</blockquote><p class="by">${A[1].n} · aluna</p><div class="cs">${btn('Ver os cursos')}<a class="link" href="${WA}" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a></div></div></div></section>`],
+ ['Faixa da aula','a foto da aula em faixa larga, com o título por cima; embaixo, três colunas: o curso iniciante, o de aperfeiçoamento e o que você leva.',
+  `<section class="sec light o5"><div class="band"><img src="${IMG}cursos/aula-demonstracao.webp" alt="Thainá demonstrando o procedimento com alunas acompanhando"><div class="wrap">${T}<p class="lead" style="color:rgba(255,255,255,.85)">Aprenda a profissão com quem vive dela. Presenciais, em turma pequena, em Carpina-PE.</p></div></div><div class="below"><div class="wrap g">${C.map(c=>`<div class="col ln"><p class="tag acc">${c.tag}</p><h3 class="nm">${c.nm}</h3><p class="tx soft" style="margin:.5rem 0 1rem">${c.d}</p>${btn('Quero esse')}</div>`).join('')}<div class="col ln"><p class="tag acc">Você leva</p>${chk(TAKE)}<div style="margin-top:1rem">${count}</div></div></div></div></section>`],
+ ['Comparação lado a lado','os dois cursos numa tabela elegante: para quem é, o que tem no curso, o que você leva, valor e botão.',
+  `<section class="sec dark o6"><div class="wrap"><div class="head"><div>${T}${LEAD}</div></div><table><thead><tr><th></th>${C.map(c=>`<th><p class="tag acc">${c.tag}</p><p class="nm">${c.nm}</p></th>`).join('')}</tr></thead><tbody><tr class="ln"><td class="ln">Para quem</td>${C.map(c=>`<td class="ln">${c.d}</td>`).join('')}</tr><tr><td class="ln">No curso</td>${C.map(()=>`<td class="ln">${chk(IN)}</td>`).join('')}</tr><tr><td class="ln">Você leva</td>${C.map(()=>`<td class="ln">${chk(TAKE)}</td>`).join('')}</tr><tr><td class="ln">Investimento</td>${C.map(()=>`<td class="ln">${price}<div style="margin-top:1rem">${btn('Garantir vaga')}</div></td>`).join('')}</tr></tbody></table></div></section>`],
+ ['A voz das alunas','título centralizado; três alunas com foto, nome e o que disseram; os cursos como dois botões no fim.',
+  `<section class="sec light o7"><div class="wrap"><div class="head">${T}${LEAD}</div><div class="row">${A.map(a=>`<figure><img src="${IMG+a.img}" alt="${a.n}"><blockquote class="q">“${a.q}”</blockquote><p class="by">${a.n} · aluna</p></figure>`).join('')}</div><div class="cs">${C.map(c=>`<a class="btn" href="${WA}" target="_blank" rel="noopener">${c.nm} <span aria-hidden="true">→</span></a>`).join('')}</div></div></section>`],
+ ['Título fixo e blocos','o título e o botão ficam parados à esquerda; à direita rolam os blocos: o vídeo, os pilares e os dois cursos.',
+  `<section class="sec olive o8"><div class="wrap g"><div class="pin">${T}${LEAD}<div style="margin-top:1.6rem">${btn()}</div></div><div class="blocks"><div class="blk ln"><p class="tag acc">Como é a aula</p>${MAN}${vid()}</div><div class="blk ln"><p class="tag acc">O que você aprende</p>${pil()}</div>${C.map(c=>`<div class="blk ln"><p class="tag acc">${c.tag}</p><h3 class="nm">${c.nm}</h3><p class="tx soft" style="margin-top:.4rem">${c.d}</p></div>`).join('')}</div></div></section>`],
+ ['Abas por curso, refinadas','a foto troca conforme o curso escolhido; à direita, duas abas com a descrição, o que inclui, o que você leva e o valor.',
+  `<section class="sec dark o9"><div class="wrap g"><div class="stage">${C.map((c,i)=>`<img class="${i?'':'on'}" src="${IMG+c.img}" alt="" loading="lazy">`).join('')}</div><div>${T}<div class="tabs ln" role="tablist">${C.map((c,i)=>`<button role="tab" aria-selected="${!i}" data-i="${i}">${c.tag}</button>`).join('')}</div><div class="panel"></div></div></div></section>`],
+ ['Compacta','o essencial numa seção baixa: título, os dois cursos em duas linhas e as alunas em miniatura com o número de formadas.',
+  `<section class="sec light o10"><div class="wrap"><div class="head"><div>${T}${LEAD}</div></div><div class="lines ln">${C.map(c=>`<div class="ln"><div><p class="tag acc">${c.tag}</p><p class="nm">${c.nm}</p></div><p class="tx soft">${c.d}</p>${btn('Saber mais')}</div>`).join('')}</div><div class="foot">${faces(4)}${count}</div></div></section>`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt" id="o${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div>${o[2]}</div>`).join('');
+/* 09 · abas */
+(()=>{const box=document.querySelector('.o9'),tabs=[...box.querySelectorAll('[role=tab]')],imgs=[...box.querySelectorAll('.stage img')],p=box.querySelector('.panel');
+ const go=i=>{tabs.forEach((t,k)=>t.setAttribute('aria-selected',k===i));imgs.forEach((m,k)=>m.classList.toggle('on',k===i));const c=C[i];p.innerHTML=`<h3 class="nm">${c.nm}</h3><p class="tx soft" style="margin-top:.5rem">${c.d}</p><div class="lists"><div><p class="tag acc" style="margin-bottom:.5rem">No curso</p>${chk(IN)}</div><div><p class="tag acc" style="margin-bottom:.5rem">Você leva</p>${chk(TAKE)}</div></div><div class="row ln">${price}${btn()}</div>`};
+ tabs.forEach((t,k)=>t.addEventListener('click',()=>go(k)));go(0)})();
+/* linha da jornada */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.3});
+document.querySelectorAll('[data-on]').forEach(el=>io.observe(el));
+/* vídeos: baixam perto, tocam ao aparecer, pausam ao sair; o arquivo fica branco após 9,1 s, então volta ao início */
+const vids=[...document.querySelectorAll('video[data-src]')];
+const near=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=e.target;if(!v.src){v.src=v.dataset.src;v.preload='auto'}near.unobserve(v)}}),{rootMargin:'400px 0px'});
+const vis=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.3});
+vids.forEach(v=>{near.observe(v);vis.observe(v);v.addEventListener('timeupdate',()=>{if(v.currentTime>=9.1){v.currentTime=0}})});
+</script>
+</body>
+</html>
