@@ -1066,3 +1066,15 @@ main>.services{--bleed:var(--sand);background:var(--sand)}
 .micro__vid{aspect-ratio:auto;height:100%;min-height:300px}
 .micro__txt,.micro__steps{align-self:start}
 @media (max-width:767px){.micro__wrap{align-items:start}.micro__vid{height:auto;min-height:0;aspect-ratio:3/4}}
+
+/* ---- Frase da avaliação honesta, abaixo da faixa da micropigmentação ----
+   Formato do início da opção 09: aspas grandes no rosa, frase em Fraunces
+   leve, complemento em itálico, texto curto e assinatura, tudo centralizado. */
+.micro__quote{max-width:640px;margin:clamp(40px,6vw,64px) auto 0;padding-top:clamp(32px,5vw,52px);border-top:1px solid var(--line);text-align:center}
+.micro__quote::before{content:"“";display:block;height:2.4rem;font:300 4.5rem/1 var(--f-display);color:var(--accent)}
+.micro__q{margin:0;font:300 clamp(1.35rem,2.1vw,1.7rem)/1.25 var(--f-display);letter-spacing:-.015em;color:var(--ink)}
+.micro__q em{font-style:italic;color:var(--accent)}
+.micro__punch{margin:.4rem 0 0;font:300 italic 1.02rem/1.4 var(--f-display);color:var(--accent)}
+.micro__honest{max-width:52ch;margin:.8rem auto 0;font-size:.9rem;line-height:1.7;color:var(--body)}
+.micro__sign{margin:.8rem 0 0;font:400 1.5rem/1 "Pinyon Script",cursive;color:var(--ink)}
+.micro{padding-bottom:var(--sec)}
