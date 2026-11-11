@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antes e depois · 10 opções · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================
+   CLIENTES REAIS, ANTES E DEPOIS · 10 opções
+   Mesma estética do site: Fraunces leve no título com a palavra-chave em
+   itálico rosado, Plus Jakarta Sans no texto, branco, fios finos, escala
+   contida. Sem Google. Os depoimentos ficam separados das fotos (não
+   sabemos de quem é cada foto, então nenhuma fala é ligada a um rosto).
+   Cada foto original é um antes (metade de cima) e depois (metade de baixo);
+   aqui elas são recortadas em "antes" e "depois" com object-position.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4544;--muted:#6B6360;--line:#E7DFD9;--rose:#9A5457;--rose-l:#E8C6C6;--tint:#F6EDEA;--cream:#F8F1EB;--pad:clamp(20px,5vw,72px);--f:"Fraunces",Georgia,serif;--s:"Plus Jakarta Sans",system-ui,sans-serif;--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--rose);color:#fff}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+h1,h2,p,figure,blockquote,ul{margin:0}ul{list-style:none;padding:0}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:var(--ink)}
+.top p{margin-top:.6rem;max-width:64ch;font-size:.9rem;color:var(--muted)}
+.idx{position:sticky;top:0;z-index:10;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.idx a{flex:none;padding:.35rem .6rem;font:500 .74rem var(--s);color:var(--muted);text-decoration:none;border-radius:4px}
+.idx a:hover{color:var(--ink);background:var(--tint)}
+.opt{scroll-margin-top:52px;border-top:8px solid var(--cream)}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:28px var(--pad) 0;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:var(--rose)}
+.meta strong{font-weight:600;font-size:.88rem;color:var(--ink)}
+.meta span{font-size:.82rem;color:var(--muted)}
+.sec{padding:clamp(48px,6vw,88px) var(--pad)}
+.wrap{max-width:1120px;margin:0 auto}
+
+/* ---- peças comuns ---- */
+.h{font:300 clamp(1.9rem,3.2vw,2.6rem)/1.1 var(--f);font-variation-settings:"opsz" 144;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
+.h em{font-style:italic;color:var(--rose)}
+.sub{margin-top:.6rem;max-width:44ch;font-size:.92rem;color:var(--muted)}
+.tag{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.cap{font:300 italic .95rem/1.4 var(--f);color:var(--muted)}
+/* recortes do mesmo arquivo: antes = metade de cima, depois = metade de baixo */
+.crop{position:relative;overflow:hidden;background:var(--cream)}
+.crop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.crop .b{object-position:50% 2%}
+.crop .a{object-position:50% 98%}
+.wide{aspect-ratio:2/1}
+.lbl{position:absolute;left:10px;top:10px;z-index:2;padding:.2rem .55rem;border-radius:999px;background:rgba(255,255,255,.92);font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.lbl.dk{background:var(--ink);color:#fff}
+.quote{font:300 clamp(1.15rem,1.8vw,1.45rem)/1.35 var(--f);letter-spacing:-.01em;color:var(--ink)}
+.from{margin-top:.6rem;font-size:.74rem;letter-spacing:.04em;color:var(--muted)}
+
+/* ===== 01 · Comparador deslizante ===== */
+.o1 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem;margin-bottom:clamp(24px,3vw,36px)}
+.o1 .cmp{position:relative;aspect-ratio:2/1;max-width:920px;margin:0 auto;border-radius:6px;overflow:hidden;--x:50%;touch-action:pan-y;user-select:none}
+.o1 .cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.o1 .cmp .b{object-position:50% 2%;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.o1 .cmp .a{object-position:50% 98%}
+.o1 .bar{position:absolute;top:0;bottom:0;left:var(--x);width:1px;background:#fff;transform:translateX(-.5px);pointer-events:none}
+.o1 .knob{position:absolute;top:50%;left:var(--x);width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#fff;box-shadow:0 8px 24px -8px rgba(22,22,22,.4);display:grid;place-items:center;pointer-events:none}
+.o1 .knob svg{width:18px;height:18px;stroke:var(--ink)}
+.o1 .cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.o1 .cmp .lbl.r{left:auto;right:10px}
+.o1 .thumbs{display:flex;justify-content:center;gap:10px;margin-top:16px}
+.o1 .thumbs button{width:72px;aspect-ratio:2/1;border-radius:4px;overflow:hidden;opacity:.45;outline:1px solid transparent;outline-offset:2px;transition:opacity .4s,outline-color .4s}
+.o1 .thumbs button[aria-pressed=true]{opacity:1;outline-color:var(--rose)}
+.o1 .thumbs img{width:100%;height:100%;object-fit:cover;object-position:50% 98%;display:block}
+
+/* ===== 02 · Toque para ver o antes ===== */
+.o2 .head{margin-bottom:clamp(24px,3vw,36px)}
+.o2 .g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.o2 .case{position:relative;aspect-ratio:2/1;border-radius:6px;overflow:hidden;cursor:pointer;background:var(--cream)}
+.o2 .case img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s var(--out)}
+.o2 .case .b{object-position:50% 2%;opacity:0}
+.o2 .case .a{object-position:50% 98%}
+.o2 .case.show .b{opacity:1}
+@media (hover:hover){.o2 .case:hover .b{opacity:1}}
+.o2 .case .lbl .x{display:none}.o2 .case.show .lbl .x,.o2 .case:hover .lbl .x{display:inline}.o2 .case.show .lbl .y,.o2 .case:hover .lbl .y{display:none}
+.o2 .hint{margin-top:12px;font-size:.76rem;color:var(--muted)}
+
+/* ===== 03 · Lado a lado, editorial ===== */
+.o3 .wrap{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(32px,5vw,72px);align-items:start}
+.o3 .list{display:grid;gap:22px}
+.o3 .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.o3 .row .crop{aspect-ratio:2/1;border-radius:4px}
+.o3 .row figcaption{grid-column:1/-1;display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);padding-top:2px}
+
+/* ===== 04 · Cortina automática ===== */
+.o4 .head{text-align:center;margin-bottom:clamp(24px,3vw,36px)}
+.o4 .head .sub{margin-inline:auto}
+.o4 .g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:960px;margin:0 auto}
+.o4 .case{position:relative;aspect-ratio:2/1;border-radius:6px;overflow:hidden;background:var(--cream)}
+.o4 .case img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.o4 .case .b{object-position:50% 2%}
+.o4 .case .a{object-position:50% 98%;clip-path:inset(0 100% 0 0)}
+@media (prefers-reduced-motion:no-preference){.o4 .case .a{animation:wipe 7s var(--out) infinite;animation-delay:calc(var(--i) * .9s)}}
+@keyframes wipe{0%,18%{clip-path:inset(0 100% 0 0)}38%,80%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 100% 0 0)}}
+@media (prefers-reduced-motion:reduce){.o4 .case .a{clip-path:inset(0 0 0 50%)}}
+
+/* ===== 05 · Destaque + fala ===== */
+.o5 .g{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,4vw,56px);align-items:center}
+.o5 .big{display:grid;gap:6px}
+.o5 .big .crop{aspect-ratio:2/1;border-radius:4px}
+.o5 .side .quote{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.o5 .minis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:20px}
+.o5 .minis .crop{aspect-ratio:2/1;border-radius:4px}
+
+/* ===== 06 · Faixa de filme ===== */
+.o6{padding-inline:0}
+.o6 .head{padding:0 var(--pad);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem;max-width:1120px;margin:0 auto clamp(24px,3vw,36px)}
+.o6 .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 8px;scroll-padding-inline:var(--pad);scrollbar-width:none}
+.o6 .rail::-webkit-scrollbar{display:none}
+.o6 .frame{flex:0 0 clamp(280px,32vw,400px);scroll-snap-align:start;display:grid;gap:4px}
+.o6 .frame .crop{aspect-ratio:2/1;border-radius:4px}
+.o6 .frame p{font-size:.74rem;color:var(--muted);padding-top:4px}
+.o6 .nav{display:flex;gap:8px}
+.o6 .nav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;transition:background .3s,color .3s}
+.o6 .nav button:hover{background:var(--ink);color:#fff}
+.o6 .nav svg{width:16px;height:16px;stroke:currentColor}
+
+/* ===== 07 · Original, refinado ===== */
+.o7 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 2rem;margin-bottom:clamp(24px,3vw,36px)}
+.o7 .g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.o7 .shot{position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:var(--cream)}
+.o7 .shot img{width:100%;height:100%;object-fit:cover;display:block}
+.o7 .shot::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.9)}
+.o7 .shot .t1,.o7 .shot .t2{position:absolute;left:8px;font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.o7 .shot .t1{top:8px}.o7 .shot .t2{top:calc(50% + 8px)}
+
+/* ===== 08 · Falas em destaque + casos ===== */
+.o8 .quoteBox{max-width:760px;margin:0 auto;text-align:center;min-height:9rem}
+.o8 .quoteBox .quote{font-size:clamp(1.4rem,2.6vw,2rem);transition:opacity .6s var(--out)}
+.o8 .dots{display:flex;justify-content:center;gap:8px;margin:18px 0 clamp(28px,4vw,44px)}
+.o8 .dots button{width:6px;height:6px;border-radius:50%;background:var(--line);transition:background .3s,width .3s}
+.o8 .dots button[aria-current=true]{width:18px;border-radius:3px;background:var(--rose)}
+.o8 .strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.o8 .strip .crop{aspect-ratio:2/1;border-radius:3px}
+.o8 .head{text-align:center;margin-bottom:clamp(24px,3vw,36px)}
+
+/* ===== 09 · Ficha de caso ===== */
+.o9 .g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.o9 .case{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding-top:14px;border-top:1px solid var(--ink)}
+.o9 .case .crop{aspect-ratio:2/1;border-radius:3px}
+.o9 .case .info{grid-column:1/-1;display:flex;justify-content:space-between;gap:1rem;padding-top:6px}
+.o9 .case .info b{font:300 1.05rem var(--f);color:var(--ink)}
+.o9 .case .info span{font-size:.74rem;color:var(--muted)}
+.o9 .head{margin-bottom:clamp(24px,3vw,36px)}
+
+/* ===== 10 · Título fixo + casos ===== */
+.o10 .wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,5vw,72px)}
+.o10 .pin{position:sticky;top:80px;align-self:start}
+.o10 .pin .quote{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:1.15rem}
+.o10 .cases{display:grid;gap:18px}
+.o10 .cases .pair{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.o10 .cases .crop{aspect-ratio:2/1;border-radius:4px}
+
+@media (max-width:767px){
+  .o2 .g,.o4 .g{grid-template-columns:minmax(0,1fr)}
+  .o3 .wrap,.o5 .g,.o9 .g,.o10 .wrap{grid-template-columns:minmax(0,1fr)}
+  .o5 .minis{grid-template-columns:1fr 1fr}
+  .o7 .g{grid-template-columns:1fr 1fr}
+  .o8 .strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .o10 .pin{position:static}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Clientes reais, antes e depois · 10 opções</h1>
+  <p>Mesma estética do site: Fraunces leve no título, fios finos e muito branco. Sem Google. As falas das clientes aparecem separadas das fotos, porque não sabemos de quem é cada foto.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+<script>
+const R='../assets/img/resultados/';
+const C=[
+ {f:'antes-depois-1.webp',t:'Sobrancelhas preenchidas e com desenho definido'},
+ {f:'design-3.webp',t:'Design: sobrancelhas preenchidas e definidas'},
+ {f:'antes-depois-2.webp',t:'Fios alinhados e sobrancelhas definidas'},
+ {f:'design-4.webp',t:'Design com desenho natural'},
+ {f:'brow-lamination-1.webp',t:'Brow lamination: fios alinhados'},
+ {f:'brow-lamination-2.webp',t:'Brow lamination: mais volume'},
+];
+const Q=['“Me sinto radiante, uma nova mulher. A praticidade de acordar pronta é maravilhosa.”','“Mãos de fada. Zero dor ou incômodo. Minhas sobrancelhas elevaram minha autoestima.”','“Ganhei vários elogios hoje, dizendo que a sobrancelha tá linda.”'];
+const H='<h2 class="h">Clientes reais, antes e <em>depois.</em></h2>';
+const SUB='<p class="sub">Resultados feitos no studio.</p>';
+const FROM='<p class="from">Cliente · via WhatsApp</p>';
+const crop=(c,side,cls='',lbl='')=>`<div class="crop ${cls}"><img class="${side}" src="${R+c.f}" alt="${side==='b'?'Antes':'Depois'}: ${c.t}" loading="lazy">${lbl}</div>`;
+const L=(t,dk)=>`<span class="lbl${dk?' dk':''}">${t}</span>`;
+const ARR=(d)=>`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+
+const O=[
+ ['Comparador deslizante','a pessoa arrasta a linha e vê o antes virar depois; miniaturas embaixo trocam o caso. O mais interativo.',
+  `<div class="sec o1"><div class="wrap"><div class="head"><div>${H}${SUB}</div></div><div class="cmp" style="--x:50%"><img class="a" src="${R+C[0].f}" alt="Depois: ${C[0].t}"><img class="b" src="${R+C[0].f}" alt="Antes: ${C[0].t}"><span class="bar"></span><span class="knob">${ARR('M9 6l-6 6 6 6M15 6l6 6-6 6')}</span>${L('Antes')}<span class="lbl dk r">Depois</span><input type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois"></div><div class="thumbs">${C.map((c,i)=>`<button type="button" aria-pressed="${!i}" data-i="${i}" aria-label="Ver caso ${i+1}"><img src="${R+c.f}" alt="" loading="lazy"></button>`).join('')}</div></div></div>`],
+ ['Toque para ver o antes','mostra só o depois; ao passar o mouse ou tocar, aparece o antes. Limpa e curiosa.',
+  `<div class="sec o2"><div class="wrap"><div class="head">${H}${SUB}</div><div class="g">${C.map(c=>`<div class="case" tabindex="0"><img class="a" src="${R+c.f}" alt="Depois: ${c.t}" loading="lazy"><img class="b" src="${R+c.f}" alt="" loading="lazy"><span class="lbl"><span class="y">Depois</span><span class="x">Antes</span></span></div>`).join('')}</div><p class="hint">Toque numa foto para ver o antes.</p></div></div>`],
+ ['Lado a lado, editorial','título e uma fala à esquerda; à direita, cada caso em antes | depois, com legenda.',
+  `<div class="sec o3"><div class="wrap"><div>${H}${SUB}<blockquote class="quote" style="margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line)">${Q[2]}</blockquote>${FROM}</div><div class="list">${C.slice(0,4).map(c=>`<figure class="row">${crop(c,'b','',L('Antes'))}${crop(c,'a','',L('Depois',1))}<figcaption><span>${c.t}</span></figcaption></figure>`).join('')}</div></div></div>`],
+ ['Cortina automática','cada foto passa sozinha do antes para o depois, com uma cortina suave, em tempos diferentes. Sem precisar tocar.',
+  `<div class="sec o4"><div class="wrap"><div class="head">${H}${SUB}</div><div class="g">${C.slice(0,4).map((c,i)=>`<div class="case" style="--i:${i}"><img class="b" src="${R+c.f}" alt="Antes e depois: ${c.t}" loading="lazy"><img class="a" src="${R+c.f}" alt="" loading="lazy"></div>`).join('')}</div></div></div>`],
+ ['Destaque e fala','um caso grande em antes e depois, uma fala de cliente ao lado e os outros casos pequenos embaixo.',
+  `<div class="sec o5"><div class="wrap"><div class="g"><div class="big">${crop(C[0],'b','',L('Antes'))}${crop(C[0],'a','',L('Depois',1))}</div><div class="side">${H}${SUB}<blockquote class="quote">${Q[0]}</blockquote>${FROM}</div></div><div class="minis">${C.slice(1,5).map(c=>crop(c,'a','',L('Depois',1))).join('')}</div></div></div>`],
+ ['Faixa de filme','os casos numa faixa que desliza para o lado, cada um com antes e depois empilhados, como fotogramas.',
+  `<div class="sec o6"><div class="head">${'<div>'+H+SUB+'</div>'}<div class="nav"><button type="button" data-d="-1" aria-label="Anterior">${ARR('M15 6l-6 6 6 6')}</button><button type="button" data-d="1" aria-label="Próximo">${ARR('M9 6l6 6-6 6')}</button></div></div><div class="rail">${C.map(c=>`<figure class="frame">${crop(c,'b','',L('Antes'))}${crop(c,'a','',L('Depois',1))}<p>${c.t}</p></figure>`).join('')}</div></div>`],
+ ['O atual, refinado','as fotos inteiras como hoje, em quatro colunas, com uma linha fina marcando onde termina o antes.',
+  `<div class="sec o7"><div class="wrap"><div class="head"><div>${H}${SUB}</div></div><div class="g">${C.slice(0,4).map(c=>`<figure class="shot"><img src="${R+c.f}" alt="Antes e depois: ${c.t}" loading="lazy"><span class="t1">Antes</span><span class="t2">Depois</span></figure>`).join('')}</div></div></div>`],
+ ['Falas em destaque','uma fala de cliente por vez, grande e centralizada, trocando sozinha; embaixo, uma faixa com os seis resultados.',
+  `<div class="sec o8"><div class="wrap"><div class="head">${H}</div><div class="quoteBox"><blockquote class="quote" aria-live="polite">${Q[0]}</blockquote>${FROM}</div><div class="dots">${Q.map((q,i)=>`<button type="button" data-i="${i}" aria-label="Fala ${i+1}" aria-current="${!i}"></button>`).join('')}</div><div class="strip">${C.map(c=>crop(c,'a')).join('')}</div></div></div>`],
+ ['Ficha de caso','cada caso como uma ficha: antes e depois lado a lado, sob um fio escuro, com o nome do tratamento.',
+  `<div class="sec o9"><div class="wrap"><div class="head">${H}${SUB}</div><div class="g">${C.slice(0,4).map(c=>`<figure class="case">${crop(c,'b','',L('Antes'))}${crop(c,'a','',L('Depois',1))}<figcaption class="info"><b>${c.t.split(':')[0]}</b><span>Studio Thainá</span></figcaption></figure>`).join('')}</div></div></div>`],
+ ['Título fixo e casos','o título e uma fala ficam parados à esquerda enquanto os casos rolam à direita.',
+  `<div class="sec o10"><div class="wrap"><div class="pin">${H}${SUB}<blockquote class="quote">${Q[1]}</blockquote>${FROM}</div><div class="cases">${C.map(c=>`<div class="pair">${crop(c,'b','',L('Antes'))}${crop(c,'a','',L('Depois',1))}</div>`).join('')}</div></div></div>`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<section class="opt" id="o${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div>${o[2]}</section>`).join('');
+
+/* 01 · comparador */
+(()=>{const box=document.querySelector('.o1'),cmp=box.querySelector('.cmp'),r=cmp.querySelector('input'),imgs=cmp.querySelectorAll('img');
+ r.addEventListener('input',()=>cmp.style.setProperty('--x',r.value+'%'));
+ box.querySelectorAll('.thumbs button').forEach(b=>b.addEventListener('click',()=>{const c=C[+b.dataset.i];imgs.forEach(im=>{im.src=R+c.f});imgs[0].alt='Depois: '+c.t;imgs[1].alt='Antes: '+c.t;box.querySelectorAll('.thumbs button').forEach(x=>x.setAttribute('aria-pressed',x===b));r.value=50;cmp.style.setProperty('--x','50%')}));})();
+/* 02 · toque */
+document.querySelectorAll('.o2 .case').forEach(c=>{const t=()=>c.classList.toggle('show');c.addEventListener('click',t);c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}})});
+/* 06 · faixa */
+(()=>{const rail=document.querySelector('.o6 .rail');document.querySelectorAll('.o6 .nav button').forEach(b=>b.addEventListener('click',()=>rail.scrollBy({left:+b.dataset.d*rail.querySelector('.frame').offsetWidth*1.05,behavior:'smooth'})))})();
+/* 08 · falas */
+(()=>{const q=document.querySelector('.o8 .quote'),dots=[...document.querySelectorAll('.o8 .dots button')];let i=0,t;
+ const go=n=>{i=n;q.style.opacity=0;setTimeout(()=>{q.textContent=Q[n];q.style.opacity=1},300);dots.forEach((d,k)=>d.setAttribute('aria-current',k===n))};
+ const auto=()=>{clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>go((i+1)%Q.length),6000)};
+ dots.forEach((d,k)=>d.addEventListener('click',()=>{go(k);auto()}));auto()})();
+</script>
+</body>
+</html>
