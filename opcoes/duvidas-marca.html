@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dúvidas · opção 1 com a identidade da Thainá · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   DÚVIDAS · a opção 1 (cortina) vestida com a identidade da Thainá
+   Mantém: título à esquerda, lista à direita, fio que corre sob a pergunta
+   aberta e resposta que se revela como cortina.
+   Troca: cores da marca (rosa queimado, rosa claro, creme, oliva do logo),
+   a estrela de quatro pontas do logo no lugar do "+" (gira ao abrir) e a
+   assinatura "Thainá" ao fim de cada resposta.
+   ========================================================================== */
+:root{--f:"Fraunces",Georgia,serif;--s:"Plus Jakarta Sans",system-ui,sans-serif;--out:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,72px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#4A4544;font:15px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,p{margin:0}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:#161616}
+.top p{margin-top:.6rem;max-width:66ch;font-size:.9rem;color:#6B6360}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:center;padding:34px var(--pad) 14px;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:#9A5457}
+.meta strong{font-weight:600;font-size:.88rem;color:#161616}
+.meta span{font-size:.82rem;color:#6B6360}
+.meta i{display:inline-flex;gap:4px}
+.meta i u{display:inline-block;width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+
+/* ---- estrutura da opção 1 ---- */
+.band{position:relative;overflow:hidden;padding:clamp(60px,7.5vw,104px) var(--pad);background:var(--bg);color:var(--fg)}
+.g{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,6vw,96px);max-width:1040px;margin:0 auto;align-items:start}
+.logo-star{display:block;width:18px;height:18px;margin-bottom:1.2rem;fill:var(--acc)}
+.h{font:300 clamp(1.9rem,3.2vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em}
+.h em{font-style:italic;color:var(--acc)}
+.sub{margin-top:.6rem;font-size:.86rem;color:var(--soft)}
+.sub a{color:inherit;text-underline-offset:3px}
+.list{border-top:1px solid var(--rule)}
+.it{border-bottom:1px solid var(--rule)}
+.it>button{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.4rem;width:100%;padding:1.05rem 0;text-align:left}
+.it>button::after{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--out)}
+.it.open>button::after{transform:scaleX(1)}
+.q{font:300 clamp(1.08rem,1.6vw,1.3rem)/1.3 var(--f);letter-spacing:-.012em;color:var(--fg);transition:color .35s var(--out)}
+.it.open .q{color:var(--strong)}
+.st{width:13px;height:13px;flex:none;fill:var(--acc);opacity:.75;transition:transform .6s var(--out),opacity .4s var(--out)}
+.it.open .st{transform:rotate(45deg) scale(1.2);opacity:1}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--out)}
+.it.open .body{grid-template-rows:1fr}
+.body>div{overflow:hidden}
+.a{padding:0 0 1.25rem;max-width:56ch;font-size:.92rem;line-height:1.72;color:var(--soft);clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--out) .08s}
+.it.open .a{clip-path:inset(0 0 0 0)}
+.sig{display:block;margin-top:.35rem;font:400 1.35rem/1 "Pinyon Script",cursive;color:var(--acc)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms !important;transition-delay:0ms !important}.a{clip-path:none}}
+@media (max-width:767px){.g{grid-template-columns:minmax(0,1fr)}}
+
+/* ---- as três roupas da marca (contraste conferido) ---- */
+.rosa{--bg:#9A5457;--fg:#FBF1EC;--strong:#FFFFFF;--soft:#F6E3DF;--acc:#EDDAC9;--rule:rgba(251,241,236,.22)}
+.oliva{--bg:#4E5446;--fg:#F3EAE0;--strong:#FFFFFF;--soft:#E3DACE;--acc:#E8C6C6;--rule:rgba(243,234,224,.18)}
+.creme{--bg:#EDDAC9;--fg:#3A2A27;--strong:#7E4044;--soft:#5A4740;--acc:#9A5457;--rule:rgba(58,42,39,.16)}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>A opção 1, com a identidade da Thainá</h1>
+  <p>Mesmo desenho e mesmo movimento da opção 1 (o fio corre sob a pergunta e a resposta abre como cortina), agora com as cores da marca, a estrelinha do logo no lugar do “+” e a assinatura dela em cada resposta. Clique nas perguntas.</p>
+</header>
+<main id="opts"></main>
+<script>
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, tenho uma dúvida');
+const F=[
+ {q:'Como eu sei qual procedimento é ideal pra mim?',a:'Eu faço uma avaliação antes e indico só o que faz sentido pro seu rosto e pra sua rotina. Nem toda sobrancelha precisa de micropigmentação.'},
+ {q:'Dói?',a:'Design, henna, brow lamination e lash lifting não doem.'},
+ {q:'Quanto custa? Posso parcelar?',a:'Os valores de cada serviço estão no menu de serviços, mais acima. A micropigmentação sai em até 10x, e o Brow Lamination e o Lash Lifting em até 2x.'},
+ {q:'A micropigmentação tem retoque?',a:'Sim. Estão inclusos o acompanhamento completo, o retoque e os cuidados pós-procedimento.'},
+ {q:'Como funciona o agendamento?',a:'Você escolhe o serviço, o dia e o período logo no começo da página (ou me chama direto no WhatsApp) e eu confirmo o horário por lá. Chegue 10 minutinhos antes pra aproveitar com calma.'},
+];
+const STAR=c=>`<svg class="${c}" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>`;
+const block=cls=>`<section class="band ${cls}"><div class="g"><div>${STAR('logo-star')}<h2 class="h">Ficou alguma <em>dúvida?</em></h2><p class="sub">Não achou a resposta? <a href="${WA}" target="_blank" rel="noopener">Me chama no WhatsApp</a>.</p></div><div class="list">${F.map((x,k)=>`<div class="it${k?'':' open'}"><button type="button" aria-expanded="${!k}"><span class="q">${x.q}</span>${STAR('st')}</button><div class="body"><div><p class="a">${x.a}<span class="sig">Thainá</span></p></div></div></div>`).join('')}</div></div></section>`;
+const O=[
+ ['rosa','Rosa queimado','a cor principal da marca de fundo, texto creme e detalhes em creme. A mais “Thainá”.',['#9A5457','#FBF1EC','#EDDAC9']],
+ ['oliva','Oliva do logo','o verde-oliva do fundo do logo original, com creme e rosa claro. Escura e elegante, como a 1, mas da marca.',['#4E5446','#F3EAE0','#E8C6C6']],
+ ['creme','Creme da marca','o creme do logo de fundo, com rosa queimado nos detalhes. A versão clara.',['#EDDAC9','#3A2A27','#9A5457']],
+];
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt"><div class="meta"><b>${String.fromCharCode(65+i)}</b><strong>${o[1]}</strong><i>${o[3].map(c=>`<u style="background:${c}"></u>`).join('')}</i><span>${o[2]}</span></div>${block(o[0])}</div>`).join('');
+document.querySelectorAll('.list').forEach(list=>{const its=[...list.querySelectorAll('.it')];its.forEach(it=>it.querySelector('button').addEventListener('click',()=>{const was=it.classList.contains('open');its.forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});if(!was){it.classList.add('open');it.querySelector('button').setAttribute('aria-expanded','true')}}))});
+</script>
+</body>
+</html>
