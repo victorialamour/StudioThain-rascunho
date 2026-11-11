@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O que as clientes dizem · 10 opções · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================
+   O QUE AS CLIENTES DIZEM · 10 opções refinadas e compactas
+   Sem caixas: as falas vivem em tipografia (Fraunces leve, itálico), com
+   fios finos e rosa só nos detalhes, como o resto do site. As três falas
+   reais do WhatsApp; nenhuma é ligada a uma foto.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4544;--muted:#6B6360;--line:#E7DFD9;--rose:#9A5457;--rose-l:#E8C6C6;--tint:#F6EDEA;--cream:#F8F1EB;--pad:clamp(20px,5vw,72px);--f:"Fraunces",Georgia,serif;--s:"Plus Jakarta Sans",system-ui,sans-serif;--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 var(--s);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--rose);color:#fff}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:2px}
+h1,h2,p,figure,blockquote,ul,ol{margin:0}ul,ol{list-style:none;padding:0}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:var(--ink)}
+.top p{margin-top:.6rem;max-width:64ch;font-size:.9rem;color:var(--muted)}
+.idx{position:sticky;top:0;z-index:10;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.idx a{flex:none;padding:.35rem .6rem;font:500 .74rem var(--s);color:var(--muted);text-decoration:none;border-radius:4px}
+.idx a:hover{color:var(--ink);background:var(--tint)}
+.opt{scroll-margin-top:52px;border-top:8px solid var(--cream)}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:28px var(--pad) 0;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:var(--rose)}
+.meta strong{font-weight:600;font-size:.88rem;color:var(--ink)}
+.meta span{font-size:.82rem;color:var(--muted)}
+.sec{padding:clamp(40px,5vw,64px) var(--pad)}
+.wrap{max-width:1120px;margin:0 auto}
+
+/* ---- peças ---- */
+.hd{font:300 clamp(1.2rem,1.8vw,1.45rem)/1.2 var(--f);letter-spacing:-.015em;color:var(--ink)}
+.hd em{font-style:italic;color:var(--rose)}
+.qt{font:300 italic clamp(1rem,1.3vw,1.1rem)/1.5 var(--f);letter-spacing:-.005em;color:var(--ink);text-wrap:pretty}
+.qt mark{background:none;color:var(--rose)}
+.by{margin-top:.5rem;font-size:.7rem;letter-spacing:.06em;color:var(--muted)}
+.star{width:10px;height:10px;fill:var(--rose);flex:none}
+
+/* ===== 01 · Três colunas entre fios ===== */
+.o1 .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.o1 figure{padding:clamp(18px,2.4vw,28px) clamp(16px,2.4vw,32px)}
+.o1 figure+figure{border-left:1px solid var(--line)}
+.o1 .hd{margin-bottom:14px}
+
+/* ===== 02 · Uma por vez, com barra de tempo ===== */
+.o2 .box{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(18px,3vw,40px);align-items:center;max-width:980px;margin:0 auto;padding:clamp(20px,2.6vw,28px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.o2 .stage{position:relative;min-height:3.4em}
+.o2 .stage figure{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(6px);transition:opacity .7s var(--out),transform .9s var(--out)}
+.o2 .stage figure.on{opacity:1;transform:none;position:relative}
+.o2 .stage figure:not(.on){pointer-events:none}
+.o2 .stage .qt{font-size:clamp(1.05rem,1.5vw,1.25rem)}
+.o2 .count{font:300 .9rem var(--f);font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.o2 .bar{position:relative;width:64px;height:1px;background:var(--line);overflow:hidden}
+.o2 .bar i{position:absolute;inset:0;background:var(--rose);transform-origin:left;transform:scaleX(0)}
+.o2 .bar i.run{animation:fill 6s linear forwards}
+@keyframes fill{to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.o2 .bar{display:none}}
+
+/* ===== 03 · Aspa e lista ===== */
+.o3 .g{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,4vw,56px);max-width:900px;margin:0 auto;align-items:start}
+.o3 .mark{font:300 5.5rem/.7 var(--f);color:var(--rose-l)}
+.o3 li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.2rem 1.4rem;padding:.75rem 0;border-bottom:1px solid var(--line)}
+.o3 li:first-child{border-top:1px solid var(--line)}
+.o3 li .by{margin:0;white-space:nowrap}
+
+/* ===== 04 · Palavras-chave que abrem ===== */
+.o4 .g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,72px);max-width:1000px;margin:0 auto;align-items:center}
+.o4 .keys{display:flex;flex-direction:column;gap:.15rem}
+.o4 .keys button{display:flex;align-items:center;gap:.7rem;padding:.2rem 0;text-align:left;font:300 italic clamp(1.3rem,2.2vw,1.75rem)/1.25 var(--f);color:#C3B8B2;transition:color .5s var(--out)}
+.o4 .keys button::before{content:"";width:0;height:1px;background:var(--rose);transition:width .6s var(--out)}
+.o4 .keys button[aria-selected=true]{color:var(--ink)}
+.o4 .keys button[aria-selected=true]::before{width:22px}
+.o4 .panel{min-height:5.4em;padding-left:clamp(18px,3vw,36px);border-left:1px solid var(--line)}
+.o4 .panel>*{animation:in .7s var(--out)}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ===== 05 · Grifo nas palavras fortes ===== */
+.o5 .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3.5vw,48px)}
+.o5 figure{padding-top:14px;border-top:1px solid var(--ink)}
+.o5 .qt mark{font-style:italic;background:linear-gradient(var(--tint),var(--tint)) 0 85%/100% .45em no-repeat;color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){
+  .js .o5 .qt mark{background-size:0% .45em;transition:background-size 1.2s var(--out) calc(var(--k) * 180ms + .2s)}
+  .js .o5.on .qt mark{background-size:100% .45em}
+}
+.o5 .hd{margin-bottom:18px}
+
+/* ===== 06 · Frase-chave em destaque ===== */
+.o6 .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3.5vw,48px)}
+.o6 .key{font:300 clamp(1.35rem,2.2vw,1.75rem)/1.15 var(--f);letter-spacing:-.02em;color:var(--ink)}
+.o6 .key em{font-style:italic;color:var(--rose)}
+.o6 .qt{margin-top:.6rem;font-size:.9rem;color:var(--body)}
+
+/* ===== 07 · Conversa (WhatsApp, minimalista) ===== */
+.o7 .g{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(24px,5vw,72px);max-width:1000px;margin:0 auto;align-items:center}
+.o7 .chat{display:flex;flex-direction:column;gap:8px}
+.o7 .msg{max-width:min(440px,92%);padding:.65rem .9rem .5rem;border-radius:14px 14px 14px 4px;background:var(--cream)}
+.o7 .msg:nth-child(2){margin-left:clamp(0px,6vw,64px)}
+.o7 .msg:nth-child(3){margin-left:clamp(0px,3vw,32px)}
+.o7 .msg .qt{font-size:.98rem}
+.o7 .msg time{display:block;margin-top:.15rem;text-align:right;font-size:.62rem;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){
+  .js .o7 .msg{opacity:0;transform:translateY(10px) scale(.98);transform-origin:left bottom;transition:opacity .6s var(--out),transform .7s var(--out);transition-delay:calc(var(--k) * 450ms)}
+  .js .o7.on .msg{opacity:1;transform:none}
+}
+.o7 .sub{margin-top:.5rem;font-size:.82rem;color:var(--muted)}
+
+/* ===== 08 · Coluna com estrelas ===== */
+.o8 .col{max-width:560px;margin:0 auto;text-align:center}
+.o8 .col .hd{margin-bottom:16px}
+.o8 figure{padding:.2rem 0}
+.o8 .sep{display:flex;justify-content:center;margin:14px 0}
+@media (prefers-reduced-motion:no-preference){
+  .js .o8 figure,.js .o8 .sep{opacity:0;transform:translateY(8px);transition:opacity .8s var(--out),transform .9s var(--out);transition-delay:calc(var(--k) * 260ms)}
+  .js .o8.on figure,.js .o8.on .sep{opacity:1;transform:none}
+}
+
+/* ===== 09 · Uma linha, com setas ===== */
+.o9 .line{display:flex;align-items:center;gap:clamp(14px,2.4vw,28px);max-width:1000px;margin:0 auto;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.o9 .viewport{flex:1;overflow:hidden}
+.o9 .track{display:flex;transition:transform .8s var(--out)}
+.o9 .track figure{flex:0 0 100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem 1.2rem}
+.o9 .track .by{margin:0}
+.o9 .nav{display:flex;gap:6px}
+.o9 .nav button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:border-color .3s,background .3s}
+.o9 .nav button:hover{border-color:var(--ink)}
+.o9 .nav svg{width:14px;height:14px;stroke:var(--ink)}
+
+/* ===== 10 · Título lateral, falas empilhadas ===== */
+.o10 .g{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);gap:clamp(24px,5vw,72px);max-width:1000px;margin:0 auto}
+.o10 .left{padding-top:.2rem}
+.o10 .left p{margin-top:.4rem;font-size:.78rem;color:var(--muted)}
+.o10 .stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 36px}
+.o10 .stack figure:first-child{grid-column:1/-1}
+.o10 .stack figure:first-child .qt{font-size:clamp(1.15rem,1.8vw,1.4rem)}
+.o10 .stack figure{padding-top:12px;border-top:1px solid var(--line)}
+
+@media (max-width:767px){
+  .o1 .row,.o5 .row,.o6 .row{grid-template-columns:minmax(0,1fr)}
+  .o1 figure+figure{border-left:0;border-top:1px solid var(--line)}
+  .o2 .box{grid-template-columns:minmax(0,1fr);gap:12px}.o2 .count{order:2}.o2 .bar{order:3}
+  .o3 .g,.o4 .g,.o7 .g,.o10 .g{grid-template-columns:minmax(0,1fr)}
+  .o3 .mark{font-size:4rem;height:2.6rem}
+  .o4 .panel{padding-left:0;border-left:0;padding-top:14px;border-top:1px solid var(--line)}
+  .o10 .stack{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>O que as clientes dizem · 10 opções</h1>
+  <p>Menores e sem caixas: as três falas reais do WhatsApp em tipografia, com fios finos, no mesmo estilo das seções que fizemos hoje. Algumas têm animação; role devagar até elas.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+<script>
+const Q=[
+ {t:'Me sinto radiante, uma nova mulher. A praticidade de acordar pronta é maravilhosa.',k:'Radiante',hi:'uma nova mulher',key:'“Uma nova <em>mulher.</em>”'},
+ {t:'Mãos de fada. Zero dor ou incômodo. Minhas sobrancelhas elevaram minha autoestima.',k:'Mãos de fada',hi:'Mãos de fada',key:'“Mãos de <em>fada.</em>”'},
+ {t:'Ganhei vários elogios hoje, dizendo que a sobrancelha tá linda.',k:'Elogios',hi:'vários elogios',key:'“Ganhei vários <em>elogios.</em>”'},
+];
+const BY='<p class="by">Cliente · via WhatsApp</p>';
+const HD='<h2 class="hd">O que as clientes <em>dizem</em></h2>';
+const STAR='<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>';
+const q=(x,mark=false,k=0)=>`<blockquote class="qt">“${mark?x.t.replace(x.hi,`<mark style="--k:${k}">${x.hi}</mark>`):x.t}”</blockquote>`;
+const ARR=d=>`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+const O=[
+ ['Três colunas entre fios','as três falas lado a lado, separadas só por fios verticais finos; sem caixa, sem sombra. Bem baixa.',
+  `<div class="sec o1"><div class="wrap">${HD.replace('class="hd"','class="hd" style="margin-bottom:14px"')}<div class="row">${Q.map(x=>`<figure>${q(x)}${BY}</figure>`).join('')}</div></div></div>`],
+ ['Uma por vez','uma fala por vez numa faixa fina, trocando sozinha; uma barra rosa mostra o tempo e o contador indica qual é.',
+  `<div class="sec o2"><div class="box">${HD}<div class="stage" aria-live="polite">${Q.map((x,i)=>`<figure class="${i?'':'on'}">${q(x)}${BY}</figure>`).join('')}</div><div><p class="count"><span class="c">1</span> / 3</p><span class="bar"><i></i></span></div></div></div>`],
+ ['Aspa e lista','uma aspa grande em rosa claro à esquerda; as falas empilhadas como lista, cada uma numa linha.',
+  `<div class="sec o3"><div class="g"><span class="mark" aria-hidden="true">“</span><div>${HD.replace('class="hd"','class="hd" style="margin-bottom:12px"')}<ul>${Q.map(x=>`<li>${q(x)}<span class="by">Cliente · via WhatsApp</span></li>`).join('')}</ul></div></div></div>`],
+ ['Palavras-chave','três palavras em itálico (Radiante, Mãos de fada, Elogios); ao tocar em uma, a fala completa aparece ao lado.',
+  `<div class="sec o4"><div class="g"><div>${HD.replace('class="hd"','class="hd" style="margin-bottom:12px"')}<div class="keys" role="tablist">${Q.map((x,i)=>`<button role="tab" aria-selected="${!i}" data-i="${i}">${x.k}</button>`).join('')}</div></div><div class="panel" aria-live="polite"></div></div></div>`],
+ ['Grifo nas palavras fortes','três colunas sob um fio escuro; as palavras mais fortes de cada fala ganham um grifo rosado que se pinta ao aparecer.',
+  `<div class="sec o5" data-on><div class="wrap">${HD}<div class="row">${Q.map((x,i)=>`<figure>${q(x,true,i)}${BY}</figure>`).join('')}</div></div></div>`],
+ ['Frase-chave em destaque','de cada fala, a frase mais forte aparece maior, em Fraunces; a fala completa vem pequena embaixo.',
+  `<div class="sec o6"><div class="wrap">${HD.replace('class="hd"','class="hd" style="margin-bottom:18px"')}<div class="row">${Q.map(x=>`<figure><p class="key">${x.key}</p>${q(x)}${BY}</figure>`).join('')}</div></div></div>`],
+ ['Conversa','as falas como mensagens de uma conversa, em balões creme bem discretos, chegando uma depois da outra.',
+  `<div class="sec o7" data-on><div class="g"><div>${HD}<p class="sub">Mensagens que a Thainá recebeu no WhatsApp.</p></div><div class="chat">${Q.map((x,i)=>`<div class="msg" style="--k:${i}">${q(x)}<time>via WhatsApp</time></div>`).join('')}</div></div></div>`],
+ ['Coluna com estrelas','uma coluna estreita e centralizada; as falas separadas pela estrelinha do logo, aparecendo em sequência.',
+  `<div class="sec o8" data-on><div class="col">${HD}${Q.map((x,i)=>`${i?`<div class="sep" style="--k:${i*2-1}">${STAR}</div>`:''}<figure style="--k:${i*2}">${q(x)}${BY}</figure>`).join('')}</div></div>`],
+ ['Uma linha, com setas','tudo numa única linha fina: a fala desliza para o lado ao tocar nas setas. A mais compacta.',
+  `<div class="sec o9"><div class="line">${HD}<div class="viewport"><div class="track">${Q.map(x=>`<figure>${q(x)}${BY}</figure>`).join('')}</div></div><div class="nav"><button type="button" data-d="-1" aria-label="Anterior">${ARR('M15 6l-6 6 6 6')}</button><button type="button" data-d="1" aria-label="Próxima">${ARR('M9 6l6 6-6 6')}</button></div></div></div>`],
+ ['Título lateral','o título à esquerda; à direita, a primeira fala maior e as outras duas lado a lado embaixo.',
+  `<div class="sec o10"><div class="g"><div class="left">${HD}<p>Três de muitas mensagens.</p></div><div class="stack">${Q.map(x=>`<figure>${q(x)}${BY}</figure>`).join('')}</div></div></div>`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<section class="opt" id="o${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div>${o[2]}</section>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.4});
+document.querySelectorAll('[data-on]').forEach(el=>io.observe(el));
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* 02 · uma por vez */
+(()=>{const box=document.querySelector('.o2'),f=[...box.querySelectorAll('.stage figure')],c=box.querySelector('.c'),bar=box.querySelector('.bar i');let i=0;
+ const go=n=>{i=n;f.forEach((x,k)=>x.classList.toggle('on',k===n));c.textContent=n+1;bar.classList.remove('run');void bar.offsetWidth;if(!RM)bar.classList.add('run')};
+ go(0);if(!RM)setInterval(()=>go((i+1)%f.length),6000)})();
+/* 04 · palavras-chave */
+(()=>{const box=document.querySelector('.o4'),b=[...box.querySelectorAll('[role=tab]')],p=box.querySelector('.panel');
+ const go=n=>{b.forEach((x,k)=>x.setAttribute('aria-selected',k===n));p.innerHTML=q(Q[n])+BY};b.forEach((x,k)=>{x.addEventListener('click',()=>go(k));x.addEventListener('mouseenter',()=>go(k))});go(0)})();
+/* 09 · uma linha */
+(()=>{const box=document.querySelector('.o9'),tr=box.querySelector('.track');let i=0;
+ box.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{i=(i+ +b.dataset.d+Q.length)%Q.length;tr.style.transform=`translateX(${-i*100}%)`}))})();
+</script>
+</body>
+</html>
