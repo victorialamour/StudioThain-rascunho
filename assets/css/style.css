@@ -1147,3 +1147,31 @@ main>.breath .breath__p{display:block;margin:.6rem 0 0;font:300 italic clamp(.95
   .press__row figure,.press__row figure:first-child{padding:0}
   .press__row figure+figure{border-left:0;border-top:1px solid var(--line);padding-top:22px}
 }
+
+/* ---- Dúvidas · opção 1 da marca, "oliva em névoa" ----
+   Fundo oliva bem diluído de ponta a ponta; título à esquerda, lista à
+   direita. Ao abrir: o fio rosa corre sob a pergunta, a estrela gira e a
+   resposta se revela como cortina. */
+main>.faq2{position:relative;padding:clamp(60px,7.5vw,104px) var(--pad);background:#EEEFE9;box-shadow:0 0 0 100vmax #EEEFE9;clip-path:inset(0 -100vmax);color:#2B2F26}
+.faq2__g{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,6vw,96px);max-width:1040px;margin:0 auto;align-items:start}
+.faq2__logo{display:block;width:18px;height:18px;margin-bottom:1.2rem;fill:var(--accent)}
+.faq2__title{margin:0;font:300 clamp(1.9rem,3.2vw,2.6rem)/1.08 var(--f-display);letter-spacing:-.025em;color:#2B2F26}
+.faq2__title em{font-style:italic;color:var(--accent)}
+.faq2__sub{margin:.6rem 0 0;font-size:.86rem;color:#555B4C}
+.faq2__sub a,.faq2__a a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.faq2__list{border-top:1px solid rgba(43,47,38,.13)}
+.faq2__it{border-bottom:1px solid rgba(43,47,38,.13)}
+.faq2__it>button{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.4rem;width:100%;padding:1.05rem 0;text-align:left}
+.faq2__it>button::after{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--e-out)}
+.faq2__it.is-open>button::after{transform:scaleX(1)}
+.faq2__q{font:300 clamp(1.08rem,1.6vw,1.3rem)/1.3 var(--f-display);letter-spacing:-.012em;color:#2B2F26;transition:color .35s var(--e-out)}
+.faq2__it.is-open .faq2__q{color:#4E5446}
+.faq2__st{width:13px;height:13px;flex:none;fill:var(--accent);opacity:.75;transition:transform .6s var(--e-out),opacity .4s var(--e-out)}
+.faq2__it.is-open .faq2__st{transform:rotate(45deg) scale(1.2);opacity:1}
+.faq2__body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--e-out)}
+.faq2__it.is-open .faq2__body{grid-template-rows:1fr}
+.faq2__body>div{overflow:hidden}
+.faq2__a{margin:0;padding:0 0 1.25rem;max-width:56ch;font-size:.92rem;line-height:1.72;color:#555B4C;clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--e-out) .08s}
+.faq2__it.is-open .faq2__a{clip-path:inset(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){.faq2 *{transition-duration:.01ms !important;transition-delay:0ms !important}.faq2__a{clip-path:none}}
+@media (max-width:767px){.faq2__g{grid-template-columns:minmax(0,1fr)}}

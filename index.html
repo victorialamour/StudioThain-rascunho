@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20261111">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('js-anim');
@@ -338,24 +338,25 @@ fim do guia desativado -->
 </section>
 fim da seção Sobre desativada -->
 
-<!-- ═══════════════ 09 · DÚVIDAS ═══════════════ -->
-<section class="faq" id="duvidas">
-  <header class="faq__head">
-    <h2 class="h2" data-reveal><b>Ficou alguma</b> dúvida?</h2>
-    <p class="sec-sub" data-reveal>Não achou a resposta? <a class="link" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20tenho%20uma%20d%C3%BAvida" target="_blank" rel="noopener">Me chama no WhatsApp</a>.</p>
-  </header>
-  <div class="faq__list" data-reveal-stagger>
-    <details class="qa" open><summary>Como eu sei qual procedimento é ideal pra mim?</summary><p>Eu faço uma avaliação antes e indico só o que faz sentido pro seu rosto e pra sua rotina. Nem toda sobrancelha precisa de micropigmentação.</p></details>
-    <details class="qa"><summary>Dói?</summary><p>[Confirmar com a Thainá: uso de anestésico e o que a cliente sente em cada procedimento.] Design, henna, brow lamination e lash lifting não doem.</p></details>
-    <details class="qa"><summary>Quanto custa?</summary><p>Design R$ 30 · henna ou tintura R$ 55 · descoloração + coloração R$ 99,90 · spa labial R$ 20 · brow lamination R$ 145 (2x de R$ 72,50) · lash lifting R$ 160 (2x de R$ 80) · micropigmentação R$ 670 (10x de R$ 67).</p></details>
-    <details class="qa"><summary>Quanto tempo leva o atendimento?</summary><p>[Confirmar tempos: design ~X min, micropigmentação ~X h, brow lamination e lash lifting ~X min.]</p></details>
-    <details class="qa"><summary>Grávida ou amamentando pode fazer?</summary><p>[Confirmar com a Thainá quais procedimentos são liberados nesse período.]</p></details>
-    <details class="qa"><summary>Qual a diferença entre fio a fio e shadow?</summary><p>O fio a fio simula fios naturais e fica mais delicado. O shadow tem efeito sombreado, parecido com henna, pra quem quer a sobrancelha sempre definida.</p></details>
-    <details class="qa"><summary>A micropigmentação tem retoque?</summary><p>Sim. Estão inclusos o acompanhamento completo, o retoque e os cuidados pós-procedimento.</p></details>
-    <details class="qa"><summary>Brow Lamination e Lash Lifting precisam de manutenção?</summary><p>Não. O Brow Lamination dura até 4 semanas e o Lash Lifting até 30 dias.</p></details>
-    <details class="qa"><summary>Vocês atendem pele madura e fios brancos?</summary><p>Sim. Tenho técnica de micropigmentação pra pele madura, e o design com tintura é ótimo pra cobrir fios brancos.</p></details>
-    <details class="qa"><summary>Posso parcelar?</summary><p>Sim. A micropigmentação sai em até 10x, e o Brow Lamination e o Lash Lifting em até 2x.</p></details>
-    <details class="qa"><summary>Como funciona o agendamento?</summary><p>Você escolhe o serviço, o dia e o período <a class="link" href="#horario">logo no começo da página</a> (ou me chama direto no WhatsApp) e eu confirmo o horário por lá. Chegue 10 minutinhos antes pra aproveitar com calma.</p></details>
+<!-- ═══════════════ 09 · DÚVIDAS (opção 1 da marca · oliva em névoa) ═══════════════ -->
+<!-- Só as 5 perguntas essenciais. Fundo oliva bem diluído (verde do logo),
+     estrela do logo no lugar do "+", fio rosa que corre sob a pergunta aberta
+     e resposta que se revela como cortina (main.js · initFaq2).
+     Pendentes com a Thainá: tempo de atendimento e grávidas/amamentando. -->
+<section class="faq2" id="duvidas">
+  <div class="faq2__g">
+    <div class="faq2__head" data-reveal>
+      <svg class="faq2__logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>
+      <h2 class="faq2__title">Ficou alguma <em>dúvida?</em></h2>
+      <p class="faq2__sub">Não achou a resposta? <a href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20tenho%20uma%20d%C3%BAvida" target="_blank" rel="noopener">Me chama no WhatsApp</a>.</p>
+    </div>
+    <div class="faq2__list" data-reveal>
+      <div class="faq2__it is-open"><button type="button" aria-expanded="true"><span class="faq2__q">Como eu sei qual procedimento é ideal pra mim?</span><svg class="faq2__st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg></button><div class="faq2__body"><div><p class="faq2__a">Eu faço uma avaliação antes e indico só o que faz sentido pro seu rosto e pra sua rotina. Nem toda sobrancelha precisa de micropigmentação.</p></div></div></div>
+      <div class="faq2__it"><button type="button" aria-expanded="false"><span class="faq2__q">Dói?</span><svg class="faq2__st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg></button><div class="faq2__body"><div><p class="faq2__a">Design, henna, brow lamination e lash lifting não doem.</p></div></div></div>
+      <div class="faq2__it"><button type="button" aria-expanded="false"><span class="faq2__q">Quanto custa? Posso parcelar?</span><svg class="faq2__st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg></button><div class="faq2__body"><div><p class="faq2__a">Os valores de cada serviço estão no <a href="#servicos">menu de serviços</a>, mais acima. A micropigmentação sai em até 10x, e o Brow Lamination e o Lash Lifting em até 2x.</p></div></div></div>
+      <div class="faq2__it"><button type="button" aria-expanded="false"><span class="faq2__q">A micropigmentação tem retoque?</span><svg class="faq2__st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg></button><div class="faq2__body"><div><p class="faq2__a">Sim. Estão inclusos o acompanhamento completo, o retoque e os cuidados pós-procedimento.</p></div></div></div>
+      <div class="faq2__it"><button type="button" aria-expanded="false"><span class="faq2__q">Como funciona o agendamento?</span><svg class="faq2__st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg></button><div class="faq2__body"><div><p class="faq2__a">Você escolhe o serviço, o dia e o período <a href="#horario">logo no começo da página</a> (ou me chama direto no WhatsApp) e eu confirmo o horário por lá. Chegue 10 minutinhos antes pra aproveitar com calma.</p></div></div></div>
+    </div>
   </div>
 </section>
 
@@ -582,6 +583,6 @@ fim da seção Sobre desativada -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=20261111"></script>
 </body>
 </html>

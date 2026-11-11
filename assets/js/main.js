@@ -470,3 +470,14 @@ function initBooking () {
 initHours();
 initGuide();
 initBooking();
+/* ---- Dúvidas (faq2): uma resposta aberta por vez ---- */
+function initFaq2 () {
+  const its = [...document.querySelectorAll('.faq2__it')];
+  its.forEach(it => it.querySelector('button').addEventListener('click', () => {
+    const was = it.classList.contains('is-open');
+    its.forEach(x => { x.classList.remove('is-open'); x.querySelector('button').setAttribute('aria-expanded', 'false'); });
+    if (!was) { it.classList.add('is-open'); it.querySelector('button').setAttribute('aria-expanded', 'true'); }
+    if (HAS_GSAP) setTimeout(() => ScrollTrigger.refresh(), 600);
+  }));
+}
+initFaq2();
