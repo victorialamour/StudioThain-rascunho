@@ -1078,3 +1078,23 @@ main>.services{--bleed:var(--sand);background:var(--sand)}
 .micro__honest{max-width:52ch;margin:.8rem auto 0;font-size:.9rem;line-height:1.7;color:var(--body)}
 .micro__sign{margin:.8rem 0 0;font:400 1.5rem/1 "Pinyon Script",cursive;color:var(--ink)}
 .micro{padding-bottom:var(--sec)}
+
+/* ---- Respiro: a frase da Thainá entre a micropigmentação e o guia ----
+   Faixa creme bem suave de ponta a ponta, muito espaço em cima e embaixo,
+   um fio fino rosa como pausa e a frase centralizada em Fraunces leve. */
+main>.breath{position:relative;padding:clamp(72px,9vw,128px) var(--pad);text-align:center;background:#F8F1EB;box-shadow:0 0 0 100vmax #F8F1EB;clip-path:inset(0 -100vmax)}
+.micro{padding-bottom:var(--sec)}
+.breath__line{display:block;width:1px;height:clamp(40px,5vw,64px);margin:0 auto clamp(28px,3.5vw,40px);background:var(--accent)}
+.breath__q{max-width:18ch;margin:0 auto;font:300 clamp(2rem,4.4vw,3.6rem)/1.08 var(--f-display);font-variation-settings:"opsz" 144;letter-spacing:-.028em;color:var(--ink);text-wrap:balance}
+.breath__q em{font-style:italic;color:var(--accent)}
+.breath__p{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.4rem 1rem;margin:clamp(20px,2.6vw,28px) 0 0;font:300 italic clamp(1rem,1.4vw,1.15rem)/1.4 var(--f-display);color:var(--muted)}
+.breath__sig{font:400 clamp(1.6rem,2.2vw,1.9rem)/1 "Pinyon Script",cursive;font-style:normal;color:var(--ink)}
+
+/* respiro como fala da Thainá: aspas pendentes, 2ª frase menor e autoria */
+.breath__fig{margin:0}
+.breath__q{max-width:20ch;margin:0 auto}
+.breath__q p{margin:0;text-indent:-.4em}
+.breath__q .breath__p{display:block;margin-top:clamp(14px,1.8vw,20px);text-indent:0;font:300 italic clamp(1.05rem,1.5vw,1.25rem)/1.4 var(--f-display);letter-spacing:-.01em;color:var(--muted)}
+.breath__by{display:flex;flex-direction:column;align-items:center;gap:.15rem;margin-top:clamp(24px,3vw,34px)}
+.breath__by b{font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--ink)}
+.breath__by span{font-size:.78rem;color:var(--muted)}
