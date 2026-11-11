@@ -1124,3 +1124,26 @@ main>.breath .breath__p{display:block;margin:.6rem 0 0;font:300 italic clamp(.95
 .results .shot__tag,.results .shot__tag--after{left:8px;padding:0;border-radius:0;background:none;font-size:.6rem;font-weight:600;letter-spacing:.14em;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.35)}
 .results .shot__tag{top:8px}
 .results .shot__tag--after{top:calc(50% + 8px)}
+
+/* ---- O que as clientes dizem · opção B (citações de imprensa) ----
+   Sem caixas: frase-chave grande em itálico, fala completa pequena, nome
+   com um traço rosa; colunas separadas só por fios finos. */
+.press{margin-top:clamp(40px,5vw,64px);padding-top:clamp(28px,3.5vw,40px);border-top:1px solid var(--line)}
+.press__hd{margin:0 0 clamp(22px,3vw,32px);font:300 clamp(1.15rem,1.6vw,1.35rem)/1.2 var(--f-display);letter-spacing:-.015em;color:var(--ink)}
+.press__hd em{font-style:italic;color:var(--accent)}
+.press__row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.press__row figure{margin:0;padding:0 clamp(18px,3vw,40px)}
+.press__row figure:first-child{padding-left:0}
+.press__row figure+figure{border-left:1px solid var(--line)}
+.press__key{margin:0;font:300 italic clamp(1.4rem,2.3vw,1.9rem)/1.15 var(--f-display);letter-spacing:-.02em;color:var(--ink)}
+.press__full{margin:.55rem 0 0;max-width:30ch;font-size:.84rem;line-height:1.6;color:var(--body)}
+.press__row figcaption{display:flex;gap:.5rem;align-items:baseline;margin-top:.9rem}
+.press__nm{font-size:.74rem;font-weight:600;letter-spacing:.08em;color:var(--ink)}
+.press__nm::before{content:"";display:inline-block;width:14px;height:1px;margin-right:.5rem;background:var(--accent);transform:translateY(-.3em)}
+.press__via{font-size:.7rem;color:var(--muted)}
+.results{padding-bottom:var(--sec)}
+@media (max-width:767px){
+  .press__row{grid-template-columns:minmax(0,1fr);gap:22px}
+  .press__row figure,.press__row figure:first-child{padding:0}
+  .press__row figure+figure{border-left:0;border-top:1px solid var(--line);padding-top:22px}
+}
