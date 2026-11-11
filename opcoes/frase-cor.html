@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 opções · Faixa de cor da frase · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Pinyon+Script&family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   5 OPÇÕES · a frase "Nem toda sobrancelha precisa de micropigmentação"
+   numa faixa de cor de ponta a ponta, para quebrar o branco e dar
+   hierarquia. Cada opção aparece entre dois trechos brancos (o fim da
+   micropigmentação e o começo do guia), para ver a transição de verdade.
+   ========================================================================== */
+:root{--ink:#161616;--body:#4A4A4A;--muted:#7A7470;--line:#EAE5E0;--sand:#F7F4F1;--accent:#9A5457;--rose-l:#E8C6C6;--tint:#F6EDEA;--cream:#EDDAC9;--pad:clamp(16px,4vw,56px);--f:"Fraunces",Georgia,serif;--ease:cubic-bezier(.22,.8,.24,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--body);font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,p,figure{margin:0}
+.top{padding:clamp(28px,4vw,48px) var(--pad) 18px}
+.top h1{font:400 clamp(1.7rem,3.4vw,2.4rem)/1.1 Gloock,serif;color:var(--ink)}
+.top p{margin-top:.5rem;max-width:64ch;color:var(--muted);font-size:.9rem}
+.idx{position:sticky;top:0;z-index:20;display:flex;gap:2px;padding:10px var(--pad);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.idx a{padding:.3rem .65rem;font-size:.75rem;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
+.idx a:hover{color:var(--ink);border-color:var(--ink)}
+.opt{scroll-margin-top:50px;border-top:6px solid var(--sand)}
+.opt__tag{padding:16px var(--pad);font-size:.75rem;color:var(--muted)}
+.opt__tag b{font:400 1.1rem Gloock,serif;color:var(--accent);margin-right:.5rem}
+.opt__tag strong{color:var(--ink);font-weight:600;margin-right:.6rem}
+/* trechos brancos de contexto, antes e depois da faixa */
+.ctx{padding:28px var(--pad);text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#C9C1BA}
+.ctx span{display:block;width:min(560px,100%);height:1px;margin:10px auto 0;background:var(--line)}
+
+/* ---- peças da frase ---- */
+.band{position:relative;padding:clamp(52px,7vw,96px) var(--pad);overflow:hidden}
+.in{max-width:760px;margin:0 auto;text-align:center}
+.marks{display:block;height:2.6rem;font:300 5rem/1 var(--f)}
+.q{font:300 clamp(1.7rem,3.2vw,2.6rem)/1.18 var(--f);letter-spacing:-.02em}
+.q em{font-style:italic}
+.punch{margin-top:.7rem;font:300 italic clamp(1.05rem,1.5vw,1.2rem)/1.4 var(--f)}
+.honest{max-width:54ch;margin:1.2rem auto 0;font-size:.9rem;line-height:1.75}
+.sign{margin-top:1.1rem;font:400 1.7rem/1 "Pinyon Script",cursive}
+.rule{display:block;width:40px;height:1px;margin:1.3rem auto 0}
+
+/* 01 · rosa queimado */
+.c1{background:var(--accent);color:#FBF3EF}
+.c1 .marks,.c1 .punch,.c1 .q em{color:var(--rose-l)}
+.c1 .honest{color:rgba(251,243,239,.82)}
+.c1 .sign{color:#fff}
+
+/* 02 · rosa claro */
+.c2{background:var(--tint);color:var(--ink)}
+.c2 .marks,.c2 .punch,.c2 .q em{color:var(--accent)}
+.c2 .honest{color:var(--body)}
+
+/* 03 · grafite */
+.c3{background:var(--ink);color:#fff}
+.c3 .marks,.c3 .punch,.c3 .q em{color:var(--rose-l)}
+.c3 .honest{color:rgba(255,255,255,.7)}
+.c3 .rule{background:var(--rose-l)}
+
+/* 04 · rosa queimado + retrato */
+.c4{padding:0;background:var(--accent);color:#FBF3EF}
+.c4 .split{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);max-width:1180px;margin:0 auto;align-items:stretch}
+.c4 .txt{padding:clamp(48px,6vw,88px) clamp(24px,5vw,72px);text-align:left}
+.c4 .marks{text-align:left}
+.c4 .honest{margin-left:0}
+.c4 .marks,.c4 .punch,.c4 .q em{color:var(--rose-l)}
+.c4 .honest{color:rgba(251,243,239,.82)}
+.c4 figure{position:relative;min-height:340px}
+.c4 figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+
+/* 05 · creme da marca, editorial em duas colunas */
+.c5{background:var(--cream);color:var(--ink)}
+.c5 .grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,72px);max-width:1040px;margin:0 auto;align-items:end;text-align:left}
+.c5 .marks{color:var(--accent)}
+.c5 .q em,.c5 .punch{color:var(--accent)}
+.c5 .side{padding-left:clamp(20px,3vw,36px);border-left:1px solid rgba(22,22,22,.18)}
+.c5 .honest{margin:0;color:#3E3A36}
+.c5 .punch{margin-top:0}
+
+@media (max-width:767px){
+  .c4 .split,.c5 .grid{grid-template-columns:minmax(0,1fr)}
+  .c4 figure{min-height:0;aspect-ratio:4/3;order:-1}
+  .c5 .side{padding-left:0;border-left:0;padding-top:1.2rem;border-top:1px solid rgba(22,22,22,.18)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>5 opções · faixa de cor para a frase</h1>
+  <p>A frase “Nem toda sobrancelha precisa de micropigmentação” vira uma faixa de cor de ponta a ponta, entre a micropigmentação e o guia, que são brancos. Os trechos claros acima e abaixo de cada opção mostram como fica a transição.</p>
+</header>
+<nav class="idx" aria-label="Opções"><a href="#c1">01</a><a href="#c2">02</a><a href="#c3">03</a><a href="#c4">04</a><a href="#c5">05</a></nav>
+<main id="opts"></main>
+<script>
+const Q='Nem toda sobrancelha precisa de <em>micropigmentação.</em>';
+const P='E eu digo isso sendo micropigmentadora.';
+const H='Antes de qualquer procedimento, eu olho com calma o seu rosto, a sua expressão e a sua rotina. Às vezes um design bem feito resolve. Você sai sabendo o que faz sentido pra você.';
+const center=`<div class="in"><span class="marks" aria-hidden="true">“</span><p class="q">${Q}</p><p class="punch">${P}</p><p class="honest">${H}</p><p class="sign">Thainá</p></div>`;
+const O=[
+ ['c1','Rosa queimado','a cor da marca em destaque; frase em creme, aspas e itálico em rosa claro. O maior impacto.',`<div class="band c1">${center}</div>`],
+ ['c2','Rosa claro','fundo rosado bem suave, frase em grafite, itálico em rosa queimado. Quebra o branco sem chamar tanta atenção.',`<div class="band c2">${center}</div>`],
+ ['c3','Grafite','fundo quase preto, frase em branco, detalhes em rosa claro. Muito chique, mas repete o tom do bloco de cursos mais abaixo.',`<div class="band c3">${center.replace('<p class="sign">','<span class="rule"></span><p class="sign">')}</div>`],
+ ['c4','Rosa queimado + retrato','a frase à esquerda e o retrato da Thainá à direita, colado na faixa. Dá rosto à frase.',`<div class="band c4"><div class="split"><div class="txt"><span class="marks" aria-hidden="true">“</span><p class="q">${Q}</p><p class="punch">${P}</p><p class="honest">${H}</p><p class="sign">Thainá</p></div><figure><img src="../assets/img/thaina-retrato.webp" alt="Retrato da Thainá Cavalcanti" loading="lazy"></figure></div></div>`],
+ ['c5','Creme da marca, editorial','o creme do logo (#EDDAC9); frase grande à esquerda, complemento e assinatura numa coluna à direita.',`<div class="band c5"><div class="grid"><div><span class="marks" aria-hidden="true">“</span><p class="q">${Q}</p></div><div class="side"><p class="punch">${P}</p><p class="honest" style="margin-top:.7rem">${H}</p><p class="sign">Thainá</p></div></div></div>`],
+];
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<section class="opt" id="${o[0]}"><p class="opt__tag"><b>0${i+1}</b><strong>${o[1]}</strong>${o[2]}</p><div class="ctx">fim da micropigmentação (branco)<span></span></div>${o[3]}<div class="ctx"><span style="margin:0 auto 10px"></span>começo do guia de técnicas (branco)</div></section>`).join('');
+</script>
+</body>
+</html>
