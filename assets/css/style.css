@@ -1110,3 +1110,17 @@ main>.breath .breath__p{display:block;margin:.6rem 0 0;font:300 italic clamp(.95
 .breath__by{margin-top:1rem;gap:.1rem}
 .breath__by b{font-size:.76rem}
 .breath__by span{font-size:.72rem}
+
+/* ---- Resultados · opção 7 ("o atual, refinado") ----
+   Título em Fraunces leve com "depois" em itálico rosado (mesma voz das
+   outras seções); rótulos Antes/Depois viram letras pequenas brancas sobre
+   a foto, sem etiqueta; linha fina branca marca onde termina o antes. */
+.results__title{margin:0;font:300 clamp(1.9rem,3.2vw,2.6rem)/1.1 var(--f-display);font-variation-settings:"opsz" 144;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
+.results__title em{font-style:italic;color:var(--accent)}
+.results__sub{margin:.6rem 0 0;font-size:.92rem;color:var(--muted)}
+.results .masonry{gap:12px}
+.results .shot{border-radius:4px}
+.results .shot::after{height:1px;margin-top:0;background:rgba(255,255,255,.9)}
+.results .shot__tag,.results .shot__tag--after{left:8px;padding:0;border-radius:0;background:none;font-size:.6rem;font-weight:600;letter-spacing:.14em;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.results .shot__tag{top:8px}
+.results .shot__tag--after{top:calc(50% + 8px)}
