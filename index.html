@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261111b">
+<link rel="stylesheet" href="assets/css/style.css?v=20261112">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('js-anim');
@@ -364,10 +364,15 @@ fim da seção Sobre desativada -->
 <!-- Estrutura inspirada na referência (manifesto → pilares → caminhos → prova),
      com texto próprio e só o que o curso comprovadamente entrega. -->
 <section class="courses" id="cursos">
+  <!-- Cabeçalho centralizado, na largura toda: "Cursos" como palavra de
+       exibição e "de design de sobrancelhas" em itálico, menor, na linha de baixo. -->
+  <header class="courses__head" data-reveal>
+    <svg class="courses__star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>
+    <h2 class="courses__title"><span class="courses__word">Cursos</span><span class="courses__what">de design de sobrancelhas</span></h2>
+    <p class="courses__lead">Aprenda a profissão com quem vive dela. Presenciais, em turma pequena, em <span style="white-space:nowrap">Carpina-PE</span>.</p>
+  </header>
+
   <div class="courses__intro">
-    <!-- Título deixa claro, logo de cara, que esta parte é sobre CURSOS. -->
-    <h2 class="courses__title" data-reveal>Cursos de <em>design de sobrancelhas</em></h2>
-    <p class="courses__lead" data-reveal>Aprenda a profissão com quem vive dela. Presenciais, em turma pequena, em Carpina-PE.</p>
     <p class="courses__manifesto" data-reveal>Eu sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri. Aqui você aprende a olhar um rosto, a decidir o que indicar e a atender com a segurança de quem sabe o que está fazendo.</p>
   </div>
 

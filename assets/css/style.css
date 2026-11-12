@@ -1181,3 +1181,21 @@ main>.faq2{position:relative;padding:clamp(60px,7.5vw,104px) var(--pad);backgrou
 .courses__title em{font-style:italic;color:var(--rose-light)}
 .courses__lead{margin:.9rem 0 0;max-width:46ch;font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.6;color:rgba(255,255,255,.82)}
 .courses__intro .courses__manifesto{margin-top:1.4rem}
+
+/* ---- Cursos · cabeçalho centralizado (skill impeccable · typeset) ----
+   Papéis: palavra de exibição "Cursos" (Fraunces leve, grande) > linha de
+   apoio "de design de sobrancelhas" (Fraunces itálico, rosa claro, ~1/3 do
+   tamanho) > frase em Plus Jakarta. Texto claro sobre grafite com um pouco
+   mais de entrelinha e espaçamento. O cabeçalho ocupa a largura toda e o
+   resto da seção desce uma linha na grade. */
+.courses__head{grid-column:1/-1;grid-row:1;display:flex;flex-direction:column;align-items:center;text-align:center;max-width:760px;margin:0 auto clamp(12px,2vw,24px)}
+.courses__star{width:16px;height:16px;margin-bottom:clamp(14px,2vw,22px);fill:var(--rose-light)}
+.courses__head .courses__title{display:flex;flex-direction:column;align-items:center;margin:0}
+.courses__word{font:300 clamp(3.2rem,8vw,6rem)/.92 var(--f-display);font-variation-settings:"opsz" 144;letter-spacing:-.035em;color:#fff}
+.courses__what{margin-top:.55rem;font:300 italic clamp(1.3rem,2.5vw,1.95rem)/1.2 var(--f-display);font-variation-settings:"opsz" 72;letter-spacing:-.01em;color:var(--rose-light)}
+.courses__head .courses__lead{margin:clamp(16px,2.2vw,24px) auto 0;max-width:44ch;font-size:clamp(1rem,1.25vw,1.08rem);line-height:1.68;letter-spacing:.005em;color:rgba(255,255,255,.8)}
+.courses__intro{grid-row:2}
+.courses__intro .courses__manifesto{margin-top:0}
+.courses__photo{grid-row:2/4}
+.courses__body{grid-row:3}
+@media (max-width:900px){.courses__head{grid-row:auto}.courses__intro,.courses__photo,.courses__body{grid-row:auto}}
