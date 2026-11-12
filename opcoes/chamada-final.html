@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chamada final · 10 hierarquias · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Instrument+Serif:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Pinyon+Script&family=Italiana&family=Plus+Jakarta+Sans:wght@400;500;600&family=Gilda+Display&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   CHAMADA FINAL · 10 hierarquias para "Vamos ver o que o seu rosto pede?"
+   Mesmo cartão oliva do site; muda a fonte e a ordem de importância entre
+   título, frase de apoio e botão.
+   ========================================================================== */
+:root{--olive:#4E5446;--rose-l:#E8C6C6;--cream:#EDDAC9;--pad:clamp(20px,5vw,72px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#4A4544;font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,p{margin:0}
+a{text-decoration:none}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 "Fraunces",serif;letter-spacing:-.025em;color:#161616}
+.top p{margin-top:.6rem;max-width:64ch;font-size:.9rem;color:#6B6360}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 var(--pad) 64px}
+.card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:14px;min-height:380px;padding:92px clamp(24px,3.5vw,44px) clamp(28px,3.5vw,44px);border-radius:8px;background:var(--olive);color:#fff}
+.lbl{position:absolute;left:18px;top:14px;right:18px;display:flex;gap:.6rem;align-items:baseline;font-size:.72rem;color:rgba(243,234,224,.7)}
+.lbl b{font:300 1.05rem "Fraunces",serif;color:var(--rose-l)}
+.lbl strong{color:#F3EAE0;font-weight:600}
+.sub{font-size:.95rem;line-height:1.6;color:rgba(255,255,255,.82)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.4rem;border-radius:999px;background:#fff;color:#1E1A19;font-size:.84rem;font-weight:600;letter-spacing:.02em;transition:background .4s}
+.btn:hover{background:var(--rose-l)}
+.link{display:inline-flex;gap:.5rem;padding-bottom:3px;border-bottom:1px solid currentColor;font-size:.84rem;font-weight:600;color:#fff}
+.caps{font:500 .74rem/1.4 "Plus Jakarta Sans",sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--cream)}
+.center{align-items:center;text-align:center;justify-content:center}
+@media (max-width:767px){.grid{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>“Vamos ver o que o seu rosto pede?” · 10 hierarquias</h1>
+  <p>O mesmo cartão oliva do site, com fontes e ordens de importância diferentes entre a pergunta, a frase de apoio e o botão.</p>
+</header>
+<main class="grid" id="grid"></main>
+<script>
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, quero agendar uma avaliação');
+const BTN=`<a class="btn" href="${WA}" target="_blank" rel="noopener">Agendar minha avaliação <span aria-hidden="true">→</span></a>`;
+const LINK=`<a class="link" href="${WA}" target="_blank" rel="noopener">Agendar minha avaliação <span aria-hidden="true">→</span></a>`;
+const O=[
+ ['Fraunces, palavra-chave em itálico','a mesma voz dos outros títulos do site; “pede?” em itálico rosa claro.','',
+  `<h2 style='font:300 clamp(2rem,3.4vw,2.8rem)/1.08 "Fraunces",serif;letter-spacing:-.025em'>Vamos ver o que o seu rosto <em style="font-style:italic;color:#E8C6C6">pede?</em></h2><p class="sub">Agende sua avaliação pelo WhatsApp.</p>${BTN}`],
+ ['Fraunces + Pinyon, como os Cursos','“Vamos ver” grande em Fraunces; “o que o seu rosto pede?” em letra cursiva creme, repetindo o título dos Cursos.','center',
+  `<h2 style="display:flex;flex-direction:column;align-items:center"><span style='font:300 clamp(2.6rem,5vw,3.8rem)/.95 "Fraunces",serif;letter-spacing:-.035em'>Vamos ver</span><span style='margin-top:.3rem;font:400 clamp(1.7rem,3vw,2.3rem)/1.1 "Pinyon Script",cursive;color:#EDDAC9'>o que o seu rosto pede?</span></h2><p class="sub">Agende sua avaliação pelo WhatsApp.</p>${BTN}`],
+ ['Cursiva pequena + pergunta grande','“Vamos ver” pequeno em cursiva abre; a pergunta vem grande em Fraunces.','',
+  `<p style='font:400 1.6rem/1 "Pinyon Script",cursive;color:#EDDAC9'>Vamos ver</p><h2 style='font:300 clamp(2.1rem,3.6vw,3rem)/1.05 "Fraunces",serif;letter-spacing:-.028em'>o que o seu rosto <em style="font-style:italic;color:#E8C6C6">pede?</em></h2>${BTN}`],
+ ['Pergunta + linha em maiúsculas','a pergunta em Fraunces e, embaixo, a instrução em maiúsculas pequenas e espaçadas.','',
+  `<h2 style='font:300 clamp(2rem,3.4vw,2.8rem)/1.08 "Fraunces",serif;letter-spacing:-.025em'>Vamos ver o que o seu rosto pede?</h2><p class="caps">Agende sua avaliação pelo WhatsApp</p>${BTN}`],
+ ['Cormorant Garamond itálico','pergunta toda em itálico clássico, delicada e romântica.','center',
+  `<h2 style='font:500 italic clamp(2.2rem,3.8vw,3.1rem)/1.05 "Cormorant Garamond",serif;letter-spacing:-.01em'>Vamos ver o que o seu rosto pede?</h2><p class="sub">Agende sua avaliação pelo WhatsApp.</p>${BTN}`],
+ ['Instrument Serif','serifa fina e atual; “rosto” em itálico; botão vira link sublinhado, mais discreto.','',
+  `<h2 style='font:400 clamp(2.3rem,4vw,3.3rem)/1.02 "Instrument Serif",serif;letter-spacing:-.015em'>Vamos ver o que o seu <em style="font-style:italic;color:#E8C6C6">rosto</em> pede?</h2><p class="sub">Agende sua avaliação pelo WhatsApp.</p>${LINK}`],
+ ['Bodoni Moda','alto contraste, de revista de luxo; pergunta em duas linhas equilibradas.','center',
+  `<h2 style='font:400 clamp(1.9rem,3.2vw,2.6rem)/1.1 "Bodoni Moda",serif;letter-spacing:-.015em'>Vamos ver o que<br>o seu rosto <em style="font-style:italic;color:#E8C6C6">pede?</em></h2><p class="caps">Agende pelo WhatsApp</p>${BTN}`],
+ ['Italiana + maiúsculas','pergunta fina e alongada, como rótulo de perfume; instrução em maiúsculas.','',
+  `<h2 style='font:400 clamp(2.2rem,3.8vw,3.1rem)/1.08 "Italiana",serif;letter-spacing:.01em'>Vamos ver o que o seu rosto pede?</h2><p class="caps">Agende sua avaliação pelo WhatsApp</p>${BTN}`],
+ ['Gilda Display + cursiva na palavra-chave','serifa suave; só “rosto” em letra cursiva creme, como uma assinatura no meio da frase.','center',
+  `<h2 style='font:400 clamp(2rem,3.4vw,2.7rem)/1.15 "Gilda Display",serif'>Vamos ver o que o seu <span style='font:400 1.35em/1 "Pinyon Script",cursive;color:#EDDAC9'>rosto</span> pede?</h2><p class="sub">Agende sua avaliação pelo WhatsApp.</p>${BTN}`],
+ ['Pergunta em degraus','a frase quebrada em duas linhas, com “pede?” enorme em itálico; frase de apoio e link pequenos ao lado.','',
+  `<h2 style="display:flex;flex-direction:column"><span style='font:300 clamp(1.5rem,2.4vw,1.9rem)/1.15 "Fraunces",serif;letter-spacing:-.015em;color:rgba(255,255,255,.88)'>Vamos ver o que o seu rosto</span><span style='font:300 italic clamp(3.4rem,6.5vw,5rem)/.95 "Fraunces",serif;letter-spacing:-.04em;color:#E8C6C6'>pede?</span></h2><div style="display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center"><p class="sub">Agende sua avaliação pelo WhatsApp.</p>${LINK}</div>`],
+];
+document.getElementById('grid').innerHTML=O.map((o,i)=>`<section class="card ${o[2]}"><p class="lbl"><b>${String(i+1).padStart(2,'0')}</b><span><strong>${o[0]}</strong> · ${o[1]}</span></p>${o[3]}</section>`).join('');
+</script>
+</body>
+</html>

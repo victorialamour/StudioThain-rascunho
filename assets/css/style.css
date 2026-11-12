@@ -1209,3 +1209,6 @@ main>.courses{--brand-olive:var(--olive-brand);background:var(--olive-brand)}
 .visit__cta{background:var(--olive-brand)}
 .foot{background:var(--olive-foot);box-shadow:0 0 0 100vmax var(--olive-foot)}
 .foot .circle:hover{color:var(--olive-foot)}
+
+/* Cursos · segunda linha em Pinyon Script (escolha 05), creme da marca */
+.courses__what{margin-top:.35rem;font:400 clamp(1.8rem,3.4vw,2.6rem)/1.1 "Pinyon Script",cursive;letter-spacing:0;color:#EDDAC9;font-variation-settings:normal}
