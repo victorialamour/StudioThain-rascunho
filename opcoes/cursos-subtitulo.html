@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursos · 10 fontes para a segunda linha · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Instrument+Serif:ital@1&family=Playfair+Display:ital@1&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&family=Pinyon+Script&family=Italiana&family=Plus+Jakarta+Sans:wght@400;500;600&family=Tenor+Sans&family=Cinzel:wght@400&family=Gilda+Display&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   CURSOS · 10 fontes para "de design de sobrancelhas"
+   "Cursos" continua igual (Fraunces leve, branco). Só muda a segunda linha.
+   Fundo no oliva da marca, como está no site.
+   ========================================================================== */
+:root{--olive:#4E5446;--rose-l:#E8C6C6;--cream:#EDDAC9;--pad:clamp(20px,5vw,72px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#4A4544;font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,p{margin:0}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 "Fraunces",serif;letter-spacing:-.025em;color:#161616}
+.top p{margin-top:.6rem;max-width:64ch;font-size:.9rem;color:#6B6360}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:#fff}
+.card{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px;padding:56px 24px 40px;background:var(--olive);text-align:center}
+.lbl{position:absolute;left:16px;top:14px;display:flex;gap:.6rem;align-items:baseline;font-size:.72rem;color:rgba(243,234,224,.7);text-align:left}
+.lbl b{font:300 1.05rem "Fraunces",serif;color:var(--rose-l)}
+.star{width:14px;height:14px;margin-bottom:16px;fill:var(--rose-l)}
+.word{font:300 clamp(3rem,6vw,4.6rem)/.92 "Fraunces",serif;font-variation-settings:"opsz" 144;letter-spacing:-.035em;color:#fff}
+.what{margin-top:.6rem;color:var(--rose-l)}
+.lead{margin-top:14px;max-width:38ch;font-size:.92rem;line-height:1.6;color:rgba(255,255,255,.78)}
+.note{margin-top:14px;font-size:.72rem;color:rgba(243,234,224,.6)}
+@media (max-width:767px){.grid{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>“de design de sobrancelhas” · 10 fontes</h1>
+  <p>“Cursos” continua igual. Só muda a fonte da segunda linha, no fundo oliva como está no site. Cada cartão diz o nome da fonte e o clima que ela passa.</p>
+</header>
+<main class="grid" id="grid"></main>
+<script>
+const STAR='<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>';
+/* [nome, clima, estilo CSS da segunda linha, texto (caixa)] */
+const F=[
+ ['Cormorant Garamond itálico','clássica e delicada, de livro de arte; a mais “boutique”','font:500 italic clamp(1.5rem,2.8vw,2.1rem)/1.15 "Cormorant Garamond",serif;letter-spacing:0'],
+ ['Instrument Serif itálico','fina e contemporânea, de marca de beleza atual','font:400 italic clamp(1.5rem,2.8vw,2.1rem)/1.15 "Instrument Serif",serif;letter-spacing:-.005em'],
+ ['Playfair Display itálico','alto contraste, de revista de moda','font:400 italic clamp(1.3rem,2.4vw,1.8rem)/1.2 "Playfair Display",serif'],
+ ['Bodoni Moda itálico','luxo clássico, traços finos e grossos','font:400 italic clamp(1.3rem,2.4vw,1.8rem)/1.2 "Bodoni Moda",serif'],
+ ['Pinyon Script','cursiva elegante, a mesma da assinatura; ar de convite','font:400 clamp(1.8rem,3.4vw,2.6rem)/1.1 "Pinyon Script",cursive;color:#EDDAC9'],
+ ['Italiana','finíssima e alongada, como rótulo de perfume','font:400 clamp(1.4rem,2.6vw,1.95rem)/1.15 "Italiana",serif;letter-spacing:.02em'],
+ ['Plus Jakarta Sans, caixa alta','a fonte do texto do site, em maiúsculas espaçadas; moderna e limpa','font:500 clamp(.78rem,1.1vw,.9rem)/1.4 "Plus Jakarta Sans",sans-serif;letter-spacing:.28em;text-transform:uppercase;margin-top:1rem'],
+ ['Tenor Sans, caixa alta','sem serifa clássica em maiúsculas; minimalista e chique','font:400 clamp(.85rem,1.2vw,1rem)/1.4 "Tenor Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase;margin-top:1rem'],
+ ['Cinzel','maiúsculas clássicas romanas, a mesma do menu de serviços','font:400 clamp(.95rem,1.4vw,1.15rem)/1.4 "Cinzel",serif;letter-spacing:.16em;margin-top:.9rem'],
+ ['Gilda Display','serifa suave e feminina, sem itálico; equilibrada','font:400 clamp(1.3rem,2.4vw,1.8rem)/1.2 "Gilda Display",serif;letter-spacing:.01em'],
+];
+document.getElementById('grid').innerHTML=F.map((f,i)=>`<section class="card"><p class="lbl"><b>${String(i+1).padStart(2,'0')}</b><span><strong style="color:#F3EAE0;font-weight:600">${f[0]}</strong> · ${f[1]}</span></p>${STAR}<h2 class="word">Cursos</h2><p class="what" style='${f[2]}'>de design de sobrancelhas</p><p class="lead">Aprenda a profissão com quem vive dela. Presenciais, em turma pequena, em Carpina-PE.</p></section>`).join('');
+</script>
+</body>
+</html>
