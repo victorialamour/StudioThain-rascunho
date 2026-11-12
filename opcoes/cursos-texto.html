@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursos · 10 hierarquias para o texto e os pilares · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Instrument+Serif:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Pinyon+Script&family=Italiana&family=Plus+Jakarta+Sans:wght@400;500;600&family=Gilda+Display&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   CURSOS · 10 hierarquias para o texto da Thainá e os quatro pilares
+   (o trecho logo abaixo de "Cursos / de design de sobrancelhas").
+   Fundo oliva como no site; muda fonte, tamanho e peso de cada papel.
+   ========================================================================== */
+:root{--olive:#4E5446;--rose-l:#E8C6C6;--cream:#EDDAC9;--pad:clamp(20px,5vw,72px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#4A4544;font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol{margin:0}ol{list-style:none;padding:0}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 "Fraunces",serif;letter-spacing:-.025em;color:#161616}
+.top p{margin-top:.6rem;max-width:66ch;font-size:.9rem;color:#6B6360}
+.opt{margin:0 var(--pad) 14px;border-radius:8px;background:var(--olive);color:rgba(255,255,255,.82);overflow:hidden}
+.lbl{display:flex;flex-wrap:wrap;gap:.2rem .7rem;align-items:baseline;padding:16px clamp(22px,3.5vw,44px) 0;font-size:.74rem;color:rgba(243,234,224,.7)}
+.lbl b{font:300 1.1rem "Fraunces",serif;color:var(--rose-l)}
+.lbl strong{color:#F3EAE0;font-weight:600}
+.body{padding:clamp(28px,4vw,48px) clamp(22px,3.5vw,44px) clamp(32px,4vw,52px)}
+.man{max-width:58ch}
+.pil{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem 2.4rem;margin-top:clamp(24px,3vw,36px)}
+.pil li{padding-top:.9rem;border-top:1px solid rgba(243,234,224,.18)}
+.pt{color:#fff}
+.pd{margin-top:.25rem;color:rgba(255,255,255,.72)}
+@media (max-width:767px){.pil{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Cursos · texto da Thainá e os quatro pilares · 10 hierarquias</h1>
+  <p>É o trecho logo abaixo de “Cursos / de design de sobrancelhas”. Em cada opção muda a fonte, o tamanho e o peso do parágrafo da Thainá, do nome de cada pilar e da explicação embaixo dele.</p>
+</header>
+<main id="opts"></main>
+<script>
+const M1='Eu sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta.';
+const M2='Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.';
+const P=[['Técnica com olhar profissional','Do desenho à finalização, entendendo o porquê de cada escolha.'],['Prática de verdade','Você observa e depois atende modelo real, dentro do studio.'],['Correção de perto','Eu corrijo o que for preciso, até você tomar decisões sozinha.'],['Você sai preparada','Com apostila, certificado e confiança pra começar a atender.']];
+const STAR='<svg viewBox="0 0 24 24" aria-hidden="true" style="width:10px;height:10px;fill:#E8C6C6;flex:none"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>';
+/* [nome, explicação, html do parágrafo, estilo do nome do pilar, estilo da explicação, extra (número/estrela)] */
+const O=[
+ ['Parágrafo em serifa, pilares em sem serifa','o texto da Thainá em Fraunces leve, maior, como uma fala; os pilares em Plus Jakarta, firmes e fáceis de ler.',
+  `<p class="man" style='font:300 clamp(1.25rem,2vw,1.55rem)/1.45 "Fraunces",serif;letter-spacing:-.01em;color:#F6EEE6'>${M1} ${M2}</p>`,
+  'font:600 .98rem/1.35 "Plus Jakarta Sans",sans-serif','font-size:.88rem;line-height:1.6',''],
+ ['Pilares em itálico','o parágrafo em Plus Jakarta, sóbrio; o nome de cada pilar em Fraunces itálico rosa claro.',
+  `<p class="man" style="font-size:1.02rem;line-height:1.75">${M1} ${M2}</p>`,
+  'font:300 italic 1.25rem/1.25 "Fraunces",serif;color:#E8C6C6','font-size:.86rem;line-height:1.6',''],
+ ['Primeira frase em destaque','“Eu sei, porque já estive do outro lado” vira um título em Cormorant itálico; o resto segue menor.',
+  `<p style='font:500 italic clamp(1.6rem,2.8vw,2.2rem)/1.15 "Cormorant Garamond",serif;color:#F6EEE6'>Eu sei, porque já estive do outro lado.</p><p class="man" style="margin-top:.8rem;font-size:.98rem;line-height:1.7">Com medo de começar, achando que não estava pronta. ${M2}</p>`,
+  'font:500 .74rem/1.4 "Plus Jakarta Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#EDDAC9','font-size:.88rem;line-height:1.6;margin-top:.4rem',''],
+ ['Fala assinada','o parágrafo como citação da Thainá, com a assinatura em cursiva; pilares numerados em Fraunces.',
+  `<p class="man" style='font:300 italic clamp(1.15rem,1.8vw,1.4rem)/1.5 "Fraunces",serif;color:#F6EEE6'>“${M1} ${M2}”</p><p style='margin-top:.6rem;font:400 1.7rem/1 "Pinyon Script",cursive;color:#EDDAC9'>Thainá</p>`,
+  'font:300 1.15rem/1.3 "Fraunces",serif','font-size:.86rem;line-height:1.6','num'],
+ ['Instrument Serif, leve e atual','o parágrafo em Instrument Serif grande; pilares com nome em Instrument e explicação pequena.',
+  `<p class="man" style='font:400 clamp(1.35rem,2.2vw,1.75rem)/1.35 "Instrument Serif",serif;color:#F6EEE6'>${M1} <em style="color:#E8C6C6">${M2}</em></p>`,
+  'font:400 1.3rem/1.2 "Instrument Serif",serif','font-size:.86rem;line-height:1.6',''],
+ ['Letra capitular','o parágrafo em Plus Jakarta com uma capitular grande em Fraunces, como na “Conheça o studio”; pilares em Fraunces.',
+  `<p class="man" style="font-size:1.02rem;line-height:1.8"><span style='float:left;padding:6px 12px 0 0;font:300 3.6rem/.8 "Fraunces",serif;color:#E8C6C6'>E</span>u sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta. ${M2}</p>`,
+  'font:300 1.15rem/1.3 "Fraunces",serif','font-size:.86rem;line-height:1.6',''],
+ ['Gilda + maiúsculas','o parágrafo em Gilda Display, suave; o nome dos pilares em Tenor Sans, maiúsculas espaçadas.',
+  `<p class="man" style='font:400 clamp(1.2rem,1.9vw,1.45rem)/1.5 "Gilda Display",serif;color:#F6EEE6'>${M1} ${M2}</p>`,
+  'font:400 .82rem/1.4 "Tenor Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase','font-size:.88rem;line-height:1.6;margin-top:.4rem',''],
+ ['Pilares em linha com estrelas','o parágrafo em Fraunces; os quatro pilares viram uma lista corrida separada pela estrela do logo, mais compacta.',
+  `<p class="man" style='font:300 clamp(1.2rem,1.9vw,1.45rem)/1.5 "Fraunces",serif;color:#F6EEE6'>${M1} ${M2}</p>`,
+  '','','inline'],
+ ['Bodoni + números grandes','o parágrafo em Bodoni itálico; cada pilar com um número grande em Fraunces ao lado.',
+  `<p class="man" style='font:400 italic clamp(1.2rem,1.9vw,1.5rem)/1.45 "Bodoni Moda",serif;color:#F6EEE6'>${M1} ${M2}</p>`,
+  'font:600 .95rem/1.35 "Plus Jakarta Sans",sans-serif','font-size:.86rem;line-height:1.6','big'],
+ ['Italiana + maiúsculas','o parágrafo em Italiana, fina e alongada; pilares com nome em maiúsculas pequenas e explicação em Plus Jakarta.',
+  `<p class="man" style='font:400 clamp(1.35rem,2.2vw,1.75rem)/1.4 "Italiana",serif;letter-spacing:.01em;color:#F6EEE6'>${M1} ${M2}</p>`,
+  'font:600 .74rem/1.4 "Plus Jakarta Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#EDDAC9','font-size:.9rem;line-height:1.6;margin-top:.35rem',''],
+];
+const pil=(t,d,extra)=>{
+  if(extra==='inline') return `<p style="display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-top:1.8rem;font:500 .95rem/1.4 'Plus Jakarta Sans',sans-serif;color:#fff">${P.map((p,i)=>`${i?STAR:''}<span>${p[0]}</span>`).join('')}</p>`;
+  return `<ol class="pil">${P.map((p,i)=>{
+    const num=extra==='num'?`<span style='display:block;margin-bottom:.35rem;font:300 1rem "Fraunces",serif;color:#E8C6C6'>0${i+1}</span>`:'';
+    if(extra==='big') return `<li style="display:grid;grid-template-columns:auto 1fr;gap:.1rem 1rem"><span style='grid-row:span 2;font:300 2.6rem/1 "Fraunces",serif;color:#E8C6C6;letter-spacing:-.04em'>0${i+1}</span><p class="pt" style='${t}'>${p[0]}</p><p class="pd" style='${d}'>${p[1]}</p></li>`;
+    return `<li>${num}<p class="pt" style='${t}'>${p[0]}</p><p class="pd" style='${d}'>${p[1]}</p></li>`;}).join('')}</ol>`;
+};
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<section class="opt"><p class="lbl"><b>${String(i+1).padStart(2,'0')}</b><strong>${o[0]}</strong><span>${o[1]}</span></p><div class="body">${o[2]}${pil(o[3],o[4],o[5])}</div></section>`).join('');
+</script>
+</body>
+</html>
