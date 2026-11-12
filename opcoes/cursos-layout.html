@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursos · 10 layouts para o texto, vídeo e pilares · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================
+   CURSOS · 10 layouts para o trecho abaixo do título
+   Conteúdo: a fala da Thainá, o vídeo das alunas (em pé), os 4 pilares e a
+   foto da aula. Fundo oliva, Fraunces + Plus Jakarta, como no site.
+   ========================================================================== */
+:root{--olive:#4E5446;--rose-l:#E8C6C6;--cream:#EDDAC9;--ln:rgba(243,234,224,.18);--pad:clamp(20px,5vw,72px);--f:"Fraunces",Georgia,serif;--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#4A4544;font:15px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p,ol,figure,blockquote{margin:0}ol{list-style:none;padding:0}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,video{display:block;max-width:100%}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1180px}
+.top h1{font:300 clamp(1.8rem,3.4vw,2.6rem)/1.08 var(--f);letter-spacing:-.025em;color:#161616}
+.top p{margin-top:.6rem;max-width:66ch;font-size:.9rem;color:#6B6360}
+.idx{position:sticky;top:0;z-index:20;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.94);border-bottom:1px solid #E7DFD9;overflow-x:auto}
+.idx a{flex:none;padding:.35rem .6rem;font:500 .74rem "Plus Jakarta Sans";color:#6B6360;text-decoration:none;border-radius:4px}
+.idx a:hover{color:#161616;background:#F6EDEA}
+.opt{scroll-margin-top:52px}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:34px var(--pad) 14px;max-width:1180px}
+.meta b{font:300 1.3rem/1 var(--f);color:#9A5457}
+.meta strong{font-weight:600;font-size:.88rem;color:#161616}
+.meta span{font-size:.82rem;color:#6B6360}
+.sec{background:var(--olive);color:rgba(255,255,255,.8);padding:clamp(56px,7vw,96px) var(--pad);overflow:hidden}
+.wrap{max-width:1120px;margin:0 auto}
+/* peças */
+.say{font:300 italic clamp(1.7rem,3vw,2.5rem)/1.12 var(--f);letter-spacing:-.022em;color:#fff;text-wrap:balance}
+.rest{margin-top:.9rem;max-width:44ch;font-size:1rem;line-height:1.7;color:rgba(255,255,255,.78)}
+.n{font:300 1rem/1 var(--f);color:var(--rose-l)}
+.pt{font:300 1.15rem/1.3 var(--f);color:#fff}
+.pd{margin-top:.3rem;font-size:.88rem;line-height:1.6;color:rgba(255,255,255,.72)}
+.vid,.pic{position:relative;overflow:hidden;border-radius:6px;background:#3a3f34}
+.vid video,.pic img{width:100%;height:100%;object-fit:cover}
+.cap{font-size:.8rem;color:rgba(255,255,255,.7)}
+.steps li{padding-top:.9rem;border-top:1px solid var(--ln)}
+.steps .n{display:block;margin-bottom:.45rem}
+
+/* 01 · Frase e vídeo; 4 passos; faixa da aula */
+.o1 .top2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,88px);align-items:center}
+.o1 .vid{aspect-ratio:4/5;max-height:520px}
+.o1 .road{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,32px);margin-top:clamp(48px,6vw,72px);padding-top:1.8rem}
+.o1 .road::before{content:"";position:absolute;left:0;right:0;top:.35rem;height:1px;background:var(--ln)}
+.o1 .road::after{content:"";position:absolute;left:0;right:0;top:.35rem;height:1px;background:var(--rose-l);transform:scaleX(0);transform-origin:left;transition:transform 2s var(--out)}
+.o1.on .road::after{transform:scaleX(1)}
+.o1 .road li{position:relative}
+.o1 .road li::before{content:"";position:absolute;left:0;top:-1.75rem;width:10px;height:10px;border-radius:50%;background:var(--olive);box-shadow:0 0 0 1px var(--rose-l);transition:background .5s var(--out) calc(var(--i) * 450ms)}
+.o1.on .road li::before{background:var(--rose-l)}
+.o1 .road .n{display:block;margin-bottom:.4rem}
+.o1 .band{position:relative;margin-top:clamp(48px,6vw,72px);aspect-ratio:21/8;border-radius:6px;overflow:hidden}
+.o1 .band img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.o1 .band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,32,26,.7),transparent 55%)}
+.o1 .band .cap{position:absolute;left:20px;bottom:16px;z-index:1;color:#fff}
+
+/* 02 · Vídeo grande à esquerda, lista à direita */
+.o2 .g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,88px);align-items:stretch}
+.o2 .vid{min-height:560px}
+.o2 .list{margin-top:1.8rem;border-top:1px solid var(--ln)}
+.o2 .list li{display:grid;grid-template-columns:2.6rem 1fr;gap:.1rem .8rem;padding:1rem 0;border-bottom:1px solid var(--ln)}
+.o2 .list .n{grid-row:span 2;font-size:1.3rem;padding-top:.1rem}
+.o2 .pd{margin-top:0}
+
+/* 03 · Frase centralizada, passos em linha, duas mídias */
+.o3 .say{text-align:center;max-width:24ch;margin:0 auto}
+.o3 .rest{text-align:center;margin:1rem auto 0}
+.o3 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,32px);margin-top:clamp(40px,5vw,60px)}
+.o3 .duo{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;margin-top:clamp(40px,5vw,60px)}
+.o3 .duo .pic,.o3 .duo .vid{aspect-ratio:auto;height:clamp(260px,30vw,380px)}
+
+/* 04 · Mosaico */
+.o4 .g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);grid-template-rows:auto auto;gap:14px}
+.o4 .pic{grid-row:span 2;min-height:440px}
+.o4 .vid{aspect-ratio:16/10}
+.o4 .txt{padding:clamp(20px,3vw,32px);border:1px solid var(--ln);border-radius:6px}
+.o4 .txt .say{font-size:clamp(1.4rem,2.2vw,1.8rem)}
+.o4 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,32px);margin-top:clamp(36px,5vw,56px)}
+
+/* 05 · Linha do tempo vertical */
+.o5 .g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,88px)}
+.o5 .pin{position:sticky;top:80px;align-self:start}
+.o5 .pin .vid{aspect-ratio:16/11;margin-top:1.6rem}
+.o5 .tl{position:relative;padding-left:32px}
+.o5 .tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--ln)}
+.o5 .tl li{position:relative;padding:0 0 clamp(28px,4vw,44px)}
+.o5 .tl li::before{content:"";position:absolute;left:-32px;top:.35rem;width:11px;height:11px;border-radius:50%;background:var(--rose-l)}
+.o5 .tl .pt{font-size:clamp(1.3rem,2vw,1.6rem)}
+.o5 .tl .n{display:block;margin-bottom:.3rem}
+.o5 .tl .pic{margin-top:.9rem;aspect-ratio:16/9;max-width:420px}
+
+/* 06 · Pilares que trocam a imagem */
+.o6 .head{max-width:640px}
+.o6 .g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,88px);margin-top:clamp(36px,5vw,56px);align-items:center}
+.o6 .tabs{border-top:1px solid var(--ln)}
+.o6 .tabs button{display:grid;grid-template-columns:2.4rem 1fr;gap:.1rem .8rem;width:100%;padding:1rem 0;text-align:left;border-bottom:1px solid var(--ln);opacity:.5;transition:opacity .4s var(--out)}
+.o6 .tabs button[aria-selected=true],.o6 .tabs button:hover{opacity:1}
+.o6 .tabs .n{grid-row:span 2;font-size:1.2rem}
+.o6 .tabs .pd{margin-top:0}
+.o6 .stage{position:relative;aspect-ratio:4/5;max-height:560px;border-radius:6px;overflow:hidden;background:#3a3f34}
+.o6 .stage>*{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s var(--out),transform 1.2s var(--out)}
+.o6 .stage>.on{opacity:1;transform:none}
+
+/* 07 · Faixa da aula com a frase por cima */
+.o7{padding-inline:0;padding-top:0}
+.o7 .band{position:relative;min-height:clamp(380px,46vw,540px);display:flex;align-items:flex-end}
+.o7 .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.o7 .band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(40,44,36,.94) 0%,rgba(40,44,36,.5) 45%,rgba(40,44,36,.05) 100%)}
+.o7 .band .wrap{position:relative;z-index:1;width:100%;padding:0 var(--pad) clamp(28px,4vw,48px)}
+.o7 .band .say{max-width:22ch}
+.o7 .below{padding:clamp(40px,5vw,60px) var(--pad) 0}
+.o7 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,32px)}
+
+/* 08 · Índice editorial */
+.o8 .say{font-size:clamp(2rem,4vw,3.2rem);max-width:20ch}
+.o8 .rest{max-width:52ch}
+.o8 .idx2{margin-top:clamp(36px,5vw,56px);border-top:1px solid var(--ln)}
+.o8 .idx2 li{display:grid;grid-template-columns:5rem minmax(0,.9fr) minmax(0,1.1fr);gap:1rem 2rem;align-items:baseline;padding:1.2rem 0;border-bottom:1px solid var(--ln)}
+.o8 .idx2 .n{font-size:2rem;letter-spacing:-.03em}
+.o8 .idx2 .pt{font-size:clamp(1.2rem,1.9vw,1.5rem)}
+.o8 .idx2 .pd{margin:0}
+.o8 .media{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:12px;margin-top:clamp(36px,5vw,56px)}
+.o8 .media>*{height:clamp(240px,28vw,360px)}
+
+/* 09 · Metade vídeo, metade texto */
+.o9{padding:0}
+.o9 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:640px}
+.o9 .vid{border-radius:0;height:100%}
+.o9 .txt{padding:clamp(48px,6vw,88px) clamp(24px,5vw,72px);display:flex;flex-direction:column;justify-content:center}
+.o9 .steps{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem;margin-top:2rem}
+
+/* 10 · Compacto */
+.o10 .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.o10 .say{font-size:clamp(1.4rem,2.3vw,1.85rem)}
+.o10 .thumbs{display:flex;gap:10px;margin-top:1.6rem}
+.o10 .thumbs>*{width:140px;height:175px}
+.o10 .steps{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.8rem}
+
+@media (max-width:767px){
+  .o1 .top2,.o2 .g,.o3 .duo,.o4 .g,.o5 .g,.o6 .g,.o8 .media,.o9 .split,.o10 .g{grid-template-columns:minmax(0,1fr)}
+  .o1 .road,.o3 .steps,.o4 .steps,.o7 .steps{grid-template-columns:1fr 1fr;row-gap:1.6rem}
+  .o1 .road::before,.o1 .road::after,.o1 .road li::before{display:none}.o1 .road{padding-top:0}
+  .o1 .band{aspect-ratio:16/10}
+  .o2 .vid{min-height:0;aspect-ratio:4/5}
+  .o4 .pic{grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .o5 .pin{position:static}
+  .o8 .idx2 li{grid-template-columns:3rem minmax(0,1fr)}.o8 .idx2 .pd{grid-column:2}
+  .o9 .split{min-height:0}.o9 .vid{aspect-ratio:4/5;height:auto}
+  .o9 .steps,.o10 .steps{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Cursos · 10 layouts para o trecho abaixo do título</h1>
+  <p>O mesmo conteúdo (a fala da Thainá, o vídeo das alunas, os 4 pilares e a foto da aula), organizado de 10 jeitos diferentes, no fundo oliva como no site.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Layouts"></nav>
+<main id="opts"></main>
+<script>
+const IMG='../assets/img/', VID='../assets/video/cursos.mp4';
+const SAY='<p class="say">Eu sei, porque já estive do outro lado.</p>';
+const REST='<p class="rest">Com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.</p>';
+const P=[['Técnica com olhar profissional','Do desenho à finalização, entendendo o porquê de cada escolha.'],['Prática de verdade','Você observa e depois atende modelo real, dentro do studio.'],['Correção de perto','Eu corrijo o que for preciso, até você tomar decisões sozinha.'],['Você sai preparada','Com apostila, certificado e confiança pra começar a atender.']];
+const CAP='Demonstração ao vivo: você acompanha cada passo de perto antes de atender.';
+const vid=(cls='')=>`<figure class="vid ${cls}"><video data-src="${VID}" muted loop playsinline preload="none" aria-label="Thainá com alunas no studio"></video></figure>`;
+const demo=(cls='')=>`<figure class="pic ${cls}"><img src="${IMG}cursos/aula-demonstracao.webp" alt="Thainá demonstrando o procedimento em modelo, com alunas acompanhando" loading="lazy"></figure>`;
+const steps=(cls='steps')=>`<ol class="${cls}">${P.map((p,i)=>`<li style="--i:${i}"><span class="n">0${i+1}</span><p class="pt">${p[0]}</p><p class="pd">${p[1]}</p></li>`).join('')}</ol>`;
+const O=[
+ ['Frase, vídeo, 4 passos e faixa da aula','a frase forte à esquerda com o vídeo ao lado; os pilares em linha, como um caminho que se desenha; a foto da aula em faixa larga embaixo.',
+  `<section class="sec o1" data-on><div class="wrap"><div class="top2"><div>${SAY}${REST}</div>${vid()}</div>${steps('road')}<figure class="band"><img src="${IMG}cursos/aula-demonstracao.webp" alt="Thainá demonstrando o procedimento em modelo, com alunas acompanhando" loading="lazy"><figcaption class="cap">${CAP}</figcaption></figure></div></section>`],
+ ['Vídeo grande e lista ao lado','o vídeo ocupa a coluna da esquerda inteira; à direita, a frase e os pilares numa lista numerada.',
+  `<section class="sec o2"><div class="wrap g">${vid()}<div>${SAY}${REST}<ol class="list">${P.map((p,i)=>`<li><span class="n">0${i+1}</span><p class="pt">${p[0]}</p><p class="pd">${p[1]}</p></li>`).join('')}</ol></div></div></section>`],
+ ['Frase centralizada e duas mídias','a frase no centro, como continuação do título; os pilares em linha; a foto da aula e o vídeo lado a lado embaixo.',
+  `<section class="sec o3"><div class="wrap">${SAY}${REST}${steps()}<div class="duo">${demo()}${vid()}</div></div></section>`],
+ ['Mosaico','a foto da aula grande à esquerda; à direita, o vídeo em cima e a frase embaixo; os pilares em linha no fim.',
+  `<section class="sec o4"><div class="wrap"><div class="g">${demo()}${vid()}<div class="txt">${SAY}${REST}</div></div>${steps()}</div></section>`],
+ ['Linha do tempo vertical','a frase e o vídeo ficam parados à esquerda; à direita, os pilares descem numa linha, e o passo da prática mostra a foto da aula.',
+  `<section class="sec o5"><div class="wrap g"><div class="pin">${SAY}${REST}${vid()}</div><ol class="tl">${P.map((p,i)=>`<li><span class="n">0${i+1}</span><p class="pt">${p[0]}</p><p class="pd">${p[1]}</p>${i===1?demo():''}</li>`).join('')}</ol></div></section>`],
+ ['Pilares que trocam a imagem','cada pilar é clicável e troca a imagem ao lado: aula, vídeo da prática, turma e aluna com certificado.',
+  `<section class="sec o6"><div class="wrap"><div class="head">${SAY}${REST}</div><div class="g"><div class="tabs" role="tablist">${P.map((p,i)=>`<button role="tab" aria-selected="${!i}" data-i="${i}"><span class="n">0${i+1}</span><span class="pt">${p[0]}</span><span class="pd">${p[1]}</span></button>`).join('')}</div><div class="stage"><img class="on" src="${IMG}cursos/aula-demonstracao.webp" alt=""><video data-src="${VID}" muted loop playsinline preload="none"></video><img src="${IMG}alunas/turma-3.webp" alt=""><img src="${IMG}alunas/turma-5.webp" alt=""></div></div></div></section>`],
+ ['Faixa da aula com a frase por cima','a foto da aula em faixa larga, com a frase sobre ela; embaixo, os pilares em linha. Sem o vídeo, mais limpa.',
+  `<section class="sec o7"><div class="band"><img src="${IMG}cursos/aula-demonstracao.webp" alt="Thainá demonstrando o procedimento em modelo, com alunas acompanhando"><div class="wrap">${SAY}${REST}</div></div><div class="below"><div class="wrap">${steps()}</div></div></section>`],
+ ['Índice editorial','a frase grande; os pilares como um índice de revista, com número grande, nome e explicação na mesma linha; mídias embaixo.',
+  `<section class="sec o8"><div class="wrap">${SAY}${REST}<ol class="idx2">${P.map((p,i)=>`<li><span class="n">0${i+1}</span><p class="pt">${p[0]}</p><p class="pd">${p[1]}</p></li>`).join('')}</ol><div class="media">${vid()}${demo()}</div></div></section>`],
+ ['Metade vídeo, metade texto','o vídeo ocupa metade da largura, de ponta a ponta; na outra metade, a frase e os pilares em duas colunas.',
+  `<section class="sec o9"><div class="split">${vid()}<div class="txt">${SAY}${REST}${steps()}</div></div></section>`],
+ ['Compacto','frase e duas miniaturas (vídeo e aula) à esquerda; pilares em duas colunas à direita. Bem mais baixo.',
+  `<section class="sec o10"><div class="wrap g"><div>${SAY}${REST}<div class="thumbs">${vid()}${demo()}</div></div>${steps()}</div></section>`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt" id="o${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div>${o[2]}</div>`).join('');
+/* linha que se desenha (01) */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.3});
+document.querySelectorAll('[data-on]').forEach(el=>io.observe(el));
+/* 06 · pilares trocam a imagem */
+(()=>{const box=document.querySelector('.o6'),b=[...box.querySelectorAll('[role=tab]')],m=[...box.querySelector('.stage').children];
+ const go=n=>{b.forEach((x,k)=>x.setAttribute('aria-selected',k===n));m.forEach((x,k)=>{x.classList.toggle('on',k===n);if(x.tagName==='VIDEO'){if(k===n){if(!x.src)x.src=x.dataset.src;x.play().catch(()=>{})}else x.pause()}})};
+ b.forEach((x,k)=>{x.addEventListener('click',()=>go(k));x.addEventListener('mouseenter',()=>go(k))})})();
+/* vídeos: baixam perto, tocam ao aparecer, pausam ao sair; o arquivo fica branco depois de 9,1 s */
+const vids=[...document.querySelectorAll('video[data-src]')];
+const near=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=e.target;if(!v.src){v.src=v.dataset.src;v.preload='auto'}near.unobserve(v)}}),{rootMargin:'400px 0px'});
+const vis=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(v.closest('.stage')&&!v.classList.contains('on'))return;e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.3});
+vids.forEach(v=>{near.observe(v);vis.observe(v);v.addEventListener('timeupdate',()=>{if(v.currentTime>=9.1)v.currentTime=0})});
+</script>
+</body>
+</html>
