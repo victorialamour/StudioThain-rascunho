@@ -1199,3 +1199,13 @@ main>.faq2{position:relative;padding:clamp(60px,7.5vw,104px) var(--pad);backgrou
 .courses__photo{grid-row:2/4}
 .courses__body{grid-row:3}
 @media (max-width:900px){.courses__head{grid-row:auto}.courses__intro,.courses__photo,.courses__body{grid-row:auto}}
+
+/* ---- Blocos escuros em oliva da marca (no lugar do preto) ----
+   Cursos e chamada final no oliva do logo; rodapé um tom abaixo, para
+   marcar o fim da página. Textos claros e rosa claro seguem com bom
+   contraste (branco 8:1, rosa claro 5:1 sobre o oliva). */
+:root{--olive-brand:#4E5446;--olive-foot:#3F4439}
+main>.courses{--brand-olive:var(--olive-brand);background:var(--olive-brand)}
+.visit__cta{background:var(--olive-brand)}
+.foot{background:var(--olive-foot);box-shadow:0 0 0 100vmax var(--olive-foot)}
+.foot .circle:hover{color:var(--olive-foot)}
