@@ -31,8 +31,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261115a">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=20261115b">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('js-anim');
@@ -356,42 +356,53 @@ fim da seção Sobre desativada -->
   </div>
 </section>
 
+<!-- ═══════════════ 08 · CURSOS (abertura) ═══════════════ -->
+<!-- A partir daqui a página vira o "site do curso": barra própria, fundo claro
+     e a Thainá em primeiro plano. Confirmar com a Thainá o número de alunas e
+     a autorização do retrato. -->
+<section class="cx" id="cursos">
+  <div class="cx__bar">
+    <a class="cx__brand" href="#cursos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><b>Thainá Cavalcanti</b><span>Cursos</span></a>
+    <nav class="cx__nav" aria-label="Menu do curso"><a href="#cursos">O curso</a><a href="#conteudo">Conteúdo</a><a href="#alunas">Alunas</a><a href="#investimento">Investimento</a></nav>
+    <a class="cx__mini" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20saber%20sobre%20o%20curso%20de%20design%20de%20sobrancelhas" target="_blank" rel="noopener">Garantir minha vaga</a>
+  </div>
+
+  <div class="cx__g">
+    <figure class="cx__pt" data-reveal-img><img decoding="async" src="assets/img/sobre-thaina.webp" alt="Thainá Cavalcanti, designer de sobrancelhas e micropigmentadora" loading="lazy"></figure>
+    <div class="cx__txt">
+      <h2 class="cx__h" data-reveal>Aprenda com quem vive do design de sobrancelhas.</h2>
+      <p class="cx__sub" data-reveal>Curso presencial no Studio Thainá Cavalcanti, em Carpina-PE. Turmas pequenas, prática em modelo real e acompanhamento de perto até você atender com segurança.</p>
+      <blockquote class="cx__q" data-reveal>
+        <p>“Eu sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.”</p>
+        <footer>Thainá Cavalcanti, designer de sobrancelhas e micropigmentadora</footer>
+      </blockquote>
+      <div class="cx__acts" data-reveal>
+        <a class="cx__btn" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20saber%20sobre%20o%20curso%20de%20design%20de%20sobrancelhas" target="_blank" rel="noopener">Quero garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="cx__lnk" href="#conteudo">Ver o conteúdo do curso</a>
+      </div>
+      <div class="cx__who" data-reveal>
+        <div class="cx__av"><img decoding="async" src="assets/img/alunas/avatar-karolayne.jpg" alt="" loading="lazy"><img decoding="async" src="assets/img/alunas/avatar-esther.jpg" alt="" loading="lazy"><img decoding="async" src="assets/img/alunas/avatar-gislleny.jpg" alt="" loading="lazy"><span>M</span></div>
+        <p>+50 alunas formadas no studio</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- O que se aprende: os 4 pilares em linhas finas -->
+  <div class="cx__prog" id="conteudo">
+    <h3 class="cx__h3" data-reveal>O que você aprende</h3>
+    <ol data-reveal-stagger>
+      <li><b>Técnica com olhar profissional</b><span>Do desenho à finalização, entendendo o porquê de cada escolha.</span></li>
+      <li><b>Prática de verdade</b><span>Você observa e depois atende modelo real, dentro do studio.</span></li>
+      <li><b>Correção de perto</b><span>Eu corrijo o que for preciso, até você tomar decisões sozinha.</span></li>
+      <li><b>Você sai preparada</b><span>Com apostila, certificado e confiança pra começar a atender.</span></li>
+    </ol>
+  </div>
+</section>
+
 <!-- ═══════════════ 08 · CURSOS ═══════════════ -->
 <!-- Estrutura inspirada na referência (manifesto → pilares → caminhos → prova),
      com texto próprio e só o que o curso comprovadamente entrega. -->
-<section class="courses" id="cursos">
-  <!-- Cabeçalho centralizado, na largura toda: "Cursos" como palavra de
-       exibição e "de design de sobrancelhas" em itálico, menor, na linha de baixo. -->
-  <header class="courses__head" data-reveal>
-    <svg class="courses__star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>
-    <h2 class="courses__title"><span class="courses__word">Cursos</span><span class="courses__what">de design de sobrancelhas</span></h2>
-    <p class="courses__lead">Aprenda a profissão com quem vive dela. Presenciais, em turma pequena, em <span style="white-space:nowrap">Carpina-PE</span>.</p>
-  </header>
-
-  <!-- Corpo dos Cursos (layout 01): a fala da Thainá com o vídeo ao lado,
-       os 4 pilares como um caminho que se desenha e a foto da aula em faixa. -->
-  <div class="cflow">
-    <div class="cflow__top">
-      <div class="cflow__txt" data-reveal>
-        <p class="cflow__say">Eu sei, porque já estive do outro lado.</p>
-        <p class="cflow__rest">Com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.</p>
-      </div>
-      <figure class="courses__photo cflow__vid" data-reveal-img>
-        <video data-src="assets/video/cursos.mp4" data-autoloop muted loop playsinline aria-label="Thainá com alunas no studio" preload="none"></video>
-      </figure>
-    </div>
-    <ol class="cflow__road">
-      <li style="--i:0"><span class="cflow__n">01</span><b>Técnica com olhar profissional</b><span>Do desenho à finalização, entendendo o porquê de cada escolha.</span></li>
-      <li style="--i:1"><span class="cflow__n">02</span><b>Prática de verdade</b><span>Você observa e depois atende modelo real, dentro do studio.</span></li>
-      <li style="--i:2"><span class="cflow__n">03</span><b>Correção de perto</b><span>Eu corrijo o que for preciso, até você tomar decisões sozinha.</span></li>
-      <li style="--i:3"><span class="cflow__n">04</span><b>Você sai preparada</b><span>Com apostila, certificado e confiança pra começar a atender.</span></li>
-    </ol>
-    <figure class="cflow__band" data-reveal-img>
-      <img decoding="async" src="assets/img/cursos/aula-demonstracao.webp" alt="Thainá demonstrando o procedimento em modelo, com alunas acompanhando de perto" loading="lazy">
-      <figcaption>Demonstração ao vivo: você acompanha cada passo de perto antes de atender.</figcaption>
-    </figure>
-  </div>
-
+<section class="courses" id="alunas">
   <!-- Alunas: fotos de certificado no studio + comentários públicos (só o
        primeiro nome). Confirmar autorização e o número de alunas. -->
   <div class="alumni">
@@ -466,7 +477,7 @@ fim da seção Sobre desativada -->
 
   <!-- Caixa de preço. Os dois cursos trocam pelo seletor (main.js · initPrice).
        Valores, parcelas e vagas entre [ ] ainda precisam ser confirmados. -->
-  <div class="price" data-reveal>
+  <div class="price" id="investimento" data-reveal>
     <div class="price__side">
       <p class="price__brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><span>Cursos Thainá</span></p>
       <p>Ficou com dúvida sobre qual curso é pra você? Me chama e a gente conversa antes de você decidir.</p>

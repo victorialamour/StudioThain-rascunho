@@ -1246,3 +1246,55 @@ main>.courses{--brand-olive:var(--olive-brand);background:var(--olive-brand)}
   .cflow__band{aspect-ratio:16/10;margin-top:48px}
 }
 @media (max-width:480px){.cflow__road{grid-template-columns:minmax(0,1fr)}}
+
+/* ==========================================================================
+   CURSOS · abertura clara (opção 06): o "site do curso" começa aqui
+   Branco gelo, Gloock nos títulos, Hanken Grotesk no texto; rosa só em detalhe.
+   ========================================================================== */
+main>.cx{--cx-ink:#1D1C1B;--cx-tx:#55524F;--cx-mut:#6F6B67;--cx-line:#E3E2DE;--cx-rose:#B9767A;--cx-bg:#F7F7F5;
+  position:relative;padding:0 var(--pad) clamp(64px,8vw,104px);background:var(--cx-bg);box-shadow:0 0 0 100vmax var(--cx-bg);clip-path:inset(0 -100vmax);color:var(--cx-tx);font-family:"Hanken Grotesk",system-ui,sans-serif}
+.cx__bar{display:flex;align-items:center;gap:24px;padding:22px 0;border-bottom:1px solid var(--cx-line);box-shadow:0 1px 0 0 var(--cx-line)}
+.cx__brand{display:flex;align-items:center;gap:10px;color:var(--cx-ink);text-decoration:none;white-space:nowrap}
+.cx__brand svg{width:11px;height:11px;fill:var(--cx-rose)}
+.cx__brand b{font:500 .95rem/1 "Hanken Grotesk",sans-serif}
+.cx__brand span{padding-left:10px;border-left:1px solid #D6D4CF;font-size:.88rem;color:var(--cx-mut)}
+.cx__nav{display:flex;gap:28px;margin-left:auto;font-size:.86rem}
+.cx__nav a{position:relative;padding:4px 0;color:var(--cx-mut);text-decoration:none}
+.cx__nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--cx-ink);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.cx__nav a:hover{color:var(--cx-ink)}.cx__nav a:hover::after{transform:scaleX(1)}
+.cx__mini{padding:.6rem 1rem;border:1px solid var(--cx-ink);border-radius:999px;font:600 .8rem/1 "Hanken Grotesk",sans-serif;color:var(--cx-ink);text-decoration:none;transition:background .3s,color .3s}
+.cx__mini:hover{background:var(--cx-ink);color:#fff}
+.cx__g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,7vw,112px);align-items:center;padding-top:clamp(48px,6vw,88px)}
+.cx__pt{margin:0;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#EFEFEC}
+.cx__pt img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.cx__h{font:400 clamp(2.4rem,4.6vw,4rem)/1.05 "Gloock",serif;letter-spacing:-.015em;color:var(--cx-ink);text-wrap:balance}
+.cx__sub{margin-top:1.2rem;max-width:52ch;font-size:clamp(1.02rem,1.2vw,1.12rem);line-height:1.65}
+.cx__q{margin:2rem 0 0;padding-left:1.4rem;border-left:1px solid var(--cx-rose)}
+.cx__q p{font:400 clamp(1.12rem,1.5vw,1.3rem)/1.5 "Gloock",serif;color:var(--cx-ink);max-width:40ch}
+.cx__q footer{margin-top:.7rem;font-size:.86rem;color:var(--cx-mut)}
+.cx__acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:2.2rem}
+.cx__btn{display:inline-flex;align-items:center;gap:.75rem;padding:1.05rem 1.7rem;border-radius:999px;background:var(--cx-ink);color:#fff;font:600 .92rem/1 "Hanken Grotesk",sans-serif;text-decoration:none;transition:background .35s}
+.cx__btn svg{width:16px;height:16px;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.cx__btn:hover{background:#3A3836}.cx__btn:hover svg{transform:translateX(3px)}
+.cx__lnk{padding:4px 0;border-bottom:1px solid #D6D4CF;font:600 .92rem/1.2 "Hanken Grotesk",sans-serif;color:var(--cx-ink);text-decoration:none;transition:border-color .3s}
+.cx__lnk:hover{border-color:var(--cx-ink)}
+.cx__who{display:flex;align-items:center;gap:14px;margin-top:2rem}
+.cx__who p{font-size:.86rem;color:var(--cx-mut)}
+.cx__av{display:flex}
+.cx__av img,.cx__av span{width:38px;height:38px;margin-left:-10px;border-radius:50%;border:2px solid var(--cx-bg);object-fit:cover}
+.cx__av span{display:grid;place-items:center;background:#E9DCD8;font:600 .8rem "Hanken Grotesk",sans-serif;color:#9A5457}
+.cx__av>:first-child{margin-left:0}
+.cx__prog{margin-top:clamp(64px,8vw,104px)}
+.cx__h3{font:400 clamp(1.6rem,2.4vw,2rem)/1.2 "Gloock",serif;color:var(--cx-ink)}
+.cx__prog ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,36px);margin:1.6rem 0 0;padding:0;list-style:none}
+.cx__prog li{display:flex;flex-direction:column;gap:.4rem;padding-top:1.1rem;border-top:1px solid var(--cx-line)}
+.cx__prog b{font:400 1.2rem/1.25 "Gloock",serif;color:var(--cx-ink)}
+.cx__prog span{font-size:.92rem;line-height:1.6}
+.cx a:focus-visible{outline:1.5px solid #9A5457;outline-offset:4px}
+@media (max-width:900px){
+  .cx__nav{display:none}.cx__mini{margin-left:auto}
+  .cx__g{grid-template-columns:minmax(0,1fr)}
+  .cx__pt{max-height:520px}
+  .cx__prog ol{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1.6rem}
+}
+@media (max-width:520px){.cx__brand span{display:none}.cx__prog ol{grid-template-columns:minmax(0,1fr)}}
