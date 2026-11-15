@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topo · 6 opções · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   TOPO · 6 opções com frase e botão sobre o vídeo
+   Regra dos 5 segundos: em uma olhada a visitante sabe o que é, onde é e o
+   que fazer. Mesmas fontes do site (Fraunces + Plus Jakarta), vídeo atual.
+   A barra de agendamento continua embaixo, como no site.
+   ========================================================================== */
+:root{--ink:#1D1C1B;--rose:#E8C6C6;--accent:#CA8486;--sans:"Plus Jakarta Sans",system-ui,sans-serif;--disp:"Fraunces",Georgia,serif;--pad:clamp(20px,5vw,72px);--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:#55524F;font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,p{margin:0}a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+::selection{background:#EBD3D3;color:var(--ink)}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1200px}
+.top h1{font:300 clamp(1.8rem,3.2vw,2.5rem)/1.1 var(--disp);color:var(--ink)}
+.top p{margin-top:.6rem;max-width:76ch;font-size:.92rem;color:#6F6B67}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:44px var(--pad) 14px;max-width:1200px}
+.meta b{font:300 1.35rem/1 var(--disp);color:#9A5457}
+.meta strong{font-weight:600;font-size:.92rem;color:var(--ink)}
+.meta span{font-size:.84rem;color:#6F6B67}
+
+/* moldura que imita o topo do site */
+.hero{position:relative;height:min(760px,92vh);min-height:600px;overflow:hidden;color:#fff;background:#2a2622}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;pointer-events:none}
+.bar{position:absolute;left:0;right:0;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:18px var(--pad)}
+.bar .logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.bar .logo img{height:clamp(44px,5vw,60px);width:auto}
+.circ{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.circ svg{width:18px;height:18px}
+.icons{display:flex;gap:8px}
+/* barra de agendamento (só a aparência, como no site) */
+.book{position:absolute;left:50%;bottom:22px;z-index:3;transform:translateX(-50%);display:flex;align-items:center;gap:22px;width:min(860px,calc(100% - 2*var(--pad)));padding:12px 12px 12px 24px;border-radius:999px;background:rgba(28,26,24,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:.82rem}
+.book div{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.book small{font-size:.7rem;opacity:.75}
+.book span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.book a{flex:none;padding:.85rem 1.3rem;border-radius:999px;background:#fff;color:var(--ink);font-weight:600}
+/* texto e botões */
+.in{position:absolute;z-index:2;left:0;right:0;padding:0 var(--pad)}
+.h{font:300 clamp(2.4rem,5.4vw,4.6rem)/1.02 var(--disp);font-variation-settings:"opsz" 144;letter-spacing:-.03em;text-wrap:balance}
+.h em{font-style:italic;color:var(--rose)}
+.sub{margin-top:1rem;max-width:44ch;font-size:clamp(1rem,1.2vw,1.12rem);line-height:1.55;color:rgba(255,255,255,.88)}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:1.8rem}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:1.05rem 1.7rem;border-radius:999px;background:#fff;color:var(--ink);font:600 .92rem/1 var(--sans);transition:background .35s}
+.btn svg{width:16px;height:16px;transition:transform .5s var(--out)}
+.btn:hover{background:var(--rose)}.btn:hover svg{transform:translateX(3px)}
+.btn.ghost{background:none;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.lnk{padding-bottom:2px;border-bottom:1px solid rgba(255,255,255,.6);font-weight:600;font-size:.92rem}
+.lnk:hover{border-color:#fff}
+.chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.86rem;color:rgba(255,255,255,.85)}
+.chip i{width:6px;height:6px;border-radius:50%;background:var(--rose)}
+/* entrada suave, uma vez */
+.rv{animation:up 1.1s var(--out) both;animation-delay:calc(var(--d,0) * 120ms + .2s)}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){.rv{animation:none}}
+
+/* 01 · Editorial embaixo à esquerda */
+.t1 .shade{background:linear-gradient(0deg,rgba(20,18,16,.78) 0%,rgba(20,18,16,.25) 45%,rgba(20,18,16,.1) 70%,rgba(20,18,16,.35) 100%)}
+.t1 .in{bottom:120px}
+/* 02 · Centralizado */
+.t2 .shade{background:radial-gradient(ellipse at 50% 60%,rgba(20,18,16,.55),rgba(20,18,16,.2) 60%),linear-gradient(180deg,rgba(20,18,16,.35),transparent 30%,transparent 70%,rgba(20,18,16,.5))}
+.t2 .in{top:50%;transform:translateY(-38%);text-align:center}
+.t2 .h{max-width:16ch;margin:0 auto}.t2 .sub{margin-inline:auto}.t2 .acts{justify-content:center}
+/* 03 · Assinatura */
+.t3 .shade{background:linear-gradient(90deg,rgba(20,18,16,.7) 0%,rgba(20,18,16,.35) 45%,transparent 70%),linear-gradient(180deg,rgba(20,18,16,.3),transparent 25%)}
+.t3 .in{top:50%;transform:translateY(-45%)}
+.t3 .h{max-width:13ch}
+.t3 .sig{margin-top:1.2rem;font:400 2.2rem/1 "Pinyon Script",cursive;color:var(--rose)}
+/* 04 · Mínimo */
+.t4 .shade{background:linear-gradient(0deg,rgba(20,18,16,.65),transparent 40%),linear-gradient(180deg,rgba(20,18,16,.3),transparent 25%)}
+.t4 .in{bottom:118px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
+.t4 .h{font-size:clamp(1.6rem,2.8vw,2.3rem);max-width:22ch}
+.t4 .acts{margin:0}
+/* 05 · Painel claro ao lado */
+.t5{background:#F7F7F5;color:var(--ink)}
+.t5 video{left:auto;width:56%}
+.t5 .shade{left:auto;width:56%;background:linear-gradient(180deg,rgba(20,18,16,.35),transparent 25%)}
+.t5 .bar .logo img{filter:brightness(0) saturate(100%) invert(10%)}
+.t5 .bar>.circ{background:rgba(29,28,27,.08);color:var(--ink)}
+.t5 .in{top:50%;transform:translateY(-45%);width:44%;right:auto;padding-right:clamp(24px,4vw,56px)}
+.t5 .h em{color:#9A5457}
+.t5 .sub{color:#55524F}
+.t5 .btn{background:var(--ink);color:#fff}
+.t5 .btn:hover{background:#3A3836}
+.t5 .lnk{border-color:#CFC7BC}
+.t5 .chip{color:#6F6B67}
+.t5 .book{left:auto;right:2%;transform:none;width:52%}
+/* 06 · Dois caminhos */
+.t6 .shade{background:linear-gradient(0deg,rgba(20,18,16,.8) 0%,rgba(20,18,16,.3) 50%,rgba(20,18,16,.15) 75%,rgba(20,18,16,.35) 100%)}
+.t6 .in{bottom:120px}
+.paths{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.8rem}
+.paths a{display:flex;flex-direction:column;gap:.2rem;min-width:220px;padding:1rem 1.3rem;border-radius:14px;background:rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);transition:background .35s}
+.paths a:first-child{background:#fff;color:var(--ink);box-shadow:none}
+.paths a:hover{background:rgba(255,255,255,.24)}.paths a:first-child:hover{background:var(--rose)}
+.paths b{font:600 .98rem/1.2 var(--sans)}
+.paths span{font-size:.82rem;opacity:.75}
+
+@media (max-width:760px){
+  .hero{height:auto;min-height:760px}
+  .book{flex-wrap:wrap;gap:10px 16px;border-radius:20px;padding:14px}
+  .book div:nth-child(3){display:none}
+  .book a{width:100%;text-align:center}
+  .in{bottom:170px!important}
+  .t2 .in,.t3 .in{top:auto;transform:none}
+  .t4 .in{flex-direction:column;align-items:flex-start}
+  .t5 video,.t5 .shade{width:100%;height:44%;top:0}
+  .t5 .in{top:auto;bottom:170px!important;transform:none;width:auto;padding-right:var(--pad)}
+  .t5 .book{left:50%;right:auto;transform:translateX(-50%);width:calc(100% - 2*var(--pad))}
+  .t5 .bar .logo img{filter:none}.t5 .bar>.circ{background:rgba(255,255,255,.16);color:#fff}
+  .paths a{min-width:0;flex:1 1 100%}
+  .icons .circ:first-child{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Topo do site · 6 opções</h1>
+  <p>Hoje o topo só tem o vídeo e ícones: quem chega não lê o que é o studio nem vê onde agendar. Aqui estão 6 jeitos de colocar uma frase curta e um botão sobre o vídeo, nas fontes do site. O vídeo ainda é o da modelo (teste); no projeto existe também o vídeo original da Thainá, que pode voltar quando você quiser.</p>
+</header>
+<main id="opts"></main>
+<script>
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, quero agendar uma avaliação');
+const V='../assets/video/hero-modelo-2.mp4', LOGO='../assets/img/logo-thaina-claro.png';
+const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const MENU='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>';
+const IG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></svg>';
+const WAI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.8Z"/></svg>';
+const BAR=`<div class="bar"><span class="circ" aria-hidden="true">${MENU}</span><a class="logo" href="#"><img src="${LOGO}" alt="Thainá Cavalcanti"></a><div class="icons"><span class="circ">${IG}</span><span class="circ">${WAI}</span></div></div>`;
+const BOOK=`<div class="book" aria-hidden="true"><div><small>Data</small><span>16/11/2026</span></div><div><small>Serviço</small><span>Quero uma avaliação</span></div><div><small>Período</small><span>Manhã</span></div><a href="#">Consultar</a></div>`;
+const BTN=`<a class="btn" href="${WA}" target="_blank" rel="noopener">Agendar avaliação ${ARROW}</a>`;
+const SUB='<p class="sub rv" style="--d:1">Design, micropigmentação, brow lamination e lash lifting em Carpina-PE.</p>';
+const O=[
+ ['Editorial, embaixo à esquerda','A frase da marca grande, embaixo à esquerda, com o botão e um link para os serviços. O rosto continua livre no centro.','t1',
+  `<div class="in"><h2 class="h rv">Realçar não é transformar.<br>É <em>valorizar.</em></h2>${SUB}<div class="acts rv" style="--d:2">${BTN}<a class="lnk" href="#">Ver serviços</a></div></div>`],
+ ['Centralizado','Frase e botão no centro, sobre o rosto, com um leve escurecido para ler bem. O mais direto.','t2',
+  `<div class="in"><h2 class="h rv">Sobrancelhas que valorizam <em>quem você já é.</em></h2>${SUB}<div class="acts rv" style="--d:2">${BTN}</div></div>`],
+ ['Com a assinatura da Thainá','Texto à esquerda sobre um degradê suave, fechado com a assinatura “Thainá” em cursiva. Pessoal e elegante.','t3',
+  `<div class="in"><h2 class="h rv">Realçar não é transformar. É <em>valorizar.</em></h2>${SUB}<div class="acts rv" style="--d:2">${BTN}<span class="chip"><i></i>Avaliação antes de qualquer técnica</span></div><p class="sig rv" style="--d:3">Thainá</p></div>`],
+ ['Mínimo','Uma linha só, menor, com o botão ao lado. Quase não mexe na hero limpa de hoje, mas já diz o que é e onde agendar.','t4',
+  `<div class="in"><h2 class="h rv">Studio de sobrancelhas em Carpina-PE. <em>Realçar é valorizar.</em></h2><div class="acts rv" style="--d:1">${BTN}</div></div>`],
+ ['Painel claro ao lado','A tela dividida: texto num painel gelo à esquerda, vídeo à direita. Combina com o resto do site claro e lê muito bem.','t5',
+  `<div class="in"><h2 class="h rv">Realçar não é transformar. É <em>valorizar.</em></h2><p class="sub rv" style="--d:1">Design, micropigmentação, brow lamination e lash lifting em Carpina-PE.</p><div class="acts rv" style="--d:2">${BTN}<a class="lnk" href="#">Ver serviços</a></div></div>`],
+ ['Dois caminhos','Além da frase, dois botões que separam os públicos logo de cara: “Agendar avaliação” e “Quero fazer o curso”. Resolve também a virada para a parte dos Cursos.','t6',
+  `<div class="in"><h2 class="h rv">Realçar não é transformar.<br>É <em>valorizar.</em></h2>${SUB}<div class="paths rv" style="--d:2"><a href="${WA}" target="_blank" rel="noopener"><b>Agendar avaliação</b><span>Sobrancelhas, micro e cílios</span></a><a href="#"><b>Quero fazer o curso</b><span>Design de sobrancelhas</span></a></div></div>`],
+];
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt"><div class="meta"><b>0${i+1}</b><strong>${o[0]}</strong><span>${o[1]}</span></div><section class="hero ${o[2]}"><video data-src="${V}" muted loop playsinline preload="none" aria-hidden="true"></video><span class="shade"></span>${BAR}${o[3]}${BOOK}</section></div>`).join('');
+/* vídeos: baixam perto, tocam só na tela, pausam ao sair */
+const vids=[...document.querySelectorAll('video[data-src]')];
+const near=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=e.target;if(!v.src){v.src=v.dataset.src}near.unobserve(v)}}),{rootMargin:'400px 0px'});
+const vis=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.3});
+vids.forEach(v=>{near.observe(v);vis.observe(v)});
+</script>
+</body>
+</html>
