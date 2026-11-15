@@ -1390,43 +1390,59 @@ main>.cinv{--cx-ink:#1D1C1B;--cx-tx:#57524D;--cx-mut:#736D67;--cx-line:#E2DCD3;-
 .rod a:focus-visible{outline:1.5px solid #9A5457;outline-offset:4px}
 
 /* ==========================================================================
-   PADRONIZAÇÃO · uma família para o site todo
-   Gloock nos títulos · Hanken Grotesk no texto · Instrument Serif itálico na
-   palavra de destaque e nas falas · Pinyon só na assinatura.
-   Títulos em dois níveis: abertura dos Cursos (maior) e todas as outras partes.
+   PADRONIZAÇÃO · fontes do studio no site todo + tamanhos iguais
+   Studio mantém Fraunces (títulos), Plus Jakarta (texto) e o menu em
+   Cinzel/Raleway. Cursos e rodapé passam a usar as mesmas fontes do studio.
+   Tamanhos únicos: título de seção (--t2), abertura dos Cursos (--t1),
+   subtítulo (--t3), item (--t4), texto (--fs-lead / --fs-sm), botão (.92rem).
    Três fundos claros: branco, gelo (#F7F7F5) e linho (#F3EFE9).
    ========================================================================== */
-:root{--f-sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--f-display:"Gloock",Georgia,serif;--f-brand:"Gloock",Georgia,serif;--sand:#F7F7F5;--rose-tint:#F7F7F5}
-body{font-family:var(--f-sans)}
+:root{--sand:#F7F7F5;--rose-tint:#F7F7F5;
+  --t1:clamp(2.4rem,4.6vw,4rem);--t2:clamp(2.1rem,3.6vw,3rem);--t3:clamp(1.4rem,2vw,1.7rem);--t4:clamp(1.15rem,1.4vw,1.3rem)}
 
-/* títulos de seção (nível 2) */
-.studio__title,.menu__title,.micro__title,.results__title,.faq2__title,.cal__h,.cinv__h,.visit__title{
-  font:400 clamp(2.1rem,3.6vw,3rem)/1.08 "Gloock",Georgia,serif!important;letter-spacing:-.015em!important;
-  font-variation-settings:normal!important;text-transform:none!important;color:#1D1C1B}
-/* palavra de destaque dentro do título */
-.studio__title em,.micro__title em,.results__title em,.faq2__title em,.press__hd em,.cx__h em,.cal__h em,.cinv__h em{
-  font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:0;color:#9A5457}
-.press__hd{font:400 1.35rem/1.2 "Gloock",Georgia,serif!important;letter-spacing:0!important}
+/* títulos de seção: um tamanho só */
+.studio__title,.micro__title,.results__title,.faq2__title,.cal__h,.cinv__h,.visit__title{
+  font:300 var(--t2)/1.1 "Fraunces",Georgia,serif!important;font-variation-settings:"opsz" 144!important;letter-spacing:-.02em!important;text-transform:none!important;color:#1D1C1B}
+.studio__title em,.micro__title em,.results__title em,.faq2__title em,.cx__h em,.cal__h em,.cinv__h em{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:300;font-size:1em;letter-spacing:inherit;color:var(--accent)}
+.menu__title{font-size:var(--t2)!important}
 .visit__title{margin:0 0 .4rem}
+/* abertura dos Cursos: o único título maior */
+.cx__h{font:300 var(--t1)/1.05 "Fraunces",Georgia,serif!important;font-variation-settings:"opsz" 144!important;letter-spacing:-.025em!important}
+/* subtítulos */
+.cx__h3,.press__hd{font:300 var(--t3)/1.2 "Fraunces",Georgia,serif!important;font-variation-settings:"opsz" 144!important;letter-spacing:-.015em!important}
+/* nomes de item, falas e valores dos Cursos, nas fontes do studio */
+.cx__prog b{font:300 var(--t4)/1.25 "Fraunces",Georgia,serif!important}
+.cinv__nm{font:300 var(--t3)/1.15 "Fraunces",Georgia,serif!important;font-variation-settings:"opsz" 144!important}
+.cinv__val b{font:300 clamp(2rem,3vw,2.5rem)/1 "Fraunces",Georgia,serif!important;font-variation-settings:"opsz" 144!important}
+.cx__q p,.cal__q p{font:300 italic var(--t4)/1.5 "Fraunces",Georgia,serif!important;letter-spacing:-.005em}
 
-/* menu de serviços no mesmo sistema (sem Cinzel/Raleway) */
-.menu__orn{font:600 .75rem/1 "Hanken Grotesk",sans-serif;letter-spacing:.2em}
-.menu__row{font:400 clamp(1rem,1.6vw,1.12rem)/1.3 "Gloock",Georgia,serif!important;letter-spacing:0!important;text-transform:none!important}
-.menu__sub{font:400 .92rem/1.5 "Hanken Grotesk",sans-serif!important;font-style:normal!important}
+/* texto dos Cursos e do rodapé: Plus Jakarta, como no studio */
+main>.cx,main>.cal,main>.cinv,.rod{font-family:var(--f-sans)!important}
+.cx :is(a,button,p,span,b,footer,li,small,nav,h4),.cal :is(a,button,p,span,b,footer,li,small),.cinv :is(a,button,p,span,b,small),.rod :is(a,p,span,nav){font-family:var(--f-sans)}
+.cx__sub{font-size:var(--fs-lead)!important}
+/* texto de abertura de cada seção: um tamanho só */
+.micro__lead,.cx__sub,.studio__body p{font-size:var(--fs-lead)!important;line-height:1.6}
+.cinv__for{font-size:1rem!important}
+.cx__prog span,.cinv__inc{font-size:var(--fs-sm)!important;line-height:1.6}
+.cx__q footer,.cal__q footer,.cinv__terms,.rod__bot{font-size:var(--fs-sm)!important}
 
-/* botões: um principal (escuro, com seta) e um secundário (contorno) */
-.pill.pill--dark,.micro__link,.menu__cta .pill{display:inline-flex;align-items:center;gap:.75rem;min-height:0;padding:1.05rem 1.7rem;border:0;border-radius:999px!important;background:#1D1C1B;color:#fff;
-  font:600 .92rem/1 "Hanken Grotesk",sans-serif!important;letter-spacing:0!important;text-transform:none;text-decoration:none;transition:background .35s}
-.pill.pill--dark:hover,.micro__link:hover,.menu__cta .pill:hover{background:#3A3836;color:#fff}
-.pill.pill--dark svg,.micro__link svg{width:16px;height:16px;transition:transform .5s cubic-bezier(.16,1,.3,1)}
-.pill.pill--dark:hover svg,.micro__link:hover svg{transform:translateX(3px)}
-.pill.pill--line{min-height:0;padding:.95rem 1.5rem;border:0;border-radius:999px;background:none;box-shadow:inset 0 0 0 1px #1D1C1B;color:#1D1C1B;font:600 .9rem/1 "Hanken Grotesk",sans-serif;letter-spacing:0}
-.pill.pill--line:hover{background:#1D1C1B;color:#fff}
+/* botões: um principal (escuro, com seta) e um secundário (contorno), mesmo tamanho */
+.pill.pill--dark,.micro__link,.cx__btn{display:inline-flex;align-items:center;gap:.75rem;min-height:0;padding:1.05rem 1.7rem;border:0;border-radius:999px!important;background:#1D1C1B;color:#fff;
+  font:600 .92rem/1 var(--f-sans)!important;letter-spacing:0!important;text-transform:none;text-decoration:none;transition:background .35s}
+.pill.pill--dark:hover,.micro__link:hover,.cx__btn:hover{background:#3A3836;color:#fff}
+.pill.pill--dark svg,.micro__link svg,.cx__btn svg{width:16px;height:16px;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.pill.pill--dark:hover svg,.micro__link:hover svg,.cx__btn:hover svg{transform:translateX(3px)}
+.pill.pill--line,.cx__mini{min-height:0;padding:.95rem 1.5rem;border:0;border-radius:999px;background:none;box-shadow:inset 0 0 0 1px #1D1C1B;color:#1D1C1B;font:600 .9rem/1 var(--f-sans)!important;letter-spacing:0}
+.cx__mini{padding:.6rem 1rem;font-size:.8rem!important}
+.pill.pill--line:hover,.cx__mini:hover{background:#1D1C1B;color:#fff}
+/* o botão do menu de serviços continua no estilo do menu (Cinzel) */
+.menu__cta .pill.pill--dark{border-radius:0!important;font:500 .9rem/1 Cinzel,serif!important;letter-spacing:.14em!important}
 
-/* fundos: Dúvidas em linho (sai o verde-névoa) */
+/* fundos: Dúvidas em linho */
 main>.faq2{background:#F3EFE9;box-shadow:0 0 0 100vmax #F3EFE9}
-
 /* contraste de textos secundários no linho */
 main>.cinv{--cx-mut:#69635D}
 .rod__bot{color:#69635D}
-.menu__cta .link{font-family:"Hanken Grotesk",sans-serif!important;font-style:normal!important;letter-spacing:0!important}
+.cx__who a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#CFC7BC;transition:text-decoration-color .3s}
+.cx__who a:hover{text-decoration-color:currentColor}
+.cal__hd{grid-template-columns:minmax(0,1fr)}
