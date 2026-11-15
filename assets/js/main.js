@@ -82,10 +82,10 @@ function initReveals () {
   document.querySelectorAll('[data-count]').forEach(el => {
     const end = parseInt(el.dataset.count, 10), obj = { n: 0 };
     el.textContent = '0';
-    // conta de 0 até o número, segura 3s e recomeça (só roda quando está na tela)
-    gsap.to(obj, { n: end, duration: 2.2, ease: 'power3.out', repeat: -1, repeatDelay: 3,
+    // conta de 0 até o número uma vez só, quando aparece na tela
+    gsap.to(obj, { n: end, duration: 2.2, ease: 'power3.out',
       onUpdate: () => { el.textContent = Math.round(obj.n); },
-      scrollTrigger: { trigger: el, start: 'top 90%', end: 'bottom 10%', toggleActions: 'play pause resume pause' } });
+      scrollTrigger: { trigger: el, start: 'top 85%', once: true } });
   });
   document.querySelectorAll('[data-reveal-img]').forEach(el => gsap.to(el, {
     clipPath: 'inset(0% 0% 0% 0% round 8px)', opacity: 1, duration: 1.3, ease: 'expo.out',

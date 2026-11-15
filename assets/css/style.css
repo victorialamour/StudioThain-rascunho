@@ -1446,3 +1446,14 @@ main>.cinv{--cx-mut:#69635D}
 .cx__who a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#CFC7BC;transition:text-decoration-color .3s}
 .cx__who a:hover{text-decoration-color:currentColor}
 .cal__hd{grid-template-columns:minmax(0,1fr)}
+
+/* Cursos mais curtos: menos respiro vertical, uma faixa de fotos só,
+   vídeo um pouco menor */
+main>.cx{padding-bottom:clamp(56px,7vw,88px)}
+.cx__g{padding-top:clamp(36px,4.5vw,64px)}
+.cx__pt{max-height:560px}
+.cx__prog{margin-top:clamp(48px,6vw,72px)}
+main>.cal{padding-top:clamp(56px,7vw,96px)}
+.cal__rows{margin-top:clamp(32px,4vw,48px)}
+.cal__bot{padding:clamp(48px,6vw,80px) 0}
+.cal__vid{width:clamp(220px,20vw,280px)}
