@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursos · alunas · 10 opções · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ==========================================================================
+   CURSOS · parte das alunas (vídeo da aula, número rodando, fotos e falas)
+   Mesmo sistema da abertura escolhida: branco/gelo/cinza claro, Gloock nos
+   títulos, Hanken Grotesk no texto, rosa só em detalhe. Só conteúdo real.
+   ========================================================================== */
+:root{--white:#fff;--ice:#F7F7F5;--mist:#F0F0ED;--line:#E3E2DE;--line2:#D6D4CF;--ink:#1D1C1B;--text:#55524F;--muted:#6F6B67;--rose:#B9767A;--rose-d:#9A5457;
+  --sans:"Hanken Grotesk",system-ui,sans-serif;--serif:"Gloock",Georgia,serif;--pad:clamp(20px,5vw,80px);--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--text);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p,ol,ul,figure,blockquote{margin:0}ol,ul{list-style:none;padding:0}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:#EBD3D3;color:var(--ink)}
+:focus-visible{outline:1.5px solid var(--rose-d);outline-offset:4px}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1200px}
+.top h1{font:400 clamp(1.8rem,3.2vw,2.5rem)/1.1 var(--serif);color:var(--ink)}
+.top p{margin-top:.6rem;max-width:74ch;font-size:.92rem;color:var(--muted)}
+.idx{position:sticky;top:0;z-index:40;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);overflow-x:auto}
+.idx a{flex:none;padding:.35rem .6rem;font:600 .78rem var(--sans);color:var(--muted);border-radius:4px}
+.idx a:hover,.idx a:focus-visible{color:var(--ink);background:var(--mist);outline:none}
+.opt{scroll-margin-top:52px}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:44px var(--pad) 14px;max-width:1200px}
+.meta b{font:400 1.35rem/1 var(--serif);color:var(--rose-d)}
+.meta strong{font-weight:600;font-size:.92rem;color:var(--ink)}
+.meta span{font-size:.84rem;color:var(--muted);max-width:92ch}
+.prev{height:40px;background:var(--ice);border-top:1px solid var(--line);display:flex;align-items:center;padding:0 var(--pad);font-size:.75rem;color:var(--muted)}
+
+/* ---------- peças ---------- */
+.s{position:relative;overflow:hidden;background:#fff;padding:clamp(72px,9vw,120px) 0}
+.s.mist{background:var(--mist)}
+.w{max-width:1200px;margin:0 auto;padding:0 var(--pad)}
+.h{font:400 clamp(2.2rem,4.2vw,3.6rem)/1.06 var(--serif);letter-spacing:-.015em;color:var(--ink);text-wrap:balance}
+.lead{margin-top:1rem;max-width:50ch;font-size:clamp(1rem,1.15vw,1.1rem);line-height:1.65}
+.num{font-variant-numeric:tabular-nums}
+.big{display:flex;align-items:baseline;gap:.15em;font:400 clamp(5rem,11vw,9rem)/.9 var(--serif);letter-spacing:-.04em;color:var(--ink)}
+.big small{font-size:.42em;color:var(--rose)}
+.bigl{margin-top:.6rem;font:500 1rem/1.4 var(--sans);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:.75rem;padding:1.05rem 1.7rem;border-radius:999px;background:var(--ink);color:#fff;font:600 .92rem/1 var(--sans);transition:background .35s}
+.btn svg{width:16px;height:16px;transition:transform .5s var(--out)}
+.btn:hover{background:#3A3836}.btn:hover svg{transform:translateX(3px)}
+.cta{margin-top:2rem}
+/* vídeo vertical com som */
+.vid{position:relative;aspect-ratio:9/16;border-radius:6px;overflow:hidden;background:var(--mist)}
+.vid video{width:100%;height:100%;object-fit:cover}
+.snd{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .9rem;border-radius:999px;background:rgba(255,255,255,.92);color:var(--ink);font:600 .8rem/1 var(--sans);transition:background .3s}
+.snd:hover{background:#fff}
+.snd svg{width:16px;height:16px}
+.snd .on{display:none}.snd[aria-pressed=true] .on{display:inline}.snd[aria-pressed=true] .off{display:none}
+.vcap{margin-top:.7rem;font-size:.84rem;color:var(--muted)}
+/* foto de aluna */
+.ph{position:relative;overflow:hidden;border-radius:4px;background:var(--mist)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.pcap{margin-top:.5rem;font-size:.84rem;color:var(--muted)}
+.pcap b{color:var(--ink);font-weight:600}
+/* depoimento */
+.q p{font:400 clamp(1.1rem,1.5vw,1.3rem)/1.5 var(--serif);color:var(--ink)}
+.q footer{display:flex;align-items:center;gap:10px;margin-top:1rem;font-size:.88rem;color:var(--muted)}
+.q footer b{color:var(--ink);font-weight:600}
+.av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}
+span.av{display:grid;place-items:center;background:#E9DCD8;font:600 .8rem var(--sans);color:var(--rose-d)}
+/* movimento único por seção: entra suave */
+.js .s:not(.in) .rv{opacity:0;transform:translateY(16px)}
+.rv{transition:opacity 1s var(--out),transform 1.2s var(--out);transition-delay:calc(var(--d,0) * 110ms)}
+@media (prefers-reduced-motion:reduce){.rv{transition:none!important;opacity:1!important;transform:none!important}.marq .tr{animation:none!important}}
+
+/* 01 · Número grande e vídeo */
+.a1 .g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,7vw,112px);align-items:center}
+.a1 .vid{max-height:640px;margin-left:auto;width:min(360px,100%)}
+.a1 .q{margin-top:2.4rem;padding-top:1.8rem;border-top:1px solid var(--line);max-width:48ch}
+.a1 .row{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;margin-top:clamp(56px,7vw,88px)}
+.a1 .row .ph{aspect-ratio:1}
+
+/* 02 · Frase com o número dentro */
+.a2 .h{text-align:center;max-width:20ch;margin:0 auto;font-size:clamp(2.4rem,4.8vw,4rem)}
+.a2 .h .num{color:var(--rose-d)}
+.a2 .lead{text-align:center;margin:1.1rem auto 0}
+.a2 .tri{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;margin-top:clamp(48px,6vw,72px)}
+.a2 .vid{width:clamp(240px,24vw,320px)}
+.a2 .q:first-child{text-align:right}.a2 .q:first-child footer{justify-content:flex-end}
+.a2 .strip{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;margin-top:clamp(48px,6vw,72px)}
+.a2 .strip .ph{aspect-ratio:1}
+.a2 .c{text-align:center}
+
+/* 03 · Vídeo parado e falas ao lado */
+.a3 .g{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(40px,7vw,112px);align-items:start}
+.a3 .pin{position:sticky;top:72px;width:clamp(260px,26vw,340px)}
+.a3 .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:1.6rem;border-bottom:1px solid var(--line)}
+.a3 .hd .big{font-size:clamp(3.6rem,7vw,5.6rem)}
+.a3 .list li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:24px;padding:1.8rem 0;border-bottom:1px solid var(--line)}
+.a3 .list .ph{aspect-ratio:1}
+.a3 .list .q p{font-size:clamp(1.05rem,1.4vw,1.2rem)}
+.a3 .list .q footer{margin-top:.7rem}
+
+/* 04 · Galeria com nomes e vídeo no meio */
+.a4 .hd{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.a4 .hd .big{font-size:clamp(3.6rem,7vw,5.6rem)}
+.a4 .grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:auto;gap:12px;margin-top:clamp(40px,5vw,64px)}
+.a4 .grid .vwrap{grid-column:3;grid-row:1/3}
+.a4 .grid .vid{aspect-ratio:auto;height:100%}
+.a4 .grid .ph{aspect-ratio:1}
+
+/* 05 · Uma fala por vez */
+.a5 .g{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(40px,7vw,112px);align-items:center}
+.a5 .vid{width:clamp(250px,25vw,330px)}
+.a5 .top5{display:flex;align-items:baseline;gap:14px;color:var(--muted);font-size:.92rem}
+.a5 .top5 b{font:400 2.2rem/1 var(--serif);color:var(--ink);letter-spacing:-.02em}
+.car{position:relative;margin-top:1.8rem;min-height:clamp(300px,28vw,340px)}
+.car .sl{position:absolute;inset:0;display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;align-items:start;opacity:0;transform:translateY(10px);transition:opacity .7s var(--out),transform .9s var(--out);pointer-events:none}
+.car .sl.on{opacity:1;transform:none;pointer-events:auto}
+.car .ph{aspect-ratio:4/5}
+.car .q p{font-size:clamp(1.3rem,2vw,1.75rem);line-height:1.4}
+.nav5{display:flex;align-items:center;gap:16px;margin-top:1.4rem}
+.nav5 button{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line2);border-radius:50%;transition:border-color .3s,background .3s}
+.nav5 button:hover{border-color:var(--ink);background:#fff}
+.nav5 svg{width:18px;height:18px}
+.nav5 .ct{font-size:.86rem;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* 06 · Vídeo no centro, fotos dos lados */
+.a6 .h{text-align:center;margin:0 auto;max-width:18ch}
+.a6 .cnt{display:flex;justify-content:center;align-items:baseline;gap:12px;margin-top:1rem;color:var(--muted)}
+.a6 .cnt b{font:400 2.4rem/1 var(--serif);color:var(--ink);letter-spacing:-.02em}
+.a6 .stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:center;margin-top:clamp(40px,5vw,64px)}
+.a6 .col{display:grid;gap:12px}
+.a6 .col .ph{aspect-ratio:1}
+.a6 .col.o{transform:translateY(40px)}
+.a6 .vid{width:clamp(240px,24vw,320px)}
+.a6 .c{display:flex;justify-content:center;margin-top:clamp(56px,6vw,80px)}
+
+/* 07 · Fotos rodando em duas faixas */
+.a7{padding-bottom:0}
+.a7 .hd{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.marq{overflow:hidden;margin-top:12px;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marq .tr{display:flex;gap:12px;width:max-content;animation:mq 60s linear infinite}
+.marq.rev .tr{animation-direction:reverse}
+.marq:hover .tr{animation-play-state:paused}
+.marq .ph{width:clamp(150px,15vw,200px);aspect-ratio:1;flex:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+.a7 .rows{margin-top:clamp(40px,5vw,64px)}
+.a7 .bot{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(40px,7vw,112px);align-items:center;padding:clamp(64px,8vw,104px) 0}
+.a7 .vid{width:clamp(240px,24vw,320px)}
+.a7 .qs{display:grid;gap:2rem}
+.a7 .qs .q+.q{padding-top:2rem;border-top:1px solid var(--line)}
+
+/* 08 · Convite para ser a próxima */
+.a8 .g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,7vw,112px);align-items:center}
+.a8 .vid{width:min(360px,100%);margin-left:auto}
+.a8 .faces{display:flex;align-items:center;gap:14px;margin-top:2rem}
+.a8 .faces .avs{display:flex}
+.a8 .faces .avs>*{width:44px;height:44px;margin-left:-12px;border:2px solid #fff;border-radius:50%;object-fit:cover}
+.a8 .faces .avs>:first-child{margin-left:0}
+.a8 .faces .avs span{display:grid;place-items:center;background:#E9DCD8;font:600 .8rem var(--sans);color:var(--rose-d)}
+.a8 .faces p{font-size:.9rem;color:var(--muted)}
+.a8 .faces p b{color:var(--ink)}
+.a8 .marqq{margin-top:clamp(56px,7vw,88px);padding-top:2rem;border-top:1px solid var(--line);overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.a8 .marqq .tr{display:flex;gap:56px;width:max-content;animation:mq 70s linear infinite}
+.a8 .marqq:hover .tr{animation-play-state:paused}
+.a8 .marqq .q{width:420px;flex:none}
+.a8 .marqq .q p{font-size:1.08rem}
+
+/* 09 · Faixa cinza com falas que se revezam */
+.a9 .g{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(40px,7vw,112px);align-items:center}
+.a9 .vid{width:clamp(250px,25vw,330px);box-shadow:0 0 0 10px #fff}
+.a9 .big{font-size:clamp(4rem,8vw,6.6rem)}
+.rot{position:relative;margin-top:2rem;min-height:190px}
+.rot .q{position:absolute;inset:0;opacity:0;transition:opacity 1s var(--out)}
+.rot .q.on{opacity:1}
+.a9 .ring{display:flex;gap:10px;margin-top:clamp(48px,6vw,72px);flex-wrap:wrap}
+.a9 .ring img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid #fff}
+
+/* 10 · Grade editorial */
+.a10 .h{max-width:22ch;font-size:clamp(2.4rem,4.8vw,4rem)}
+.a10 .g{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start;margin-top:clamp(40px,5vw,64px);padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--line)}
+.a10 .vid{width:clamp(240px,23vw,310px)}
+.a10 .qs{display:grid;gap:2rem}
+.a10 .qs .q+.q{padding-top:2rem;border-top:1px solid var(--line)}
+.a10 .marq{margin-top:clamp(56px,7vw,88px)}
+
+@media (max-width:900px){
+  .a1 .g,.a2 .tri,.a3 .g,.a5 .g,.a7 .bot,.a8 .g,.a9 .g,.a10 .g,.a4 .hd,.a7 .hd{grid-template-columns:minmax(0,1fr)}
+  .a1 .vid,.a8 .vid{margin:0 auto}
+  .a2 .vid,.a3 .pin,.a5 .vid,.a7 .vid,.a9 .vid,.a10 .vid{width:min(320px,100%);margin:0 auto}
+  .a2 .q:first-child{text-align:left}.a2 .q:first-child footer{justify-content:flex-start}
+  .a2 .tri .vid{grid-row:1}
+  .a3 .pin{position:static}
+  .a1 .row,.a2 .strip{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .a4 .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.a4 .grid .vwrap{grid-column:1/-1;grid-row:auto}.a4 .grid .vid{aspect-ratio:9/16;width:min(320px,100%);margin:0 auto;height:auto}
+  .a6 .stage{grid-template-columns:repeat(2,minmax(0,1fr))}.a6 .stage .vid{grid-column:1/-1;grid-row:1;margin:0 auto}.a6 .col.o{transform:none}
+  .car{min-height:470px}.car .sl{grid-template-columns:minmax(0,1fr)}.car .ph{width:140px}
+  .a8 .marqq .q{width:300px}
+  .rot{min-height:260px}
+}
+@media (max-width:520px){.a3 .list li{grid-template-columns:72px minmax(0,1fr);gap:16px}.a3 .hd{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Cursos · parte das alunas · 10 opções</h1>
+  <p>A parte que vem logo depois da abertura: o vídeo da aula (com som), o número de alunas contando e as fotos e falas reais delas. Tudo no mesmo sistema claro da abertura escolhida, com fundo branco para separar da abertura em gelo. O objetivo aqui é a prova: mostrar que outras mulheres já começaram com a Thainá.</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+<script>
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, quero saber sobre o curso de design de sobrancelhas');
+const I='../assets/img/alunas/', V='../assets/video/curso-aula.mp4';
+const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const SND='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path class="off" d="M16 9l5 6M21 9l-5 6"/><path class="on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>';
+const VID=(cls='')=>`<figure class="vid ${cls}"><video data-src="${V}" muted loop playsinline preload="none" aria-label="Aula do curso no studio"></video><button class="snd" type="button" aria-pressed="false">${SND}<span class="off">Ativar som</span><span class="on">Som ligado</span></button></figure>`;
+/* alunas com foto e/ou fala reais */
+const AL=[
+ {n:'Karolayne',f:'turma-1.jpg',a:'avatar-karolayne.jpg',q:'Obrigada por tudo, pela paciência, calma e toda atenção. Obrigada por cada ensinamento e aprendizado. Esses 2 dias foram incríveis. És uma profissional maravilhosa.'},
+ {n:'Heloísa',f:'turma-2.jpg',a:'avatar-heloisa.jpg',q:'Você foi, e sempre será, essencial nessa minha nova jornada. Gratidão por cada ensinamento passado, toda paciência. Foram dias incríveis.'},
+ {n:'Marta',f:null,a:null,q:'Foi um prazer passar esse tempo com você aprendendo um pouco dos seus conhecimentos. É uma carreira que vou levar pra vida, e lá na frente você vai se orgulhar porque fui sua primeira aluna.'},
+ {n:'Esther',f:'turma-3.webp',a:'avatar-esther.jpg',q:'Eu amei, Thai, você é uma profissional excelente, foi uma honra.'},
+];
+const PH8=[['turma-1.jpg','Karolayne'],['turma-2.jpg','Heloísa'],['turma-3.webp','Esther'],['turma-4.webp',''],['turma-5.webp',''],['turma-6.jpg',''],['turma-7.webp',''],['turma-8.jpg','Gislleny']];
+const phAlt=n=>n?`${n} com o certificado, ao lado da Thainá`:'Aluna com o certificado, ao lado da Thainá';
+const PH=(p,cap=false)=>`<figure><div class="ph"><img src="${I}${p[0]}" alt="${phAlt(p[1])}" loading="lazy"></div>${cap?`<p class="pcap">${p[1]?`<b>${p[1]}</b>`:'Aluna'} · com certificado</p>`:''}</figure>`;
+const PHS=(list=PH8,cap=false)=>list.map(p=>PH(p,cap)).join('');
+const AV=s=>s.a?`<img class="av" src="${I}${s.a}" alt="" loading="lazy">`:`<span class="av" aria-hidden="true">${s.n[0]}</span>`;
+const Q=(s,short)=>`<blockquote class="q"><p>“${short?short:s.q}”</p><footer>${AV(s)}<span><b>${s.n}</b>, aluna</span></footer></blockquote>`;
+const CNT=(cls='big')=>`<p class="${cls}"><small>+</small><span class="num" data-count="50">50</span></p>`;
+const CTA=`<a class="btn" href="${WA}" target="_blank" rel="noopener">Quero ser a próxima aluna ${ARROW}</a>`;
+const MARQ=(rev='')=>{const set=PHS(PH8.map(p=>[p[0],p[1]]));return `<div class="marq ${rev}" aria-hidden="true"><div class="tr">${set}${set}</div></div>`};
+const O=[
+ ['Número grande e vídeo','O “+50” contando, enorme, com uma fala real de aluna embaixo; o vídeo da aula ao lado; as fotos das turmas numa linha no fim.',
+  `<div class="w"><div class="g"><div>${CNT().replace('class="big"','class="big rv"')}<p class="bigl rv" style="--d:1">alunas formadas no studio</p><h2 class="h rv" style="--d:2;margin-top:2rem;font-size:clamp(1.9rem,3vw,2.6rem)">Elas começaram com a mesma dúvida que você.</h2><div class="q rv" style="--d:3">${Q(AL[1]).replace('<blockquote class="q">','<blockquote>')}</div><div class="cta rv" style="--d:4">${CTA}</div></div><div class="rv" style="--d:1">${VID()}</div></div><div class="row rv" style="--d:2">${PHS()}</div></div>`],
+ ['Frase com o número dentro','O número roda dentro da frase, no centro. O vídeo fica entre duas falas de alunas, e as fotos das turmas fecham a seção.',
+  `<div class="w"><h2 class="h rv">Mais de <span class="num" data-count="50">50</span> alunas já começaram por aqui.</h2><p class="lead rv" style="--d:1">Com certificado, apostila e a confiança de quem praticou em modelo real.</p><div class="tri"><div class="rv" style="--d:2">${Q(AL[1])}</div><div class="rv" style="--d:1">${VID()}</div><div class="rv" style="--d:3">${Q(AL[3])}</div></div><div class="strip rv" style="--d:2">${PHS()}</div><div class="c cta rv" style="--d:3">${CTA}</div></div>`],
+ ['Vídeo parado e falas ao lado','O vídeo fica parado à esquerda enquanto as falas das alunas descem à direita, cada uma com a foto dela no dia do certificado.',
+  `<div class="w"><div class="g"><div class="pin rv">${VID()}<p class="vcap">Aula no studio. Ative o som.</p></div><div><div class="hd rv" style="--d:1"><h2 class="h" style="font-size:clamp(2rem,3.4vw,2.9rem)">O que dizem as alunas.</h2><div style="text-align:right">${CNT()}<p class="bigl">alunas formadas</p></div></div><ol class="list">${AL.map((s,i)=>`<li class="rv" style="--d:${i+2}">${s.f?`<div class="ph"><img src="${I}${s.f}" alt="${phAlt(s.n)}" loading="lazy"></div>`:`<div class="ph" style="display:grid;place-items:center;font:400 2rem var(--serif);color:var(--rose-d);background:#F1E6E3">${s.n[0]}</div>`}${Q(s)}</li>`).join('')}</ol><div class="cta rv">${CTA}</div></div></div></div>`],
+ ['Galeria com nomes','O título e o número no alto; embaixo, as fotos das alunas com o nome de cada uma e o vídeo ocupando o centro da galeria.',
+  `<div class="w"><div class="hd"><div><h2 class="h rv">Cada foto é uma aluna que começou aqui.</h2><p class="lead rv" style="--d:1">Todas no dia do certificado, dentro do studio.</p></div><div class="rv" style="--d:2">${CNT()}<p class="bigl">alunas formadas</p></div></div><div class="grid rv" style="--d:2">${PHS(PH8.slice(0,2),true)}<div class="vwrap">${VID()}</div>${PHS(PH8.slice(2,8),true)}</div><div class="cta rv" style="--d:3">${CTA}</div></div>`],
+ ['Uma fala por vez','O vídeo à esquerda e, à direita, uma fala por vez, grande, com a foto da aluna. Setas para passar, e elas também mudam sozinhas.',
+  `<div class="w"><div class="g"><div class="rv">${VID()}</div><div><p class="top5 rv" style="--d:1"><b><span>+</span><span class="num" data-count="50">50</span></b>alunas formadas no studio</p><div class="car rv" style="--d:2" id="car">${AL.map((s,i)=>`<div class="sl ${i?'':'on'}">${s.f?`<div class="ph"><img src="${I}${s.f}" alt="${phAlt(s.n)}" loading="lazy"></div>`:`<div class="ph" style="display:grid;place-items:center;font:400 3rem var(--serif);color:var(--rose-d);background:#F1E6E3">${s.n[0]}</div>`}${Q(s)}</div>`).join('')}</div><div class="nav5 rv" style="--d:3"><button type="button" data-k="-1" aria-label="Fala anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button type="button" data-k="1" aria-label="Próxima fala"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><span class="ct" id="carct">1 / ${AL.length}</span></div><div class="cta rv" style="--d:4">${CTA}</div></div></div></div>`],
+ ['Vídeo no centro, fotos dos lados','Composição simétrica: o vídeo no centro e as fotos das turmas dos dois lados, em colunas desencontradas, com o número e o título em cima.',
+  `<div class="w"><h2 class="h rv">Quem já passou pelo curso.</h2><p class="cnt rv" style="--d:1"><b><span>+</span><span class="num" data-count="50">50</span></b>alunas formadas no studio</p><div class="stage rv" style="--d:2"><div class="col">${PHS(PH8.slice(0,2))}</div><div class="col o">${PHS(PH8.slice(2,4))}</div>${VID()}<div class="col o">${PHS(PH8.slice(4,6))}</div><div class="col">${PHS(PH8.slice(6,8))}</div></div><div class="c rv" style="--d:3">${CTA}</div></div>`],
+ ['Fotos rodando em duas faixas','As fotos das alunas passam devagar em duas faixas, em sentidos opostos (param com o mouse). Embaixo, o vídeo e duas falas.',
+  `<div class="w"><div class="hd"><h2 class="h rv">Mais de <span class="num" data-count="50">50</span> alunas, uma de cada vez, de perto.</h2><a class="btn rv" style="--d:1" href="${WA}" target="_blank" rel="noopener">Quero ser a próxima aluna ${ARROW}</a></div></div><div class="rows rv" style="--d:2">${MARQ()}${MARQ('rev')}</div><div class="w"><div class="bot"><div class="rv">${VID()}</div><div class="qs">${Q(AL[0]).replace('class="q"','class="q rv" style="--d:1"')}${Q(AL[2]).replace('class="q"','class="q rv" style="--d:2"')}</div></div></div>`],
+ ['Convite para ser a próxima','Texto e número à esquerda com o rosto das alunas, vídeo à direita; as falas passam devagar numa faixa embaixo. A mais próxima do que o site tem hoje, só que clara.',
+  `<div class="w"><div class="g"><div><h2 class="h rv">Elas começaram com a mesma dúvida que você.</h2><p class="lead rv" style="--d:1">Hoje atendem com técnica, certificado e a segurança de quem praticou em modelo real, com a Thainá ao lado.</p><div class="faces rv" style="--d:2"><div class="avs">${AL.map(AV).join('').replace(/class="av"/g,'')}<img src="${I}avatar-gislleny.jpg" alt="" loading="lazy"></div><p><b><span>+</span><span class="num" data-count="50">50</span> alunas</b> formadas no studio</p></div><div class="cta rv" style="--d:3">${CTA}</div></div><div class="rv" style="--d:1">${VID()}</div></div><div class="marqq rv" style="--d:2"><div class="tr">${AL.map(s=>Q(s)).join('')}${AL.map(s=>Q(s)).join('')}</div></div></div>`],
+ ['Faixa cinza com falas que se revezam','Fundo cinza bem clarinho; o vídeo com moldura branca, o número grande e uma fala que troca sozinha a cada poucos segundos. Os rostos das alunas fecham a seção.',
+  `<div class="w"><div class="g"><div class="rv">${VID()}</div><div>${CNT().replace('class="big"','class="big rv" style="--d:1"')}<p class="bigl rv" style="--d:1">alunas formadas no studio</p><div class="rot rv" style="--d:2" id="rot">${AL.map((s,i)=>Q(s).replace('class="q"',`class="q ${i?'':'on'}"`)).join('')}</div><div class="cta rv" style="--d:3">${CTA}</div></div></div><div class="ring rv" style="--d:3">${PH8.map(p=>`<img src="${I}${p[0]}" alt="${phAlt(p[1])}" loading="lazy">`).join('')}</div></div>`],
+ ['Grade editorial','Título grande; embaixo, três colunas: o número e o texto, o vídeo no meio, duas falas à direita. As fotos passam numa faixa no fim.',
+  `<div class="w"><h2 class="h rv">O curso visto por quem já fez.</h2><div class="g"><div class="rv" style="--d:1">${CNT()}<p class="bigl">alunas formadas no studio</p><p class="lead">Todas saíram com certificado e apostila, depois de praticar em modelo real.</p><div class="cta">${CTA}</div></div><div class="rv" style="--d:2">${VID()}</div><div class="qs">${Q(AL[1]).replace('class="q"','class="q rv" style="--d:3"')}${Q(AL[3]).replace('class="q"','class="q rv" style="--d:4"')}</div></div></div>${MARQ()}`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt" id="o${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div><div class="prev">fim da abertura dos Cursos (O que você aprende)</div><section class="s a${i+1} ${i===8?'mist':''}">${o[2]}</section></div>`).join('');
+/* seção aparece: conteúdo sobe e o número roda de 0 até 50 */
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const count=el=>{const to=+el.dataset.count;if(reduce){el.textContent=to;return}let t0;const f=t=>{t0??=t;const p=Math.min(1,(t-t0)/1800),e=1-Math.pow(1-p,4);el.textContent=Math.round(to*e);if(p<1)requestAnimationFrame(f)};el.textContent='0';requestAnimationFrame(f)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-count]').forEach(count);io.unobserve(e.target)}}),{threshold:.25});
+document.querySelectorAll('.s').forEach(s=>io.observe(s));
+/* som do vídeo: liga em um, desliga nos outros */
+document.querySelectorAll('.snd').forEach(b=>b.addEventListener('click',()=>{const v=b.parentElement.querySelector('video'),on=v.muted;document.querySelectorAll('.snd').forEach(o=>{o.parentElement.querySelector('video').muted=true;o.setAttribute('aria-pressed','false')});if(on){v.muted=false;v.play().catch(()=>{});b.setAttribute('aria-pressed','true')}}));
+/* 05 · uma fala por vez */
+(()=>{const c=document.getElementById('car'),sl=[...c.children],ct=document.getElementById('carct');let k=0,tm;const go=n=>{k=(n+sl.length)%sl.length;sl.forEach((s,j)=>s.classList.toggle('on',j===k));ct.textContent=`${k+1} / ${sl.length}`};const auto=()=>{clearInterval(tm);if(!reduce)tm=setInterval(()=>go(k+1),7000)};document.querySelectorAll('.nav5 button').forEach(b=>b.addEventListener('click',()=>{go(k+ +b.dataset.k);auto()}));auto()})();
+/* 09 · falas que se revezam */
+(()=>{const q=[...document.getElementById('rot').children];let k=0;if(!reduce)setInterval(()=>{q[k].classList.remove('on');k=(k+1)%q.length;q[k].classList.add('on')},6000)})();
+/* vídeos: baixam perto, tocam (sem som) ao aparecer, pausam ao sair */
+const vids=[...document.querySelectorAll('video[data-src]')];
+const near=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=e.target;if(!v.src){v.src=v.dataset.src;v.preload='auto'}near.unobserve(v)}}),{rootMargin:'400px 0px'});
+const vis=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.25});
+vids.forEach(v=>{near.observe(v);vis.observe(v)});
+</script>
+</body>
+</html>
