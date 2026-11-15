@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261115e">
+<link rel="stylesheet" href="assets/css/style.css?v=20261115f">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('js-anim');
@@ -422,46 +422,30 @@ fim da seção Sobre desativada -->
 </section>
 
 <!-- ═══════════════ 10 · CURSOS · INVESTIMENTO ═══════════════ -->
-<!-- Os dois cursos lado a lado (opção 01). Valores, parcelas, datas e duração
-     entre [ ] ainda precisam ser confirmados pela Thainá. -->
+<!-- Um bloco só, com seletor Iniciante / Aperfeiçoamento (main.js · initInvest).
+     Valores, parcelas e data entre [ ] ainda precisam ser confirmados. -->
 <section class="cinv" id="investimento">
-  <div class="cinv__hd">
+  <div class="cinv__box">
     <h2 class="cinv__h" data-reveal>Escolha o seu curso.</h2>
-    <p class="cinv__next" data-reveal><i aria-hidden="true"></i>Turma pequena · próxima: [DATA]</p>
-  </div>
-  <div class="cinv__two">
-      <article class="cinv__c" data-reveal>
-        <h3 class="cinv__nm">Design de Sobrancelhas</h3>
-        <p class="cinv__for">Pra quem está começando do zero e quer entrar na profissão com base sólida.</p>
-        <p class="cinv__val"><small>R$</small><b>[VALOR]</b></p>
-        <p class="cinv__terms">ou [X]x no cartão</p>
-        <a class="cx__btn cinv__btn" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%20curso" target="_blank" rel="noopener">Garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="cinv__ls">
-          <div><h4>No curso</h4><ul><li>Teoria + visagismo</li><li>Prática em modelo real</li><li>Correção de perto</li><li>Duração: [DURAÇÃO]</li></ul></div>
-          <div><h4>Você leva</h4><ul><li>Kit de materiais</li><li>Apostila</li><li>Certificado</li><li>Suporte pós-curso</li></ul></div>
-        </div>
-      </article>
-      <article class="cinv__c" data-reveal>
-        <h3 class="cinv__nm">Aperfeiçoamento em Design</h3>
-        <p class="cinv__for">Pra quem já atende e quer elevar o nível dos resultados.</p>
-        <p class="cinv__val"><small>R$</small><b>[VALOR]</b></p>
-        <p class="cinv__terms">ou [X]x no cartão</p>
-        <a class="cx__btn cinv__btn" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%20curso" target="_blank" rel="noopener">Garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="cinv__ls">
-          <div><h4>No curso</h4><ul><li>Teoria + visagismo</li><li>Prática em modelo real</li><li>Correção de perto</li><li>Duração: [DURAÇÃO]</li></ul></div>
-          <div><h4>Você leva</h4><ul><li>Kit de materiais</li><li>Apostila</li><li>Certificado</li><li>Suporte pós-curso</li></ul></div>
-        </div>
-      </article>
-  </div>
-  <div class="cinv__foot">
-    <div class="cinv__doubt" data-reveal>
-      <p>Ficou com dúvida sobre qual curso é pra você? Me chama e a gente conversa antes de você decidir.</p>
-      <a class="cx__lnk" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20os%20cursos" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+    <div class="cinv__seg" role="tablist" aria-label="Escolha o curso" data-reveal><button type="button" role="tab" id="cinv-t0" aria-selected="true" aria-controls="cinv-p0">Iniciante</button><button type="button" role="tab" id="cinv-t1" aria-selected="false" aria-controls="cinv-p1" tabindex="-1">Aperfeiçoamento</button></div>
+    <div class="cinv__pane" id="cinv-p0" role="tabpanel" aria-labelledby="cinv-t0">
+      <h3 class="cinv__nm">Design de Sobrancelhas</h3>
+      <p class="cinv__for">Para começar do zero.</p>
+      <p class="cinv__val"><small>R$</small><b>[VALOR]</b></p>
+      <p class="cinv__terms">ou [X]x no cartão</p>
+      <a class="cx__btn cinv__btn" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%20curso" target="_blank" rel="noopener">Garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <dl class="cinv__notes" data-reveal>
-      <div><dt>Turma pequena</dt><dd>Poucas alunas por turma, pra eu corrigir cada uma de perto.</dd></div>
-      <div><dt>Prática em modelo real</dt><dd>Você não sai só com teoria. Sai tendo atendido.</dd></div>
-    </dl>
+    <div class="cinv__pane" id="cinv-p1" role="tabpanel" aria-labelledby="cinv-t1" hidden>
+      <h3 class="cinv__nm">Aperfeiçoamento em Design</h3>
+      <p class="cinv__for">Para quem já atende.</p>
+      <p class="cinv__val"><small>R$</small><b>[VALOR]</b></p>
+      <p class="cinv__terms">ou [X]x no cartão</p>
+      <a class="cx__btn cinv__btn" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%20curso" target="_blank" rel="noopener">Garantir minha vaga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="cinv__end" data-reveal>
+      <p class="cinv__inc"><b>Inclui</b> kit de materiais, apostila, certificado e suporte pós-curso.</p>
+      <a class="cx__lnk" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20os%20cursos" target="_blank" rel="noopener">Dúvidas? Fale com a Thainá</a>
+    </div>
   </div>
 </section>
 
@@ -510,6 +494,6 @@ fim da seção Sobre desativada -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js?v=20261115b"></script>
+<script src="assets/js/main.js?v=20261115c"></script>
 </body>
 </html>

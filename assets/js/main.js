@@ -495,3 +495,21 @@ initFaq2();
   }), { threshold: .35 });
   io.observe(road);
 })();
+
+/* ---- Cursos · investimento: seletor Iniciante / Aperfeiçoamento */
+(function initInvest () {
+  const tabs = [...document.querySelectorAll('.cinv__seg [role="tab"]')]; if (!tabs.length) return;
+  const select = (i, focus) => tabs.forEach((t, k) => {
+    const on = k === i;
+    t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    if (on && focus) t.focus();
+  });
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(i));
+    t.addEventListener('keydown', e => {
+      const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (d) { e.preventDefault(); select((i + d + tabs.length) % tabs.length, true); }
+    });
+  });
+})();
