@@ -196,11 +196,11 @@ html{scrollbar-color:var(--line2) var(--ice)}
 .c9 .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start;margin-top:clamp(48px,6vw,80px);padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)}
 .c9 h2{font:500 clamp(1.7rem,2.6vw,2.2rem)/1.2 "Bodoni Moda",serif;color:var(--ink);text-wrap:balance}
 .c9 .acts{margin-top:1.8rem}
-.c9 .who{display:flex;align-items:center;gap:14px;margin-top:2rem}
-.c9 .av{display:flex}
-.c9 .av img,.c9 .av span{width:38px;height:38px;margin-left:-10px;border-radius:50%;border:2px solid var(--ice);object-fit:cover}
-.c9 .av span{display:grid;place-items:center;background:#E9DCD8;font:600 .8rem var(--sans);color:var(--rose-d)}
-.c9 .av :first-child{margin-left:0}
+.c6 .who,.c9 .who{display:flex;align-items:center;gap:14px;margin-top:2rem}
+.c6 .av,.c9 .av{display:flex}
+.c6 .av img,.c6 .av span,.c9 .av img,.c9 .av span{width:38px;height:38px;margin-left:-10px;border-radius:50%;border:2px solid #fff;object-fit:cover}
+.c6 .av span,.c9 .av span{display:grid;place-items:center;background:#E9DCD8;font:600 .8rem var(--sans);color:var(--rose-d)}
+.c6 .av :first-child,.c9 .av :first-child{margin-left:0}
 
 /* ===== 10 · Mínimo gelo (Hanken) ===== */
 .c10 .g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px,7vw,112px);align-items:center;padding:clamp(72px,9vw,120px) var(--pad) clamp(56px,7vw,88px)}
@@ -262,7 +262,7 @@ const O=[
  ['Ficha do curso','O título à esquerda e, à direita, uma ficha clara com tudo o que a pessoa precisa saber para decidir (formato, turma, prática, material e próxima turma) e o botão. Fotos em sequência embaixo.','',
   `<div class="g"><div><h2 class="rv">Do primeiro traço ao primeiro atendimento, <em>com segurança.</em></h2><p class="sub rv" style="--d:1">${SUB}</p>${AUTH(2)}</div><aside class="ficha rv" style="--d:2"><h3>Curso de Design de Sobrancelhas</h3><dl>${F.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}<div><dt>Próxima turma</dt><dd>[DATA]</dd></div></dl>${BTN.replace('class="btn"','class="btn"')}<p class="note">Vagas limitadas por turma.</p></aside></div><div class="strip rv" style="--d:3">${VID()}${PH(AULA,AULA_ALT)}${PH('alunas/turma-5.webp','Alunas com certificado no studio')}</div>`],
  ['A Thainá em primeiro plano','O retrato da Thainá grande e, ao lado, o convite e a fala dela em destaque. A confiança vem da pessoa: quem ensina, e por quê.','mist',
-  `<div class="g"><div class="ph pt rvi"><img src="${I}sobre-thaina.webp" alt="Thainá Cavalcanti" loading="lazy"></div><div><h2 class="rv">Aprenda com quem vive do design de sobrancelhas.</h2><p class="sub rv" style="--d:1">${SUB}</p><blockquote class="rv" style="--d:2"><p>“Eu sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.”</p><footer>Thainá Cavalcanti, designer de sobrancelhas e micropigmentadora</footer></blockquote>${ACTS(3)}</div></div>`],
+  `<div class="g"><div class="ph pt rvi"><img src="${I}sobre-thaina.webp" alt="Thainá Cavalcanti" loading="lazy"></div><div><h2 class="rv">Aprenda com quem vive do design de sobrancelhas.</h2><p class="sub rv" style="--d:1">${SUB}</p><blockquote class="rv" style="--d:2"><p>“Eu sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.”</p><footer>Thainá Cavalcanti, designer de sobrancelhas e micropigmentadora</footer></blockquote>${ACTS(3)}<div class="who rv" style="--d:4"><div class="av"><img src="${I}alunas/avatar-karolayne.jpg" alt="" loading="lazy"><img src="${I}alunas/avatar-esther.jpg" alt="" loading="lazy"><img src="${I}alunas/avatar-gislleny.jpg" alt="" loading="lazy"><span>M</span></div><p class="note">+50 alunas formadas no studio</p></div></div></div>`],
  ['Conteúdo e inscrição','A abertura já mostra o que se aprende, em linhas elegantes, com um quadro de inscrição ao lado que acompanha a rolagem. Para quem decide pela informação.','',
   `<div class="w"><div class="hero"><h2 class="rv">Um curso completo, do desenho à <em>finalização.</em></h2><p class="sub rv" style="--d:1">${SUB}</p></div><div class="g"><ol class="prog rv" style="--d:2"><li><b>Técnica com olhar profissional</b><span>Do desenho à finalização, entendendo o porquê de cada escolha.</span></li><li><b>Prática de verdade</b><span>Você observa e depois atende modelo real, dentro do studio.</span></li><li><b>Correção de perto</b><span>A Thainá corrige o que for preciso, até você tomar decisões sozinha.</span></li><li><b>Você sai preparada</b><span>Com apostila, certificado e confiança pra começar a atender.</span></li></ol><aside class="enr rv" style="--d:3">${VID()}<h3>Próxima turma: [DATA]</h3><p>Presencial em Carpina-PE, em turma pequena.</p>${BTN}</aside></div></div>`],
  ['Galeria do curso','Três imagens reais abrindo a seção, como uma escola de moda: vídeo, aula e turma. O título em Marcellus (clássica e calma) e o texto vêm logo abaixo.','ice',
