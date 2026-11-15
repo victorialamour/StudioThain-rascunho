@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261115f">
+<link rel="stylesheet" href="assets/css/style.css?v=20261115g">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('js-anim');
@@ -471,24 +471,18 @@ fim da seção Sobre desativada -->
 </main>
 
 <!-- ═══════════════ RODAPÉ ═══════════════ -->
-<footer class="foot">
-  <div class="foot__top">
-    <div>
-      <p class="foot__brand"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>Thainá Cavalcanti</p>
-      <p class="foot__about">Studio de sobrancelhas em Carpina-PE. Sobrancelhas que valorizam quem você já é.</p>
-    </div>
-    <nav class="foot__links" aria-label="Rodapé">
-      <a href="#servicos">Serviços</a><a href="#cursos">Cursos</a><a href="#resultados">Resultados</a><a href="#duvidas">Dúvidas</a>
-    </nav>
-    <div class="foot__social">
-      <a class="circle circle--line" href="https://instagram.com/thainacavalcanti_sobrancelhas" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
-      <a class="circle circle--dark" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19l1.2-3.6A7.5 7.5 0 1 1 9 18.3L5 19Z" stroke-linejoin="round"/></svg></a>
-    </div>
+<!-- Centralizado e leve (opção 3), com a estrela grande da marca (opção 10). -->
+<footer class="rod">
+  <svg class="rod__star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>
+  <p class="rod__brand">Thainá Cavalcanti</p>
+  <p class="rod__about">Studio de sobrancelhas e cursos em Carpina-PE.</p>
+  <div class="rod__soc">
+    <a href="https://instagram.com/thainacavalcanti_sobrancelhas" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.8Z"/><path d="M9.2 8.6c.2-.5.9-.6 1.2-.1l.6 1.2c.1.3 0 .6-.2.8l-.4.4c.5 1 1.3 1.8 2.3 2.3l.4-.4c.2-.2.5-.3.8-.2l1.2.6c.5.3.4 1-.1 1.2-1.6.8-4.4-1.1-5.4-3.1-.6-1.1-.6-2.1-.4-2.7Z" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Tiradentes+110+Galeria+Gomes+Santos+Carpina+PE" target="_blank" rel="noopener" aria-label="Abrir no mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg></a>
   </div>
-  <div class="foot__bottom">
-    <p>Rua Tiradentes, 110 · Galeria Gomes Santos, sala 05 · Carpina-PE</p>
-    <p>© <span id="year">2026</span> Studio Thainá Cavalcanti</p>
-  </div>
+  <nav class="rod__nav" aria-label="Rodapé"><a href="#servicos">Serviços</a><a href="#resultados">Resultados</a><a href="#cursos">Cursos</a><a href="#duvidas">Dúvidas</a></nav>
+  <div class="rod__bot"><p>Rua Tiradentes, 110 · Carpina-PE</p><p>© <span id="year">2026</span> Studio Thainá Cavalcanti</p></div>
 </footer>
 </div>
 
