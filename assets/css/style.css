@@ -1298,3 +1298,38 @@ main>.cx{--cx-ink:#1D1C1B;--cx-tx:#55524F;--cx-mut:#6F6B67;--cx-line:#E3E2DE;--c
   .cx__prog ol{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1.6rem}
 }
 @media (max-width:520px){.cx__brand span{display:none}.cx__prog ol{grid-template-columns:minmax(0,1fr)}}
+
+/* ==========================================================================
+   CURSOS · alunas (opção 07): fotos em duas faixas, número contando,
+   vídeo da aula com som e falas em itálico delicado (Instrument Serif)
+   ========================================================================== */
+main>.cal{--cx-ink:#1D1C1B;--cx-tx:#55524F;--cx-mut:#6F6B67;--cx-line:#E3E2DE;
+  position:relative;padding:clamp(72px,9vw,120px) var(--pad) 0;background:#fff;box-shadow:0 0 0 100vmax #fff;clip-path:inset(0 -100vmax);color:var(--cx-tx);font-family:"Hanken Grotesk",system-ui,sans-serif}
+.cal__hd{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.cal__h{font:400 clamp(2.2rem,4.2vw,3.6rem)/1.06 "Gloock",serif;letter-spacing:-.015em;color:var(--cx-ink);max-width:20ch;text-wrap:balance}
+.cal__n{font-variant-numeric:tabular-nums}
+.cal__rows{margin:clamp(40px,5vw,64px) calc(var(--pad) * -1) 0}
+.cal__marq{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.cal__marq+.cal__marq{margin-top:12px}
+.cal__tr{display:flex;gap:12px;width:max-content;animation:calmq 60s linear infinite}
+.cal__marq--rev .cal__tr{animation-direction:reverse}
+.cal__rows:hover .cal__tr{animation-play-state:paused}
+.cal__tr figure{flex:none;width:clamp(140px,15vw,200px);aspect-ratio:1;margin:0;border-radius:4px;overflow:hidden;background:#F0F0ED}
+.cal__tr img{width:100%;height:100%;object-fit:cover}
+@keyframes calmq{to{transform:translateX(-50%)}}
+.cal__bot{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(40px,7vw,112px);align-items:center;padding:clamp(64px,8vw,104px) 0}
+.cal__vid{position:relative;width:clamp(240px,24vw,320px);aspect-ratio:9/16;margin:0;border-radius:6px;overflow:hidden;background:#F0F0ED}
+.cal__vid video{width:100%;height:100%;object-fit:cover}
+.cal__qs{display:grid;gap:2rem;max-width:620px}
+.cal__q{margin:0}
+.cal__q+.cal__q{padding-top:2rem;border-top:1px solid var(--cx-line)}
+.cal__q p{font:400 italic clamp(1.14rem,1.45vw,1.3rem)/1.5 "Instrument Serif",serif;color:var(--cx-ink)}
+.cal__q footer{display:flex;align-items:center;gap:10px;margin-top:.9rem;font-size:.86rem;color:var(--cx-mut)}
+.cal__q footer b{color:var(--cx-ink);font-weight:600}
+.cal__q footer img,.cal__ini{width:34px;height:34px;border-radius:50%;object-fit:cover;flex:none}
+.cal__ini{display:grid;place-items:center;background:#E9DCD8;font:600 .78rem "Hanken Grotesk",sans-serif;color:#9A5457}
+@media (prefers-reduced-motion:reduce){.cal__tr{animation:none}}
+@media (max-width:900px){
+  .cal__hd,.cal__bot{grid-template-columns:minmax(0,1fr)}
+  .cal__vid{width:min(320px,100%);margin:0 auto}
+}
