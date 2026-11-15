@@ -103,12 +103,16 @@ function initParallax () {
 }
 
 /* ---- 6 · Vídeos só tocam quando aparecem ----------------------------------- */
+/* Todos os vídeos (inclusive o do topo) só tocam quando estão na tela e
+   pausam ao sair dela. Os vídeos com som (.media-replay) têm controle próprio
+   em initReplay, com a mesma regra. */
 function initVideos () {
   const io = new IntersectionObserver(entries => entries.forEach(({ target, isIntersecting }) => {
     if (target.closest('[hidden]')) return;
-    isIntersecting ? target.play().catch(() => {}) : target.pause();
-  }), { rootMargin: '120px 0px' });
-  document.querySelectorAll('video:not(.hero__video)').forEach(v => { if (!v.closest('.media-replay')) io.observe(v); });
+    if (isIntersecting) { if (target.src || target.currentSrc) target.play().catch(() => {}); }
+    else target.pause();
+  }), { threshold: 0.25 });
+  document.querySelectorAll('video').forEach(v => { if (!v.closest('.media-replay')) io.observe(v); });
 }
 
 /* ---- 7 · Abas genéricas (serviços, cursos, resultados) ----------------------- */
