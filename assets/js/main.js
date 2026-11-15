@@ -481,3 +481,13 @@ function initFaq2 () {
   }));
 }
 initFaq2();
+
+/* ---- Cursos: a linha rosa dos 4 passos se desenha quando aparece */
+(() => {
+  const road = document.querySelector('.cflow__road'); if (!road) return;
+  if (!('IntersectionObserver' in window)) { road.classList.add('is-drawn'); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { road.classList.add('is-drawn'); io.disconnect(); }
+  }), { threshold: .35 });
+  io.observe(road);
+})();

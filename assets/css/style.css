@@ -1212,3 +1212,37 @@ main>.courses{--brand-olive:var(--olive-brand);background:var(--olive-brand)}
 
 /* Cursos · segunda linha em Pinyon Script (escolha 05), creme da marca */
 .courses__what{margin-top:.35rem;font:400 clamp(1.8rem,3.4vw,2.6rem)/1.1 "Pinyon Script",cursive;letter-spacing:0;color:#EDDAC9;font-variation-settings:normal}
+
+/* ==========================================================================
+   CURSOS · corpo no layout 01 (frase + vídeo, caminho de 4 passos, faixa)
+   ========================================================================== */
+.cflow{grid-column:1/-1;grid-row:2;width:100%}
+.cflow__top{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,88px);align-items:center}
+.cflow__say{font:300 italic clamp(1.9rem,3.2vw,2.7rem)/1.1 var(--f-display);letter-spacing:-.022em;color:#fff;text-wrap:balance;max-width:16ch}
+.cflow__rest{margin-top:1rem;max-width:44ch;font-size:var(--fs-lead);line-height:1.65;color:rgba(255,255,255,.8)}
+.courses .cflow .courses__photo{grid-column:auto;grid-row:auto;min-height:0;aspect-ratio:4/5;max-height:540px;width:100%;border-radius:var(--r-xl)}
+.cflow__road{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,36px);margin:clamp(56px,7vw,88px) 0 0;padding:2.6rem 0 0;list-style:none}
+.cflow__road::before,.cflow__road::after{content:"";position:absolute;left:0;right:0;top:.35rem;height:1px}
+.cflow__road::before{background:rgba(250,245,239,.2)}
+.cflow__road::after{background:#E8C6C6;transform:scaleX(0);transform-origin:left;transition:transform 2s cubic-bezier(.16,1,.3,1)}
+.cflow__road.is-drawn::after{transform:scaleX(1)}
+.cflow__road li{position:relative;display:flex;flex-direction:column;gap:.3rem}
+.cflow__road li::before{content:"";position:absolute;left:0;top:-2.55rem;width:10px;height:10px;border-radius:50%;background:var(--olive-brand);box-shadow:0 0 0 1px #E8C6C6;transition:background .5s ease calc(var(--i) * 450ms)}
+.cflow__road.is-drawn li::before{background:#E8C6C6}
+.cflow__n{font:300 1rem/1 var(--f-display);color:#E8C6C6;margin-bottom:.2rem}
+.cflow__road b{font:300 1.18rem/1.3 var(--f-display);color:#fff}
+.cflow__road li>span:last-child{font-size:var(--fs-sm);line-height:1.55;color:rgba(255,255,255,.74)}
+.cflow__band{position:relative;margin:clamp(56px,7vw,88px) 0 0;aspect-ratio:21/8;border-radius:var(--r-xl);overflow:hidden}
+.cflow__band img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.cflow__band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,32,26,.72),transparent 55%);pointer-events:none}
+.cflow__band figcaption{position:absolute;left:clamp(16px,2.4vw,28px);bottom:clamp(14px,2vw,22px);z-index:1;font-size:var(--fs-sm);color:#fff}
+@media (prefers-reduced-motion:reduce){.cflow__road::after,.cflow__road li::before{transition:none}}
+@media (max-width:900px){
+  .cflow{grid-row:auto}
+  .cflow__top{grid-template-columns:minmax(0,1fr);gap:28px}
+  .cflow__road{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1.8rem;padding-top:0;margin-top:48px}
+  .cflow__road::before,.cflow__road::after,.cflow__road li::before{display:none}
+  .cflow__road li{padding-top:.9rem;border-top:1px solid rgba(250,245,239,.2)}
+  .cflow__band{aspect-ratio:16/10;margin-top:48px}
+}
+@media (max-width:480px){.cflow__road{grid-template-columns:minmax(0,1fr)}}

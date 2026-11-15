@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Young+Serif&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261112c">
+<link rel="stylesheet" href="assets/css/style.css?v=20261115a">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('js-anim');
@@ -368,23 +368,28 @@ fim da seção Sobre desativada -->
     <p class="courses__lead">Aprenda a profissão com quem vive dela. Presenciais, em turma pequena, em <span style="white-space:nowrap">Carpina-PE</span>.</p>
   </header>
 
-  <div class="courses__intro">
-    <p class="courses__manifesto" data-reveal>Eu sei, porque já estive do outro lado: com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.</p>
-  </div>
-
-  <figure class="courses__photo" data-reveal-img>
-    <video data-src="assets/video/cursos.mp4" data-autoloop muted loop playsinline aria-label="Thainá com alunas no studio" preload="none"></video>
-  </figure>
-
-  <div class="courses__body">
-    <ul class="pillars" data-reveal-stagger>
-      <li><b>Técnica com olhar profissional</b><span>Do desenho à finalização, entendendo o porquê de cada escolha.</span></li>
-      <li><b>Prática de verdade</b><span>Você observa e depois atende modelo real, dentro do studio.</span></li>
-      <li><b>Correção de perto</b><span>Eu corrijo o que for preciso, até você tomar decisões sozinha.</span></li>
-      <li><b>Você sai preparada</b><span>Com apostila, certificado e confiança pra começar a atender.</span></li>
-    </ul>
-    <figure class="courses__demo" data-reveal><img decoding="async" src="assets/img/cursos/aula-demonstracao.webp" alt="Thainá demonstrando o procedimento em modelo, com alunas acompanhando de perto" loading="lazy"><figcaption>Demonstração ao vivo: você acompanha cada passo de perto antes de atender.</figcaption></figure>
-
+  <!-- Corpo dos Cursos (layout 01): a fala da Thainá com o vídeo ao lado,
+       os 4 pilares como um caminho que se desenha e a foto da aula em faixa. -->
+  <div class="cflow">
+    <div class="cflow__top">
+      <div class="cflow__txt" data-reveal>
+        <p class="cflow__say">Eu sei, porque já estive do outro lado.</p>
+        <p class="cflow__rest">Com medo de começar, achando que não estava pronta. Hoje vivo da profissão que escolhi, e ensino o caminho que eu percorri.</p>
+      </div>
+      <figure class="courses__photo cflow__vid" data-reveal-img>
+        <video data-src="assets/video/cursos.mp4" data-autoloop muted loop playsinline aria-label="Thainá com alunas no studio" preload="none"></video>
+      </figure>
+    </div>
+    <ol class="cflow__road">
+      <li style="--i:0"><span class="cflow__n">01</span><b>Técnica com olhar profissional</b><span>Do desenho à finalização, entendendo o porquê de cada escolha.</span></li>
+      <li style="--i:1"><span class="cflow__n">02</span><b>Prática de verdade</b><span>Você observa e depois atende modelo real, dentro do studio.</span></li>
+      <li style="--i:2"><span class="cflow__n">03</span><b>Correção de perto</b><span>Eu corrijo o que for preciso, até você tomar decisões sozinha.</span></li>
+      <li style="--i:3"><span class="cflow__n">04</span><b>Você sai preparada</b><span>Com apostila, certificado e confiança pra começar a atender.</span></li>
+    </ol>
+    <figure class="cflow__band" data-reveal-img>
+      <img decoding="async" src="assets/img/cursos/aula-demonstracao.webp" alt="Thainá demonstrando o procedimento em modelo, com alunas acompanhando de perto" loading="lazy">
+      <figcaption>Demonstração ao vivo: você acompanha cada passo de perto antes de atender.</figcaption>
+    </figure>
   </div>
 
   <!-- Alunas: fotos de certificado no studio + comentários públicos (só o
@@ -544,6 +549,6 @@ fim da seção Sobre desativada -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="assets/js/main.js?v=20261111"></script>
+<script src="assets/js/main.js?v=20261115a"></script>
 </body>
 </html>
