@@ -1372,3 +1372,12 @@ main>.cinv{--cx-ink:#1D1C1B;--cx-tx:#57524D;--cx-mut:#736D67;--cx-line:#E2DCD3;-
   .cinv__c+.cinv__c{padding-left:0;border-left:0;border-top:1px solid var(--cx-line);margin-top:40px}
 }
 @media (max-width:480px){.cinv__ls{grid-template-columns:minmax(0,1fr);gap:22px}}
+
+/* Chamada "Vamos ver o que o seu rosto pede?" removida: fica só o endereço,
+   com o texto à esquerda e o mapa à direita no computador. */
+.visit{grid-template-columns:minmax(0,1fr)}
+@media (min-width:901px){
+  .visit__place{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:clamp(32px,5vw,72px)}
+  .visit__place>*{grid-column:1}
+  .visit__place>.visit__map{grid-column:2;grid-row:1/span 5;height:100%;min-height:300px}
+}
