@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rodapé · 10 opções · Studio Thainá</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   RODAPÉ · 10 opções no sistema atual
+   Tons claros (branco, gelo, linho, névoa), Gloock na marca, Hanken no texto,
+   Instrument Serif itálico em frases; rosa só em detalhe. Pouco texto.
+   O site é "2 em 1": os links se dividem entre Studio e Cursos.
+   ========================================================================== */
+:root{--ink:#1D1C1B;--text:#57524D;--muted:#736D67;--line:#E2DCD3;--line2:#CFC7BC;--rose:#B9767A;--rose-d:#9A5457;
+  --sans:"Hanken Grotesk",system-ui,sans-serif;--serif:"Gloock",Georgia,serif;--it:"Instrument Serif",Georgia,serif;--pad:clamp(20px,5vw,80px);--out:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p,ul,dl,dd,address{margin:0;font-style:normal}ul{list-style:none;padding:0}
+a{color:inherit;text-decoration:none}
+::selection{background:#EBD3D3;color:var(--ink)}
+:focus-visible{outline:1.5px solid var(--rose-d);outline-offset:4px}
+.top{padding:clamp(32px,5vw,56px) var(--pad) 24px;max-width:1200px}
+.top h1{font:400 clamp(1.8rem,3.2vw,2.5rem)/1.1 var(--serif);color:var(--ink)}
+.top p{margin-top:.6rem;max-width:74ch;font-size:.92rem;color:var(--muted)}
+.idx{position:sticky;top:0;z-index:40;display:flex;gap:.2rem;padding:.6rem var(--pad);background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);overflow-x:auto}
+.idx a{flex:none;padding:.35rem .6rem;font:600 .78rem var(--sans);color:var(--muted);border-radius:4px}
+.idx a:hover,.idx a:focus-visible{color:var(--ink);background:#F0F0ED;outline:none}
+.opt{scroll-margin-top:52px}
+.meta{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:baseline;padding:44px var(--pad) 14px;max-width:1200px}
+.meta b{font:400 1.35rem/1 var(--serif);color:var(--rose-d)}
+.meta strong{font-weight:600;font-size:.92rem;color:var(--ink)}
+.meta span{font-size:.84rem;color:var(--muted)}
+.prev{height:40px;background:#fff;border-top:1px solid var(--line);display:flex;align-items:center;padding:0 var(--pad);font-size:.75rem;color:var(--muted)}
+
+/* peças */
+.f{position:relative;overflow:hidden;color:var(--text)}
+.f.white{background:#fff}.f.ice{background:#F7F7F5}.f.linen{background:#F3EFE9}.f.mist{background:#EEEFE9}
+.w{max-width:1200px;margin:0 auto;padding:0 var(--pad)}
+.brand{display:inline-flex;align-items:center;gap:10px;font:400 1.35rem/1 var(--serif);color:var(--ink)}
+.brand svg{width:12px;height:12px;fill:var(--rose)}
+.about{margin-top:.7rem;max-width:34ch;font-size:.95rem}
+.ch{font:600 .9rem/1.3 var(--sans);color:var(--ink)}
+.lk{display:grid;gap:.5rem;margin-top:.8rem;font-size:.95rem}
+.lk a{width:fit-content;color:var(--text);background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--out),color .3s}
+.lk a:hover{color:var(--ink);background-size:100% 1px}
+.soc{display:flex;gap:10px}
+.ic{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line2);color:var(--ink);transition:background .3s,color .3s,box-shadow .3s}
+.ic:hover{background:var(--ink);color:#fff;box-shadow:inset 0 0 0 1px var(--ink)}
+.ic svg{width:18px;height:18px}
+.bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:.84rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 1.6rem;border-radius:999px;background:var(--ink);color:#fff;font:600 .9rem/1 var(--sans);transition:background .35s}
+.btn svg{width:16px;height:16px;transition:transform .5s var(--out)}
+.btn:hover{background:#3A3836}.btn:hover svg{transform:translateX(3px)}
+.ul{display:inline-flex;padding:3px 0;border-bottom:1px solid var(--line2);font:600 .92rem/1.2 var(--sans);color:var(--ink);transition:border-color .3s}
+.ul:hover{border-color:var(--ink)}
+
+/* 01 · Assinatura grande */
+.r1{padding:clamp(64px,8vw,96px) 0 0}
+.r1 .cols{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:32px}
+.r1 .mark{margin-top:clamp(56px,7vw,88px);font:400 clamp(2rem,11vw,10rem)/.9 var(--serif);letter-spacing:-.04em;color:var(--ink);white-space:nowrap;text-align:center;margin-bottom:.15em}
+.r1 .bot{padding:18px 0;border-top:1px solid var(--line);position:relative;background:inherit}
+
+/* 02 · Studio e Cursos */
+.r2{padding:clamp(64px,8vw,96px) 0 28px}
+.r2 .g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr) auto;gap:clamp(24px,4vw,56px);align-items:start}
+.r2 .bot{margin-top:clamp(48px,6vw,72px);padding-top:22px;border-top:1px solid var(--line)}
+
+/* 03 · Centralizado mínimo */
+.r3{padding:clamp(64px,8vw,96px) 0 32px;text-align:center}
+.r3 .brand{font-size:1.6rem}
+.r3 .about{margin:.7rem auto 0}
+.r3 .soc{justify-content:center;margin-top:1.6rem}
+.r3 .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:2rem;font-size:.92rem}
+.r3 .row a:hover{color:var(--ink)}
+.r3 .bot{justify-content:center;margin-top:2.4rem;padding-top:20px;border-top:1px solid var(--line)}
+
+/* 04 · Assinatura da Thainá */
+.r4{padding:clamp(64px,8vw,96px) 0 28px}
+.r4 .g{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.r4 .sig{font:400 clamp(3.4rem,8vw,6rem)/1 "Pinyon Script",cursive;color:var(--ink)}
+.r4 .who{margin-top:.4rem;font-size:.95rem;color:var(--muted)}
+.r4 .right{display:grid;gap:1.4rem;justify-items:end;text-align:right}
+.r4 .row{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 24px;font-size:.92rem}
+.r4 .row a:hover{color:var(--ink)}
+.r4 .bot{margin-top:clamp(40px,5vw,56px);padding-top:20px;border-top:1px solid var(--line)}
+
+/* 05 · Última frase e botão */
+.r5{padding:clamp(72px,9vw,112px) 0 28px}
+.r5 .call{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:clamp(40px,5vw,56px);border-bottom:1px solid var(--line)}
+.r5 .call p{font:400 italic clamp(2rem,4vw,3.2rem)/1.1 var(--it);color:var(--ink)}
+.r5 .g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:clamp(36px,4vw,48px)}
+.r5 .bot{margin-top:clamp(40px,5vw,56px)}
+
+/* 06 · Uma linha só */
+.r6{padding:28px 0}
+.r6 .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
+.r6 nav{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:.92rem}
+.r6 nav a:hover{color:var(--ink)}
+.r6 .brand{font-size:1.15rem}
+.r6 .soc .ic{width:38px;height:38px}
+.r6 small{font-size:.84rem;color:var(--muted)}
+
+/* 07 · Com horário ao vivo */
+.r7{padding:clamp(64px,8vw,96px) 0 28px}
+.r7 .g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.now{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.2rem;padding:.55rem .9rem;border-radius:999px;background:#fff;font:600 .86rem/1 var(--sans);color:var(--ink)}
+.now i{width:8px;height:8px;border-radius:50%;background:#8A9B6E}
+.now.off i{background:var(--rose)}
+.r7 dl{display:grid;gap:.45rem;margin-top:.8rem;font-size:.95rem}
+.r7 dl div{display:flex;justify-content:space-between;gap:20px}
+.r7 dt{color:var(--text)}.r7 dd{color:var(--ink);font-variant-numeric:tabular-nums}
+.r7 .bot{margin-top:clamp(40px,5vw,56px);padding-top:20px;border-top:1px solid rgba(29,28,27,.12)}
+
+/* 08 · Instagram em destaque */
+.r8{padding:clamp(72px,9vw,112px) 0 28px}
+.r8 .ig{display:inline-flex;align-items:baseline;gap:.4em;font:400 italic clamp(1.9rem,4.6vw,3.6rem)/1.1 var(--it);color:var(--ink);background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .6s var(--out)}
+.r8 .ig:hover{background-size:100% 1px}
+.r8 .lead{margin-top:.6rem;font-size:.95rem;color:var(--muted)}
+.r8 .g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:clamp(48px,6vw,72px);padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--line)}
+.r8 .bot{margin-top:clamp(40px,5vw,56px)}
+
+/* 09 · Ficha de contato */
+.r9{padding:clamp(64px,8vw,96px) 0 28px}
+.r9 .g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.r9 dl>div{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:16px;padding:1rem 0;border-top:1px solid var(--line)}
+.r9 dl>div:last-child{border-bottom:1px solid var(--line)}
+.r9 dt{font-size:.9rem;color:var(--muted)}
+.r9 dd{font-size:.98rem;color:var(--ink)}
+.r9 dd a:hover{text-decoration:underline;text-underline-offset:3px}
+.r9 .row{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:1.6rem;font-size:.92rem}
+.r9 .bot{margin-top:clamp(40px,5vw,56px)}
+
+/* 10 · Estrela da marca */
+.r10{padding:clamp(64px,8vw,96px) 0 28px}
+.r10 .g{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.r10 .star{width:clamp(56px,6vw,80px);height:clamp(56px,6vw,80px);fill:var(--rose)}
+.r10 .bot{margin-top:clamp(48px,6vw,72px);padding-top:20px;border-top:1px solid var(--line)}
+
+@media (max-width:900px){
+  .r1 .cols,.r2 .g,.r5 .g,.r7 .g,.r8 .g,.r10 .g{grid-template-columns:1fr 1fr}
+  .r1 .cols>:first-child,.r2 .g>:first-child,.r5 .g>:first-child,.r7 .g>:first-child,.r8 .g>:first-child{grid-column:1/-1}
+  .r10 .g>:nth-child(-n+2){grid-column:1/-1}
+  .r4 .g,.r9 .g{grid-template-columns:minmax(0,1fr)}
+  .r4 .right{justify-items:start;text-align:left}.r4 .row{justify-content:flex-start}
+}
+@media (max-width:480px){.r9 dl>div{grid-template-columns:minmax(0,1fr);gap:2px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Rodapé · 10 opções</h1>
+  <p>No mesmo sistema claro do site, com pouco texto. Como a página é “2 em 1”, várias opções dividem os links entre Studio e Cursos. A faixa branca em cima de cada opção é o fim da página (endereço e mapa).</p>
+</header>
+<nav class="idx" id="idx" aria-label="Opções"></nav>
+<main id="opts"></main>
+<script>
+const WA='https://wa.me/5581992901559?text='+encodeURIComponent('Oi Thainá, quero agendar uma avaliação');
+const IG='https://instagram.com/thainacavalcanti_sobrancelhas';
+const MAP='https://www.google.com/maps/search/?api=1&query=Rua+Tiradentes+110+Galeria+Gomes+Santos+Carpina+PE';
+const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const STAR='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg>';
+const IGI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>';
+const WAI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.8Z"/><path d="M9.2 8.6c.2-.5.9-.6 1.2-.1l.6 1.2c.1.3 0 .6-.2.8l-.4.4c.5 1 1.3 1.8 2.3 2.3l.4-.4c.2-.2.5-.3.8-.2l1.2.6c.5.3.4 1-.1 1.2-1.6.8-4.4-1.1-5.4-3.1-.6-1.1-.6-2.1-.4-2.7Z" fill="currentColor" stroke="none"/></svg>';
+const MAPI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>';
+const BRAND=`<p class="brand">${STAR}Thainá Cavalcanti</p>`;
+const ABOUT='<p class="about">Studio de sobrancelhas e cursos em Carpina-PE.</p>';
+const SOC=`<div class="soc"><a class="ic" href="${IG}" target="_blank" rel="noopener" aria-label="Instagram">${IGI}</a><a class="ic" href="${WA}" target="_blank" rel="noopener" aria-label="WhatsApp">${WAI}</a><a class="ic" href="${MAP}" target="_blank" rel="noopener" aria-label="Abrir no mapa">${MAPI}</a></div>`;
+const STUDIO=[['O studio','#studio'],['Serviços','#servicos'],['Micropigmentação','#micropigmentacao'],['Resultados','#resultados'],['Dúvidas','#duvidas']];
+const CURSOS=[['O curso','#cursos'],['Alunas','#alunas'],['Investimento','#investimento']];
+const COL=(t,a)=>`<div><p class="ch">${t}</p><div class="lk">${a.map(x=>`<a href="${x[1]}">${x[0]}</a>`).join('')}</div></div>`;
+const CONTATO=`<div><p class="ch">Contato</p><div class="lk"><a href="${WA}" target="_blank" rel="noopener">(81) 99290-1559</a><a href="${IG}" target="_blank" rel="noopener">@thainacavalcanti_sobrancelhas</a><a href="${MAP}" target="_blank" rel="noopener">Rua Tiradentes, 110 · Carpina-PE</a></div></div>`;
+const Y=new Date().getFullYear();
+const BOT=(extra='Rua Tiradentes, 110 · Galeria Gomes Santos, sala 05 · Carpina-PE')=>`<div class="bot"><p>${extra}</p><p>© ${Y} Studio Thainá Cavalcanti</p></div>`;
+const ROW=a=>a.map(x=>`<a href="${x[1]}">${x[0]}</a>`).join('');
+const MAIN=[['Serviços','#servicos'],['Resultados','#resultados'],['Cursos','#cursos'],['Dúvidas','#duvidas']];
+const O=[
+ ['Assinatura grande','O nome “Thainá Cavalcanti” enorme fecha o site, como assinatura de marca. Acima, três colunas: Studio, Cursos e Contato.','white',
+  `<div class="w"><div class="cols"><div>${BRAND}${ABOUT}<div style="margin-top:1.4rem">${SOC}</div></div>${COL('Studio',STUDIO)}${COL('Cursos',CURSOS)}${CONTATO}</div></div><p class="mark" aria-hidden="true">Thainá Cavalcanti</p><div class="w"><div class="bot" style="border-top:1px solid var(--line);padding:18px 0"><p>Carpina-PE</p><p>© ${Y} Studio Thainá Cavalcanti</p></div></div>`],
+ ['Studio e Cursos','A marca à esquerda e os links divididos nas duas partes do site, Studio e Cursos, com os ícones à direita. Fundo gelo.','ice',
+  `<div class="w"><div class="g"><div>${BRAND}${ABOUT}</div>${COL('Studio',STUDIO)}${COL('Cursos',CURSOS)}${SOC}</div>${BOT()}</div>`],
+ ['Centralizado mínimo','Estrela, nome, uma frase, os ícones e uma linha de links, tudo centralizado. O mais leve.','linen',
+  `<div class="w">${BRAND}${ABOUT}${SOC}<nav class="row" aria-label="Rodapé">${ROW(MAIN)}</nav>${BOT('Rua Tiradentes, 110 · Carpina-PE')}</div>`],
+ ['Assinatura da Thainá','O site termina com a assinatura “Thainá” em cursiva, como uma carta. Links e ícones à direita.','white',
+  `<div class="w"><div class="g"><div><p class="sig">Thainá</p><p class="who">Designer de sobrancelhas e micropigmentadora · Carpina-PE</p></div><div class="right"><nav class="row" aria-label="Rodapé">${ROW(MAIN)}</nav>${SOC}</div></div>${BOT()}</div>`],
+ ['Última frase e botão','Uma frase final em itálico delicado e o botão do WhatsApp, antes das colunas de links. Fecha com um convite.','ice',
+  `<div class="w"><div class="call"><p>Te espero no studio.</p><a class="btn" href="${WA}" target="_blank" rel="noopener">Agendar pelo WhatsApp ${ARROW}</a></div><div class="g"><div>${BRAND}${ABOUT}<div style="margin-top:1.4rem">${SOC}</div></div>${COL('Studio',STUDIO)}${COL('Cursos',CURSOS)}</div>${BOT()}</div>`],
+ ['Uma linha só','Tudo numa faixa fina: marca, links, ícones e o ano. O menor rodapé possível.','linen',
+  `<div class="w"><div class="row">${BRAND}<nav aria-label="Rodapé">${ROW(MAIN)}</nav>${SOC}<small>© ${Y} · Carpina-PE</small></div></div>`],
+ ['Com horário ao vivo','Mostra se o studio está aberto agora e o horário da semana, além dos links. Fundo névoa (o verde bem clarinho das Dúvidas).','mist',
+  `<div class="w"><div class="g"><div>${BRAND}${ABOUT}<p class="now" id="now7"><i aria-hidden="true"></i><span></span></p><div style="margin-top:1.4rem">${SOC}</div></div><div><p class="ch">Horário</p><dl><div><dt>Segunda a sexta</dt><dd>9h às 18h</dd></div><div><dt>Sábado</dt><dd>9h às 13h</dd></div><div><dt>Domingo</dt><dd>Fechado</dd></div></dl></div>${COL('Navegação',[...MAIN,['Investimento','#investimento']])}</div>${BOT()}</div>`],
+ ['Instagram em destaque','O Instagram vira o convite final, grande e em itálico; embaixo, as colunas de links. Bom porque é onde as clientes acompanham o trabalho.','white',
+  `<div class="w"><a class="ig" href="${IG}" target="_blank" rel="noopener">@thainacavalcanti_sobrancelhas</a><p class="lead">Acompanhe os resultados no Instagram.</p><div class="g"><div>${BRAND}${ABOUT}<div style="margin-top:1.4rem">${SOC}</div></div>${COL('Studio',STUDIO)}${COL('Cursos',CURSOS)}</div>${BOT()}</div>`],
+ ['Ficha de contato','A marca e os links de um lado; do outro, uma ficha com endereço, WhatsApp, Instagram e horário em linhas finas.','ice',
+  `<div class="w"><div class="g"><div>${BRAND}${ABOUT}<nav class="row" aria-label="Rodapé">${ROW(MAIN)}</nav></div><dl><div><dt>Endereço</dt><dd><a href="${MAP}" target="_blank" rel="noopener">Rua Tiradentes, 110, Galeria Gomes Santos, sala 05 · Carpina-PE</a></dd></div><div><dt>WhatsApp</dt><dd><a href="${WA}" target="_blank" rel="noopener">(81) 99290-1559</a></dd></div><div><dt>Instagram</dt><dd><a href="${IG}" target="_blank" rel="noopener">@thainacavalcanti_sobrancelhas</a></dd></div><div><dt>Horário</dt><dd>Seg a sex 9h às 18h · Sáb 9h às 13h</dd></div></dl></div>${BOT('Carpina-PE')}</div>`],
+ ['Estrela da marca','A estrela do logo, grande, abre o rodapé; ao lado, a marca e as colunas Studio e Cursos. Fundo linho.','linen',
+  `<div class="w"><div class="g"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 3.9 10.8 12 12-8.1 1.2-11.4 5.4-12 12-.6-6.6-3.9-10.8-12-12 8.1-1.2 11.4-5.4 12-12Z"/></svg><div>${BRAND}${ABOUT}<div style="margin-top:1.4rem">${SOC}</div></div>${COL('Studio',STUDIO)}${COL('Cursos',CURSOS)}</div>${BOT()}</div>`],
+];
+const pad=i=>String(i+1).padStart(2,'0');
+document.getElementById('idx').innerHTML=O.map((o,i)=>`<a href="#o${i+1}">${pad(i)}</a>`).join('');
+document.getElementById('opts').innerHTML=O.map((o,i)=>`<div class="opt" id="o${i+1}"><div class="meta"><b>${pad(i)}</b><strong>${o[0]}</strong><span>${o[1]}</span></div><div class="prev">fim da página (endereço e mapa)</div><footer class="f r${i+1} ${o[2]}">${o[3]}</footer></div>`).join('');
+/* 07 · aberto agora (mesma tabela de horários do site) */
+(()=>{const H={1:[9,18],2:[9,18],3:[9,18],4:[9,18],5:[9,18],6:[9,13]};const d=new Date(),h=H[d.getDay()],t=d.getHours()+d.getMinutes()/60;const el=document.getElementById('now7');const open=h&&t>=h[0]&&t<h[1];el.classList.toggle('off',!open);el.querySelector('span').textContent=open?`Aberto agora · até ${h[1]}h`:'Fechado agora';})();
+</script>
+</body>
+</html>
