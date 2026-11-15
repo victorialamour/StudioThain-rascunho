@@ -1333,3 +1333,42 @@ main>.cal{--cx-ink:#1D1C1B;--cx-tx:#55524F;--cx-mut:#6F6B67;--cx-line:#E3E2DE;
   .cal__hd,.cal__bot{grid-template-columns:minmax(0,1fr)}
   .cal__vid{width:min(320px,100%);margin:0 auto}
 }
+
+/* ==========================================================================
+   CURSOS · investimento (opção 01): dois cursos lado a lado
+   Fundo em linho claro (tom quente e discreto, diferente do branco das alunas
+   e do gelo da abertura); hierarquia: título > nome do curso > valor > texto.
+   ========================================================================== */
+main>.cinv{--cx-ink:#1D1C1B;--cx-tx:#57524D;--cx-mut:#736D67;--cx-line:#E2DCD3;--cinv-bg:#F3EFE9;
+  position:relative;padding:clamp(80px,10vw,136px) var(--pad);background:var(--cinv-bg);box-shadow:0 0 0 100vmax var(--cinv-bg);clip-path:inset(0 -100vmax);color:var(--cx-tx);font-family:"Hanken Grotesk",system-ui,sans-serif}
+.cinv__hd{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
+.cinv__h{font:400 clamp(2.2rem,3.8vw,3.2rem)/1.08 "Gloock",serif;letter-spacing:-.015em;color:var(--cx-ink)}
+.cinv__next{display:inline-flex;align-items:center;gap:.55rem;font-size:.95rem;color:var(--cx-mut)}
+.cinv__next i{width:7px;height:7px;border-radius:50%;background:#B9767A}
+.cinv__two{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(44px,5vw,64px);border-top:1px solid var(--cx-line)}
+.cinv__c{padding:clamp(36px,4vw,52px) clamp(28px,4vw,56px) 0 0}
+.cinv__c+.cinv__c{padding-left:clamp(28px,4vw,56px);padding-right:0;border-left:1px solid var(--cx-line)}
+.cinv__nm{font:400 clamp(1.6rem,2.3vw,2rem)/1.15 "Gloock",serif;color:var(--cx-ink)}
+.cinv__for{margin-top:.6rem;max-width:40ch;font-size:1.04rem;line-height:1.6}
+.cinv__val{display:flex;align-items:baseline;gap:.4rem;margin-top:2rem;color:var(--cx-ink)}
+.cinv__val small{font:500 1rem "Hanken Grotesk",sans-serif;color:var(--cx-mut)}
+.cinv__val b{font:400 clamp(2.1rem,3vw,2.6rem)/1 "Gloock",serif;letter-spacing:-.015em;font-weight:400}
+.cinv__terms{margin-top:.4rem;font-size:.95rem;color:var(--cx-mut)}
+.cinv__btn{margin-top:1.8rem}
+.cinv__ls{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:2.4rem;padding-top:1.8rem;border-top:1px solid var(--cx-line)}
+.cinv__ls h4{font:600 .95rem/1.3 "Hanken Grotesk",sans-serif;color:var(--cx-ink)}
+.cinv__ls ul{margin:.9rem 0 0;padding:0;list-style:none;display:grid;gap:.7rem}
+.cinv__ls li{display:flex;gap:.7rem;align-items:baseline;font-size:1rem;line-height:1.45;color:var(--cx-tx)}
+.cinv__ls li::before{content:"";flex:none;width:10px;height:6px;border:solid #9A5457;border-width:0 0 1.4px 1.4px;transform:translateY(-3px) rotate(-45deg)}
+.cinv__foot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);margin-top:clamp(56px,7vw,88px);padding-top:clamp(32px,4vw,44px);border-top:1px solid var(--cx-line)}
+.cinv__doubt p{font:400 italic clamp(1.2rem,1.6vw,1.4rem)/1.5 "Instrument Serif",serif;color:var(--cx-ink);max-width:36ch}
+.cinv__doubt .cx__lnk{display:inline-flex;margin-top:1.1rem}
+.cinv__notes{margin:0;display:grid;gap:1.4rem}
+.cinv__notes dt{font:600 1rem/1.3 "Hanken Grotesk",sans-serif;color:var(--cx-ink)}
+.cinv__notes dd{margin:.3rem 0 0;font-size:1rem;line-height:1.55}
+@media (max-width:900px){
+  .cinv__two,.cinv__foot{grid-template-columns:minmax(0,1fr)}
+  .cinv__c{padding-right:0}
+  .cinv__c+.cinv__c{padding-left:0;border-left:0;border-top:1px solid var(--cx-line);margin-top:40px}
+}
+@media (max-width:480px){.cinv__ls{grid-template-columns:minmax(0,1fr);gap:22px}}
