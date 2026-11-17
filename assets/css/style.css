@@ -1457,3 +1457,31 @@ main>.cal{padding-top:clamp(56px,7vw,96px)}
 .cal__rows{margin-top:clamp(32px,4vw,48px)}
 .cal__bot{padding:clamp(48px,6vw,80px) 0}
 .cal__vid{width:clamp(220px,20vw,280px)}
+
+/* ==========================================================================
+   TOPO · frase da marca + dois caminhos (opção 6)
+   Fica acima da barra de agendamento, que sobe um pouco sobre o vídeo.
+   ========================================================================== */
+.hero__shade{background:linear-gradient(0deg,rgba(20,18,16,.8) 0%,rgba(20,18,16,.3) 50%,rgba(20,18,16,.15) 75%,rgba(20,18,16,.35) 100%)!important}
+.hero6{position:relative;z-index:2;width:100%;max-width:1200px;margin:auto auto 70px;padding:0 clamp(.2rem,2vw,2rem)}
+.hero6__h{margin:0;font:300 clamp(2.4rem,5.4vw,4.6rem)/1.02 "Fraunces",Georgia,serif;font-variation-settings:"opsz" 144;letter-spacing:-.03em;color:#fff;text-wrap:balance}
+.hero6__h em{font-style:italic;color:#E8C6C6}
+.hero6__sub{margin:1rem 0 0;max-width:44ch;font-size:clamp(1rem,1.2vw,1.12rem);line-height:1.55;color:rgba(255,255,255,.88)}
+.hero6__paths{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.8rem}
+.hero6__paths a{display:flex;flex-direction:column;gap:.2rem;min-width:230px;padding:1rem 1.3rem;border-radius:14px;color:#fff;text-decoration:none;
+  background:rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);transition:background .35s}
+.hero6__paths a:first-child{background:#fff;color:#1D1C1B;box-shadow:none}
+.hero6__paths a:hover{background:rgba(255,255,255,.24)}
+.hero6__paths a:first-child:hover{background:#E8C6C6}
+.hero6__paths b{font:600 .98rem/1.2 var(--f-sans)}
+.hero6__paths span{font-size:.82rem;opacity:.75}
+.hero6__paths a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media (max-width:900px){
+  .hero6{margin-bottom:150px}
+  .hero6__paths a{min-width:0;flex:1 1 100%}
+}
+/* entrada do texto do topo em CSS (não depende do script) */
+.hero6>*{animation:hero6In 1.1s cubic-bezier(.16,1,.3,1) both}
+.hero6>:nth-child(2){animation-delay:.12s}.hero6>:nth-child(3){animation-delay:.24s}
+@keyframes hero6In{from{opacity:0;transform:translateY(16px)}}
+@media (prefers-reduced-motion:reduce){.hero6>*{animation:none}}
