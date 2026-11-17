@@ -82,10 +82,10 @@ function initReveals () {
   document.querySelectorAll('[data-count]').forEach(el => {
     const end = parseInt(el.dataset.count, 10), obj = { n: 0 };
     el.textContent = '0';
-    // conta de 0 até o número uma vez só, quando aparece na tela
-    gsap.to(obj, { n: end, duration: 2.2, ease: 'power3.out',
+    // conta de 0 até o número, segura 3s e recomeça (só roda quando está na tela)
+    gsap.to(obj, { n: end, duration: 2.2, ease: 'power3.out', repeat: -1, repeatDelay: 3,
       onUpdate: () => { el.textContent = Math.round(obj.n); },
-      scrollTrigger: { trigger: el, start: 'top 85%', once: true } });
+      scrollTrigger: { trigger: el, start: 'top 90%', end: 'bottom 10%', toggleActions: 'play pause resume pause' } });
   });
   document.querySelectorAll('[data-reveal-img]').forEach(el => gsap.to(el, {
     clipPath: 'inset(0% 0% 0% 0% round 8px)', opacity: 1, duration: 1.3, ease: 'expo.out',
@@ -511,5 +511,31 @@ initFaq2();
       const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
       if (d) { e.preventDefault(); select((i + d + tabs.length) % tabs.length, true); }
     });
+  });
+})();
+
+/* ---- Contador estilo odômetro (alunas): os algarismos rolam até o número,
+   seguram alguns segundos e rolam de novo, só enquanto estão na tela */
+(function initOdometer () {
+  document.querySelectorAll('[data-odo]').forEach(el => {
+    const target = String(el.dataset.odo);
+    el.classList.add('odo'); el.textContent = '';
+    const strip = Array.from({ length: 30 }, (_, i) => `<span>${i % 10}</span>`).join('');
+    const cols = [...target].map(() => { const d = document.createElement('span'); d.className = 'odo__d'; d.setAttribute('aria-hidden', 'true'); d.innerHTML = `<span class="odo__s">${strip}</span>`; el.appendChild(d); return d.firstChild; });
+    const H = () => cols[0].firstChild.getBoundingClientRect().height;
+    const set = (lap, anim) => cols.forEach((s, i) => {
+      const n = +target[i] + lap * 10;
+      s.style.transition = anim ? `transform ${1.6 + i * .35}s cubic-bezier(.16,1,.3,1) ${i * .08}s` : 'none';
+      s.style.transform = `translateY(${-n * H()}px)`;
+    });
+    if (REDUCED) { set(0, false); return; }
+    let timer = null, lap = 0;
+    const cycle = () => { set(0, false); void el.offsetWidth; lap = 2; set(lap, true); timer = setTimeout(cycle, 5200); };
+    set(0, false);
+    new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { if (!timer) cycle(); }
+      else { clearTimeout(timer); timer = null; }
+    }, { threshold: .4 }).observe(el);
+    addEventListener('resize', () => set(lap, false));
   });
 })();
