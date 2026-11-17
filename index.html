@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Cinzel:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261117b">
+<link rel="stylesheet" href="assets/css/style.css?v=20261117c">
 <script>
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('js-anim');
@@ -159,20 +159,31 @@
      Itens aparecem um a um ao rolar (data-reveal-stagger). O vídeo que
      ficava aqui foi para o destaque da micropigmentação (#micropigmentacao). -->
 <section class="services" id="servicos">
-  <div class="menu-card">
-    <h2 class="menu__title" data-reveal>Menu de serviços</h2>
-    <ul class="menu__list" data-reveal-stagger>
-      <li><p class="menu__row"><span>Micropigmentação</span><b>R$ 670</b></p><p class="menu__sub">Fio a fio ou shadow · até 10x de R$ 67</p></li>
-      <li><p class="menu__row"><span>Brow lamination</span><b>R$ 145</b></p><p class="menu__sub">Fios alinhados e volumosos · até 4 semanas · 2x de R$ 72,50</p></li>
-      <li><p class="menu__row"><span>Lash lifting</span><b>R$ 160</b></p><p class="menu__sub">Cílios curvados sem extensão · até 30 dias · 2x de R$ 80</p></li>
-      <li><p class="menu__row"><span>Design de sobrancelhas</span><b>R$ 30</b></p><p class="menu__sub">Feito pro formato do seu rosto</p></li>
-      <li><p class="menu__row"><span>Design com henna ou tintura</span><b>R$ 55</b></p><p class="menu__sub">Henna até 7 dias · tintura até 30 dias</p></li>
-      <li><p class="menu__row"><span>Descoloração + coloração</span><b>R$ 99,90</b></p><p class="menu__sub">Cor em harmonia com o cabelo · até 30 dias</p></li>
-      <li><p class="menu__row"><span>Spa labial</span><b>R$ 20</b></p><p class="menu__sub">Hidratação, esfoliação e revitalização</p></li>
-    </ul>
-    <div class="menu__cta" data-reveal>
+  <!-- Menu de serviços em duas colunas por categoria (opção 2) -->
+  <div class="svc2">
+    <h2 class="menu__title svc2__title" data-reveal>Menu de serviços</h2>
+    <div class="svc2__g">
+      <div class="svc2__col" data-reveal>
+        <p class="svc2__cat">Sobrancelhas</p>
+        <ul>
+        <li><p class="svc2__nm">Micropigmentação</p><p class="svc2__pr">R$ 670</p><p class="svc2__ds">Fio a fio ou shadow · até 10x de R$ 67</p></li>
+        <li><p class="svc2__nm">Brow lamination</p><p class="svc2__pr">R$ 145</p><p class="svc2__ds">Fios alinhados e volumosos · 2x de R$ 72,50</p></li>
+        <li><p class="svc2__nm">Design de sobrancelhas</p><p class="svc2__pr">R$ 30</p><p class="svc2__ds">Feito pro formato do seu rosto</p></li>
+        <li><p class="svc2__nm">Design com henna ou tintura</p><p class="svc2__pr">R$ 55</p><p class="svc2__ds">Henna até 7 dias · tintura até 30 dias</p></li>
+        <li><p class="svc2__nm">Descoloração + coloração</p><p class="svc2__pr">R$ 99,90</p><p class="svc2__ds">Cor em harmonia com o cabelo</p></li>
+        </ul>
+      </div>
+      <div class="svc2__col" data-reveal>
+        <p class="svc2__cat">Cílios e lábios</p>
+        <ul>
+        <li><p class="svc2__nm">Lash lifting</p><p class="svc2__pr">R$ 160</p><p class="svc2__ds">Cílios curvados sem extensão · 2x de R$ 80</p></li>
+        <li><p class="svc2__nm">Spa labial</p><p class="svc2__pr">R$ 20</p><p class="svc2__ds">Hidratação, esfoliação e revitalização</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="svc2__acts" data-reveal>
       <a class="pill pill--dark pill--lg" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">Agendar avaliação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="link" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20n%C3%A3o%20sei%20qual%20servi%C3%A7o%20escolher" target="_blank" rel="noopener">Não sabe qual escolher? Fale comigo</a>
+      <a class="svc2__lnk" href="https://wa.me/5581992901559?text=Oi%20Thain%C3%A1%2C%20n%C3%A3o%20sei%20qual%20servi%C3%A7o%20escolher" target="_blank" rel="noopener">Não sabe qual escolher? Fale comigo</a>
     </div>
   </div>
 </section>
